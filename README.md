@@ -1,2 +1,4 @@
 # Metamodel-Reference-Architecture-Validation
-This repository contains all metamodel, modular designer diagrams, the validation tool, as well as input and output data of the validation of the metamodel reference architecture.
+This repository is currently empty. Its future content can currently be found at:
+https://svnserver.informatik.kit.edu/i43/svn/palladio/misha.strittmatter/ResearchProjects/mPCM
+There is currently work ongoing. The repository needs to be restructured afterward and will be migrated at the same time.
