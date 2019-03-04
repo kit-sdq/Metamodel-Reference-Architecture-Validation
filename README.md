@@ -1,7 +1,7 @@
 # Metamodel-Reference-Architecture-Validation
 This repository is currently empty.
 Its future content can currently be found at:
-* https://svnserver.informatik.kit.edu/i43/svn/palladio/misha.strittmatter/ResearchProjects/mPCM
+* https://svnserver.informatik.kit.edu/i43/svn/palladio/misha.strittmatter/ResearchProjects/MetamodelReferenceStructure
 * User: anonymous
 * Password: anonymous
 
