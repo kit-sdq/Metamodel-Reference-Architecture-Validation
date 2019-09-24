@@ -1,0 +1,1 @@
+In order to load models (for the metamodel utilization evaluation), the projects in "for_models" are also required.
