@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bpmn2" nsURI="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
+    nsPrefix="bpmn2">
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value=""/>
+      <details key="kind" value="mixed"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="name" value=":mixed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xMLNSPrefixMap" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xmlns:prefix"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xSISchemaLocation" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xsi:schemaLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.activities/model/activities.ecore#//Activity"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="activity"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="adHocSubProcess" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.subprocesses/model/subprocesses.ecore#//AdHocSubProcess"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="adHocSubProcess"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowElement" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.flows/model/flows.ecore#//FlowElement" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="flowElement"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="artifact" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.artifacts/model/artifacts.ecore#//Artifact"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="artifact"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignment" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//Assignment" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="assignment"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="association" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.artifacts/model/artifacts.ecore#//Association"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="association"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#artifact"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="auditing" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.auditingandmonitoring/model/auditingandmonitoring.ecore#//Auditing"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="auditing"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="baseElement" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.core/model/core.ecore#//BaseElement" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="baseElement"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="baseElementWithMixedContent"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.core/model/core.ecore#//BaseElement"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="baseElementWithMixedContent"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boundaryEvent" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//BoundaryEvent"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="boundaryEvent"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="businessRuleTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.activities/model/activities.ecore#//BusinessRuleTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="businessRuleTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="callableElement" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.services/model/services.ecore#//CallableElement"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="callableElement"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="callActivity" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.activities/model/activities.ecore#//CallActivity"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="callActivity"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="callChoreography" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.choreography/model/choreography.ecore#//choreographyactivities/CallChoreography"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="callChoreography"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="callConversation" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.conversations/model/conversations.ecore#//CallConversation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="callConversation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#conversationNode"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conversationNode" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.conversations/model/conversations.ecore#//ConversationNode"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="conversationNode"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cancelEventDefinition"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//CancelEventDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="cancelEventDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventDefinition" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events/model/events.ecore#//events/EventDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="eventDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rootElement" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.core/model/core.ecore#//RootElement" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="rootElement"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="catchEvent" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events/model/events.ecore#//events/CatchEvent"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="catchEvent"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="category" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.group/model/group.ecore#//Category" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="category"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="categoryValue" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.group/model/group.ecore#//CategoryValue" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="categoryValue"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choreography" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.choreography/model/choreography.ecore#//Choreography"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="choreography"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#collaboration"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collaboration" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.collaboration/model/collaboration.ecore#//Collaboration"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="collaboration"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choreographyActivity" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.choreography/model/choreography.ecore#//choreographyactivities/ChoreographyActivity"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="choreographyActivity"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choreographyTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.choreography/model/choreography.ecore#//choreographyactivities/ChoreographyTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="choreographyTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="compensateEventDefinition"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//CompensateEventDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="compensateEventDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="complexBehaviorDefinition"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.looping/model/looping.ecore#//ComplexBehaviorDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="complexBehaviorDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="complexGateway" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.gateways/model/gateways.ecore#//ComplexGateway"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="complexGateway"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditionalEventDefinition"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//ConditionalEventDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="conditionalEventDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conversation" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.conversations/model/conversations.ecore#//Conversation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="conversation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#conversationNode"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conversationAssociation"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.conversations/model/conversations.ecore#//ConversationAssociation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="conversationAssociation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conversationLink" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.conversations/model/conversations.ecore#//ConversationLink"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="conversationLink"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correlationKey" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.correlations/model/correlations.ecore#//CorrelationKey"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="correlationKey"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correlationProperty" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.correlations/model/correlations.ecore#//CorrelationProperty"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="correlationProperty"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correlationPropertyBinding"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.correlations/model/correlations.ecore#//CorrelationPropertyBinding"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="correlationPropertyBinding"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correlationPropertyRetrievalExpression"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.correlations/model/correlations.ecore#//CorrelationPropertyRetrievalExpression"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="correlationPropertyRetrievalExpression"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correlationSubscription"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.correlations/model/correlations.ecore#//CorrelationSubscription"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="correlationSubscription"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataAssociation" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//DataAssociation" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dataAssociation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataInput" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//DataInput" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dataInput"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataInputAssociation" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//DataInputAssociation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dataInputAssociation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataObject" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//DataObject" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dataObject"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataObjectReference" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//DataObjectReference"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dataObjectReference"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutput" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//DataOutput" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dataOutput"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutputAssociation"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//DataOutputAssociation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dataOutputAssociation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataState" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//DataState" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dataState"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataStore" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//DataStore" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dataStore"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataStoreReference" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//DataStoreReference"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dataStoreReference"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definitions" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.core/model/core.ecore#//Definitions" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="definitions"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentation" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.core/model/core.ecore#//Documentation" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="documentation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endEvent" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events/model/events.ecore#//events/EndEvent"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="endEvent"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endPoint" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.services/model/services.ecore#//EndPoint"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="endPoint"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="error" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.services/model/services.ecore#//Error" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="error"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="errorEventDefinition" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//ErrorEventDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="errorEventDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="escalation" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//Escalation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="escalation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="escalationEventDefinition"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//EscalationEventDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="escalationEventDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events/model/events.ecore#//events/Event"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="event"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventBasedGateway" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.gateways/model/gateways.ecore#//EventBasedGateway"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="eventBasedGateway"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exclusiveGateway" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.gateways/model/gateways.ecore#//ExclusiveGateway"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="exclusiveGateway"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.expressions/model/expressions.ecore#//Expression"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="expression"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extension" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.externals/model/externals.ecore#//extension/Extension"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="extension"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extensionElements" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.externals/model/externals.ecore#//extension/ExtensionAttributeValue"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="extensionElements"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowNode" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.flows/model/flows.ecore#//FlowNode" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="flowNode"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formalExpression" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.expressions/model/expressions.ecore#//FormalExpression"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="formalExpression"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#expression"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gateway" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.gateways/model/gateways.ecore#//Gateway" changeable="false"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="gateway"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalBusinessRuleTask"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.activities/model/activities.ecore#//GlobalBusinessRuleTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="globalBusinessRuleTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalChoreographyTask"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.choreography/model/choreography.ecore#//GlobalChoreographyTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="globalChoreographyTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#choreography"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalConversation" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.conversations/model/conversations.ecore#//GlobalConversation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="globalConversation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#collaboration"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalManualTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.humaninteraction/model/humaninteraction.ecore#//GlobalManualTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="globalManualTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalScriptTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.activities/model/activities.ecore#//GlobalScriptTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="globalScriptTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.activities/model/activities.ecore#//GlobalTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="globalTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalUserTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.humaninteraction/model/humaninteraction.ecore#//GlobalUserTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="globalUserTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="group" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.group/model/group.ecore#//Group" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="group"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#artifact"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="humanPerformer" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.resources.human/model/human.ecore#//HumanPerformer"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="humanPerformer"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#performer"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performer" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.resources/model/resources.ecore#//Performer"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="performer"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#resourceRole"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceRole" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.resources/model/resources.ecore#//ResourceRole"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="resourceRole"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implicitThrowEvent" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events/model/events.ecore#//ImplicitThrowEvent"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="implicitThrowEvent"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="import" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.externals/model/externals.ecore#//Import"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="import"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inclusiveGateway" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.gateways/model/gateways.ecore#//InclusiveGateway"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="inclusiveGateway"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputSet" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//InputSet" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="inputSet"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.services/model/services.ecore#//Interface"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="interface"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intermediateCatchEvent"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//IntermediateCatchEvent"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="intermediateCatchEvent"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intermediateThrowEvent"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//IntermediateThrowEvent"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="intermediateThrowEvent"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ioBinding" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.services/model/services.ecore#//InputOutputBinding"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="ioBinding"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ioSpecification" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//InputOutputSpecification"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="ioSpecification"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="itemDefinition" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//ItemDefinition" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="itemDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lane" upperBound="-2" eType="ecore:EClass ../../mbpmn.processes/model/processes.ecore#//Lane"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="lane"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="laneSet" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.processes/model/processes.ecore#//LaneSet"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="laneSet"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkEventDefinition" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//LinkEventDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="linkEventDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loopCharacteristics" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.looping/model/looping.ecore#//LoopCharacteristics"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="loopCharacteristics"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="manualTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.humaninteraction/model/humaninteraction.ecore#//ManualTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="manualTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="message" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.messaging/model/messaging.ecore#//Message"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="message"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messageEventDefinition"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//MessageEventDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="messageEventDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messageFlow" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.messaging/model/messaging.ecore#//MessageFlow"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="messageFlow"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messageFlowAssociation"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.messaging/model/messaging.ecore#//MessageFlowAssociation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="messageFlowAssociation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="monitoring" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.auditingandmonitoring/model/auditingandmonitoring.ecore#//Monitoring"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="monitoring"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="multiInstanceLoopCharacteristics"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.looping/model/looping.ecore#//MultiInstanceLoopCharacteristics"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="multiInstanceLoopCharacteristics"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#loopCharacteristics"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.services/model/services.ecore#//Operation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="operation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputSet" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//OutputSet" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="outputSet"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parallelGateway" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.gateways/model/gateways.ecore#//ParallelGateway"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="parallelGateway"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participant" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.collaboration/model/collaboration.ecore#//Participant"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="participant"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participantAssociation"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.collaboration/model/collaboration.ecore#//ParticipantAssociation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="participantAssociation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participantMultiplicity"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.collaboration/model/collaboration.ecore#//ParticipantMultiplicity"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="participantMultiplicity"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partnerEntity" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.collaboration/model/collaboration.ecore#//PartnerEntity"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="partnerEntity"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partnerRole" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.collaboration/model/collaboration.ecore#//PartnerRole"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="partnerRole"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="potentialOwner" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.resources.human/model/human.ecore#//PotentialOwner"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="potentialOwner"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#performer"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="process" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.processes/model/processes.ecore#//Process"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="process"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//Property" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="property"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiveTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.activities/model/activities.ecore#//ReceiveTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="receiveTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relationship" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.externals/model/externals.ecore#//Relationship"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="relationship"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rendering" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.humaninteraction/model/humaninteraction.ecore#//Rendering"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="rendering"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.resources/model/resources.ecore#//Resource"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="resource"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceAssignmentExpression"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.resources/model/resources.ecore#//ResourceAssignmentExpression"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="resourceAssignmentExpression"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceParameter" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.resources/model/resources.ecore#//ResourceParameter"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="resourceParameter"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceParameterBinding"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.resources/model/resources.ecore#//ResourceParameterBinding"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="resourceParameterBinding"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="script" upperBound="-2"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="script"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scriptTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.activities/model/activities.ecore#//ScriptTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="scriptTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sendTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.activities/model/activities.ecore#//SendTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="sendTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sequenceFlow" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.flows/model/flows.ecore#//SequenceFlow" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="sequenceFlow"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.activities/model/activities.ecore#//ServiceTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="serviceTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signal" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//Signal"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="signal"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signalEventDefinition"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//SignalEventDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="signalEventDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="standardLoopCharacteristics"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.looping/model/looping.ecore#//StandardLoopCharacteristics"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="standardLoopCharacteristics"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#loopCharacteristics"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="startEvent" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events/model/events.ecore#//events/StartEvent"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="startEvent"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subChoreography" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.choreography/model/choreography.ecore#//choreographyactivities/SubChoreography"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="subChoreography"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subConversation" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.conversations/model/conversations.ecore#//SubConversation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="subConversation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#conversationNode"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subProcess" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.subprocesses/model/subprocesses.ecore#//SubProcess"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="subProcess"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" upperBound="-2" eType="ecore:EClass ../../mbpmn.activities/model/activities.ecore#//Task"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="task"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="terminateEventDefinition"
+        upperBound="-2" eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//TerminateEventDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="terminateEventDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="text" upperBound="-2" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="text"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="textAnnotation" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.artifacts/model/artifacts.ecore#//TextAnnotation"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="textAnnotation"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#artifact"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="throwEvent" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events/model/events.ecore#//events/ThrowEvent"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="throwEvent"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timerEventDefinition" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.events.advanced/model/advanced.ecore#//TimerEventDefinition"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="timerEventDefinition"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transaction" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.subprocesses/model/subprocesses.ecore#//Transaction"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="transaction"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="userTask" upperBound="-2"
+        eType="ecore:EClass ../../mbpmn.humaninteraction/model/humaninteraction.ecore#//UserTask"
+        volatile="true" transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="userTask"/>
+        <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        <details key="affiliation" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

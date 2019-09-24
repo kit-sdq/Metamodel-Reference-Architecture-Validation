@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_CT-TsLLjEeWaL4cfYRKdZg" entityName="testSerialization">
+    <scenarioBehaviour_UsageScenario id="_CT-Ts7LjEeWaL4cfYRKdZg" entityName="testSerialization">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CT-TsbLjEeWaL4cfYRKdZg" successor="_CT-TtLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CT-TtLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.concurrent.DebuggableThreadPoolExecutorTest.java.DebuggableThreadPoolExecutorTest.testSerialization() at 1227" successor="_CUDMMLLjEeWaL4cfYRKdZg" predecessor="_CT-TsbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CUDMMLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CT-TsrLjEeWaL4cfYRKdZg" predecessor="_CT-TtLLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_CUDMMbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.concurrent.DebuggableThreadPoolExecutorTest.java.DebuggableThreadPoolExecutorTest.testSerialization() from 1960 to 1996">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CUDMMrLjEeWaL4cfYRKdZg" successor="_CUDMM7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CUDMM7LjEeWaL4cfYRKdZg" entityName="execute:  @position: org.apache.cassandra.concurrent.DebuggableThreadPoolExecutorTest.java.DebuggableThreadPoolExecutorTest.testSerialization().Block at 2046" successor="_CUDzQrLjEeWaL4cfYRKdZg" predecessor="_CUDMMrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_CUDzQLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_fSDpELLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CUDzQrLjEeWaL4cfYRKdZg" predecessor="_CUDMM7LjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CT-TsrLjEeWaL4cfYRKdZg" predecessor="_CUDMMLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

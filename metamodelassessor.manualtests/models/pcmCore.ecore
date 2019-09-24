@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ecore:EPackage xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pcm" nsPrefix="pcm" nsURI="http://palladiosimulator.org/PalladioComponentModel/5.1" xmi:version="2.0">
+  <eClassifiers name="PrimitiveTypeEnum" xsi:type="ecore:EEnum">
+    <eLiterals name="INT"/>
+    <eLiterals name="STRING" value="1"/>
+    <eLiterals name="BOOL" value="2"/>
+    <eLiterals name="DOUBLE" value="3"/>
+    <eLiterals name="CHAR" value="4"/>
+    <eLiterals name="BYTE" value="5"/>
+    <eLiterals name="LONG" value="6"/>
+  </eClassifiers>
+  <eClassifiers name="ParameterModifier" xsi:type="ecore:EEnum">
+    <eLiterals name="none"/>
+    <eLiterals name="in" value="1"/>
+    <eLiterals name="out" value="2"/>
+    <eLiterals name="inout" value="3"/>
+  </eClassifiers>
+  <eClassifiers name="ComponentType" xsi:type="ecore:EEnum">
+    <eLiterals name="BUSINESS_COMPONENT"/>
+    <eLiterals name="INFRASTRUCTURE_COMPONENT" value="1"/>
+  </eClassifiers>
+  <eClassifiers name="VariableCharacterisationType" xsi:type="ecore:EEnum">
+    <eLiterals name="STRUCTURE"/>
+    <eLiterals name="NUMBER_OF_ELEMENTS" value="1"/>
+    <eLiterals name="VALUE" value="2"/>
+    <eLiterals name="BYTESIZE" value="3"/>
+    <eLiterals name="TYPE" value="4"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="Interface" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//Protocol" name="protocols__Interface" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//RequiredCharacterisation" name="requiredCharacterisations" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//Interface" name="parentInterfaces__Interface" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" name="Protocol" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" lowerBound="1" name="protocolTypeID" ordered="false" xsi:type="ecore:EAttribute"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity #//DataType" name="CompositeDataType" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//CompositeDataType" name="parentType_CompositeDataType" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//InnerDeclaration" name="innerDeclaration_CompositeDataType" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" name="DataType" xsi:type="ecore:EClass"/>
+  <eClassifiers name="Parameter" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" lowerBound="1" name="parameterName" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures defaultValueLiteral="none" eType="#//ParameterModifier" lowerBound="1" name="modifier__Parameter" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures eType="#//DataType" lowerBound="1" name="dataType__Parameter" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//NamedElement #//Identifier" name="Entity" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//Entity #//DataType" name="CollectionDataType" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//DataType" lowerBound="1" name="innerType_CollectionDataType" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" name="NamedElement" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="aName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" lowerBound="1" name="entityName" ordered="false" xsi:type="ecore:EAttribute"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Signature" name="OperationSignature" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//DataType" name="returnType__OperationSignature" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//Parameter" name="parameters__OperationSignature" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//NamedElement" name="InnerDeclaration" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//DataType" lowerBound="1" name="datatype_InnerDeclaration" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="Repository" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" lowerBound="0" name="repositoryDescription" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures containment="true" eType="#//DataType" name="dataTypes__Repository" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//Interface" name="interfaces__Repository" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//RepositoryComponent" name="components__Repository" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//FailureType" name="failureTypes__Repository" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//RepositoryComponent" name="ImplementationComponentType" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="BUSINESS_COMPONENT" eType="#//ComponentType" lowerBound="1" name="componentType" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures eType="#//CompleteComponentType" name="parentCompleteComponentTypes" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//VariableUsage" name="componentParameterUsage_ImplementationComponentType" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//RepositoryComponent" name="CompleteComponentType" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//ProvidesComponentType" name="parentProvidesComponentTypes" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//RepositoryComponent" name="ProvidesComponentType" xsi:type="ecore:EClass"/>
+  <eClassifiers abstract="true" eSuperTypes="#//InterfaceProvidingRequiringEntity" name="RepositoryComponent" xsi:type="ecore:EClass"/>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="ComposedStructure" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ResourceRequiredDelegationConnector" name="resourceRequiredDelegationConnectors_ComposedStructure" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//EventChannel" name="eventChannel__ComposedStructure" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//Connector" name="connectors__ComposedStructure" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//AssemblyContext" name="assemblyContexts__ComposedStructure" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers name="ResourceRequiredDelegationConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//ResourceRequiredRole" lowerBound="1" name="outerResourceRequiredRole_ResourceRequiredDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//ResourceRequiredRole" lowerBound="1" name="innerResourceRequiredRole_ResourceRequiredDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//DelegationConnector" name="RequiredResourceDelegationConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="assemblyContext__RequiredResourceDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//ResourceRequiredRole" lowerBound="1" name="outerRequiredRole__RequiredResourceDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//ResourceRequiredRole" lowerBound="1" name="innerRequiredRole__RequiredResourceDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Connector" name="DelegationConnector" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//Entity" name="AssemblyContext" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//RepositoryComponent" lowerBound="1" name="encapsulatedComponent__AssemblyContext" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//VariableUsage" name="configParameterUsages__AssemblyContext" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Role" name="ResourceRequiredRole" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//ResourceInterface" lowerBound="1" name="requiredResourceInterface__ResourceRequiredRole" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#//RandomVariable" name="PCMRandomVariable" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//Signature" name="InfrastructureSignature" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//Parameter" name="parameters__InfrastructureSignature" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="CallAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//VariableUsage" name="inputVariableUsages__CallAction" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//AbstractAction" name="AbstractInternalControlFlowAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//InfrastructureCall" name="infrastructureCall__Action" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//ResourceCall" name="resourceCall__Action" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//ParametricResourceDemand" name="resourceDemand_Action" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//RequiredRole" name="InfrastructureRequiredRole" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//InfrastructureInterface" lowerBound="1" name="requiredInterface__InfrastructureRequiredRole" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//CallAction" name="InfrastructureCall" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//InfrastructureSignature" lowerBound="1" name="signature__InfrastructureCall" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//InfrastructureRequiredRole" lowerBound="1" name="requiredRole__InfrastructureCall" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="numberOfCalls__InfrastructureCall" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//CallAction" name="ResourceCall" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="numberOfCalls__ResourceCall" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//ResourceRequiredRole" lowerBound="1" name="resourceRequiredRole__ResourceCall" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//ResourceSignature" lowerBound="1" name="signature__ResourceCall" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="ResourceSignature" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" lowerBound="1" name="resourceServiceId" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures containment="true" eType="#//Parameter" name="parameter__ResourceSignature" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="Connector" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//Connector" name="AssemblyInfrastructureConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="providingAssemblyContext__AssemblyInfrastructureConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//AssemblyContext" name="requiringAssemblyContext__AssemblyInfrastructureConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//InfrastructureRequiredRole" lowerBound="1" name="requiredRole__AssemblyInfrastructureConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//InfrastructureProvidedRole" lowerBound="1" name="providedRole__AssemblyInfrastructureConnector" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//DelegationConnector" name="RequiredInfrastructureDelegationConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="assemblyContext__RequiredInfrastructureDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//InfrastructureRequiredRole" lowerBound="1" name="outerRequiredRole__RequiredInfrastructureDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//InfrastructureRequiredRole" lowerBound="1" name="innerRequiredRole__RequiredInfrastructureDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//ProvidedRole" name="InfrastructureProvidedRole" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//InfrastructureInterface" lowerBound="1" name="providedInterface__InfrastructureProvidedRole" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//DelegationConnector" name="ProvidedInfrastructureDelegationConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="assemblyContext__ProvidedInfrastructureDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//InfrastructureProvidedRole" lowerBound="1" name="innerProvidedRole__ProvidedInfrastructureDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//InfrastructureProvidedRole" lowerBound="1" name="outerProvidedRole__ProvidedInfrastructureDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" name="SpecifiedQoSAnnotation" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//Signature" lowerBound="1" name="signature_SpecifiedQoSAnnation" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//Role" lowerBound="1" name="role_SpecifiedQoSAnnotation" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//FailureOccurrenceDescription" name="ExternalFailureOccurrenceDescription" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//FailureType" lowerBound="1" name="failureType__ExternalFailureOccurrenceDescription" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//SpecifiedQoSAnnotation" name="SpecifiedReliabilityAnnotation" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ExternalFailureOccurrenceDescription" lowerBound="1" name="externalFailureOccurrenceDescriptions__SpecifiedReliabilityAnnotation" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//SpecifiedExecutionTime" name="ComponentSpecifiedExecutionTime" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="assemblyContext_ComponentSpecifiedExecutionTime" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//SpecifiedQoSAnnotation" name="SpecifiedExecutionTime" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="specification_SpecifiedExecutionTime" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//FailureOccurrenceDescription" name="InternalFailureOccurrenceDescription" xsi:type="ecore:EClass">
+    <eStructuralFeatures eOpposite="#//SoftwareInducedFailureType/internalFailureOccurrenceDescriptions__SoftwareInducedFailureType" eType="#//SoftwareInducedFailureType" lowerBound="1" name="softwareInducedFailureType__InternalFailureOccurrenceDescription" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Identifier" name="ResourceDemandingBehaviour" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//AbstractAction" name="steps_Behaviour" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//ResourceDemandingBehaviour #//FailureHandlingEntity" name="RecoveryActionBehaviour" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//RecoveryActionBehaviour" name="failureHandlingAlternatives__RecoveryActionBehaviour" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" name="FailureOccurrenceDescription" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="0.0" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" lowerBound="1" name="failureProbability" ordered="false" xsi:type="ecore:EAttribute"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//FailureType" name="SoftwareInducedFailureType" xsi:type="ecore:EClass">
+    <eStructuralFeatures eOpposite="#//InternalFailureOccurrenceDescription/softwareInducedFailureType__InternalFailureOccurrenceDescription" eType="#//InternalFailureOccurrenceDescription" name="internalFailureOccurrenceDescriptions__SoftwareInducedFailureType" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//FailureHandlingEntity #//CallReturnAction #//AbstractAction" name="ExternalCallAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" lowerBound="1" name="retryCount" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures eType="#//OperationRequiredRole" lowerBound="1" name="role_ExternalService" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//OperationSignature" lowerBound="1" name="calledService_ExternalService" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="FailureType" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//AbstractInternalControlFlowAction" name="InternalAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//InternalFailureOccurrenceDescription" name="internalFailureOccurrenceDescriptions__InternalAction" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="FailureHandlingEntity" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//FailureType" name="failureTypes_FailureHandlingEntity" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractInternalControlFlowAction" name="RecoveryAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//RecoveryActionBehaviour" lowerBound="1" name="primaryBehaviour__RecoveryAction" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//RecoveryActionBehaviour" lowerBound="2" name="recoveryActionBehaviours__RecoveryAction" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="AbstractAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures eOpposite="#//AbstractAction/successor_AbstractAction" eType="#//AbstractAction" name="predecessor_AbstractAction" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eOpposite="#//AbstractAction/predecessor_AbstractAction" eType="#//AbstractAction" name="successor_AbstractAction" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Signature" name="EventType" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//Parameter" lowerBound="1" name="parameter__EventType" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractAction #//CallAction" name="EmitEventAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//EventType" lowerBound="1" name="eventType__EmitEventAction" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//SourceRole" lowerBound="1" name="sourceRole__EmitEventAction" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//RequiredRole" name="SourceRole" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//EventGroup" lowerBound="1" name="eventGroup__SourceRole" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="Role" xsi:type="ecore:EClass"/>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity #//ResourceInterfaceRequiringEntity" name="InterfaceRequiringEntity" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//RequiredRole" name="requiredRoles_InterfaceRequiringEntity" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="PassiveResource" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="capacity_PassiveResource" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eOpposite="#//ResourceTimeoutFailureType/passiveResource__ResourceTimeoutFailureType" eType="#//ResourceTimeoutFailureType" name="resourceTimeoutFailureType__PassiveResource" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="InterfaceProvidingEntity" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ProvidedRole" name="providedRoles_InterfaceProvidingEntity" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="Signature" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ExceptionType" name="exceptions__Signature" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//FailureType" name="failureType" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers name="VariableUsage" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//VariableCharacterisation" name="variableCharacterisation_VariableUsage" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  <eStructuralFeatures containment="true" eType="#//AbstractNamedReference" lowerBound="1" name="namedReference__VariableUsage" ordered="false" xsi:type="ecore:EReference"/></eClassifiers>
+  <eClassifiers eSuperTypes="#//DataType" name="PrimitiveDataType" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="INT" eType="#//PrimitiveTypeEnum" lowerBound="1" name="type" ordered="false" xsi:type="ecore:EAttribute"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//DelegationConnector" name="SinkDelegationConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="assemblyContext__SinkDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//SinkRole" lowerBound="1" name="outerSinkRole__SinkRole" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//SinkRole" lowerBound="1" name="innerSinkRole__SinkRole" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//DelegationConnector" name="SourceDelegationConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="assemblyContext__SourceDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//SourceRole" lowerBound="1" name="outerSourceRole__SourceRole" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//SourceRole" lowerBound="1" name="innerSourceRole__SourceRole" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//ProvidedRole" name="SinkRole" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//EventGroup" lowerBound="1" name="eventGroup__SinkRole" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="EventChannel" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//EventGroup" lowerBound="1" name="eventGroup__EventChannel" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eOpposite="#//EventChannelSourceConnector/eventChannel__EventChannelSourceConnector" eType="#//EventChannelSourceConnector" name="eventChannelSourceConnector__EventChannel" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eOpposite="#//EventChannelSinkConnector/eventChannel__EventChannelSinkConnector" eType="#//EventChannelSinkConnector" name="eventChannelSinkConnector__EventChannel" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Connector" name="EventChannelSourceConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="assemblyContext__EventChannelSourceConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//SourceRole" lowerBound="1" name="sourceRole__EventChannelSourceRole" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eOpposite="#//EventChannel/eventChannelSourceConnector__EventChannel" eType="#//EventChannel" lowerBound="1" name="eventChannel__EventChannelSourceConnector" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity #//ComposedProvidingRequiringEntity" name="System" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//QoSAnnotations" name="qosAnnotations_System" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="ResourceContainer" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ProcessingResourceSpecification" name="activeResourceSpecifications_ResourceContainer" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//ResourceContainer" name="nestedResourceContainers__ResourceContainer" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Connector" name="AssemblyEventConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" name="filterCondition__AssemblyEventConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="sourceAssemblyContext__AssemblyEventConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="sinkAssemblyContext__AssemblyEventConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//SourceRole" lowerBound="1" name="sourceRole__AssemblyEventConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//SinkRole" lowerBound="1" name="sinkRole__AssemblyEventConnector" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="AllocationContext" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//EventChannel" name="eventChannel__AllocationContext" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//ResourceContainer" lowerBound="1" name="resourceContainer_AllocationContext" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//AssemblyContext" name="assemblyContext_AllocationContext" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//NamedElement" name="ResourceEnvironment" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ResourceContainer" name="resourceContainer_ResourceEnvironment" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//LinkingResource" name="linkingResources__ResourceEnvironment" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Interface" name="EventGroup" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//EventType" name="eventTypes__EventGroup" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="Allocation" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//System" lowerBound="1" name="system_Allocation" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//ResourceEnvironment" name="targetResourceEnvironment_Allocation" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//AllocationContext" name="allocationContexts_Allocation" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Connector" name="EventChannelSinkConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="assemblyContext__EventChannelSinkConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" name="filterCondition__EventChannelSinkConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//SinkRole" lowerBound="1" name="sinkRole__EventChannelSinkConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eOpposite="#//EventChannel/eventChannelSinkConnector__EventChannel" eType="#//EventChannel" lowerBound="1" name="eventChannel__EventChannelSinkConnector" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="LinkingResource" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//CommunicationLinkResourceSpecification" lowerBound="1" name="communicationLinkResourceSpecifications_LinkingResource" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//ResourceContainer" name="connectedResourceContainers_LinkingResource" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//InterfaceProvidingEntity #//InterfaceRequiringEntity" name="InterfaceProvidingRequiringEntity" xsi:type="ecore:EClass"/>
+  <eClassifiers abstract="true" eSuperTypes="#//Role" name="RequiredRole" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//ImplementationComponentType" name="BasicComponent" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//PassiveResource" name="passiveResource_BasicComponent" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//ServiceEffectSpecification" name="serviceEffectSpecifications__BasicComponent" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers name="ExceptionType" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" lowerBound="1" name="exceptionName" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" lowerBound="1" name="exceptionMessage" ordered="false" xsi:type="ecore:EAttribute"/>
+  </eClassifiers>
+  <eClassifiers name="RequiredCharacterisation" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="STRUCTURE" eType="#//VariableCharacterisationType" lowerBound="1" name="type" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures eType="#//Parameter" lowerBound="1" name="parameter" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Role" name="ProvidedRole" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//Interface" name="OperationInterface" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//OperationSignature" name="signatures__OperationInterface" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//ProvidedRole" name="OperationProvidedRole" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//OperationInterface" lowerBound="1" name="providedInterface__OperationProvidedRole" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//RequiredRole" name="OperationRequiredRole" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//OperationInterface" lowerBound="1" name="requiredInterface__OperationRequiredRole" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers name="UserData" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="assemblyContext_userData" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//VariableUsage" name="userDataParameterUsages_UserData" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractUserAction" name="Delay" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="timeSpecification_Delay" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Workload" name="OpenWorkload" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="interArrivalTime_OpenWorkload" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="ScenarioBehaviour" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//AbstractUserAction" name="actions_ScenarioBehaviour" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Workload" name="ClosedWorkload" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" lowerBound="1" name="population" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="thinkTime_ClosedWorkload" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="AbstractUserAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures eOpposite="#//AbstractUserAction/predecessor" eType="#//AbstractUserAction" name="successor" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eOpposite="#//AbstractUserAction/successor" eType="#//AbstractUserAction" name="predecessor" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractUserAction" name="EntryLevelSystemCall" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" lowerBound="1" name="priority" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures eType="#//OperationProvidedRole" lowerBound="1" name="providedRole_EntryLevelSystemCall" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//OperationSignature" lowerBound="1" name="operationSignature__EntryLevelSystemCall" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//VariableUsage" name="outputParameterUsages_EntryLevelSystemCall" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//VariableUsage" name="inputParameterUsages_EntryLevelSystemCall" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractUserAction" name="Loop" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="loopIteration_Loop" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//ScenarioBehaviour" lowerBound="1" name="bodyBehaviour_Loop" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="UsageScenario" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//Workload" lowerBound="1" name="workload_UsageScenario" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//ScenarioBehaviour" lowerBound="1" name="scenarioBehaviour_UsageScenario" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Interface" name="InfrastructureInterface" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//InfrastructureSignature" name="infrastructureSignatures__InfrastructureInterface" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" name="Identifier" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true" lowerBound="1" name="id" ordered="true" xsi:type="ecore:EAttribute"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="SchedulingPolicy" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//ResourceType" name="CommunicationLinkResourceType" xsi:type="ecore:EClass">
+    <eStructuralFeatures eOpposite="#//NetworkInducedFailureType/communicationLinkResourceType__NetworkInducedFailureType" eType="#//NetworkInducedFailureType" name="networkInducedFailureType__CommunicationLinkResourceType" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Identifier" name="ProcessingResourceSpecification" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" lowerBound="1" name="numberOfReplicas" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" lowerBound="1" name="requiredByContainer" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures defaultValueLiteral="0.0" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" lowerBound="1" name="MTTR" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures defaultValueLiteral="0.0" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" lowerBound="1" name="MTTF" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures eType="#//SchedulingPolicy" lowerBound="1" name="schedulingPolicy" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="processingRate_ProcessingResourceSpecification" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//ProcessingResourceType" lowerBound="1" name="activeResourceType_ActiveResourceSpecification" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Identifier" name="CommunicationLinkResourceSpecification" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="0.0" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" lowerBound="1" name="failureProbability" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="latency_CommunicationLinkResourceSpecification" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="throughput_CommunicationLinkResourceSpecification" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//CommunicationLinkResourceType" lowerBound="1" name="communicationLinkResourceType_CommunicationLinkResourceSpecification" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//ResourceType" name="ProcessingResourceType" xsi:type="ecore:EClass">
+    <eStructuralFeatures eOpposite="#//HardwareInducedFailureType/processingResourceType__HardwareInducedFailureType" eType="#//HardwareInducedFailureType" name="hardwareInducedFailureType__ProcessingResourceType" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" name="SpecifiedOutputParameterAbstraction" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//Signature" lowerBound="1" name="signature_SpecifiedOutputParameterAbstraction" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//Role" lowerBound="1" name="role_SpecifiedOutputParameterAbstraction" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//VariableUsage" name="expectedExternalOutputs_SpecifiedOutputParameterAbstraction" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="QoSAnnotations" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//SpecifiedOutputParameterAbstraction" name="specifiedOutputParameterAbstractions_QoSAnnotations" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//SpecifiedQoSAnnotation" name="specifiedQoSAnnotations_QoSAnnotations" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//SpecifiedExecutionTime" name="SystemSpecifiedExecutionTime" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//AbstractInternalControlFlowAction" name="ReleaseAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//PassiveResource" lowerBound="1" name="passiveResource_ReleaseAction" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractInternalControlFlowAction" name="SetVariableAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//VariableUsage" name="localVariableUsages_SetVariableAction" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractInternalControlFlowAction" name="AcquireAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" lowerBound="1" name="timeout" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures defaultValueLiteral="0.0" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" lowerBound="1" name="timeoutValue" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures eType="#//PassiveResource" lowerBound="1" name="passiveresource_AcquireAction" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers name="ServiceEffectSpecification" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" lowerBound="1" name="seffTypeID" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures eType="#//Signature" lowerBound="1" name="describedService__SEFF" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//CallAction" name="CallReturnAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//VariableUsage" name="returnVariableUsage__CallReturnAction" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//Entity" name="AbstractBranchTransition" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ResourceDemandingBehaviour" lowerBound="1" name="branchBehaviour_BranchTransition" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractLoopAction" name="CollectionIteratorAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//Parameter" lowerBound="1" name="parameter_CollectionIteratorAction" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractLoopAction" name="LoopAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="iterationCount_LoopAction" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractBranchTransition" name="GuardedBranchTransition" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="branchCondition_GuardedBranchTransition" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Identifier" name="SynchronisationPoint" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//VariableUsage" name="outputParameterUsage_SynchronisationPoint" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//ForkedBehaviour" lowerBound="1" name="synchronousForkedBehaviours_SynchronisationPoint" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers name="ParametricResourceDemand" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//ProcessingResourceType" lowerBound="1" name="requiredResource_ParametricResourceDemand" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="specification_ParametericResourceDemand" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Identifier #//ServiceEffectSpecification #//ResourceDemandingBehaviour" name="ResourceDemandingSEFF" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ResourceDemandingInternalBehaviour" name="resourceDemandingInternalBehaviours" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//ResourceDemandingBehaviour" name="ResourceDemandingInternalBehaviour" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//CallAction #//AbstractInternalControlFlowAction" name="InternalCallAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//ResourceDemandingInternalBehaviour" lowerBound="1" name="calledResourceDemandingInternalBehaviour" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="ResourceInterface" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ResourceSignature" name="resourceSignatures__ResourceInterface" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Role" name="ResourceProvidedRole" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//ResourceInterface" lowerBound="1" name="providedResourceInterface__ResourceProvidedRole" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers name="ResourceRepository" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ResourceInterface" name="resourceInterfaces__ResourceRepository" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//ResourceType" name="availableResourceTypes_ResourceRepository" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//SchedulingPolicy" name="schedulingPolicies__ResourceRepository" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//Entity" name="ResourceInterfaceProvidingEntity" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ResourceProvidedRole" name="resourceProvidedRoles__ResourceInterfaceProvidingEntity" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitCarryingElement #//ResourceInterfaceProvidingEntity #//Entity" name="ResourceType" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//Entity" name="ResourceInterfaceRequiringEntity" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ResourceRequiredRole" name="resourceRequiredRoles__ResourceInterfaceRequiringEntity" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//FailureType" name="HardwareInducedFailureType" xsi:type="ecore:EClass">
+    <eStructuralFeatures eOpposite="#//ProcessingResourceType/hardwareInducedFailureType__ProcessingResourceType" eType="#//ProcessingResourceType" lowerBound="1" name="processingResourceType__HardwareInducedFailureType" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//SoftwareInducedFailureType" name="ResourceTimeoutFailureType" xsi:type="ecore:EClass">
+    <eStructuralFeatures eOpposite="#//PassiveResource/resourceTimeoutFailureType__PassiveResource" eType="#//PassiveResource" lowerBound="1" name="passiveResource__ResourceTimeoutFailureType" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//FailureType" name="NetworkInducedFailureType" xsi:type="ecore:EClass">
+    <eStructuralFeatures eOpposite="#//CommunicationLinkResourceType/networkInducedFailureType__CommunicationLinkResourceType" eType="#//CommunicationLinkResourceType" lowerBound="1" name="communicationLinkResourceType__NetworkInducedFailureType" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//DelegationConnector" name="ProvidedDelegationConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//OperationProvidedRole" lowerBound="1" name="innerProvidedRole_ProvidedDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//OperationProvidedRole" lowerBound="1" name="outerProvidedRole_ProvidedDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="assemblyContext_ProvidedDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//InterfaceProvidingRequiringEntity #//ComposedStructure" name="ComposedProvidingRequiringEntity" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//Connector" name="AssemblyConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//OperationProvidedRole" lowerBound="1" name="providedRole_AssemblyConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//OperationRequiredRole" lowerBound="1" name="requiredRole_AssemblyConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="requiringAssemblyContext_AssemblyConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="providingAssemblyContext_AssemblyConnector" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//RepositoryComponent #//ComposedProvidingRequiringEntity" name="SubSystem" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//ImplementationComponentType #//ComposedProvidingRequiringEntity" name="CompositeComponent" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//DelegationConnector" name="RequiredDelegationConnector" xsi:type="ecore:EClass">
+    <eStructuralFeatures eType="#//OperationRequiredRole" lowerBound="1" name="outerRequiredRole_RequiredDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//OperationRequiredRole" lowerBound="1" name="innerRequiredRole_RequiredDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures eType="#//AssemblyContext" lowerBound="1" name="assemblyContext_RequiredDelegationConnector" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//ResourceDemandingBehaviour" name="ForkedBehaviour" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//AbstractInternalControlFlowAction" name="StopAction" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//AbstractInternalControlFlowAction" name="ForkAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ForkedBehaviour" name="asynchronousForkedBehaviours_ForkAction" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//SynchronisationPoint" name="synchronisingBehaviours_ForkAction" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractBranchTransition" name="ProbabilisticBranchTransition" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="0.0" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" lowerBound="1" name="branchProbability" ordered="false" xsi:type="ecore:EAttribute"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractInternalControlFlowAction" name="BranchAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//AbstractBranchTransition" name="branches_Branch" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" eSuperTypes="#//AbstractInternalControlFlowAction" name="AbstractLoopAction" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//ResourceDemandingBehaviour" lowerBound="1" name="bodyBehaviour_Loop" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractInternalControlFlowAction" name="StartAction" xsi:type="ecore:EClass"/>
+  <eClassifiers name="VariableCharacterisation" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="STRUCTURE" eType="#//VariableCharacterisationType" lowerBound="1" name="type" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures containment="true" eType="#//PCMRandomVariable" lowerBound="1" name="specification_VariableCharacterisation" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractUserAction" name="Branch" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//BranchTransition" name="branchTransitions_Branch" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers eSuperTypes="#//AbstractUserAction" name="Stop" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//AbstractUserAction" name="Start" xsi:type="ecore:EClass"/>
+  <eClassifiers name="UsageModel" xsi:type="ecore:EClass">
+    <eStructuralFeatures containment="true" eType="#//UserData" name="userData_UsageModel" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+    <eStructuralFeatures containment="true" eType="#//UsageScenario" name="usageScenario_UsageModel" ordered="false" upperBound="-1" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers name="BranchTransition" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="0.0" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" lowerBound="1" name="branchProbability" ordered="false" xsi:type="ecore:EAttribute"/>
+    <eStructuralFeatures containment="true" eType="#//ScenarioBehaviour" lowerBound="1" name="branchedBehaviour_BranchTransition" ordered="false" xsi:type="ecore:EReference"/>
+  </eClassifiers>
+  <eClassifiers abstract="true" name="Workload" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="#//ResourceInterfaceRequiringEntity #//ResourceInterfaceProvidingEntity" name="ResourceInterfaceProvidingRequiringEntity" xsi:type="ecore:EClass"/>
+  <eClassifiers eSuperTypes="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#//Variable" name="CharacterisedVariable" xsi:type="ecore:EClass">
+    <eStructuralFeatures defaultValueLiteral="STRUCTURE" eType="#//VariableCharacterisationType" lowerBound="1" name="characterisationType" ordered="false" xsi:type="ecore:EAttribute"/>
+  </eClassifiers>
+<eClassifiers eSuperTypes="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#//AbstractNamedReference" name="AbstractNamedReference" xsi:type="ecore:EClass"/><eClassifiers eSuperTypes="#//AbstractNamedReference platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#//NamespaceReference" name="NamespaceReference" xsi:type="ecore:EClass"/><eClassifiers eSuperTypes="#//AbstractNamedReference platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#//VariableReference" name="VariableReference" xsi:type="ecore:EClass"/></ecore:EPackage>

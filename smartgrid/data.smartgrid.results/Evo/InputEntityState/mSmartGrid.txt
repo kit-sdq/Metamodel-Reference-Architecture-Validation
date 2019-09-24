@@ -1,0 +1,139 @@
+20/06/2018 10:01:35
+Metamodel: mSmartGrid
+Assessing: extent from txt file
+################################################################################
+EntryClassNames (1):
+disti:smartgridinput.EntityState>input.EntityState
+################################################################################
+Loaded 6 metamodel modules.
+Searching class names in loaded modules.
+DistinguishMatchException matched class input.EntityState: disti:smartgridinput.EntityState>input.EntityState
+################################################################################
+Metamodels (6):
+input
+output
+topo
+typerepo
+base
+graph
+################################################################################
+Relevant modules (1): input
+################################################################################
+EntryClasses (1):
+EntityState
+################################################################################
+################################################################################
+RemainingClasses (33):
+Identifier
+PhysicalConnection
+CommunicatingEntity
+SmartMeter
+InterCom
+EntityState
+NetworkEntity
+PowerState
+Offline
+ScenarioState
+ScenarioResult
+NamedEntity
+GenericController
+Repository
+LogicalCommunication
+NoUplink
+PowerGridNode
+NoPower
+Defect
+NetworkNodeType
+On
+NetworkNode
+Cluster
+ConnectionType
+ConnectionTypeApplication
+Online
+SmartGridTopology
+SmartMeterTypeApplication
+TypeApplications
+NamedIdentifier
+NetworkNodeTypeApplication
+SmartMeterType
+ControlCenter
+################################################################################
+Using ContainmentWalker(grab package, don't grab subclasses, don't grab incoming containments)
+EntityState(obligatory ref)->NetworkEntity (package: graph)
+EntityState(package)->ScenarioState (package: input)
+EntityState(package)->PowerState (package: input)
+NetworkEntity(obligatory ref)->PowerGridNode (package: graph)
+NetworkEntity(super class)->NamedIdentifier (package: base)
+NetworkEntity(package)->PhysicalConnection (package: graph)
+NetworkEntity(package)->CommunicatingEntity (package: graph)
+NetworkEntity(package)->LogicalCommunication (package: graph)
+NamedIdentifier(super class)->Identifier (package: base)
+NamedIdentifier(super class)->NamedEntity (package: base)
+NamedIdentifier(package)->NamedEntity (package: base)
+NamedIdentifier(package)->Identifier (package: base)
+NamedIdentifier(package)->NamedIdentifier (package: base)
+################################################################################
+EntryClasses after walk (11):
+ScenarioState
+PhysicalConnection
+CommunicatingEntity
+Identifier
+NamedEntity
+PowerGridNode
+LogicalCommunication
+NamedIdentifier
+NetworkEntity
+PowerState
+EntityState
+################################################################################
+################################################################################
+RemainingClasses after walk (23):
+SmartMeter
+InterCom
+EntityState
+Offline
+ScenarioResult
+GenericController
+Repository
+NoUplink
+NoPower
+Defect
+NetworkNodeType
+On
+NetworkNode
+Cluster
+ConnectionType
+ConnectionTypeApplication
+Online
+SmartGridTopology
+SmartMeterTypeApplication
+TypeApplications
+NetworkNodeTypeApplication
+SmartMeterType
+ControlCenter
+################################################################################
+################################################################################
+Used Modules (3):
+base
+input
+graph
+################################################################################
+################################################################################
+Unused Modules (3):
+typerepo
+output
+topo
+################################################################################
+Using CompleteCollector
+################################################################################
+Results raw:
+Classes 12
+Attributes 5
+Inheritances 7
+References 8
+Containments 2
+Packages 3
+################################################################################
+Waiting for hypergraph analysis job.
+Persisting current hypergraph to D:\eclipse_oxygen\ws-runtime-dissvali\metamodelassessor.results/results1/InputEntityState/mSmartGrid.xmi
+Persisting current csv data to text file D:\eclipse_oxygen\ws-runtime-dissvali\metamodelassessor.results/results1/InputEntityState/mSmartGrid.csv

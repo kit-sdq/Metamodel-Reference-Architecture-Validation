@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="choreography" nsURI="http://www.example.org/choreography" nsPrefix="choreography">
+  <eClassifiers xsi:type="ecore:EClass" name="GlobalChoreographyTask" eSuperTypes="#//Choreography">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tGlobalChoreographyTask"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initiatingParticipantRef"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mbpmn.collaboration/model/collaboration.ecore#//Participant">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="initiatingParticipantRef"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ChoreographyLoopType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tChoreographyLoopType"/>
+    </eAnnotations>
+    <eLiterals name="None"/>
+    <eLiterals name="Standard" value="1"/>
+    <eLiterals name="MultiInstanceSequential" value="2"/>
+    <eLiterals name="MultiInstanceParallel" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Choreography" eSuperTypes="../../mbpmn.collaboration/model/collaboration.ecore#//Collaboration ../../mbpmn.flows/model/flows.ecore#//FlowElementsContainer">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tChoreography"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eSubpackages name="choreographyactivities" nsURI="choreographyactivities.choreographyactivities"
+      nsPrefix="choreographyactivities">
+    <eClassifiers xsi:type="ecore:EClass" name="ChoreographyTask" eSuperTypes="#//choreographyactivities/ChoreographyActivity">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tChoreographyTask"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageFlowRef" ordered="false"
+          lowerBound="1" upperBound="2" eType="ecore:EClass ../../mbpmn.messaging/model/messaging.ecore#//MessageFlow">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="messageFlowRef"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ChoreographyActivity" abstract="true"
+        eSuperTypes="../../mbpmn.flows/model/flows.ecore#//FlowNode">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tChoreographyActivity"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="participantRefs" ordered="false"
+          lowerBound="2" upperBound="-1" eType="ecore:EClass ../../mbpmn.collaboration/model/collaboration.ecore#//Participant">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="participantRef"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="correlationKeys" ordered="false"
+          upperBound="-1" eType="ecore:EClass ../../mbpmn.correlations/model/correlations.ecore#//CorrelationKey"
+          containment="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="correlationKey"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="initiatingParticipantRef"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mbpmn.collaboration/model/collaboration.ecore#//Participant">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="initiatingParticipantRef"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="loopType" ordered="false"
+          eType="#//ChoreographyLoopType" defaultValueLiteral="None">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="loopType"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CallChoreography" eSuperTypes="#//choreographyactivities/ChoreographyActivity">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tCallChoreography"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="participantAssociations"
+          ordered="false" upperBound="-1" eType="ecore:EClass ../../mbpmn.collaboration/model/collaboration.ecore#//ParticipantAssociation"
+          containment="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="participantAssociation"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="calledChoreographyRef"
+          ordered="false" eType="#//Choreography">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="calledChoreographyRef"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SubChoreography" eSuperTypes="#//choreographyactivities/ChoreographyActivity ../../mbpmn.flows/model/flows.ecore#//FlowElementsContainer">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tSubChoreography"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" ordered="false"
+          upperBound="-1" eType="ecore:EClass ../../mbpmn.artifacts/model/artifacts.ecore#//Artifact"
+          containment="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="artifact"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#artifact"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="events" nsURI="mpcm.domain.extensions.events" nsPrefix="mpcm.domain.extensions.events">
+  <eSubpackages name="repository" nsURI="mpcm.domain.extensions.events.repository"
+      nsPrefix="mpcm.domain.extensions.events.repository">
+    <eClassifiers xsi:type="ecore:EClass" name="EventGroup" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//Interface">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An EventGroup combines a set of EventTypes that are supported by a Sink and/or a Source. This is comparable to an operation interface combining a set of operation signatures."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventTypes__EventGroup"
+          ordered="false" upperBound="-1" eType="#//repository/EventType" containment="true"
+          eOpposite="#//repository/EventType/eventGroup__EventType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EventType" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//Signature">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The EventType represents a single class of events that can be emited by a source or consumed by a sink. The characteristics of the event are defined by the variable included in the EventType.&#xD;&#xA;Due to the extension of the signature class, the EventType is also accessible for ServiceEffectSpecifications (SEFF). By this, a SEFF is able to represent an event handler for this type of events."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter__EventType"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Parameter"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventGroup__EventType"
+          ordered="false" lowerBound="1" eType="#//repository/EventGroup" eOpposite="#//repository/EventGroup/eventTypes__EventGroup"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SourceRole" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//RequiredRole">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventGroup__SourceRole"
+          ordered="false" lowerBound="1" eType="#//repository/EventGroup"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SinkRole" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//ProvidedRole">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A SinkRole, extending a ProvidedRole, identifies components that provide an event handler for specific EventTypes. As for SourceRoles, the EventTypes, a SinkRole is compatible with, are defined by the associated EventGroup."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventGroup__SinkRole"
+          ordered="false" lowerBound="1" eType="#//repository/EventGroup"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="seff" nsURI="mpcm.domain.extensions.events.seff" nsPrefix="mpcm.domain.extensions.events.seff">
+    <eClassifiers xsi:type="ecore:EClass" name="EmitEventAction" eSuperTypes="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractAction ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//CallAction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="EmitEventAction specifies when a component emits an event during its processing. To enable the specification of the EventType characteristics, the EmitEventAction extends the CallAction. The EmitEventAction defines which type of events are emited, their characteristics and the SourceRole that triggered. Each EmitEventAction is limited to one type of events. To support multiple types of events, multiple EmitEventActions have to be used."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventType__EmitEventAction"
+          ordered="false" lowerBound="1" eType="#//repository/EventType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRole__EmitEventAction"
+          ordered="false" lowerBound="1" eType="#//repository/SourceRole"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="composition" nsURI="mpcm.domain.extensions.events.composition"
+      nsPrefix="mpcm.domain.extensions.events.composition">
+    <eClassifiers xsi:type="ecore:EClass" name="AssemblyEventConnector" eSuperTypes="../../mpcm.paradigm.composition/model/composition.ecore#//Connector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An AssemblyConnector is a bidirectional link of two assembly contexts. Intuitively, an AssemblyEventConnector connects a sink and a source. AssemblyContext must refer to the tuple (Role,AssemblyContext) in order to uniquely identify which component sink and source roles communicate with each other."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sinkRole__AssemblyEventConnector"
+          ordered="false" lowerBound="1" eType="#//repository/SinkRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRole__AssemblyEventConnector"
+          ordered="false" lowerBound="1" eType="#//repository/SourceRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sinkAssemblyContext__AssemblyEventConnector"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceAssemblyContext__AssemblyEventConnector"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="filterCondition__AssemblyEventConnector"
+          ordered="false" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EventChannel" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity ../../mpcm.paradigm.composition/model/composition.ecore#//Containable">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventGroup__EventChannel"
+          ordered="false" lowerBound="1" eType="#//repository/EventGroup"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventChannelSourceConnector__EventChannel"
+          ordered="false" upperBound="-1" eType="#//composition/EventChannelSourceConnector"
+          eOpposite="#//composition/EventChannelSourceConnector/eventChannel__EventChannelSourceConnector"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventChannelSinkConnector__EventChannel"
+          ordered="false" upperBound="-1" eType="#//composition/EventChannelSinkConnector"
+          eOpposite="#//composition/EventChannelSinkConnector/eventChannel__EventChannelSinkConnector"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentStructure__EventChannel"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//ComposedStructure"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EventChannelSourceConnector" eSuperTypes="../../mpcm.paradigm.composition/model/composition.ecore#//Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRole__EventChannelSourceRole"
+          ordered="false" lowerBound="1" eType="#//repository/SourceRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext__EventChannelSourceConnector"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventChannel__EventChannelSourceConnector"
+          ordered="false" lowerBound="1" eType="#//composition/EventChannel" eOpposite="#//composition/EventChannel/eventChannelSourceConnector__EventChannel"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EventChannelSinkConnector" eSuperTypes="../../mpcm.paradigm.composition/model/composition.ecore#//Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sinkRole__EventChannelSinkConnector"
+          ordered="false" lowerBound="1" eType="#//repository/SinkRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="filterCondition__EventChannelSinkConnector"
+          ordered="false" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext__EventChannelSinkConnector"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventChannel__EventChannelSinkConnector"
+          ordered="false" lowerBound="1" eType="#//composition/EventChannel" eOpposite="#//composition/EventChannel/eventChannelSinkConnector__EventChannel"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SourceDelegationConnector" eSuperTypes="../../mpcm.paradigm.composition/model/composition.ecore#//DelegationConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A SourceDelegationConnector delegates outgoing events of encapsulated assembly contexts to an external souce role of the enclosing assembly context."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerSourceRole__SourceRole"
+          ordered="false" lowerBound="1" eType="#//repository/SourceRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outerSourceRole__SourceRole"
+          ordered="false" lowerBound="1" eType="#//repository/SourceRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext__SourceDelegationConnector"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SinkDelegationConnector" eSuperTypes="../../mpcm.paradigm.composition/model/composition.ecore#//DelegationConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A SinkDelegationConnector delegates an incoming event to the encapsulated assembly contexts to inner sink roles."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext__SinkDelegationConnector"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerSinkRole__SinkRole"
+          ordered="false" lowerBound="1" eType="#//repository/SinkRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outerSinkRole__SinkRole"
+          ordered="false" lowerBound="1" eType="#//repository/SinkRole"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="allocation" nsURI="mpcm.domain.extensions.events.allocation"
+      nsPrefix="mpcm.domain.extensions.events.allocation">
+    <eClassifiers xsi:type="ecore:EClass" name="EventChannelAllocation" eSuperTypes="../../mpcm.domain.allocation/model/allocation.ecore#//Deployable">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventChannel" lowerBound="1"
+          eType="#//composition/EventChannel"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

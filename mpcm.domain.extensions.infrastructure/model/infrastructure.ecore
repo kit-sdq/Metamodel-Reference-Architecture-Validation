@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="infrastructure" nsURI="mpcm.domain.extensions.infrastructure"
+    nsPrefix="mpcm.domain.extensions.infrastructure">
+  <eSubpackages name="repository" nsURI="mpcm.domain.extensions.infrastructure.repository"
+      nsPrefix="mpcm.domain.extensions.infrastructure.repository">
+    <eClassifiers xsi:type="ecore:EClass" name="InfrastructureRepositoryRoot">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="infrastructurecomponent"
+          upperBound="-1" eType="#//repository/InfrastructureComponent" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InfrastructureComponent">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1"
+          eType="ecore:EClass ../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InfrastructureInterface" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//Interface">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="infrastructureSignatures__InfrastructureInterface"
+          ordered="false" upperBound="-1" eType="#//repository/InfrastructureSignature"
+          containment="true" eOpposite="#//repository/InfrastructureSignature/infrastructureInterface__InfrastructureSignature"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InfrastructureSignature" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//Signature">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameters__InfrastructureSignature"
+          ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Parameter"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="infrastructureInterface__InfrastructureSignature"
+          ordered="false" lowerBound="1" eType="#//repository/InfrastructureInterface"
+          eOpposite="#//repository/InfrastructureInterface/infrastructureSignatures__InfrastructureInterface"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InfrastructureProvidedRole" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//ProvidedRole">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="providedInterface__InfrastructureProvidedRole"
+          ordered="false" lowerBound="1" eType="#//repository/InfrastructureInterface"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InfrastructureRequiredRole" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//RequiredRole">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredInterface__InfrastructureRequiredRole"
+          ordered="false" lowerBound="1" eType="#//repository/InfrastructureInterface"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="seff" nsURI="mpcm.domain.extensions.infrastructure.seff" nsPrefix="mpcm.domain.extensions.infrastructure.seff">
+    <eClassifiers xsi:type="ecore:EClass" name="InfrastructureSEFFRoot">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="infrastructurecall" upperBound="-1"
+          eType="#//seff/InfrastructureCall" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InfrastructureCall" eSuperTypes="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//CallAction">
+      <eOperations name="SignatureMustBelongToUsedRequiredRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="signature__InfrastructureCall.infrastructureInterface__InfrastructureSignature = requiredRole__InfrastructureCall.requiredInterface__InfrastructureRequiredRole"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="ReferencedRequiredRoleMustBeRequiredByComponent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="self.oclAsType(ecore::EObject)->closure(eContainer())->select( entity | entity.oclIsKindOf(mpcm::core::entity::InterfaceRequiringEntity)).oclAsType(mpcm::core::entity::InterfaceRequiringEntity).requiredRoles_InterfaceRequiringEntity->includes(self.requiredRole__InfrastructureCall)"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="SignatureRoleCombinationMustBeUniqueWithinAbstractInternalControlFlowAction"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="self.action__InfrastructureCall.infrastructureCall__Action->select(call | call.requiredRole__InfrastructureCall = self.requiredRole__InfrastructureCall and call.signature__InfrastructureCall=self.signature__InfrastructureCall)->size() = 1"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="signature__InfrastructureCall"
+          ordered="false" lowerBound="1" eType="#//repository/InfrastructureSignature"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="numberOfCalls__InfrastructureCall"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action__InfrastructureCall"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractInternalControlFlowAction"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredRole__InfrastructureCall"
+          ordered="false" lowerBound="1" eType="#//repository/InfrastructureRequiredRole"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="composition" nsURI="mpcm.domain.extensions.infrastructure.composition"
+      nsPrefix="mpcm.domain.extensions.infrastructure.composition">
+    <eClassifiers xsi:type="ecore:EClass" name="AssemblyInfrastructureConnector" eSuperTypes="../../mpcm.paradigm.composition/model/composition.ecore#//Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="providedRole__AssemblyInfrastructureConnector"
+          ordered="false" lowerBound="1" eType="#//repository/InfrastructureProvidedRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredRole__AssemblyInfrastructureConnector"
+          ordered="false" lowerBound="1" eType="#//repository/InfrastructureRequiredRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="providingAssemblyContext__AssemblyInfrastructureConnector"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requiringAssemblyContext__AssemblyInfrastructureConnector"
+          ordered="false" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ProvidedInfrastructureDelegationConnector"
+        eSuperTypes="../../mpcm.paradigm.composition/model/composition.ecore#//DelegationConnector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerProvidedRole__ProvidedInfrastructureDelegationConnector"
+          ordered="false" lowerBound="1" eType="#//repository/InfrastructureProvidedRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outerProvidedRole__ProvidedInfrastructureDelegationConnector"
+          ordered="false" lowerBound="1" eType="#//repository/InfrastructureProvidedRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext__ProvidedInfrastructureDelegationConnector"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RequiredInfrastructureDelegationConnector"
+        eSuperTypes="../../mpcm.paradigm.composition/model/composition.ecore#//DelegationConnector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerRequiredRole__RequiredInfrastructureDelegationConnector"
+          ordered="false" lowerBound="1" eType="#//repository/InfrastructureRequiredRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outerRequiredRole__RequiredInfrastructureDelegationConnector"
+          ordered="false" lowerBound="1" eType="#//repository/InfrastructureRequiredRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext__RequiredInfrastructureDelegationConnector"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="topo" nsURI="http://www.example.org/topo" nsPrefix="topo">
+  <eClassifiers xsi:type="ecore:EClass" name="SmartGridTopology" eSuperTypes="../../msmartgrid.paradigm.base/model/base.ecore#//NamedIdentifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsNE" upperBound="-1"
+        eType="ecore:EClass ../../msmartgrid.paradigm.graph/model/graph.ecore#//NetworkEntity"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsPGN" upperBound="-1"
+        eType="ecore:EClass ../../msmartgrid.paradigm.graph/model/graph.ecore#//PowerGridNode"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsPC" upperBound="-1"
+        eType="ecore:EClass ../../msmartgrid.paradigm.graph/model/graph.ecore#//PhysicalConnection"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsLC" upperBound="-1"
+        eType="ecore:EClass ../../msmartgrid.paradigm.graph/model/graph.ecore#//LogicalCommunication"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SmartMeter" eSuperTypes="../../msmartgrid.paradigm.graph/model/graph.ecore#//CommunicatingEntity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Aggregation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkNode" eSuperTypes="../../msmartgrid.paradigm.graph/model/graph.ecore#//NetworkEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlCenter" eSuperTypes="../../msmartgrid.paradigm.graph/model/graph.ecore#//CommunicatingEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericController" eSuperTypes="../../msmartgrid.paradigm.graph/model/graph.ecore#//CommunicatingEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InterCom" eSuperTypes="../../msmartgrid.paradigm.graph/model/graph.ecore#//CommunicatingEntity"/>
+</ecore:EPackage>

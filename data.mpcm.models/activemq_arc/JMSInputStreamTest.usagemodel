@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_0LzbUJhYEeWKgoTb5jIgDA" entityName="testStreams">
+    <scenarioBehaviour_UsageScenario id="_0LzbU5hYEeWKgoTb5jIgDA" entityName="testStreams">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_0LzbUZhYEeWKgoTb5jIgDA" successor="_0N5GAZhYEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_0N5GAZhYEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.streams.JMSInputStreamTest.java.JMSInputStreamTest.testStreams() at 1986" successor="_0R6qYphYEeWKgoTb5jIgDA" predecessor="_0LzbUZhYEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_0R6qYphYEeWKgoTb5jIgDA" entityName="default loop count value" successor="_0TQHIJhYEeWKgoTb5jIgDA" predecessor="_0N5GAZhYEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_0R6qY5hYEeWKgoTb5jIgDA" entityName=" @position: org.activemq.streams.JMSInputStreamTest.java.JMSInputStreamTest.testStreams() from 2222 to 2257">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_0R6qZJhYEeWKgoTb5jIgDA" successor="_0R6qZphYEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_0R6qZphYEeWKgoTb5jIgDA" predecessor="_0R6qZJhYEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_0TQHIJhYEeWKgoTb5jIgDA" entityName="default loop count value" successor="_0LzbUphYEeWKgoTb5jIgDA" predecessor="_0R6qYphYEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_0TQHIZhYEeWKgoTb5jIgDA" entityName=" @position: org.activemq.streams.JMSInputStreamTest.java.JMSInputStreamTest.testStreams() from 2321 to 2356">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_0TQHIphYEeWKgoTb5jIgDA" successor="_0T2kEZhYEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_0T2kEZhYEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.streams.JMSInputStreamTest.java.JMSInputStreamTest.testStreams().Block at 2402" successor="_0T2kEphYEeWKgoTb5jIgDA" predecessor="_0TQHIphYEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_0T2kEphYEeWKgoTb5jIgDA" predecessor="_0T2kEZhYEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_0LzbUphYEeWKgoTb5jIgDA" predecessor="_0TQHIJhYEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_0T2kE5hYEeWKgoTb5jIgDA" entityName="testLarge">
+    <scenarioBehaviour_UsageScenario id="_0T2kFphYEeWKgoTb5jIgDA" entityName="testLarge">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_0T2kFJhYEeWKgoTb5jIgDA" successor="_0T2kF5hYEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_0T2kF5hYEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.streams.JMSInputStreamTest.java.JMSInputStreamTest.testLarge() from 2616 to 2659" successor="_0cpTsphYEeWKgoTb5jIgDA" predecessor="_0T2kFJhYEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_0cpTsphYEeWKgoTb5jIgDA" entityName="default loop count value" successor="_0T2kFZhYEeWKgoTb5jIgDA" predecessor="_0T2kF5hYEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_0cpTs5hYEeWKgoTb5jIgDA" entityName=" @position: org.activemq.streams.JMSInputStreamTest.java.JMSInputStreamTest.testLarge() from 3514 to 3551">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_0cpTtJhYEeWKgoTb5jIgDA" successor="_0cpTtphYEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_0cpTtphYEeWKgoTb5jIgDA" predecessor="_0cpTtJhYEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_0T2kFZhYEeWKgoTb5jIgDA" predecessor="_0cpTsphYEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

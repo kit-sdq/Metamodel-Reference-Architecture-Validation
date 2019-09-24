@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_j4dp8LLWEeWT3tCwcp23sg" entityName="testSenderWithSpringXml">
+    <scenarioBehaviour_UsageScenario id="_j4dp87LWEeWT3tCwcp23sg" entityName="testSenderWithSpringXml">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_j4dp8bLWEeWT3tCwcp23sg" successor="_j4dp9LLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j4dp9LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringTest.java.SpringTest.testSenderWithSpringXml() at 1152" successor="_j43SkbLWEeWT3tCwcp23sg" predecessor="_j4dp8bLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j43SkbLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringTest.java.SpringTest.assertSenderConfig() at 2112" successor="_j435oLLWEeWT3tCwcp23sg" predecessor="_j4dp9LLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j435oLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringProducer.java.SpringProducer.getMessageCount() from 2054 to 2082" successor="_j4dp8rLWEeWT3tCwcp23sg" predecessor="_j43SkbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_j4dp8rLWEeWT3tCwcp23sg" predecessor="_j435oLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_j44gsLLWEeWT3tCwcp23sg" entityName="testSenderWithSpringXmlAndQueue">
+    <scenarioBehaviour_UsageScenario id="_j44gs7LWEeWT3tCwcp23sg" entityName="testSenderWithSpringXmlAndQueue">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_j44gsbLWEeWT3tCwcp23sg" successor="_j44gtLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j44gtLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringTest.java.SpringTest.testSenderWithSpringXmlAndQueue() at 1328" successor="_j5HKMLLWEeWT3tCwcp23sg" predecessor="_j44gsbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j5HKMLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringTest.java.SpringTest.assertSenderConfig() at 2112" successor="_j5HKMrLWEeWT3tCwcp23sg" predecessor="_j44gtLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j5HKMrLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringProducer.java.SpringProducer.getMessageCount() from 2054 to 2082" successor="_j44gsrLWEeWT3tCwcp23sg" predecessor="_j5HKMLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_j44gsrLWEeWT3tCwcp23sg" predecessor="_j5HKMrLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_j5HxQLLWEeWT3tCwcp23sg" entityName="testSenderWithSpringXmlUsingJNDI">
+    <scenarioBehaviour_UsageScenario id="_j5HxQ7LWEeWT3tCwcp23sg" entityName="testSenderWithSpringXmlUsingJNDI">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_j5HxQbLWEeWT3tCwcp23sg" successor="_j5HxRLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j5HxRLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringTest.java.SpringTest.testSenderWithSpringXmlUsingJNDI() at 1504" successor="_j5Xo4LLWEeWT3tCwcp23sg" predecessor="_j5HxQbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j5Xo4LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringTest.java.SpringTest.assertSenderConfig() at 2112" successor="_j5Xo4rLWEeWT3tCwcp23sg" predecessor="_j5HxRLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j5Xo4rLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringProducer.java.SpringProducer.getMessageCount() from 2054 to 2082" successor="_j5HxQrLWEeWT3tCwcp23sg" predecessor="_j5Xo4LLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_j5HxQrLWEeWT3tCwcp23sg" predecessor="_j5Xo4rLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_j5YP8LLWEeWT3tCwcp23sg" entityName="testSenderWithSpringXmlEmbeddedBrokerConfiguredViaXml">
+    <scenarioBehaviour_UsageScenario id="_j5YP87LWEeWT3tCwcp23sg" entityName="testSenderWithSpringXmlEmbeddedBrokerConfiguredViaXml">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_j5YP8bLWEeWT3tCwcp23sg" successor="_j5YP9LLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j5YP9LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringTest.java.SpringTest.testSenderWithSpringXmlEmbeddedBrokerConfiguredViaXml() at 1705" successor="_j5sZAbLWEeWT3tCwcp23sg" predecessor="_j5YP8bLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j5sZAbLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringTest.java.SpringTest.assertSenderConfig() at 2112" successor="_j5tAELLWEeWT3tCwcp23sg" predecessor="_j5YP9LLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_j5tAELLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.spring.SpringProducer.java.SpringProducer.getMessageCount() from 2054 to 2082" successor="_j5YP8rLWEeWT3tCwcp23sg" predecessor="_j5sZAbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_j5YP8rLWEeWT3tCwcp23sg" predecessor="_j5tAELLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="edu.kit.ipd.sdq.kamp.ui.CreateSubalternativeContribution"
+            objectClass="org.eclipse.core.resources.IContainer">
+         <menu
+               icon="../edu.kit.ipd.sdq.kamp/icons/edit.png"
+               id="edu.kit.ipd.sdq.kamp.menukamp"
+               label="KAMP">
+         </menu>
+         <action
+               class="edu.kit.ipd.sdq.kamp.ui.CreateSubalternativeAction"
+               icon="../edu.kit.ipd.sdq.kamp/icons/editcopy.png"
+               id="edu.kit.ipd.sdq.kamp.ui.CreateSubalternativeActionID"
+               label="Create architecture sub-version"
+               menubarPath="kamp">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

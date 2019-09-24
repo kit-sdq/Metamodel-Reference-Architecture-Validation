@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_k-vVgLLWEeWT3tCwcp23sg" entityName="testGetPacketType">
+    <scenarioBehaviour_UsageScenario id="_k-vVg7LWEeWT3tCwcp23sg" entityName="testGetPacketType">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_k-vVgbLWEeWT3tCwcp23sg" successor="_k-vVhLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_k-vVhLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testGetPacketType() at 1057" successor="_k_CQcLLWEeWT3tCwcp23sg" predecessor="_k-vVgbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_CQcLLWEeWT3tCwcp23sg" entityName="getPacketType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testGetPacketType() at 1131" successor="_k-vVgrLWEeWT3tCwcp23sg" predecessor="_k-vVhLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E9fmkrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_k-vVgrLWEeWT3tCwcp23sg" predecessor="_k_CQcLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_k_C3gbLWEeWT3tCwcp23sg" entityName="testReadXidPacket">
+    <scenarioBehaviour_UsageScenario id="_k_C3hLLWEeWT3tCwcp23sg" entityName="testReadXidPacket">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_k_C3grLWEeWT3tCwcp23sg" successor="_k_EssLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_k_EssLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() at 3809" successor="_k_EssbLWEeWT3tCwcp23sg" predecessor="_k_C3grLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_EssbLWEeWT3tCwcp23sg" entityName="setType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() at 3837" successor="_k_EssrLWEeWT3tCwcp23sg" predecessor="_k_EssLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoK20rLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_EssrLWEeWT3tCwcp23sg" entityName="setXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() at 3863" successor="_k_Ess7LWEeWT3tCwcp23sg" predecessor="_k_EssbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoK20bLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_k_Ess7LWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() from 3864 to 3884" successor="_k_EstLLWEeWT3tCwcp23sg" predecessor="_k_EssrLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_EstLLWEeWT3tCwcp23sg" entityName="writePacketToByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testReadXidPacket() at 1469" successor="_k_FTwLLWEeWT3tCwcp23sg" predecessor="_k_Ess7LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_dwOgYbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_FTwLLWEeWT3tCwcp23sg" entityName="readPacketFromByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testReadXidPacket() at 1564" successor="_k_otYLLWEeWT3tCwcp23sg" predecessor="_k_EstLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_dwPHcrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_k_otYLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3209" successor="_k_otYbLWEeWT3tCwcp23sg" predecessor="_k_FTwLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_otYbLWEeWT3tCwcp23sg" entityName="getType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3342" successor="_k_otYrLWEeWT3tCwcp23sg" predecessor="_k_otYLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoKPwLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_otYrLWEeWT3tCwcp23sg" entityName="getType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3342" successor="_k_pUcLLWEeWT3tCwcp23sg" predecessor="_k_otYbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoKPwLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_pUcLLWEeWT3tCwcp23sg" entityName="getXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3404" successor="_k_pUcbLWEeWT3tCwcp23sg" predecessor="_k_otYrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoKPwbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_pUcbLWEeWT3tCwcp23sg" entityName="getXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3404" successor="_k_C3g7LWEeWT3tCwcp23sg" predecessor="_k_pUcLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoKPwbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_k_C3g7LWEeWT3tCwcp23sg" predecessor="_k_pUcbLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_k_pUcrLWEeWT3tCwcp23sg" entityName="testReadNoXidPacket">
+    <scenarioBehaviour_UsageScenario id="_k_pUdbLWEeWT3tCwcp23sg" entityName="testReadNoXidPacket">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_k_pUc7LWEeWT3tCwcp23sg" successor="_k_qikLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_k_qikLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createNoXidPacket() at 3992" successor="_k_qikbLWEeWT3tCwcp23sg" predecessor="_k_pUc7LWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_qikbLWEeWT3tCwcp23sg" entityName="setType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createNoXidPacket() at 4041" successor="_k_rJoLLWEeWT3tCwcp23sg" predecessor="_k_qikLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoK20rLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_k_rJoLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createNoXidPacket() from 4042 to 4062" successor="_k_rJobLWEeWT3tCwcp23sg" predecessor="_k_qikbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_rJobLWEeWT3tCwcp23sg" entityName="writePacketToByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testReadNoXidPacket() at 1945" successor="_k_rJorLWEeWT3tCwcp23sg" predecessor="_k_rJoLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_dwOgYbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_rJorLWEeWT3tCwcp23sg" entityName="readPacketFromByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testReadNoXidPacket() at 2040" successor="_k_uM8LLWEeWT3tCwcp23sg" predecessor="_k_rJobLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_dwPHcrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_k_uM8LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3209" successor="_k_uM8bLWEeWT3tCwcp23sg" predecessor="_k_rJorLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_uM8bLWEeWT3tCwcp23sg" entityName="getType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3342" successor="_k_uM8rLWEeWT3tCwcp23sg" predecessor="_k_uM8LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoKPwLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_uM8rLWEeWT3tCwcp23sg" entityName="getType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3342" successor="_k_uM87LWEeWT3tCwcp23sg" predecessor="_k_uM8bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoKPwLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_uM87LWEeWT3tCwcp23sg" entityName="getXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3404" successor="_k_uM9LLWEeWT3tCwcp23sg" predecessor="_k_uM8rLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoKPwbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_uM9LLWEeWT3tCwcp23sg" entityName="getXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3404" successor="_k_pUdLLWEeWT3tCwcp23sg" predecessor="_k_uM87LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoKPwbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_k_pUdLLWEeWT3tCwcp23sg" predecessor="_k_uM9LLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_k_u0ALLWEeWT3tCwcp23sg" entityName="testTime">
+    <scenarioBehaviour_UsageScenario id="_k_u0A7LWEeWT3tCwcp23sg" entityName="testTime">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_k_u0AbLWEeWT3tCwcp23sg" successor="_k_xQQLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_k_xQQLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() at 3809" successor="_k_xQQbLWEeWT3tCwcp23sg" predecessor="_k_u0AbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_xQQbLWEeWT3tCwcp23sg" entityName="setType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() at 3837" successor="_k_xQQrLWEeWT3tCwcp23sg" predecessor="_k_xQQLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoK20rLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_k_xQQrLWEeWT3tCwcp23sg" entityName="setXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() at 3863" successor="_k_xQQ7LWEeWT3tCwcp23sg" predecessor="_k_xQQbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EoK20bLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_k_xQQ7LWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() from 3864 to 3884" successor="_lALf8LLWEeWT3tCwcp23sg" predecessor="_k_xQQrLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_lALf8LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testTime() at 2421" successor="_lALf8bLWEeWT3tCwcp23sg" predecessor="_k_xQQ7LWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_lALf8bLWEeWT3tCwcp23sg" entityName="default loop count value" successor="_k_u0ArLWEeWT3tCwcp23sg" predecessor="_lALf8LLWEeWT3tCwcp23sg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_lALf8rLWEeWT3tCwcp23sg" entityName=" @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testTime() from 2479 to 2522">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_lALf87LWEeWT3tCwcp23sg" successor="_lALf9LLWEeWT3tCwcp23sg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lALf9LLWEeWT3tCwcp23sg" entityName="writePacketToByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testTime().Block at 2591" successor="_lALf9bLWEeWT3tCwcp23sg" predecessor="_lALf87LWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_dwOgYbLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lALf9bLWEeWT3tCwcp23sg" entityName="readPacketFromByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testTime().Block at 2676" successor="_lALf9rLWEeWT3tCwcp23sg" predecessor="_lALf9LLWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_dwPHcrLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_lALf9rLWEeWT3tCwcp23sg" predecessor="_lALf9bLWEeWT3tCwcp23sg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_k_u0ArLWEeWT3tCwcp23sg" predecessor="_lALf8bLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

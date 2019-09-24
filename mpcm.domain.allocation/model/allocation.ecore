@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="allocation" nsURI="mpcm.domain.allocation" nsPrefix="mpcm.domain.allocation">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="All PCM entities related to model allocation"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Allocation" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The allocation repository holding all available allocation contexts of a model."/>
+    </eAnnotations>
+    <eOperations name="EachAssemblyContextWithinSystemHasToBeAllocatedExactlyOnce"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="-- Get all AssemblyContexts used by this system, that is &#xD;&#xA;-- 1) the AssemblyContexts directly used in the system and &#xD;&#xA;self.system_Allocation.assemblyContexts__ComposedStructure&#xD;&#xA;-- 2) the AssemblyContexts used by SubSystems in the System. Note that if a SubSystem also contains other Subsystems,&#xD;&#xA;-- we need to get those AssemblyContexts too: Thus, we use a closure here&#xD;&#xA;->union(self.system_Allocation.assemblyContexts__ComposedStructure->closure(&#xD;&#xA;encapsulatedComponent__AssemblyContext->select(composites|composites.oclIsTypeOf(mpcm::subsystem::SubSystem)).oclAsType(mpcm::subsystem::SubSystem)&#xD;&#xA;.assemblyContexts__ComposedStructure))&#xD;&#xA;--Now, after we collected all AssemblyContexts somehow used, we check whether they need to be allocated &#xD;&#xA;--and if yes, if they are allocated.&#xD;&#xA;->forAll(assemblyCtx|&#xD;&#xA;--AssemblyContexts that contain SubSystems do not need to be allocated&#xD;&#xA;assemblyCtx.encapsulatedComponent__AssemblyContext.oclIsTypeOf(mpcm::subsystem::SubSystem) or&#xD;&#xA;--All others need to be allocated. &#xD;&#xA;self.allocationContexts_Allocation->select(allocationCtx|&#xD;&#xA;allocationCtx.assemblyContext_AllocationContext = assemblyCtx)->size() = 1)"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Each Assembly of BasicComponents and CompositeComponents used in the referenced System must be allocated. &#xD;&#xA;&#xD;&#xA;Things are complicated by the introduction of SubSystems. Here, the Assembly of the SubSystem itself does not have to be allocated. If it is not allocated, all BasicComponents and CompositeComponents contained in this SubSystem (also transitively over several nested and not-allocated SubSystems) need to be allocated. &#xD;&#xA;&#xD;&#xA;The constraint is realised wth a closure over the AssemblyContext contained in a ComposedStructure. "/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="CommunicatingServersHaveToBeConnectedByLinkingResource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.allocationContexts_Allocation->forAll(a | self.allocationContexts_Allocation->forAll(b | &#xD;&#xA;    --- if a and b are not on the same server&#xD;&#xA;    (a.resourceContainer_AllocationContext &lt;> b.resourceContainer_AllocationContext &#xD;&#xA;    and&#xD;&#xA;    --  and if the assembly contexts of a and b are connected&#xD;&#xA;      self.system_Allocation.connectors__ComposedStructure->select(conn | conn.oclIsTypeOf(mpcm::core::composition::AssemblyConnector)).oclAsType(mpcm::core::composition::AssemblyConnector)->exists(conn | &#xD;&#xA;         (conn.providingAssemblyContext_AssemblyConnector = a.assemblyContext_AllocationContext  &#xD;&#xA;         and &#xD;&#xA;         conn.requiringAssemblyContext_AssemblyConnector = b.assemblyContext_AllocationContext )&#xD;&#xA;         or &#xD;&#xA;          (conn.providingAssemblyContext_AssemblyConnector = b.assemblyContext_AllocationContext  &#xD;&#xA;         and &#xD;&#xA;         conn.requiringAssemblyContext_AssemblyConnector = a.assemblyContext_AllocationContext )&#xD;&#xA;       )&#xD;&#xA;     )&#xD;&#xA;     -- then the servers have to be connected by a linking resource&#xD;&#xA;     implies &#xD;&#xA;     self.targetResourceEnvironment_Allocation.linkingResources__ResourceEnvironment->exists(l | &#xD;&#xA;        -- l connects the two&#xD;&#xA;        l.connectedResourceContainers_LinkingResource->includes(a.resourceContainer_AllocationContext)&#xD;&#xA;        and &#xD;&#xA;        l.connectedResourceContainers_LinkingResource->includes(b.resourceContainer_AllocationContext)&#xD;&#xA;     )&#xD;&#xA;  ))"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetResourceEnvironment_Allocation"
+        ordered="false" eType="ecore:EClass ../../mpcm.domain.environment/model/environment.ecore#//Environment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="system_Allocation" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../mpcm.domain.composition/model/composition.ecore#//System"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allocationContexts_Allocation"
+        ordered="false" upperBound="-1" eType="#//AllocationContext" containment="true"
+        eOpposite="#//AllocationContext/allocation_AllocationContext"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AllocationContext" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Mapping between AssemblyContext and Resource. Sometimes referred to as &quot;Deployment&quot;."/>
+    </eAnnotations>
+    <eOperations name="OneAssemblyContextOrOneEventChannelShouldBeReferred" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="not(self.assemblyContext_AllocationContext.oclIsUndefined()) xor not(self.eventChannel__AllocationContext.oclIsUndefined())"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceContainer_AllocationContext"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.domain.environment/model/environment.ecore#//Container"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext_AllocationContext"
+        ordered="false" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allocation_AllocationContext"
+        ordered="false" lowerBound="1" eType="#//Allocation" eOpposite="#//Allocation/allocationContexts_Allocation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deployables" ordered="false"
+        eType="#//Deployable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Deployable" abstract="true"/>
+</ecore:EPackage>

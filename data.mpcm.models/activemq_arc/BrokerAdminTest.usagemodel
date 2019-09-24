@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_HjVKUJhREeWKgoTb5jIgDA" entityName="testInitialState">
+    <scenarioBehaviour_UsageScenario id="_HjVKU5hREeWKgoTb5jIgDA" entityName="testInitialState">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_HjVKUZhREeWKgoTb5jIgDA" successor="_HjVKVZhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_HjVKVZhREeWKgoTb5jIgDA" entityName="listMessageContainerAdmin:  @position: org.activemq.broker.BrokerAdminTest.java.BrokerAdminTest.testInitialState() at 1743" successor="_IROyIJhREeWKgoTb5jIgDA" predecessor="_HjVKUZhREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_HjVKVphREeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IROyIJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.broker.BrokerAdminTest.java.BrokerAdminTest.testInitialState() at 1783" successor="_HjVKUphREeWKgoTb5jIgDA" predecessor="_HjVKVZhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_HjVKUphREeWKgoTb5jIgDA" predecessor="_IROyIJhREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_IROyIZhREeWKgoTb5jIgDA" entityName="testCreateQueue">
+    <scenarioBehaviour_UsageScenario id="_IROyJJhREeWKgoTb5jIgDA" entityName="testCreateQueue">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_IROyIphREeWKgoTb5jIgDA" successor="_IRURsZhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IRURsZhREeWKgoTb5jIgDA" entityName="createMessageContainer:  @position: org.activemq.broker.BrokerAdminTest.java.BrokerAdminTest.testCreateQueue() at 2057" successor="_IRURsphREeWKgoTb5jIgDA" predecessor="_IROyIphREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_9mPTXZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IRURsphREeWKgoTb5jIgDA" entityName="listMessageContainerAdmin:  @position: org.activemq.broker.BrokerAdminTest.java.BrokerAdminTest.testCreateQueue() at 2148" successor="_JCZwYJhREeWKgoTb5jIgDA" predecessor="_IRURsZhREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_HjVKVphREeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_JCZwYJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.broker.BrokerAdminTest.java.BrokerAdminTest.testCreateQueue() at 2188" successor="_Jy-RsJhREeWKgoTb5jIgDA" predecessor="_IRURsphREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Jy-RsJhREeWKgoTb5jIgDA" entityName="getDestinationName:  @position: org.activemq.broker.BrokerAdminTest.java.BrokerAdminTest.testCreateQueue() at 2268" successor="_Jy-RsphREeWKgoTb5jIgDA" predecessor="_JCZwYJhREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_Jy-RsZhREeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Jy-RsphREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.broker.BrokerAdminTest.java.BrokerAdminTest.testCreateQueue() at 2268" successor="_IROyI5hREeWKgoTb5jIgDA" predecessor="_Jy-RsJhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_IROyI5hREeWKgoTb5jIgDA" predecessor="_Jy-RsphREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_Jy-Rs5hREeWKgoTb5jIgDA" entityName="testDeleteQueue">
+    <scenarioBehaviour_UsageScenario id="_Jy-RtphREeWKgoTb5jIgDA" entityName="testDeleteQueue">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Jy-RtJhREeWKgoTb5jIgDA" successor="_JzG0kJhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JzG0kJhREeWKgoTb5jIgDA" entityName="createMessageContainer:  @position: org.activemq.broker.BrokerAdminTest.java.BrokerAdminTest.testDeleteQueue() at 2545" successor="_JzG0kZhREeWKgoTb5jIgDA" predecessor="_Jy-RtJhREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_9mPTXZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JzG0kZhREeWKgoTb5jIgDA" entityName="destoryMessageContainer:  @position: org.activemq.broker.BrokerAdminTest.java.BrokerAdminTest.testDeleteQueue() at 2628" successor="_JzG0kphREeWKgoTb5jIgDA" predecessor="_JzG0kJhREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_9mPTXphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JzG0kphREeWKgoTb5jIgDA" entityName="listMessageContainerAdmin:  @position: org.activemq.broker.BrokerAdminTest.java.BrokerAdminTest.testDeleteQueue() at 2719" successor="_Kf1XsJhREeWKgoTb5jIgDA" predecessor="_JzG0kZhREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_HjVKVphREeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Kf1XsJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.broker.BrokerAdminTest.java.BrokerAdminTest.testDeleteQueue() at 2759" successor="_Jy-RtZhREeWKgoTb5jIgDA" predecessor="_JzG0kphREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Jy-RtZhREeWKgoTb5jIgDA" predecessor="_Kf1XsJhREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

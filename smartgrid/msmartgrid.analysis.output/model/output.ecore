@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="output" nsURI="http://www.example.org/output" nsPrefix="output">
+  <eClassifiers xsi:type="ecore:EClass" name="ScenarioResult">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="States" upperBound="-1"
+        eType="#//EntityState" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Clusters" upperBound="-1"
+        eType="#//Cluster" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Scenario" eType="ecore:EClass ../../msmartgrid.domain.topo/model/topo.ecore#//SmartGridTopology"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityState" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Owner" lowerBound="1" eType="ecore:EClass ../../msmartgrid.paradigm.graph/model/graph.ecore#//NetworkEntity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Online" eSuperTypes="#//On"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Defect" eSuperTypes="#//EntityState #//Offline"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NoPower" eSuperTypes="#//EntityState #//Offline"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NoUplink" eSuperTypes="#//Offline #//On"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Offline" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Cluster">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ControlCenterCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SmartMeterCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasEntities" upperBound="-1"
+        eType="#//On" eOpposite="#//On/BelongsToCluster"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="On" abstract="true" eSuperTypes="#//EntityState">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BelongsToCluster" eType="#//Cluster"
+        eOpposite="#//Cluster/HasEntities"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IsHacked" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+</ecore:EPackage>

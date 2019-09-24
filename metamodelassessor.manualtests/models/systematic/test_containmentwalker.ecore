@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="test_containmentwalker" nsURI="test_containmentwalker.de" nsPrefix="test_containmentwalker">
+  <eClassifiers xsi:type="ecore:EClass" name="Door" eSuperTypes="#//Super #//Super2">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containee" upperBound="-1"
+        eType="#//Containee" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mandatory" lowerBound="1"
+        eType="#//Mandatory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="optionary" eType="#//Optionary"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="foo" upperBound="-1" eType="ecore:EClass test_containmentwalker_dependency.ecore#//Foo"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Container" eSuperTypes="#//ContainerSuper">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="door" upperBound="-1" eType="#//Door"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containercontainee" upperBound="-1"
+        eType="#//ContainerContainee" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containermandatory" lowerBound="1"
+        eType="#//ContainerMandatory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containeroptionary" eType="#//ContainerOptionary"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Super" eSuperTypes="#//SuperSuper">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supercontainee" upperBound="-1"
+        eType="#//SuperContainee" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supermandatory" lowerBound="1"
+        eType="#//SuperMandatory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superoptionary" eType="#//SuperOptionary"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mandatory" eSuperTypes="#//MandatorySuper">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mandatorycontainee" upperBound="-1"
+        eType="#//MandatoryContainee" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mandatoryoptionary" eType="#//MandatoryOptionary"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mandatorymandatory" lowerBound="1"
+        eType="#//MandatoryMandatory"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Containee" eSuperTypes="#//ContaineeSuper">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containeecontainee" upperBound="-1"
+        eType="#//ContaineeContainee" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containeeoptionary" eType="#//ContaineeOptionary"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containeemandatory" lowerBound="1"
+        eType="#//ContaineeMandatory"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sub" eSuperTypes="#//Door #//SubSuper">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="suboptionary" eType="#//SubOptionary"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="submanadtory" lowerBound="1"
+        eType="#//SubManadtory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subcontainee" upperBound="-1"
+        eType="#//SubContainee" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Optionary" eSuperTypes="#//OptinarySuper">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="optionarycontainee" upperBound="-1"
+        eType="#//OptionaryContainee" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="optmandatory" lowerBound="1"
+        eType="#//OptMandatory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="optopt" eType="#//OptOpt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="super" upperBound="-1"
+        eType="#//Super" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperSuper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperSub" eSuperTypes="#//Super"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperContainee"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperMandatory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperOptionary"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerSuper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" upperBound="-1"
+        eType="#//Container" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerSub" eSuperTypes="#//Container"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerContainee"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerMandatory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerOptionary"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Super2" eSuperTypes="#//Super2Super"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Super2Sub" eSuperTypes="#//Super2"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OptinarySuper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OptionaryContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="optionary" upperBound="-1"
+        eType="#//Optionary" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OptionarySub" eSuperTypes="#//Optionary"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OptionaryContainee"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OptMandatory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OptOpt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Isolated"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MandatorySuper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MandatoryContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mandatory" upperBound="-1"
+        eType="#//Mandatory" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MandatorySub" eSuperTypes="#//Mandatory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MandatoryContainee"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MandatoryMandatory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MandatoryOptionary"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContaineeSub" eSuperTypes="#//Containee"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContaineeContainee"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContaineeOptionary"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContaineeMandatory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContaineeSuper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContaineeContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containee" upperBound="-1"
+        eType="#//Containee" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubSuper"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sub" upperBound="-1" eType="#//Sub"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubSub" eSuperTypes="#//Sub"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubContainee"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubOptionary"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubManadtory"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Super2Super"/>
+  <eSubpackages name="newPackage1">
+    <eClassifiers xsi:type="ecore:EClass" name="ClassInIsolatedPackage"/>
+  </eSubpackages>
+</ecore:EPackage>

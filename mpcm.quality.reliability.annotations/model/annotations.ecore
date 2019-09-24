@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="annotations" nsURI="mpcm.quality.reliability.annotations" nsPrefix="mpcm.quality.reliability.annotations">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Reliability&amp;nbsp;aspects&amp;nbsp;of&amp;nbsp;QoS&amp;nbsp;annotations."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceReliabilityAnnotation" eSuperTypes="../../mpcm.paradigm.annotations/model/annotations.ecore#//ServicePropertyAnnotation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A SpecifiedFailureProbability of a service resembles its &quot;Probability of Failure on Demand&quot; (POFOD). Whenever the service is called, this values states the probability that it returns successfully. For reliability prediction, the PCMRandomVariable specified in its superclass SpecifiedQoSAnnotation must evaluate to a real number between 0 and 1.&#xD;&#xA;&#xD;&#xA;"/>
+    </eAnnotations>
+    <eOperations name="SpecifiedReliabilityAnnotationMustReferenceRequiredRoleOfASystem"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="(self.role_SpecifiedQoSAnnotation.oclIsTypeOf(mpcm::repository::OperationRequiredRole)) and (self.role_SpecifiedQoSAnnotation.oclAsType(mpcm::repository::OperationRequiredRole).requiringEntity_RequiredRole.oclIsTypeOf(mpcm::system::System))&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="SumOfReliabilityAnnotationFailureProbabilitiesMustNotExceed1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.externalFailureOccurrenceDescriptions__SpecifiedReliabilityAnnotation.failureProbability.oclAsType(Real)->sum()&lt;=1.0"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="MultipleExternalOccurrenceDescriptionsPerFailureTypeNotAllowed"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.externalFailureOccurrenceDescriptions__SpecifiedReliabilityAnnotation->forAll(x:mpcm::reliability::ExternalFailureOccurrenceDescription,y:mpcm::reliability::ExternalFailureOccurrenceDescription  | x&lt;>y implies x.failureType__ExternalFailureOccurrenceDescription &lt;> y.failureType__ExternalFailureOccurrenceDescription )"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalFailureOccurrenceDescriptions__SpecifiedReliabilityAnnotation"
+        ordered="false" lowerBound="1" upperBound="-1" eType="#//ExternalFailureOccurrenceDescription"
+        containment="true" eOpposite="#//ExternalFailureOccurrenceDescription/specifiedReliabilityAnnotation__ExternalFailureOccurrenceDescription"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalFailureOccurrenceDescription"
+      eSuperTypes="../../mpcm.quality.reliability/model/reliability.ecore#//FailureOccurrenceDescription">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Special&amp;nbsp;case&amp;nbsp;of&amp;nbsp;a&amp;nbsp;FailureOccurenceDescription&amp;nbsp;specifying&amp;nbsp;the&amp;nbsp;failure&amp;nbsp;potential&amp;nbsp;of&amp;nbsp;system-external&amp;nbsp;calls.&amp;nbsp;Can&amp;nbsp;relate&amp;nbsp;to&#xD;&#xA;any FailureType."/>
+    </eAnnotations>
+    <eOperations name="NoResourceTimeoutFailureAllowedForExternalFailureOccurrenceDescription"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="not self.failureType__ExternalFailureOccurrenceDescription.oclIsTypeOf(ResourceTimeoutFailureType)"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="ResourceTimeoutFailures&amp;nbsp;are&amp;nbsp;software-induced&amp;nbsp;failure&amp;nbsp;types,&amp;nbsp;but&amp;nbsp;are&amp;nbsp;not&amp;nbsp;annotated&amp;nbsp;to&amp;nbsp;system-external&#xD;&#xA;calls&amp;nbsp;(they&amp;nbsp;are&amp;nbsp;only&amp;nbsp;meant&lt;br />&#xD;&#xA;for&amp;nbsp;passive&amp;nbsp;resource&amp;nbsp;timeouts)."/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specifiedReliabilityAnnotation__ExternalFailureOccurrenceDescription"
+        ordered="false" lowerBound="1" eType="#//ServiceReliabilityAnnotation" eOpposite="#//ServiceReliabilityAnnotation/externalFailureOccurrenceDescriptions__SpecifiedReliabilityAnnotation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="failureType__ExternalFailureOccurrenceDescription"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.quality.reliability/model/reliability.ecore#//failuretypes/FailureType"/>
+  </eClassifiers>
+</ecore:EPackage>

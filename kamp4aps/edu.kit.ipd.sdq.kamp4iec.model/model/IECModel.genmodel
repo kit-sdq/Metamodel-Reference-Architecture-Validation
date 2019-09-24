@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kamp4iec.model/src" modelPluginID="edu.kit.ipd.sdq.kamp4iec.model"
+    modelName="IECModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies/model/ComponentInternalDependencies.genmodel#//ComponentInternalDependencies ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>IECModel.ecore</foreignModel>
+  <genPackages prefix="IECModel" basePackage="edu.kit.ipd.sdq.kamp4iec.model" disposableProviderFactory="true"
+      ecorePackage="IECModel.ecore#/">
+    <genClasses ecoreClass="IECModel.ecore#//FunctionBlock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//FunctionBlock/Id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//FunctionBlock/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/AccessesProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/HasMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/HasProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="IECModel.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//Function/Id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//Function/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Function/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="IECModel.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/CallsFunction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/CallsFunctionBlock"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//Program/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//Program/Id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/Type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/ImplementsInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/DeclaresVariable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/UsesEnum"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/AccessesProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/CallsMethod"/>
+    </genClasses>
+    <genClasses ecoreClass="IECModel.ecore#//SPSSystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//SPSSystem/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//SPSSystem/Id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//SPSSystem/ContainsProgram"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//SPSSystem/ComponentInternalDependencies"/>
+    </genClasses>
+    <genClasses ecoreClass="IECModel.ecore#//IECInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//IECInterface/Id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//IECInterface/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECInterface/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="IECModel.ecore#//GlobalVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//GlobalVariable/Id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//GlobalVariable/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//GlobalVariable/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="IECModel.ecore#//StaticFunctionblock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//StaticFunctionblock/Id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//StaticFunctionblock/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//StaticFunctionblock/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//StaticFunctionblock/AccessesGlobalVariable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//StaticFunctionblock/HasMethod"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//StaticFunctionblock/HasProperty"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="IECModel.ecore#//IFunctionBlock"/>
+    <genClasses ecoreClass="IECModel.ecore#//IECMethodImplementation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//IECMethodImplementation/Id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//IECMethodImplementation/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethodImplementation/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethodImplementation/AccessesGlobalVariable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethodImplementation/AccessesProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="IECModel.ecore#//IECPropertyImplementation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//IECPropertyImplementation/Id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//IECPropertyImplementation/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECPropertyImplementation/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="IECModel.ecore#//Enum">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//Enum/Id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECModel.ecore#//Enum/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Enum/Type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

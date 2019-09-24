@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_n1v-4LLWEeWT3tCwcp23sg" entityName="testQuery">
+    <scenarioBehaviour_UsageScenario id="_n1v-47LWEeWT3tCwcp23sg" entityName="testQuery">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_n1v-4bLWEeWT3tCwcp23sg" successor="_n1v-5LLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n1v-5LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testQuery() at 923" successor="_n13ToLLWEeWT3tCwcp23sg" predecessor="_n1v-4bLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n13ToLLWEeWT3tCwcp23sg" entityName="parseQuery:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testQuery() at 1073" successor="_n19aQLLWEeWT3tCwcp23sg" predecessor="_n1v-5LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n13TobLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n19aQLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testQuery() at 1211" successor="_n2Dg4LLWEeWT3tCwcp23sg" predecessor="_n13ToLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2Dg4LLWEeWT3tCwcp23sg" entityName="getLastQuery:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testQuery() at 1635" successor="_n2GkMLLWEeWT3tCwcp23sg" predecessor="_n19aQLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2Dg4bLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n2GkMLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testQuery() at 1699" successor="_n1v-4rLWEeWT3tCwcp23sg" predecessor="_n2Dg4LLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_n1v-4rLWEeWT3tCwcp23sg" predecessor="_n2GkMLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_n2GkMbLWEeWT3tCwcp23sg" entityName="testNext">
+    <scenarioBehaviour_UsageScenario id="_n2GkNLLWEeWT3tCwcp23sg" entityName="testNext">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_n2GkMrLWEeWT3tCwcp23sg" successor="_n2GkNbLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n2GkNbLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testNext() at 1803" successor="_n2JAcLLWEeWT3tCwcp23sg" predecessor="_n2GkMrLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2JAcLLWEeWT3tCwcp23sg" entityName="hasNext:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testNext() at 1972" successor="_n2LcsLLWEeWT3tCwcp23sg" predecessor="_n2GkNbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2JAcbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2LcsLLWEeWT3tCwcp23sg" entityName="getNext:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testNext() at 2024" successor="_n2N48LLWEeWT3tCwcp23sg" predecessor="_n2JAcLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2LcsbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2N48LLWEeWT3tCwcp23sg" entityName="hasNext:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testNext() at 2062" successor="_n2Q8QLLWEeWT3tCwcp23sg" predecessor="_n2LcsLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2JAcbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2Q8QLLWEeWT3tCwcp23sg" entityName="getNext:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testNext() at 2114" successor="_n2TYgLLWEeWT3tCwcp23sg" predecessor="_n2N48LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2LcsbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2TYgLLWEeWT3tCwcp23sg" entityName="hasNext:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testNext() at 2161" successor="_n2GkM7LWEeWT3tCwcp23sg" predecessor="_n2Q8QLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2JAcbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_n2GkM7LWEeWT3tCwcp23sg" predecessor="_n2TYgLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_n2TYgbLWEeWT3tCwcp23sg" entityName="testLastPath">
+    <scenarioBehaviour_UsageScenario id="_n2TYhLLWEeWT3tCwcp23sg" entityName="testLastPath">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_n2TYgrLWEeWT3tCwcp23sg" successor="_n2TYhbLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n2TYhbLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 2275" successor="_n2V0wLLWEeWT3tCwcp23sg" predecessor="_n2TYgrLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2V0wLLWEeWT3tCwcp23sg" entityName="getLastPath:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 2474" successor="_n2XC4LLWEeWT3tCwcp23sg" predecessor="_n2TYhbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2Wb0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n2XC4LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 2555" successor="_n2ZfILLWEeWT3tCwcp23sg" predecessor="_n2V0wLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2ZfILLWEeWT3tCwcp23sg" entityName="getLastPath:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 2645" successor="_n2aGMLLWEeWT3tCwcp23sg" predecessor="_n2XC4LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2Wb0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n2aGMLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 2721" successor="_n2b7YLLWEeWT3tCwcp23sg" predecessor="_n2ZfILLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2b7YLLWEeWT3tCwcp23sg" entityName="getLastPath:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 2804" successor="_n2cicLLWEeWT3tCwcp23sg" predecessor="_n2aGMLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2Wb0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n2cicLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 2847" successor="_n2eXoLLWEeWT3tCwcp23sg" predecessor="_n2b7YLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2eXoLLWEeWT3tCwcp23sg" entityName="getLastPath:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 2937" successor="_n2e-sbLWEeWT3tCwcp23sg" predecessor="_n2cicLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2Wb0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n2e-sbLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 2973" successor="_n2ha8LLWEeWT3tCwcp23sg" predecessor="_n2eXoLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2ha8LLWEeWT3tCwcp23sg" entityName="getLastPath:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 3056" successor="_n2ha8bLWEeWT3tCwcp23sg" predecessor="_n2e-sbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2Wb0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n2ha8bLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 3098" successor="_n2jQILLWEeWT3tCwcp23sg" predecessor="_n2ha8LLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2jQILLWEeWT3tCwcp23sg" entityName="getLastPath:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 3175" successor="_n2j3MLLWEeWT3tCwcp23sg" predecessor="_n2ha8bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2Wb0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n2j3MLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 3225" successor="_n2lsYLLWEeWT3tCwcp23sg" predecessor="_n2jQILLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2lsYLLWEeWT3tCwcp23sg" entityName="getLastPath:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 3315" successor="_n2m6gLLWEeWT3tCwcp23sg" predecessor="_n2j3MLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2Wb0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n2m6gLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 3381" successor="_n2qk4LLWEeWT3tCwcp23sg" predecessor="_n2lsYLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_n2qk4LLWEeWT3tCwcp23sg" entityName="getLastPath:  @position: org.activemq.util.URIHelperTest.java.URIHelperTest.testLastPath() at 3471" successor="_n2TYg7LWEeWT3tCwcp23sg" predecessor="_n2m6gLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_jpVBwLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_n2Wb0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_n2TYg7LWEeWT3tCwcp23sg" predecessor="_n2qk4LLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

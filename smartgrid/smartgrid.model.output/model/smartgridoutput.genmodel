@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/smartgrid.model.output/src" modelPluginID="smartgrid.model.output"
+    modelName="Smartgridoutput" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    usedGenPackages="../../smartgrid.model.topo/model/smartgridtopo.genmodel#//smartgridtopo"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>smartgridoutput.ecore</foreignModel>
+  <genPackages prefix="Smartgridoutput" disposableProviderFactory="true" ecorePackage="smartgridoutput.ecore#/">
+    <genClasses ecoreClass="smartgridoutput.ecore#//ScenarioResult">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smartgridoutput.ecore#//ScenarioResult/States"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smartgridoutput.ecore#//ScenarioResult/Clusters"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridoutput.ecore#//ScenarioResult/Scenario"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="smartgridoutput.ecore#//EntityState">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridoutput.ecore#//EntityState/Owner"/>
+    </genClasses>
+    <genClasses ecoreClass="smartgridoutput.ecore#//Online"/>
+    <genClasses ecoreClass="smartgridoutput.ecore#//Defect"/>
+    <genClasses ecoreClass="smartgridoutput.ecore#//NoPower"/>
+    <genClasses ecoreClass="smartgridoutput.ecore#//NoUplink"/>
+    <genClasses image="false" ecoreClass="smartgridoutput.ecore#//Offline"/>
+    <genClasses ecoreClass="smartgridoutput.ecore#//Cluster">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smartgridoutput.ecore#//Cluster/ControlCenterCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smartgridoutput.ecore#//Cluster/SmartMeterCount"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridoutput.ecore#//Cluster/HasEntities"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="smartgridoutput.ecore#//On">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridoutput.ecore#//On/BelongsToCluster"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smartgridoutput.ecore#//On/IsHacked"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

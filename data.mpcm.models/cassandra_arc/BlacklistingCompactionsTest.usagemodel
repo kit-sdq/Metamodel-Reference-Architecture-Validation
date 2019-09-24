@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_CAQGcLLjEeWaL4cfYRKdZg" entityName="testBlacklistingWithSizeTieredCompactionStrategy">
+    <scenarioBehaviour_UsageScenario id="_CAQGc7LjEeWaL4cfYRKdZg" entityName="testBlacklistingWithSizeTieredCompactionStrategy">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CAQGcbLjEeWaL4cfYRKdZg" successor="_CBQMALLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBQMALLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklistingWithSizeTieredCompactionStrategy() at 2350" successor="_CBQMAbLjEeWaL4cfYRKdZg" predecessor="_CAQGcbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBQMAbLjEeWaL4cfYRKdZg" entityName="open:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 2756" successor="_CBQzELLjEeWaL4cfYRKdZg" predecessor="_CBQMALLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAnxAbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBQzELLjEeWaL4cfYRKdZg" entityName="getColumnFamilyStore:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 2838" successor="_CBRaILLjEeWaL4cfYRKdZg" predecessor="_CBQMAbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AApmMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBRaILLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 2880" successor="_CBRaIbLjEeWaL4cfYRKdZg" predecessor="_CBQzELLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBRaIbLjEeWaL4cfYRKdZg" entityName="setCompactionStrategyClass:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 3026" successor="_CBSoQLLjEeWaL4cfYRKdZg" predecessor="_CBRaILLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CBSBMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBSoQLLjEeWaL4cfYRKdZg" entityName="disableAutoCompaction:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 3109" successor="_CBTPULLjEeWaL4cfYRKdZg" predecessor="_CBRaIbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nhw1cLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBTPULLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 3233" successor="_CBTPUbLjEeWaL4cfYRKdZg" predecessor="_CBSoQLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CBTPUbLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CBYH0bLjEeWaL4cfYRKdZg" predecessor="_CBTPULLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_CBTPUrLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() from 3300 to 3342">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CBTPU7LjEeWaL4cfYRKdZg" successor="_CBTPVLLjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CBTPVLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CBVrkrLjEeWaL4cfYRKdZg" predecessor="_CBTPU7LjEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_CBTPVbLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block from 3353 to 3407">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CBTPVrLjEeWaL4cfYRKdZg" successor="_CBTPV7LjEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBTPV7LjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3488" successor="_CBTPWLLjEeWaL4cfYRKdZg" predecessor="_CBTPVrLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBTPWLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_CBT2YLLjEeWaL4cfYRKdZg" predecessor="_CBTPV7LjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBT2YLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CBT2YbLjEeWaL4cfYRKdZg" predecessor="_CBTPWLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBT2YbLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CBT2YrLjEeWaL4cfYRKdZg" predecessor="_CBT2YLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBT2YrLjEeWaL4cfYRKdZg" entityName="bytes:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CBUdcLLjEeWaL4cfYRKdZg" predecessor="_CBT2YbLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBUdcLLjEeWaL4cfYRKdZg" entityName="add:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CBVEgLLjEeWaL4cfYRKdZg" predecessor="_CBT2YrLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBVEgLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3871" successor="_CBVEgbLjEeWaL4cfYRKdZg" predecessor="_CBUdcLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBVEgbLjEeWaL4cfYRKdZg" entityName="apply:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3899" successor="_CBVrkLLjEeWaL4cfYRKdZg" predecessor="_CBVEgLLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dX8FwLLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBVrkLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3934" successor="_CBVrkbLjEeWaL4cfYRKdZg" predecessor="_CBVEgbLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CBVrkbLjEeWaL4cfYRKdZg" predecessor="_CBVrkLLjEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBVrkrLjEeWaL4cfYRKdZg" entityName="forceBlockingFlush:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 3986" successor="_CBVrk7LjEeWaL4cfYRKdZg" predecessor="_CBTPVLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ncpE4LLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBVrk7LjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6780" successor="_CBVrlLLjEeWaL4cfYRKdZg" predecessor="_CBVrkrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CBVrlLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CBYH0LLjEeWaL4cfYRKdZg" predecessor="_CBVrk7LjEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_CBVrlbLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() from 6781 to 6836">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CBVrlrLjEeWaL4cfYRKdZg" successor="_CBVrl7LjEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBVrl7LjEeWaL4cfYRKdZg" entityName="getMaxTimestamp:  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6930" successor="_CBWSoLLjEeWaL4cfYRKdZg" predecessor="_CBVrlrLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AA7TALLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nNi48bLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBWSoLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6930" successor="_CBWSobLjEeWaL4cfYRKdZg" predecessor="_CBVrl7LjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBWSobLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6930" successor="_CBWSorLjEeWaL4cfYRKdZg" predecessor="_CBWSoLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CBWSorLjEeWaL4cfYRKdZg" predecessor="_CBWSobLjEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CBYH0LLjEeWaL4cfYRKdZg" predecessor="_CBVrlLLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBYH0bLjEeWaL4cfYRKdZg" entityName="getSSTables:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 4232" successor="_CBYu4LLjEeWaL4cfYRKdZg" predecessor="_CBTPUbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ncqTAbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBYu4LLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 4264" successor="_CBYu4bLjEeWaL4cfYRKdZg" predecessor="_CBYH0bLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CBYu4bLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CBakErLjEeWaL4cfYRKdZg" predecessor="_CBYu4LLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_CBYu4rLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() from 4300 to 4401">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CBYu47LjEeWaL4cfYRKdZg" successor="_CBYu5LLjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBYu5LLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block from 4412 to 4466" successor="_CBYu5bLjEeWaL4cfYRKdZg" predecessor="_CBYu47LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBYu5bLjEeWaL4cfYRKdZg" entityName="getFilename:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 4635" successor="_CBZV8LLjEeWaL4cfYRKdZg" predecessor="_CBYu5LLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BSlIILLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CBYu5rLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBZV8LLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 4671" successor="_CBZ9ALLjEeWaL4cfYRKdZg" predecessor="_CBYu5bLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBZ9ALLjEeWaL4cfYRKdZg" entityName="closeQuietly:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 4801" successor="_CBakELLjEeWaL4cfYRKdZg" predecessor="_CBZV8LLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAnJ8LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_c9Q787LiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBakELLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 4846" successor="_CBakEbLjEeWaL4cfYRKdZg" predecessor="_CBZ9ALLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CBakEbLjEeWaL4cfYRKdZg" predecessor="_CBakELLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBakErLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 4883" successor="_CBakE7LjEeWaL4cfYRKdZg" predecessor="_CBYu4bLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CBakE7LjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CBbyMbLjEeWaL4cfYRKdZg" predecessor="_CBakErLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_CBakFLLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() from 4884 to 5022">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CBakFbLjEeWaL4cfYRKdZg" successor="_CBakFrLjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBakFrLjEeWaL4cfYRKdZg" entityName="forceMajorCompaction:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 5106" successor="_CBbLILLjEeWaL4cfYRKdZg" predecessor="_CBakFbLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nhvAQLLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBbLILLjEeWaL4cfYRKdZg" entityName="getSSTables:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 5647" successor="_CBbyMLLjEeWaL4cfYRKdZg" predecessor="_CBakFrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ncqTAbLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CBbyMLLjEeWaL4cfYRKdZg" predecessor="_CBbLILLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CBbyMbLjEeWaL4cfYRKdZg" entityName="truncateBlocking:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 5710" successor="_CBcZQLLjEeWaL4cfYRKdZg" predecessor="_CBakE7LjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nhehkbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CBcZQLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 5761" successor="_CAQGcrLjEeWaL4cfYRKdZg" predecessor="_CBbyMbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CAQGcrLjEeWaL4cfYRKdZg" predecessor="_CBcZQLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CBdAULLjEeWaL4cfYRKdZg" entityName="testBlacklistingWithLeveledCompactionStrategy">
+    <scenarioBehaviour_UsageScenario id="_CBdAU7LjEeWaL4cfYRKdZg" entityName="testBlacklistingWithLeveledCompactionStrategy">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CBdAUbLjEeWaL4cfYRKdZg" successor="_CB_L0LLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CB_L0LLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklistingWithLeveledCompactionStrategy() at 2532" successor="_CB_L0bLjEeWaL4cfYRKdZg" predecessor="_CBdAUbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CB_L0bLjEeWaL4cfYRKdZg" entityName="open:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 2756" successor="_CCAZ8LLjEeWaL4cfYRKdZg" predecessor="_CB_L0LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAnxAbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCAZ8LLjEeWaL4cfYRKdZg" entityName="getColumnFamilyStore:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 2838" successor="_CCBBALLjEeWaL4cfYRKdZg" predecessor="_CB_L0bLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AApmMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCBBALLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 2880" successor="_CCBBAbLjEeWaL4cfYRKdZg" predecessor="_CCAZ8LLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCBBAbLjEeWaL4cfYRKdZg" entityName="setCompactionStrategyClass:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 3026" successor="_CCBoELLjEeWaL4cfYRKdZg" predecessor="_CCBBALLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CBSBMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCBoELLjEeWaL4cfYRKdZg" entityName="disableAutoCompaction:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 3109" successor="_CCCPILLjEeWaL4cfYRKdZg" predecessor="_CCBBAbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nhw1cLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCCPILLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 3233" successor="_CCCPIbLjEeWaL4cfYRKdZg" predecessor="_CCBoELLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CCCPIbLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CCKyAbLjEeWaL4cfYRKdZg" predecessor="_CCCPILLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_CCCPIrLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() from 3300 to 3342">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CCCPI7LjEeWaL4cfYRKdZg" successor="_CCCPJLLjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CCCPJLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CCHHorLjEeWaL4cfYRKdZg" predecessor="_CCCPI7LjEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_CCCPJbLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block from 3353 to 3407">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CCCPJrLjEeWaL4cfYRKdZg" successor="_CCCPJ7LjEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCCPJ7LjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3488" successor="_CCCPKLLjEeWaL4cfYRKdZg" predecessor="_CCCPJrLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCCPKLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_CCDdQLLjEeWaL4cfYRKdZg" predecessor="_CCCPJ7LjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCDdQLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CCDdQbLjEeWaL4cfYRKdZg" predecessor="_CCCPKLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCDdQbLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CCDdQrLjEeWaL4cfYRKdZg" predecessor="_CCDdQLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCDdQrLjEeWaL4cfYRKdZg" entityName="bytes:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CCFScLLjEeWaL4cfYRKdZg" predecessor="_CCDdQbLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCFScLLjEeWaL4cfYRKdZg" entityName="add:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CCF5gLLjEeWaL4cfYRKdZg" predecessor="_CCDdQrLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCF5gLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3871" successor="_CCF5gbLjEeWaL4cfYRKdZg" predecessor="_CCFScLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCF5gbLjEeWaL4cfYRKdZg" entityName="apply:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3899" successor="_CCHHoLLjEeWaL4cfYRKdZg" predecessor="_CCF5gLLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dX8FwLLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCHHoLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3934" successor="_CCHHobLjEeWaL4cfYRKdZg" predecessor="_CCF5gbLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CCHHobLjEeWaL4cfYRKdZg" predecessor="_CCHHoLLjEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCHHorLjEeWaL4cfYRKdZg" entityName="forceBlockingFlush:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 3986" successor="_CCHusLLjEeWaL4cfYRKdZg" predecessor="_CCCPJLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ncpE4LLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCHusLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6780" successor="_CCHusbLjEeWaL4cfYRKdZg" predecessor="_CCHHorLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CCHusbLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CCKyALLjEeWaL4cfYRKdZg" predecessor="_CCHusLLjEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_CCHusrLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() from 6781 to 6836">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CCHus7LjEeWaL4cfYRKdZg" successor="_CCHutLLjEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCHutLLjEeWaL4cfYRKdZg" entityName="getMaxTimestamp:  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6930" successor="_CCI80LLjEeWaL4cfYRKdZg" predecessor="_CCHus7LjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AA7TALLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nNi48bLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCI80LLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6930" successor="_CCI80bLjEeWaL4cfYRKdZg" predecessor="_CCHutLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCI80bLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6930" successor="_CCI80rLjEeWaL4cfYRKdZg" predecessor="_CCI80LLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CCI80rLjEeWaL4cfYRKdZg" predecessor="_CCI80bLjEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CCKyALLjEeWaL4cfYRKdZg" predecessor="_CCHusbLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCKyAbLjEeWaL4cfYRKdZg" entityName="getSSTables:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 4232" successor="_CCLZELLjEeWaL4cfYRKdZg" predecessor="_CCCPIbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ncqTAbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCLZELLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 4264" successor="_CCLZEbLjEeWaL4cfYRKdZg" predecessor="_CCKyAbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CCLZEbLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CCMnM7LjEeWaL4cfYRKdZg" predecessor="_CCLZELLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_CCLZErLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() from 4300 to 4401">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CCLZE7LjEeWaL4cfYRKdZg" successor="_CCLZFLLjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCLZFLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block from 4412 to 4466" successor="_CCLZFbLjEeWaL4cfYRKdZg" predecessor="_CCLZE7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCLZFbLjEeWaL4cfYRKdZg" entityName="getFilename:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 4635" successor="_CCMAILLjEeWaL4cfYRKdZg" predecessor="_CCLZFLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BSlIILLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CBYu5rLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCMAILLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 4671" successor="_CCMnMLLjEeWaL4cfYRKdZg" predecessor="_CCLZFbLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCMnMLLjEeWaL4cfYRKdZg" entityName="closeQuietly:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 4801" successor="_CCMnMbLjEeWaL4cfYRKdZg" predecessor="_CCMAILLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAnJ8LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_c9Q787LiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCMnMbLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 4846" successor="_CCMnMrLjEeWaL4cfYRKdZg" predecessor="_CCMnMLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CCMnMrLjEeWaL4cfYRKdZg" predecessor="_CCMnMbLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCMnM7LjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 4883" successor="_CCMnNLLjEeWaL4cfYRKdZg" predecessor="_CCLZEbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CCMnNLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CCOcYbLjEeWaL4cfYRKdZg" predecessor="_CCMnM7LjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_CCMnNbLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() from 4884 to 5022">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CCMnNrLjEeWaL4cfYRKdZg" successor="_CCMnN7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCMnN7LjEeWaL4cfYRKdZg" entityName="forceMajorCompaction:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 5106" successor="_CCNOQLLjEeWaL4cfYRKdZg" predecessor="_CCMnNrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nhvAQLLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCNOQLLjEeWaL4cfYRKdZg" entityName="getSSTables:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 5647" successor="_CCOcYLLjEeWaL4cfYRKdZg" predecessor="_CCMnN7LjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ncqTAbLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CCOcYLLjEeWaL4cfYRKdZg" predecessor="_CCNOQLLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCOcYbLjEeWaL4cfYRKdZg" entityName="truncateBlocking:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 5710" successor="_CCPDcLLjEeWaL4cfYRKdZg" predecessor="_CCMnNLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nhehkbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCPDcLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 5761" successor="_CBdAUrLjEeWaL4cfYRKdZg" predecessor="_CCOcYbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CBdAUrLjEeWaL4cfYRKdZg" predecessor="_CCPDcLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CCPDcbLjEeWaL4cfYRKdZg" entityName="testBlacklisting">
+    <scenarioBehaviour_UsageScenario id="_CCPDdLLjEeWaL4cfYRKdZg" entityName="testBlacklisting">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CCPDcrLjEeWaL4cfYRKdZg" successor="_CCPqgLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCPqgLLjEeWaL4cfYRKdZg" entityName="open:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 2756" successor="_CCQRkLLjEeWaL4cfYRKdZg" predecessor="_CCPDcrLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAnxAbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCQRkLLjEeWaL4cfYRKdZg" entityName="getColumnFamilyStore:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 2838" successor="_CCQ4oLLjEeWaL4cfYRKdZg" predecessor="_CCPqgLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AApmMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCQ4oLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 2880" successor="_CCQ4obLjEeWaL4cfYRKdZg" predecessor="_CCQRkLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCQ4obLjEeWaL4cfYRKdZg" entityName="setCompactionStrategyClass:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 3026" successor="_CCSGwLLjEeWaL4cfYRKdZg" predecessor="_CCQ4oLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CBSBMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCSGwLLjEeWaL4cfYRKdZg" entityName="disableAutoCompaction:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 3109" successor="_CCSt0LLjEeWaL4cfYRKdZg" predecessor="_CCQ4obLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nhw1cLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCSt0LLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 3233" successor="_CCjzkLLjEeWaL4cfYRKdZg" predecessor="_CCSGwLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CCjzkLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CCpTILLjEeWaL4cfYRKdZg" predecessor="_CCSt0LLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_CCjzkbLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() from 3300 to 3342">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CCjzkrLjEeWaL4cfYRKdZg" successor="_CCjzk7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CCjzk7LjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CCmP0rLjEeWaL4cfYRKdZg" predecessor="_CCjzkrLjEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_CCjzlLLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block from 3353 to 3407">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CCjzlbLjEeWaL4cfYRKdZg" successor="_CCjzlrLjEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCjzlrLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3488" successor="_CCjzl7LjEeWaL4cfYRKdZg" predecessor="_CCjzlbLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCjzl7LjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_CCkaoLLjEeWaL4cfYRKdZg" predecessor="_CCjzlrLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCkaoLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CCkaobLjEeWaL4cfYRKdZg" predecessor="_CCjzl7LjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCkaobLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CCkaorLjEeWaL4cfYRKdZg" predecessor="_CCkaoLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCkaorLjEeWaL4cfYRKdZg" entityName="bytes:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CClBsLLjEeWaL4cfYRKdZg" predecessor="_CCkaobLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CClBsLLjEeWaL4cfYRKdZg" entityName="add:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3789" successor="_CClowLLjEeWaL4cfYRKdZg" predecessor="_CCkaorLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CClowLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3871" successor="_CClowbLjEeWaL4cfYRKdZg" predecessor="_CClBsLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CClowbLjEeWaL4cfYRKdZg" entityName="apply:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3899" successor="_CCmP0LLjEeWaL4cfYRKdZg" predecessor="_CClowLLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dX8FwLLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCmP0LLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 3934" successor="_CCmP0bLjEeWaL4cfYRKdZg" predecessor="_CClowbLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CCmP0bLjEeWaL4cfYRKdZg" predecessor="_CCmP0LLjEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCmP0rLjEeWaL4cfYRKdZg" entityName="forceBlockingFlush:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 3986" successor="_CCm24LLjEeWaL4cfYRKdZg" predecessor="_CCjzk7LjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ncpE4LLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCm24LLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6780" successor="_CCm24bLjEeWaL4cfYRKdZg" predecessor="_CCmP0rLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CCm24bLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CCosEbLjEeWaL4cfYRKdZg" predecessor="_CCm24LLjEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_CCm24rLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() from 6781 to 6836">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CCm247LjEeWaL4cfYRKdZg" successor="_CCm25LLjEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCm25LLjEeWaL4cfYRKdZg" entityName="getMaxTimestamp:  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6930" successor="_CCnd8LLjEeWaL4cfYRKdZg" predecessor="_CCm247LjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AA7TALLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nNi48bLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCnd8LLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6930" successor="_CCnd8bLjEeWaL4cfYRKdZg" predecessor="_CCm25LLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCnd8bLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6930" successor="_CCnd8rLjEeWaL4cfYRKdZg" predecessor="_CCnd8LLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CCnd8rLjEeWaL4cfYRKdZg" predecessor="_CCnd8bLjEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CCosEbLjEeWaL4cfYRKdZg" predecessor="_CCm24bLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCpTILLjEeWaL4cfYRKdZg" entityName="getSSTables:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 4232" successor="_CCp6MLLjEeWaL4cfYRKdZg" predecessor="_CCjzkLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ncqTAbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCp6MLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 4264" successor="_CCrvYLLjEeWaL4cfYRKdZg" predecessor="_CCpTILLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CCrvYLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CCuysLLjEeWaL4cfYRKdZg" predecessor="_CCp6MLLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_CCrvYbLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() from 4300 to 4401">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CCrvYrLjEeWaL4cfYRKdZg" successor="_CCrvY7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCrvY7LjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block from 4412 to 4466" successor="_CCrvZLLjEeWaL4cfYRKdZg" predecessor="_CCrvYrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCrvZLLjEeWaL4cfYRKdZg" entityName="getFilename:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 4635" successor="_CCsWcLLjEeWaL4cfYRKdZg" predecessor="_CCrvY7LjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BSlIILLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CBYu5rLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCsWcLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 4671" successor="_CCs9gLLjEeWaL4cfYRKdZg" predecessor="_CCrvZLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCs9gLLjEeWaL4cfYRKdZg" entityName="closeQuietly:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block.Block at 4801" successor="_CCtkkLLjEeWaL4cfYRKdZg" predecessor="_CCsWcLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAnJ8LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_c9Q787LiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCtkkLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 4846" successor="_CCtkkbLjEeWaL4cfYRKdZg" predecessor="_CCs9gLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CCtkkbLjEeWaL4cfYRKdZg" predecessor="_CCtkkLLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_CCuysLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_CCwA0bLjEeWaL4cfYRKdZg" predecessor="_CCrvYLLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_CCuysbLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() from 4884 to 5022">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CCuysrLjEeWaL4cfYRKdZg" successor="_CCuys7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCuys7LjEeWaL4cfYRKdZg" entityName="forceMajorCompaction:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 5106" successor="_CCuytLLjEeWaL4cfYRKdZg" predecessor="_CCuysrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nhvAQLLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCuytLLjEeWaL4cfYRKdZg" entityName="getSSTables:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting().Block at 5647" successor="_CCwA0LLjEeWaL4cfYRKdZg" predecessor="_CCuys7LjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ncqTAbLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CCwA0LLjEeWaL4cfYRKdZg" predecessor="_CCuytLLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CCwA0bLjEeWaL4cfYRKdZg" entityName="truncateBlocking:  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 5710" successor="_CCwn4LLjEeWaL4cfYRKdZg" predecessor="_CCuysLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nhehkbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CCwn4LLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.BlacklistingCompactionsTest.java.BlacklistingCompactionsTest.testBlacklisting() at 5761" successor="_CCPDc7LjEeWaL4cfYRKdZg" predecessor="_CCwA0bLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CCPDc7LjEeWaL4cfYRKdZg" predecessor="_CCwn4LLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

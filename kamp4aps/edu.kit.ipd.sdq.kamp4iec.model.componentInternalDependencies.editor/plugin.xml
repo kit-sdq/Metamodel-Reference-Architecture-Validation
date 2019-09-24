@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ComponentInternalDependencies -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.presentation.ComponentInternalDependenciesModelWizardID"
+            name="%_UI_ComponentInternalDependenciesModelWizard_label"
+            class="edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.presentation.ComponentInternalDependenciesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ComponentInternalDependenciesModelFile.gif">
+         <description>%_UI_ComponentInternalDependenciesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ComponentInternalDependencies -->
+      <editor
+            id="edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.presentation.ComponentInternalDependenciesEditorID"
+            name="%_UI_ComponentInternalDependenciesEditor_label"
+            icon="icons/full/obj16/ComponentInternalDependenciesModelFile.gif"
+            extensions="componentinternaldependencies"
+            class="edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.presentation.ComponentInternalDependenciesEditor"
+            contributorClass="edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.presentation.ComponentInternalDependenciesActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

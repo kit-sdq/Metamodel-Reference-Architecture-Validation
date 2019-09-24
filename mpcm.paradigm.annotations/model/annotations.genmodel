@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mpcm.quality.annotations/src" modelPluginID="mpcm.quality.annotations"
+    modelName="Annotations" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../mpcm.paradigm.base/model/base.genmodel#//base ../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../mpcm.paradigm.repository/model/repository.genmodel#//repository ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units ../../mpcm.paradigm.variables/model/variables.genmodel#//variables"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>annotations.ecore</foreignModel>
+  <genPackages prefix="Annotations" disposableProviderFactory="true" ecorePackage="annotations.ecore#/">
+    <genClasses ecoreClass="annotations.ecore#//AnnotationRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference annotations.ecore#//AnnotationRoot/specifiedOutputParameterAbstractions_QoSAnnotations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference annotations.ecore#//AnnotationRoot/specifiedQoSAnnotations_QoSAnnotations"/>
+      <genOperations ecoreOperation="annotations.ecore#//AnnotationRoot/MultipleReliabilityAnnotationsPerExternalCallNotAllowed">
+        <genParameters ecoreParameter="annotations.ecore#//AnnotationRoot/MultipleReliabilityAnnotationsPerExternalCallNotAllowed/diagnostics"/>
+        <genParameters ecoreParameter="annotations.ecore#//AnnotationRoot/MultipleReliabilityAnnotationsPerExternalCallNotAllowed/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="annotations.ecore#//ServicePropertyAnnotation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference annotations.ecore#//ServicePropertyAnnotation/signature_SpecifiedQoSAnnation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference annotations.ecore#//ServicePropertyAnnotation/role_SpecifiedQoSAnnotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference annotations.ecore#//ServicePropertyAnnotation/qosAnnotations_SpecifiedQoSAnnotation"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="annotations.ecore#//ServiceOutputParameterAbstraction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference annotations.ecore#//ServiceOutputParameterAbstraction/signature_SpecifiedOutputParameterAbstraction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference annotations.ecore#//ServiceOutputParameterAbstraction/role_SpecifiedOutputParameterAbstraction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference annotations.ecore#//ServiceOutputParameterAbstraction/expectedExternalOutputs_SpecifiedOutputParameterAbstraction"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference annotations.ecore#//ServiceOutputParameterAbstraction/qosAnnotations_SpecifiedOutputParameterAbstraction"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="aps.mm" nsURI="aps.mm" nsPrefix="aps.mm">
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusMaster">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../mkamp.as.mm/model/as.mm.ecore#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.aps/model/aps.ecore#//buscomponents/BusMaster"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyPhysicalConnection">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../mkamp.as.mm/model/as.mm.ecore#//ModifyInterface">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.aps/model/aps.ecore#//interfaces/PhysicalConnection"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifySignalinterface">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../mkamp.as.mm/model/as.mm.ecore#//ModifyInterface">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.aps/model/aps.ecore#//interfaces/SignalInterface"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifySensor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modifySignalInterfaces"
+        upperBound="-1" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//interfaces/SignalInterface"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modifyPhysicalConnections"
+        upperBound="-1" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//interfaces/PhysicalConnection"
+        containment="true"/>
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../mkamp.as.mm/model/as.mm.ecore#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/Sensor"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusSlave">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../mkamp.as.mm/model/as.mm.ecore#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.aps/model/aps.ecore#//buscomponents/BusSlave"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyRamp">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../mkamp.as.mm/model/as.mm.ecore#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/RegularRamp"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusCable">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../mkamp.as.mm/model/as.mm.ecore#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.aps/model/aps.ecore#//buscomponents/BusCable"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusBox">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../mkamp.as.mm/model/as.mm.ecore#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.aps/model/aps.ecore#//buscomponents/BusBox"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+</ecore:EPackage>

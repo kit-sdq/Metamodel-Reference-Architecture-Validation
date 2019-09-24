@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated IECModel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.ipd.sdq.kamp4iec.model.IECModel.presentation.IECModelModelWizardID"
+            name="%_UI_IECModelModelWizard_label"
+            class="edu.kit.ipd.sdq.kamp4iec.model.IECModel.presentation.IECModelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/IECModelModelFile.gif">
+         <description>%_UI_IECModelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated IECModel -->
+      <editor
+            id="edu.kit.ipd.sdq.kamp4iec.model.IECModel.presentation.IECModelEditorID"
+            name="%_UI_IECModelEditor_label"
+            icon="icons/full/obj16/IECModelModelFile.gif"
+            extensions="iecmodel"
+            class="edu.kit.ipd.sdq.kamp4iec.model.IECModel.presentation.IECModelEditor"
+            contributorClass="edu.kit.ipd.sdq.kamp4iec.model.IECModel.presentation.IECModelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

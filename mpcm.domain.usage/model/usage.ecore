@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="usage" nsURI="mpcm.domain.usage" nsPrefix="mpcm.domain.usage">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="TODO:&amp;nbsp;Put&amp;nbsp;the&amp;nbsp;3.2.2&amp;nbsp;Context&amp;nbsp;Model&amp;nbsp;chapter&amp;nbsp;of&amp;nbsp;Steffens&amp;nbsp;Diss&amp;nbsp;somewhere&amp;nbsp;so&amp;nbsp;that&amp;nbsp;it&amp;nbsp;can&amp;nbsp;be&amp;nbsp;referred&amp;nbsp;to&amp;nbsp;here.&amp;nbsp;It&amp;nbsp;provides&amp;nbsp;an&amp;nbsp;important&amp;nbsp;overview&amp;nbsp;on&amp;nbsp;why&amp;nbsp;we&amp;nbsp;have&amp;nbsp;the&amp;nbsp;usage&amp;nbsp;model.&amp;nbsp;&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;TODO:&amp;nbsp;Include&amp;nbsp;the&amp;nbsp;example&amp;nbsp;from&amp;nbsp;Heiko's&amp;nbsp;dissertation&amp;nbsp;here?&amp;nbsp;But&amp;nbsp;how&amp;nbsp;to&amp;nbsp;include&amp;nbsp;the&amp;nbsp;picture?&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;The&amp;nbsp;usage&amp;nbsp;of&amp;nbsp;a&amp;nbsp;software&amp;nbsp;system&amp;nbsp;by&amp;nbsp;external&amp;nbsp;clients&amp;nbsp;has&amp;nbsp;to&amp;nbsp;be&amp;nbsp;captured&amp;nbsp;in&amp;nbsp;models&amp;nbsp;to&amp;nbsp;enable&amp;nbsp;model-driven&lt;br />&#xD;&#xA;performance&amp;nbsp;predictions.&amp;nbsp;Here,&amp;nbsp;the&amp;nbsp;term&amp;nbsp;usage&amp;nbsp;refers&amp;nbsp;to&amp;nbsp;workload&amp;nbsp;(i.e.,&amp;nbsp;the&amp;nbsp;number&amp;nbsp;of&amp;nbsp;users&amp;nbsp;concurrently&lt;br />&#xD;&#xA;present&amp;nbsp;in&amp;nbsp;the&amp;nbsp;system),&amp;nbsp;usage&amp;nbsp;scenarios&amp;nbsp;(i.e.,&amp;nbsp;possible&amp;nbsp;sequences&amp;nbsp;of&amp;nbsp;invoking&amp;nbsp;services&amp;nbsp;at&amp;nbsp;system&amp;nbsp;provided&lt;br />&#xD;&#xA;roles),&amp;nbsp;waiting&amp;nbsp;delays&amp;nbsp;between&amp;nbsp;service&amp;nbsp;invocations,&amp;nbsp;and&amp;nbsp;values&amp;nbsp;for&amp;nbsp;parameters&amp;nbsp;and&amp;nbsp;component&amp;nbsp;configurations.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;This&amp;nbsp;package&amp;nbsp;contains&amp;nbsp;the&amp;nbsp;usage&amp;nbsp;specification&amp;nbsp;language,&amp;nbsp;which&amp;nbsp;(i)&amp;nbsp;provides&amp;nbsp;more&amp;nbsp;expressiveness&amp;nbsp;for&lt;br />&#xD;&#xA;characterising&amp;nbsp;parameter&amp;nbsp;instances&amp;nbsp;than&amp;nbsp;previous&amp;nbsp;models,&amp;nbsp;but&amp;nbsp;(ii)&amp;nbsp;at&amp;nbsp;the&amp;nbsp;same&amp;nbsp;time&amp;nbsp;is&amp;nbsp;restricted&amp;nbsp;to&amp;nbsp;concepts&lt;br />&#xD;&#xA;familiar&amp;nbsp;to&amp;nbsp;domain&amp;nbsp;experts&amp;nbsp;to&amp;nbsp;create&amp;nbsp;a&amp;nbsp;domain&amp;nbsp;specific&amp;nbsp;language.&amp;nbsp;The&amp;nbsp;language&amp;nbsp;is&amp;nbsp;called&amp;nbsp;PCM&amp;nbsp;usage&lt;br />&#xD;&#xA;model.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;The&amp;nbsp;UsageModel&amp;nbsp;specifies&amp;nbsp;the&amp;nbsp;whole&amp;nbsp;user&amp;nbsp;interaction&amp;nbsp;with&amp;nbsp;a&amp;nbsp;system&amp;nbsp;from&amp;nbsp;a&amp;nbsp;performance&amp;nbsp;viewpoint.&amp;nbsp;It&amp;nbsp;consists&amp;nbsp;of&amp;nbsp;a&amp;nbsp;number&amp;nbsp;of&amp;nbsp;concurrently&amp;nbsp;executed&amp;nbsp;UsageScenarios&amp;nbsp;and&amp;nbsp;a&amp;nbsp;set&amp;nbsp;of&amp;nbsp;global&amp;nbsp;UserData&amp;nbsp;specifications.&amp;nbsp;Each&amp;nbsp;UsageScenario&amp;nbsp;includes&amp;nbsp;a&amp;nbsp;workload&amp;nbsp;and&amp;nbsp;a&amp;nbsp;scenario&amp;nbsp;behaviour.&amp;nbsp;The&amp;nbsp;concepts&amp;nbsp;are&amp;nbsp;explained&amp;nbsp;for&amp;nbsp;the&amp;nbsp;single&amp;nbsp;meta&amp;nbsp;classes&amp;nbsp;included&amp;nbsp;in&amp;nbsp;this&amp;nbsp;package.&amp;nbsp;&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;Note&amp;nbsp;that&amp;nbsp;UsageModels&amp;nbsp;are&amp;nbsp;completely&amp;nbsp;decoupled&amp;nbsp;from&amp;nbsp;the&amp;nbsp;inner&amp;nbsp;contents&amp;nbsp;of&amp;nbsp;a&amp;nbsp;system,&amp;nbsp;which&amp;nbsp;consists&amp;nbsp;of&amp;nbsp;an&amp;nbsp;assembly&amp;nbsp;and&amp;nbsp;a&amp;nbsp;connected&amp;nbsp;resource&amp;nbsp;environment.&amp;nbsp;The&amp;nbsp;UsageModel&amp;nbsp;only&amp;nbsp;refers&amp;nbsp;to&amp;nbsp;services&amp;nbsp;of&amp;nbsp;system&amp;nbsp;provided&amp;nbsp;roles.&amp;nbsp;It&amp;nbsp;regards&amp;nbsp;the&amp;nbsp;component&lt;br />&#xD;&#xA;architecture&amp;nbsp;(i.e.,&amp;nbsp;the&amp;nbsp;assembly)&amp;nbsp;as&amp;nbsp;well&amp;nbsp;as&amp;nbsp;used&amp;nbsp;resources&amp;nbsp;(i.e.,&amp;nbsp;hardware&amp;nbsp;devices&amp;nbsp;such&amp;nbsp;as&amp;nbsp;CPUs&lt;br />&#xD;&#xA;and&amp;nbsp;harddisks&amp;nbsp;or&amp;nbsp;software&amp;nbsp;entities&amp;nbsp;such&amp;nbsp;as&amp;nbsp;threads,&amp;nbsp;semaphores)&amp;nbsp;as&amp;nbsp;hidden&amp;nbsp;in&amp;nbsp;the&amp;nbsp;system.&amp;nbsp;Thus,&amp;nbsp;the&amp;nbsp;UsageModel&amp;nbsp;only&amp;nbsp;captures&amp;nbsp;information&amp;nbsp;that&amp;nbsp;is&amp;nbsp;available&amp;nbsp;to&amp;nbsp;domain&amp;nbsp;experts&amp;nbsp;and&amp;nbsp;can&amp;nbsp;be&amp;nbsp;changed&amp;nbsp;by&amp;nbsp;them.&amp;nbsp;Resource&lt;br />&#xD;&#xA;environment&amp;nbsp;and&amp;nbsp;component&amp;nbsp;architecture&amp;nbsp;may&amp;nbsp;be&amp;nbsp;changed&amp;nbsp;independently&amp;nbsp;from&amp;nbsp;the&amp;nbsp;UsageModel&amp;nbsp;&lt;br />&#xD;&#xA;by&amp;nbsp;system&amp;nbsp;architects,&amp;nbsp;if&amp;nbsp;the&amp;nbsp;system's&amp;nbsp;ProvidedRoles&amp;nbsp;remain&amp;nbsp;unchanged.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;Discussion:&amp;nbsp;&lt;br />&#xD;&#xA;Notice,&amp;nbsp;that&amp;nbsp;unlike&amp;nbsp;other&amp;nbsp;behavioural&amp;nbsp;description&amp;nbsp;languages&amp;nbsp;for&amp;nbsp;performance&amp;nbsp;prediction&amp;nbsp;(e.g.,&amp;nbsp;[162,&amp;nbsp;187,&lt;br />&#xD;&#xA;78]),&amp;nbsp;the&amp;nbsp;PCM&amp;nbsp;usage&amp;nbsp;model&amp;nbsp;specifically&amp;nbsp;models&amp;nbsp;user&amp;nbsp;behaviour&amp;nbsp;and&amp;nbsp;for&amp;nbsp;example&amp;nbsp;does&amp;nbsp;not&amp;nbsp;refer&amp;nbsp;to&amp;nbsp;resources.&lt;br />&#xD;&#xA;Other&amp;nbsp;performance&amp;nbsp;meta-models&amp;nbsp;mix&amp;nbsp;up&amp;nbsp;the&amp;nbsp;specification&amp;nbsp;of&amp;nbsp;user&amp;nbsp;behaviour,&amp;nbsp;component&amp;nbsp;behaviour,&amp;nbsp;and&lt;br />&#xD;&#xA;resources,&amp;nbsp;so&amp;nbsp;that&amp;nbsp;a&amp;nbsp;single&amp;nbsp;developer&amp;nbsp;role&amp;nbsp;(i.e.,&amp;nbsp;a&amp;nbsp;performance&amp;nbsp;analyst)&amp;nbsp;needs&amp;nbsp;to&amp;nbsp;specify&amp;nbsp;the&amp;nbsp;performance&lt;br />&#xD;&#xA;model.&amp;nbsp;Opposed&amp;nbsp;to&amp;nbsp;this,&amp;nbsp;the&amp;nbsp;PCM&amp;nbsp;targets&amp;nbsp;a&amp;nbsp;division&amp;nbsp;of&amp;nbsp;work&amp;nbsp;for&amp;nbsp;multiple&amp;nbsp;developer&amp;nbsp;roles&amp;nbsp;(cf.&amp;nbsp;Section&amp;nbsp;3.1&amp;nbsp;of&amp;nbsp;Heiko&amp;nbsp;Koziolek's&amp;nbsp;dissertation).&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;Furthermore,&amp;nbsp;none&amp;nbsp;of&amp;nbsp;the&amp;nbsp;other&amp;nbsp;performance&amp;nbsp;meta-models&amp;nbsp;support&amp;nbsp;explicit&amp;nbsp;service&amp;nbsp;parameter&amp;nbsp;modelling.&lt;br />&#xD;&#xA;While&amp;nbsp;CSM&amp;nbsp;[162]&amp;nbsp;includes&amp;nbsp;a&amp;nbsp;meta-class&amp;nbsp;Message&amp;nbsp;to&amp;nbsp;specify&amp;nbsp;the&amp;nbsp;amount&amp;nbsp;of&amp;nbsp;data&amp;nbsp;transferred&amp;nbsp;between&lt;br />&#xD;&#xA;two&amp;nbsp;steps&amp;nbsp;in&amp;nbsp;the&amp;nbsp;performance&amp;nbsp;model,&amp;nbsp;and&amp;nbsp;KLAPER&amp;nbsp;[78]&amp;nbsp;allows&amp;nbsp;the&amp;nbsp;specification&amp;nbsp;of&amp;nbsp;parameter&amp;nbsp;values&lt;br />&#xD;&#xA;in&amp;nbsp;principle,&amp;nbsp;none&amp;nbsp;of&amp;nbsp;these&amp;nbsp;language&amp;nbsp;uses&amp;nbsp;the&amp;nbsp;information&amp;nbsp;to&amp;nbsp;parameterise&amp;nbsp;resource&amp;nbsp;demands&amp;nbsp;or&amp;nbsp;component&lt;br />&#xD;&#xA;behaviour.&amp;nbsp;Additionally,&amp;nbsp;they&amp;nbsp;do&amp;nbsp;not&amp;nbsp;provide&amp;nbsp;the&amp;nbsp;information&amp;nbsp;readily&amp;nbsp;analysable&amp;nbsp;by&amp;nbsp;MDSD&amp;nbsp;tools.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;The&amp;nbsp;PCM&amp;nbsp;usage&amp;nbsp;model&amp;nbsp;has&amp;nbsp;been&amp;nbsp;designed&amp;nbsp;based&amp;nbsp;on&amp;nbsp;meta&amp;nbsp;models&amp;nbsp;such&amp;nbsp;as&amp;nbsp;the&amp;nbsp;performance&amp;nbsp;domain&amp;nbsp;model&lt;br />&#xD;&#xA;of&amp;nbsp;the&amp;nbsp;UML&amp;nbsp;SPT&amp;nbsp;profile&amp;nbsp;[31],&amp;nbsp;the&amp;nbsp;Core&amp;nbsp;Scenario&amp;nbsp;Model&amp;nbsp;(CSM)&amp;nbsp;[162],&amp;nbsp;and&amp;nbsp;KLAPER&amp;nbsp;[78].&amp;nbsp;It&amp;nbsp;is&amp;nbsp;furthermore&lt;br />&#xD;&#xA;related&amp;nbsp;to&amp;nbsp;usage&amp;nbsp;models&amp;nbsp;used&amp;nbsp;in&amp;nbsp;statistical&amp;nbsp;testing&amp;nbsp;[34].&amp;nbsp;Although&amp;nbsp;the&amp;nbsp;concepts&amp;nbsp;included&amp;nbsp;in&amp;nbsp;the&amp;nbsp;PCM&amp;nbsp;usage&lt;br />&#xD;&#xA;model&amp;nbsp;are&amp;nbsp;quite&amp;nbsp;similar&amp;nbsp;to&amp;nbsp;the&amp;nbsp;modelling&amp;nbsp;capabilities&amp;nbsp;of&amp;nbsp;the&amp;nbsp;UML&amp;nbsp;SPT&amp;nbsp;profile,&amp;nbsp;there&amp;nbsp;are&amp;nbsp;some&amp;nbsp;subtle&lt;br />&#xD;&#xA;differences:&lt;br />&#xD;&#xA;-&#xD;&#xA;The&amp;nbsp;usage&amp;nbsp;model&amp;nbsp;is&amp;nbsp;aligned&amp;nbsp;with&amp;nbsp;the&amp;nbsp;role&amp;nbsp;of&amp;nbsp;the&amp;nbsp;domain&amp;nbsp;expert,&amp;nbsp;and&amp;nbsp;uses&amp;nbsp;only&amp;nbsp;concepts&amp;nbsp;known&amp;nbsp;to&lt;br />&#xD;&#xA;this&amp;nbsp;role.&amp;nbsp;It&amp;nbsp;is&amp;nbsp;a&amp;nbsp;domain&amp;nbsp;specific&amp;nbsp;language,&amp;nbsp;whereas&amp;nbsp;the&amp;nbsp;UML&amp;nbsp;SPT&amp;nbsp;performance&amp;nbsp;domain&amp;nbsp;model&amp;nbsp;is&lt;br />&#xD;&#xA;a&amp;nbsp;general&amp;nbsp;purpose&amp;nbsp;language&amp;nbsp;that&amp;nbsp;includes&amp;nbsp;information,&amp;nbsp;which&amp;nbsp;is&amp;nbsp;usually&amp;nbsp;spread&amp;nbsp;over&amp;nbsp;multiple&amp;nbsp;developer&lt;br />&#xD;&#xA;roles&amp;nbsp;such&amp;nbsp;as&amp;nbsp;the&amp;nbsp;component&amp;nbsp;assembler&amp;nbsp;and&amp;nbsp;the&amp;nbsp;system&amp;nbsp;deployer,&amp;nbsp;so&amp;nbsp;that&amp;nbsp;a&amp;nbsp;domain&amp;nbsp;expert&amp;nbsp;without&amp;nbsp;a&amp;nbsp;technical&amp;nbsp;background&amp;nbsp;could&amp;nbsp;not&amp;nbsp;specify&amp;nbsp;an&amp;nbsp;instance&amp;nbsp;of&amp;nbsp;it.&amp;nbsp;Nevertheless,&amp;nbsp;domain&amp;nbsp;experts&lt;br />&#xD;&#xA;should&amp;nbsp;be&amp;nbsp;able&amp;nbsp;to&amp;nbsp;create&amp;nbsp;PCM&amp;nbsp;usage&amp;nbsp;models&amp;nbsp;with&amp;nbsp;appropriate&amp;nbsp;tools&amp;nbsp;independently&amp;nbsp;from&amp;nbsp;other&amp;nbsp;developer&lt;br />&#xD;&#xA;roles,&amp;nbsp;because&amp;nbsp;such&amp;nbsp;models&amp;nbsp;only&amp;nbsp;contain&amp;nbsp;concepts&amp;nbsp;known&amp;nbsp;to&amp;nbsp;them.&lt;br />&#xD;&#xA;-&#xD;&#xA;The&amp;nbsp;number&amp;nbsp;of&amp;nbsp;loop&amp;nbsp;iterations&amp;nbsp;is&amp;nbsp;not&amp;nbsp;bound&amp;nbsp;to&amp;nbsp;a&amp;nbsp;constant&amp;nbsp;value,&amp;nbsp;but&amp;nbsp;can&amp;nbsp;be&amp;nbsp;specified&amp;nbsp;as&amp;nbsp;a&amp;nbsp;random&lt;br />&#xD;&#xA;variable.&lt;br />&#xD;&#xA;-&#xD;&#xA;The&amp;nbsp;control&amp;nbsp;flow&amp;nbsp;constructs&amp;nbsp;are&amp;nbsp;arranged&amp;nbsp;in&amp;nbsp;a&amp;nbsp;hierarchical&amp;nbsp;fashion&amp;nbsp;to&amp;nbsp;enable&amp;nbsp;easy&amp;nbsp;analyses.&lt;br />&#xD;&#xA;-&#xD;&#xA;Users&amp;nbsp;are&amp;nbsp;restricted&amp;nbsp;to&amp;nbsp;non-concurrent&amp;nbsp;behaviour,&amp;nbsp;as&amp;nbsp;it&amp;nbsp;is&amp;nbsp;assumed,&amp;nbsp;that&amp;nbsp;users&amp;nbsp;only&amp;nbsp;execute&amp;nbsp;the&lt;br />&#xD;&#xA;services&amp;nbsp;of&amp;nbsp;a&amp;nbsp;system&amp;nbsp;one&amp;nbsp;at&amp;nbsp;a&amp;nbsp;time.&lt;br />&#xD;&#xA;-&#xD;&#xA;System&amp;nbsp;service&amp;nbsp;invocations&amp;nbsp;can&amp;nbsp;be&amp;nbsp;enhanced&amp;nbsp;with&amp;nbsp;characterisations&amp;nbsp;of&amp;nbsp;parameters&amp;nbsp;values.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;[31]&amp;nbsp;Object&amp;nbsp;Management&amp;nbsp;Group&amp;nbsp;(OMG),&amp;nbsp;&quot;UML&amp;nbsp;Profile&amp;nbsp;for&amp;nbsp;Schedulability,&amp;nbsp;Performance&amp;nbsp;and&amp;nbsp;Time,&quot;&lt;br />&#xD;&#xA;http://www.omg.org/cgi-bin/doc?formal/2005-01-02,&amp;nbsp;January&amp;nbsp;2005.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;[34]&amp;nbsp;James&amp;nbsp;A.&amp;nbsp;Whittaker&amp;nbsp;and&amp;nbsp;Michael&amp;nbsp;G.&amp;nbsp;Thomason,&amp;nbsp;&quot;A&amp;nbsp;Markov&amp;nbsp;chain&amp;nbsp;model&amp;nbsp;for&amp;nbsp;statistical&amp;nbsp;software&lt;br />&#xD;&#xA;testing,&quot;&amp;nbsp;IEEE&amp;nbsp;Transactions&amp;nbsp;on&amp;nbsp;Software&amp;nbsp;Engineering,&amp;nbsp;vol.&amp;nbsp;20,&amp;nbsp;no.&amp;nbsp;10,&amp;nbsp;pp.&amp;nbsp;812-824,&amp;nbsp;Oct.&amp;nbsp;1994.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;[78]&amp;nbsp;V.&amp;nbsp;Grassi,&amp;nbsp;R.&amp;nbsp;Mirandola,&amp;nbsp;and&amp;nbsp;A.&amp;nbsp;Sabetta,&amp;nbsp;&quot;From&amp;nbsp;design&amp;nbsp;to&amp;nbsp;analysis&amp;nbsp;models:&amp;nbsp;a&amp;nbsp;kernel&amp;nbsp;language&lt;br />&#xD;&#xA;for&amp;nbsp;performance&amp;nbsp;and&amp;nbsp;reliability&amp;nbsp;analysis&amp;nbsp;of&amp;nbsp;component-based&amp;nbsp;systems,&quot;&amp;nbsp;in&amp;nbsp;Proc.&amp;nbsp;5th&amp;nbsp;International&lt;br />&#xD;&#xA;Workshop&amp;nbsp;on&amp;nbsp;Software&amp;nbsp;and&amp;nbsp;Performance&amp;nbsp;(WOSP&amp;nbsp;'05).&amp;nbsp;New&amp;nbsp;York,&amp;nbsp;NY,&amp;nbsp;USA:&amp;nbsp;ACM&amp;nbsp;Press,&amp;nbsp;2005,&lt;br />&#xD;&#xA;pp.&amp;nbsp;25-36.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;[162]&amp;nbsp;D.&amp;nbsp;B.&amp;nbsp;Petriu&amp;nbsp;and&amp;nbsp;M.&amp;nbsp;Woodside,&amp;nbsp;&quot;A&amp;nbsp;metamodel&amp;nbsp;for&amp;nbsp;generating&amp;nbsp;performance&amp;nbsp;models&amp;nbsp;from&amp;nbsp;UML&amp;nbsp;designs,&quot;&lt;br />&#xD;&#xA;in&amp;nbsp;UML&amp;nbsp;2004&amp;nbsp;-&amp;nbsp;The&amp;nbsp;Unified&amp;nbsp;Modeling&amp;nbsp;Language.&amp;nbsp;Model&amp;nbsp;Languages&amp;nbsp;and&amp;nbsp;Applications.&amp;nbsp;7th&lt;br />&#xD;&#xA;International&amp;nbsp;Conference,&amp;nbsp;Lisbon,&amp;nbsp;Portugal,&amp;nbsp;October&amp;nbsp;11-15,&amp;nbsp;2004,&amp;nbsp;Proceedings,&amp;nbsp;ser.&amp;nbsp;LNCS,&amp;nbsp;T.&amp;nbsp;Baar,&lt;br />&#xD;&#xA;A.&amp;nbsp;Strohmeier,&amp;nbsp;A.&amp;nbsp;Moreira,&amp;nbsp;and&amp;nbsp;S.&amp;nbsp;J.&amp;nbsp;Mellor,&amp;nbsp;Eds.,&amp;nbsp;vol.&amp;nbsp;3273.&amp;nbsp;Springer,&amp;nbsp;2004,&amp;nbsp;pp.&amp;nbsp;41-53.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;[187]&amp;nbsp;C.&amp;nbsp;U.&amp;nbsp;Smith,&amp;nbsp;C.&amp;nbsp;M.&amp;nbsp;Llado,&amp;nbsp;V.&amp;nbsp;Cortellessa,&amp;nbsp;A.&amp;nbsp;D.&amp;nbsp;Marco,&amp;nbsp;and&amp;nbsp;L.&amp;nbsp;G.&amp;nbsp;Williams,&amp;nbsp;&quot;From&amp;nbsp;UML&amp;nbsp;models&lt;br />&#xD;&#xA;to&amp;nbsp;software&amp;nbsp;performance&amp;nbsp;results:&amp;nbsp;an&amp;nbsp;SPE&amp;nbsp;process&amp;nbsp;based&amp;nbsp;on&amp;nbsp;XML&amp;nbsp;interchange&amp;nbsp;formats,&quot;&amp;nbsp;in&amp;nbsp;Proc.&amp;nbsp;5th&lt;br />&#xD;&#xA;international&amp;nbsp;workshop&amp;nbsp;on&amp;nbsp;Software&amp;nbsp;and&amp;nbsp;performance&amp;nbsp;(WOSP'05).&amp;nbsp;New&amp;nbsp;York,&amp;nbsp;NY,&amp;nbsp;USA:&amp;nbsp;ACM&lt;br />&#xD;&#xA;Press,&amp;nbsp;2005,&amp;nbsp;pp.&amp;nbsp;87-98.&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;&lt;br />&#xD;&#xA;&lt;br />"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="UsageModel">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The UsageModel specifies the whole user interaction with a system from a performance viewpoint. It consists of a number of concurrently executed UsageScenarios and a set of global UserData specifications. Each UsageScenario includes a workload and a scenario behaviour. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usageScenario_UsageModel"
+        ordered="false" upperBound="-1" eType="#//UsageScenario" containment="true"
+        eOpposite="#//UsageScenario/usageModel_UsageScenario"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="userData_UsageModel" ordered="false"
+        upperBound="-1" eType="#//UserData" containment="true" eOpposite="#//UserData/usageModel_UserData"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UserData">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="UserData characterises data&#xD;&#xA;used in specific assembly contexts in the system. This data is the same for all UsageScenarios, i.e.,&#xD;&#xA;multiple users accessing the same components access the same data. This UserData refers to component&#xD;&#xA;parameters of the system publicized by the software architect (see mpcm::parameters package). The domain expert&#xD;&#xA;characterises the values of component parameters related to business concepts (e.g., user specific data,&#xD;&#xA;data specific for a business domain), whereas the software architect characterises the values of component&#xD;&#xA;parameters related to technical concepts (e.g., size of caches, size of a thread pool, configuration data,&#xD;&#xA;etc.). One UserData instance includes all parameter characterisation for the annotated entity. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext_userData"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usageModel_UserData" ordered="false"
+        lowerBound="1" eType="#//UsageModel" eOpposite="#//UsageModel/userData_UsageModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="userDataParameterUsages_UserData"
+        ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//VariableUsage"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UsageScenario" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="UsageScenarios are concurrently executed behaviours of users within one UsageModel.  It describes which&#xD;&#xA;services are directly invoked by users in one specific use case and models the possible sequences of calling&#xD;&#xA;them. Each UsageScenario includes a workload and a scenario behaviour. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usageModel_UsageScenario"
+        ordered="false" lowerBound="1" eType="#//UsageModel" eOpposite="#//UsageModel/usageScenario_UsageModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenarioBehaviour_UsageScenario"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.behaviour.usage/model/usage.ecore#//ScenarioBehaviour"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workload_UsageScenario"
+        ordered="false" lowerBound="1" eType="#//Workload" containment="true" eOpposite="#//Workload/usageScenario_Workload"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Workload" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Workload specifies the usage intensity of a system, which relates to the number of users concurrently&#xD;&#xA;present in the system. The PCM usage model adopts this concept from classical queueing&#xD;&#xA;theory [123]. The specified workloads can directly be used in queueing networks or easily be mapped&#xD;&#xA;to markings in stochastic Petri nets. Workloads can either be open or closed.&#xD;&#xA;&#xD;&#xA;The algorithms used to analyse queueing networks differ depending on whether open or closed workloads&#xD;&#xA;are modelled [123]. Some special queueing networks can only be analysed given a particular workload&#xD;&#xA;type (open or closed). Notice, that it is possible to specify a usage model with open workload usage&#xD;&#xA;scenarios and closed workload usage scenarios at the same time. Open and closed workloads can be&#xD;&#xA;executed in parallel when analysing the model.&#xD;&#xA;&#xD;&#xA;[123] E. Lazowska, J. Zahorjan, G. Graham, and K. Sevcik, Quantitative System Performance. Prentice&#xD;&#xA;Hall, 1984."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usageScenario_Workload"
+        ordered="false" lowerBound="1" eType="#//UsageScenario" eOpposite="#//UsageScenario/workload_UsageScenario"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OpenWorkload" eSuperTypes="#//Workload">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="OpenWorkload specifies usage intensity with an inter-arrival time (i.e., the time between two&#xD;&#xA;user arrivals at the system) as a RandomVariable with an arbitrary probability distribution. It&#xD;&#xA;models that an infinite stream of users arrives at a system. The users execute their scenario, and then&#xD;&#xA;leave the system. The user population (i.e., the number of users concurrently present in a system) is&#xD;&#xA;not fixed in an OpenWorkload."/>
+    </eAnnotations>
+    <eOperations name="InterArrivalTimeInOpenWorkloadNeedsToBeSpecified" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="not self.interArrivalTime_OpenWorkload.oclIsUndefined() and self.interArrivalTime_OpenWorkload.specification &lt;> ''"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interArrivalTime_OpenWorkload"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClosedWorkload" eSuperTypes="#//Workload">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="ClosedWorkload specifies directly the (constant) user population and a think time. It models&#xD;&#xA;that a fixed number of users execute their scenario, then wait (or think) for the specified amount&#xD;&#xA;of think time as a RandomVariable, and then reenter the system executing their scenario again.&#xD;&#xA;Performance analysts use closed workloads to model scenarios, where the number of users is known&#xD;&#xA;(e.g., a fixed number of users in a company)."/>
+    </eAnnotations>
+    <eOperations name="PopulationInClosedWorkloadNeedsToBeSpecified" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="not self.population.oclIsUndefined() and self.population &lt;> ''"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="ThinkTimeInClosedWorkloadNeedsToBeSpecified" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="not self.thinkTime_ClosedWorkload.oclIsUndefined() and self.thinkTime_ClosedWorkload.specification &lt;> ''"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="population" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="thinkTime_ClosedWorkload"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntryLevelSystemCall" eSuperTypes="../../mpcm.paradigm.behaviour.usage/model/usage.ecore#//AbstractUserAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An EntryLevelSystemCall models the call to a service provided by a system. Therefore, an&#xD;&#xA;EntryLevelSystemCall references a ProvidedRole of a PCM System, from which the&#xD;&#xA;called interface and the providing component within the system can be derived, and a Signature&#xD;&#xA;specifying the called service. Notice, that the usage model does not permit the domain expert to&#xD;&#xA;model calls directly to components, but only to system roles. (TODO: Add such a constraint.) This decouples the System structure&#xD;&#xA;(i.e., the component-based software architecture model and its allocation) from the UsageModel&#xD;&#xA;and the software architect can change the System (e.g., include new components, remove existing&#xD;&#xA;components, or change their wiring or allocation) independently from the domain expert, if&#xD;&#xA;the system provided roles are not affected. EntryLevelSystemCalls may include a set of&#xD;&#xA;input parameter characterisations and a set of output parameter characterisations (as described in&#xD;&#xA;the mpcm::parameters package). However, the random variables characterising the input parameters&#xD;&#xA;like NUMBER_OF_ELEMENTS can not depend on other variables in the usage model. They have&#xD;&#xA;to be composed from literals only including literals describing random variables having a&#xD;&#xA;certain fixed distribution.&#xD;&#xA;&#xD;&#xA;TODO Anne: Constraint that ensures that the referred signature is contained in the interface referenced by the ProvidedRole (see Diagram)"/>
+    </eAnnotations>
+    <eOperations name="EntryLevelSystemCallMustReferenceProvidedRoleOfASystem" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.providedRole_EntryLevelSystemCall.providingEntity_ProvidedRole.oclIsTypeOf(mpcm::system::System)"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="EntryLevelSystemCallSignatureMustMatchItsProvidedRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.providedRole_EntryLevelSystemCall.providedInterface__OperationProvidedRole.signatures__OperationInterface->includes(self.operationSignature__EntryLevelSystemCall)"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedRole_EntryLevelSystemCall"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.domain.repository/model/repository.ecore#//OperationProvidedRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationSignature__EntryLevelSystemCall"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.domain.repository/model/repository.ecore#//OperationSignature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputParameterUsages_EntryLevelSystemCall"
+        ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//VariableUsage"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputParameterUsages_EntryLevelSystemCall"
+        ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//VariableUsage"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

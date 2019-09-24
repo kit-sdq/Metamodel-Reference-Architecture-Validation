@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kamp4aps.aps/src" modelPluginID="edu.kit.ipd.sdq.kamp4aps.aps"
+    modelName="Aps" editPluginClass="edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider.ApsEditPlugin"
+    editorPluginClass="edu.kit.ipd.sdq.kamp4aps.aps.aPS.aPS.presentation.ApsEditorPlugin"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.genmodel#//basic"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>aPS.ecore</foreignModel>
+  <genPackages prefix="aps" basePackage="edu.kit.ipd.sdq.kamp4aps.model" disposableProviderFactory="true"
+      ecorePackage="aPS.ecore#/">
+    <genClasses ecoreClass="aPS.ecore#//Plant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aPS.ecore#//Plant/PlantName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//Plant/structures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//Plant/interfaceRepository"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//Plant/componentRepository"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//Plant/moduleRepository"/>
+    </genClasses>
+    <nestedGenPackages prefix="ComponentRepository" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//ComponentRepository">
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Component">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Component/connectedInterfaces"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Component/parent"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Component/parentModule"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="aPS.ecore#//ComponentRepository/Panel">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Panel/componentRepository"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/OperationPanel">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/OperationPanel/screwing_rack"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/OperationPanel/leds"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/OperationPanel/buttons"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="aPS.ecore#//ComponentRepository/Motor">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Motor/gearing"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Motor/screwing"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Motor/powersupply"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/SimpleMotor"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//ComponentRepository/MechanicalAssembly"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/RegularRamp"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Sensor">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Sensor/physicalconnection"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Sensor/signalinterface"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Sensor/powersupply"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/OpticalSensor"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/InductiveSensor"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/PresenceSensor"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/PressureSensor"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//ComponentRepository/Pipe">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Pipe/plugs"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/PneumaticPipe"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Compressor">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Compressor/powersupply"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Compressor/pneumaticsupply"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Compressor/pins"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Compressor/screwing"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Compressor/switch"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="aPS.ecore#//ComponentRepository/Cable"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/PowerCable"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//ComponentRepository/Cylinder">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Cylinder/pneumaticsupply"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Cylinder/SignalInterface"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/ProportionalCylinder"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/BistableCylinder"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Rack">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Rack/screwing_to_base"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Corner"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//ComponentRepository/Valve">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Valve/pneumaticsupply"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Valve/powersupply"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Valve/signalinterface"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/RegularValve"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Tank">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Tank/watersupply"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Tank/screwing"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Dispenser"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/BottleSeperator">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/BottleSeperator/signalinterface"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/BottleSeperator/pneumaticsupply"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/BottleSeperator/powersupply"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/BottleSeperator/screwing_to_rack"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="aPS.ecore#//ComponentRepository/Splitter">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Splitter/screwing"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/PowerSupply"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/ConveyorBelt">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/ConveyorBelt/mountedTo"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/ConveyorBelt/frame"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/ConveyorBelt/rubberBand"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Frame"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Pusher">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Pusher/componentsRepository"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Pusher/fixtureCylinder"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Pusher/monostableCylinder"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Pusher/busBox"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Pusher/busCable"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/TurningTable">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/TurningTable/rack_for_turningtable"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/TurningTable/table_to_stand_on"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/TurningTable/motor_to_drive"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/TurningTable/microswitchModule"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/TurningTable/busSlave"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/TurningTable/busBox"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/TurningTable/busCable"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/TurningTable/potentiometer"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Controller">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Controller/powersupply"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Controller/controllerOf"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/LogicalWiring">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/LogicalWiring/busCable"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/VacuumSwitch"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/ReedSwitch"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/PowerSplitter">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/PowerSplitter/powersupply"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/WaterSplitter">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/WaterSplitter/watersupply"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/PneumaticSplitter">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/PneumaticSplitter/pneumaticsupply"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/CylinderPart"/>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/MonostableCylinder">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/MonostableCylinder/housing"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/MonostableCylinder/spring"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/MonostableCylinder/reedSwitches"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/MonostableCylinder/cylinderPart"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/MonostableCylinder/valve"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/MonostableCylinder/busSlave"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/ComponentRepository">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/ComponentRepository/allComponentsInPlant"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Fixture"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="BusComponents" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//BusComponents">
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/BusBox">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//BusComponents/BusBox/signalinterfaces"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//BusComponents/BusBox/signalinterface_master"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//BusComponents/BusBox/signalinterface_box"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//BusComponents/BusBox/powersupply"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/BusMaster">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//BusComponents/BusMaster/signalinterfaces"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//BusComponents/BusMaster/signalinterface_controller"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/BusSlave">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//BusComponents/BusSlave/signalinterface_master"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//BusComponents/BusSlave/signalinterface_slave"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/BusCable">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//BusComponents/BusCable/SignalPlug1"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//BusComponents/BusCable/SignalPlug2"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/ProfibusDPBox"/>
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/ProfibusDPMaster"/>
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/ProfibusDPSlave"/>
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/ProfibusDPCable"/>
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/EtherCATBox"/>
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/EtherCATMaster"/>
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/EtherCATSlave"/>
+      <genClasses ecoreClass="aPS.ecore#//BusComponents/EtherCATCable"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="ElectronicComponents" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//ElectronicComponents">
+      <genClasses image="false" ecoreClass="aPS.ecore#//ElectronicComponents/ElectronicPart">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ElectronicComponents/ElectronicPart/pin"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ElectronicComponents/ElectronicPart/physicalconnection"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ElectronicComponents/Switch"/>
+      <genClasses ecoreClass="aPS.ecore#//ElectronicComponents/LED"/>
+      <genClasses ecoreClass="aPS.ecore#//ElectronicComponents/Button"/>
+      <genClasses ecoreClass="aPS.ecore#//ElectronicComponents/MicroSwitch">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference aPS.ecore#//ElectronicComponents/MicroSwitch/msModule"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ElectronicComponents/Potentiometer"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="MechanicalComponents" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//MechanicalComponents">
+      <genClasses image="false" ecoreClass="aPS.ecore#//MechanicalComponents/MechanicalPart">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//MechanicalComponents/MechanicalPart/screwing"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="aPS.ecore#//MechanicalComponents/Pushhead"/>
+      <genClasses ecoreClass="aPS.ecore#//MechanicalComponents/Housing"/>
+      <genClasses ecoreClass="aPS.ecore#//MechanicalComponents/ReturnSpring"/>
+      <genClasses ecoreClass="aPS.ecore#//MechanicalComponents/RubberBand"/>
+      <genClasses ecoreClass="aPS.ecore#//MechanicalComponents/GripperPart"/>
+      <genClasses ecoreClass="aPS.ecore#//MechanicalComponents/Arm">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//MechanicalComponents/Arm/mountedTo"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="aPS.ecore#//MechanicalComponents/Ramp">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//MechanicalComponents/Ramp/screwing_base"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//MechanicalComponents/Ramp/screwing_component"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//MechanicalComponents/Ramp/physicalconnection"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//MechanicalComponents/Table"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="StructureRepository" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//StructureRepository">
+      <genClasses ecoreClass="aPS.ecore#//StructureRepository/Structure">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference aPS.ecore#//StructureRepository/Structure/parentPlant"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//StructureRepository/Structure/modules"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//StructureRepository/Structure/components"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//StructureRepository/CommunicationNetwork"/>
+      <genClasses ecoreClass="aPS.ecore#//StructureRepository/PowerNetwork"/>
+      <genClasses ecoreClass="aPS.ecore#//StructureRepository/ControlCabinet">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//StructureRepository/ControlCabinet/controller"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//StructureRepository/PneumaticNetwork"/>
+      <genClasses ecoreClass="aPS.ecore#//StructureRepository/Conveyor">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//StructureRepository/Conveyor/belts"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//StructureRepository/Crane">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//StructureRepository/Crane/arm"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//StructureRepository/Crane/mountedOn"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//StructureRepository/Crane/vacuumgripper"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//StructureRepository/PowerWiring"/>
+      <genClasses ecoreClass="aPS.ecore#//StructureRepository/LogicalWiring"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="ModuleRepository" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//ModuleRepository">
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/MicroswitchModule">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/MicroswitchModule/busSlave"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/MicroswitchModule/switch"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/PotentiometerModule">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/PotentiometerModule/poti"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/ModuleRepository">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/ModuleRepository/allModulesInPlant"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/Module">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/Module/parentEntity"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/Module/modules"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/Module/components"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/Module/interfaces"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/RampModule"/>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/PusherModule"/>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/MotorModule">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/MotorModule/simpleMotor"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/MotorModule/busSlave"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/MotorModule/busBox"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/MotorModule/busCable"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/SensorModule"/>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/OpticalSensorModule">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/OpticalSensorModule/opticalSensor"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/OpticalSensorModule/busSlave"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/InductiveSensorModule">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/InductiveSensorModule/inductiveSensor"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/InductiveSensorModule/busSlave"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/PresenceSensorModule">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/PresenceSensorModule/presenceSensor"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/PresenceSensorModule/busSlave"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/PressureSensorModule"/>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/ConveyorBeltModule">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/ConveyorBeltModule/rubberBand"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/ConveyorBeltModule/frame"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/VacuumGripperModule"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="InterfaceRepository" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//InterfaceRepository">
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/InterfaceRepository">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//InterfaceRepository/InterfaceRepository/allInterfacesInPlant"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/Interface">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference aPS.ecore#//InterfaceRepository/Interface/parentElement"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/Screwing"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//InterfaceRepository/ScrewingSplitter"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//InterfaceRepository/ScrewingMotor"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//InterfaceRepository/ScrewingRack"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//InterfaceRepository/ScrewingCylinder"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//InterfaceRepository/ScrewingFixture"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//InterfaceRepository/ScrewingPotentiometer"/>
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/Suspension"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//InterfaceRepository/SuspensionRack"/>
+      <genClasses image="false" ecoreClass="aPS.ecore#//InterfaceRepository/SuspensionArm"/>
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/Gearing"/>
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/Clamping"/>
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/PneumaticSupply"/>
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/SignalInterface"/>
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/WaterSupply"/>
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/PhysicalConnection"/>
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/TransportConnection"/>
+      <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/Fixture"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

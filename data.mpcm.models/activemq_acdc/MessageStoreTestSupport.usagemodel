@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_bXNakLLWEeWT3tCwcp23sg" entityName="testRecovery">
+    <scenarioBehaviour_UsageScenario id="_bXNak7LWEeWT3tCwcp23sg" entityName="testRecovery">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_bXNakbLWEeWT3tCwcp23sg" successor="_bXOBoLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bXOBoLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.testRecovery() at 2785" successor="_bXu_ALLWEeWT3tCwcp23sg" predecessor="_bXNakbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_bXu_ALLWEeWT3tCwcp23sg" entityName="default loop count value" successor="_bX7MQLLWEeWT3tCwcp23sg" predecessor="_bXOBoLLWEeWT3tCwcp23sg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_bXu_AbLWEeWT3tCwcp23sg" entityName=" @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.testRecovery() from 2786 to 2840">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_bXu_ArLWEeWT3tCwcp23sg" successor="_bXu_A7LWEeWT3tCwcp23sg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_bXu_A7LWEeWT3tCwcp23sg" successor="_bXxbRLLWEeWT3tCwcp23sg" predecessor="_bXu_ArLWEeWT3tCwcp23sg">
+            <branchTransitions_Branch branchProbability="1.0">
+              <branchedBehaviour_BranchTransition id="_bXu_BLLWEeWT3tCwcp23sg" entityName="parent  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.getMessage() from 10534 to 10566/ @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.getMessage().Block from 10567 to 10613">
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_bXu_BbLWEeWT3tCwcp23sg" successor="_bXu_BrLWEeWT3tCwcp23sg"/>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bXu_BrLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10794" successor="_bXu_B7LWEeWT3tCwcp23sg" predecessor="_bXu_BbLWEeWT3tCwcp23sg">
+                  <timeSpecification_Delay specification="0"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bXu_B7LWEeWT3tCwcp23sg" entityName="generateId:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10852" successor="_bXvmELLWEeWT3tCwcp23sg" predecessor="_bXu_BrLWEeWT3tCwcp23sg">
+                  <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtpbwLLWEeWT3tCwcp23sg"/>
+                  <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_FAPYkLLWEeWT3tCwcp23sg"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bXvmELLWEeWT3tCwcp23sg" entityName="setJMSMessageID:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10852" successor="_bXw0MLLWEeWT3tCwcp23sg" predecessor="_bXu_B7LWEeWT3tCwcp23sg">
+                  <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+                  <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENBL4LLWEeWT3tCwcp23sg"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bXw0MLLWEeWT3tCwcp23sg" entityName="setJMSClientID:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10898" successor="_bXxbQLLWEeWT3tCwcp23sg" predecessor="_bXvmELLWEeWT3tCwcp23sg">
+                  <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+                  <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENEPMLLWEeWT3tCwcp23sg"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bXxbQLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10945" successor="_bXxbQbLWEeWT3tCwcp23sg" predecessor="_bXw0MLLWEeWT3tCwcp23sg">
+                  <timeSpecification_Delay specification="0"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bXxbQbLWEeWT3tCwcp23sg" entityName="setText:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10992" successor="_bXxbQrLWEeWT3tCwcp23sg" predecessor="_bXxbQLLWEeWT3tCwcp23sg">
+                  <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+                  <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E3EOcLLWEeWT3tCwcp23sg"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bXxbQrLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() from 10993 to 11015" successor="_bXxbQ7LWEeWT3tCwcp23sg" predecessor="_bXxbQbLWEeWT3tCwcp23sg">
+                  <timeSpecification_Delay specification="0"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_bXxbQ7LWEeWT3tCwcp23sg" predecessor="_bXxbQrLWEeWT3tCwcp23sg"/>
+              </branchedBehaviour_BranchTransition>
+            </branchTransitions_Branch>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bXxbRLLWEeWT3tCwcp23sg" entityName="addMessage:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.doAddMessage() at 4943" successor="_bXzQcLLWEeWT3tCwcp23sg" predecessor="_bXu_A7LWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_bXypYLLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_bXxbRbLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bXzQcLLWEeWT3tCwcp23sg" entityName="run:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.doAddMessage() at 4943" successor="_bXzQcrLWEeWT3tCwcp23sg" predecessor="_bXxbRLLWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEdZQLLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_bXzQcbLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_bXzQcrLWEeWT3tCwcp23sg" predecessor="_bXzQcLLWEeWT3tCwcp23sg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_bX7MQLLWEeWT3tCwcp23sg" entityName="default loop count value" successor="_bX9ogrLWEeWT3tCwcp23sg" predecessor="_bXu_ALLWEeWT3tCwcp23sg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_bX7MQbLWEeWT3tCwcp23sg" entityName=" @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.dumpMessageIdentities() from 5094 to 5147">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_bX7MQrLWEeWT3tCwcp23sg" successor="_bX7MQ7LWEeWT3tCwcp23sg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bX7MQ7LWEeWT3tCwcp23sg" entityName="getJMSMessageIdentity:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.dumpMessageIdentities().Block at 5274" successor="_bX7MRLLWEeWT3tCwcp23sg" predecessor="_bX7MQrLWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAi2IrLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bX7MRLLWEeWT3tCwcp23sg" entityName="getSequenceNumber:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.dumpMessageIdentities().Block at 5336" successor="_bX9ogLLWEeWT3tCwcp23sg" predecessor="_bX7MQ7LWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEdZQLLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_Iaw-srLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bX9ogLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.dumpMessageIdentities().Block at 5376" successor="_bX9ogbLWEeWT3tCwcp23sg" predecessor="_bX7MRLLWEeWT3tCwcp23sg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_bX9ogbLWEeWT3tCwcp23sg" predecessor="_bX9ogLLWEeWT3tCwcp23sg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bX9ogrLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.dumpMessageIdentities() at 5610" successor="_bYfM8LLWEeWT3tCwcp23sg" predecessor="_bX7MQLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bYfM8LLWEeWT3tCwcp23sg" entityName="getJMSMessageID:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.assertMessagesEqual() at 10403" successor="_bYfM8bLWEeWT3tCwcp23sg" predecessor="_bX9ogrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAmghLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bYfM8bLWEeWT3tCwcp23sg" entityName="getJMSMessageID:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.assertMessagesEqual() at 10403" successor="_bYf0ALLWEeWT3tCwcp23sg" predecessor="_bYfM8LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAmghLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bYf0ALLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.assertMessagesEqual() at 10456" successor="_bYf0AbLWEeWT3tCwcp23sg" predecessor="_bYfM8bLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bYf0AbLWEeWT3tCwcp23sg" entityName="run:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.assertDeliveryList() at 9971" successor="_bYhCILLWEeWT3tCwcp23sg" predecessor="_bYf0ALLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEdZQLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_bXzQcbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bYhCILLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.testRecovery() at 3095" successor="_bYi3ULLWEeWT3tCwcp23sg" predecessor="_bYf0AbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_bYi3ULLWEeWT3tCwcp23sg" entityName="default loop count value" successor="_bYksgLLWEeWT3tCwcp23sg" predecessor="_bYhCILLWEeWT3tCwcp23sg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_bYi3UbLWEeWT3tCwcp23sg" entityName=" @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.testRecovery() from 3096 to 3138">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_bYi3UrLWEeWT3tCwcp23sg" successor="_bYi3U7LWEeWT3tCwcp23sg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bYi3U7LWEeWT3tCwcp23sg" entityName="run:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.doAcknowledgeMessage() at 4656" successor="_bYjeYLLWEeWT3tCwcp23sg" predecessor="_bYi3UrLWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEdZQLLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_bXzQcbLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_bYjeYLLWEeWT3tCwcp23sg" predecessor="_bYi3U7LWEeWT3tCwcp23sg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bYksgLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.dumpMessageIdentities() at 5093" successor="_bZItMLLWEeWT3tCwcp23sg" predecessor="_bYi3ULLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZItMLLWEeWT3tCwcp23sg" entityName="clear:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11116" successor="_bZJUQLLWEeWT3tCwcp23sg" predecessor="_bYksgLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_bXypYLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_Gc8AErLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZJUQLLWEeWT3tCwcp23sg" entityName="stop:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11157" successor="_bZJUQrLWEeWT3tCwcp23sg" predecessor="_bZItMLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEcLILLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HN-bcbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZJUQrLWEeWT3tCwcp23sg" entityName="stop:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11191" successor="_bZJ7ULLWEeWT3tCwcp23sg" predecessor="_bZJUQLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEcLILLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HN-bcbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZJ7ULLWEeWT3tCwcp23sg" entityName="start:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11283" successor="_bZKiYLLWEeWT3tCwcp23sg" predecessor="_bZJUQrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEcLILLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HN-bcLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bZKiYLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11347" successor="_bZKiYbLWEeWT3tCwcp23sg" predecessor="_bZJ7ULLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZKiYbLWEeWT3tCwcp23sg" entityName="getPhysicalName:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11510" successor="_bZKiYrLWEeWT3tCwcp23sg" predecessor="_bZKiYLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EviDELLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZKiYrLWEeWT3tCwcp23sg" entityName="getContainer:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11510" successor="_bZKiY7LWEeWT3tCwcp23sg" predecessor="_bZKiYbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEcLILLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HLr8cLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bZKiY7LWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createSubscription() at 6711" successor="_bZKiZLLWEeWT3tCwcp23sg" predecessor="_bZKiYrLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZKiZLLWEeWT3tCwcp23sg" entityName="addMessageConsumer:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createSubscription() at 6903" successor="_bZKiZbLWEeWT3tCwcp23sg" predecessor="_bZKiY7LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEcLILLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HLrVYLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bZKiZbLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createSubscription() from 6904 to 7048" successor="_bZLJcLLWEeWT3tCwcp23sg" predecessor="_bZKiZLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZLJcLLWEeWT3tCwcp23sg" entityName="run:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11706" successor="_bZOz0LLWEeWT3tCwcp23sg" predecessor="_bZKiZbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEdZQLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_bXzQcbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_bZOz0LLWEeWT3tCwcp23sg" entityName="default loop count value" successor="_bXNakrLWEeWT3tCwcp23sg" predecessor="_bZLJcLLWEeWT3tCwcp23sg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_bZTsULLWEeWT3tCwcp23sg" entityName=" @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.testRecovery() from 3530 to 3591">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_bZTsUbLWEeWT3tCwcp23sg" successor="_bZTsUrLWEeWT3tCwcp23sg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_bZTsUrLWEeWT3tCwcp23sg" predecessor="_bZTsUbLWEeWT3tCwcp23sg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_bXNakrLWEeWT3tCwcp23sg" predecessor="_bZOz0LLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_bZujELLWEeWT3tCwcp23sg" entityName="testRecoveryOfNewConsumerWhichHasYetToAck">
+    <scenarioBehaviour_UsageScenario id="_bZujE7LWEeWT3tCwcp23sg" entityName="testRecoveryOfNewConsumerWhichHasYetToAck">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_bZujEbLWEeWT3tCwcp23sg" successor="_bZ7XYLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_bZ7XYLLWEeWT3tCwcp23sg" entityName="default loop count value" successor="_baDTMLLWEeWT3tCwcp23sg" predecessor="_bZujEbLWEeWT3tCwcp23sg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_bZ7XYbLWEeWT3tCwcp23sg" entityName=" @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.testRecoveryOfNewConsumerWhichHasYetToAck() from 3727 to 3781">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_bZ7XYrLWEeWT3tCwcp23sg" successor="_bZ7XY7LWEeWT3tCwcp23sg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_bZ7XY7LWEeWT3tCwcp23sg" successor="_bZ8lhLLWEeWT3tCwcp23sg" predecessor="_bZ7XYrLWEeWT3tCwcp23sg">
+            <branchTransitions_Branch branchProbability="1.0">
+              <branchedBehaviour_BranchTransition id="_bZ7XZLLWEeWT3tCwcp23sg" entityName="parent  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.getMessage() from 10534 to 10566/ @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.getMessage().Block from 10567 to 10613">
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_bZ7XZbLWEeWT3tCwcp23sg" successor="_bZ7XZrLWEeWT3tCwcp23sg"/>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bZ7XZrLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10794" successor="_bZ7XZ7LWEeWT3tCwcp23sg" predecessor="_bZ7XZbLWEeWT3tCwcp23sg">
+                  <timeSpecification_Delay specification="0"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZ7XZ7LWEeWT3tCwcp23sg" entityName="generateId:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10852" successor="_bZ7XaLLWEeWT3tCwcp23sg" predecessor="_bZ7XZrLWEeWT3tCwcp23sg">
+                  <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtpbwLLWEeWT3tCwcp23sg"/>
+                  <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_FAPYkLLWEeWT3tCwcp23sg"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZ7XaLLWEeWT3tCwcp23sg" entityName="setJMSMessageID:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10852" successor="_bZ7-cbLWEeWT3tCwcp23sg" predecessor="_bZ7XZ7LWEeWT3tCwcp23sg">
+                  <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+                  <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENBL4LLWEeWT3tCwcp23sg"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZ7-cbLWEeWT3tCwcp23sg" entityName="setJMSClientID:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10898" successor="_bZ8lgLLWEeWT3tCwcp23sg" predecessor="_bZ7XaLLWEeWT3tCwcp23sg">
+                  <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+                  <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENEPMLLWEeWT3tCwcp23sg"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bZ8lgLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10945" successor="_bZ8lgbLWEeWT3tCwcp23sg" predecessor="_bZ7-cbLWEeWT3tCwcp23sg">
+                  <timeSpecification_Delay specification="0"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZ8lgbLWEeWT3tCwcp23sg" entityName="setText:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() at 10992" successor="_bZ8lgrLWEeWT3tCwcp23sg" predecessor="_bZ8lgLLWEeWT3tCwcp23sg">
+                  <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+                  <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E3EOcLLWEeWT3tCwcp23sg"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_bZ8lgrLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createMessage() from 10993 to 11015" successor="_bZ8lg7LWEeWT3tCwcp23sg" predecessor="_bZ8lgbLWEeWT3tCwcp23sg">
+                  <timeSpecification_Delay specification="0"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_bZ8lg7LWEeWT3tCwcp23sg" predecessor="_bZ8lgrLWEeWT3tCwcp23sg"/>
+              </branchedBehaviour_BranchTransition>
+            </branchTransitions_Branch>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZ8lhLLWEeWT3tCwcp23sg" entityName="addMessage:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.doAddMessage() at 4943" successor="_bZ-asLLWEeWT3tCwcp23sg" predecessor="_bZ7XY7LWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_bXypYLLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_bXxbRbLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_bZ-asLLWEeWT3tCwcp23sg" entityName="run:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.doAddMessage() at 4943" successor="_bZ_BwLLWEeWT3tCwcp23sg" predecessor="_bZ8lhLLWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEdZQLLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_bXzQcbLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_bZ_BwLLWEeWT3tCwcp23sg" predecessor="_bZ-asLLWEeWT3tCwcp23sg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_baDTMLLWEeWT3tCwcp23sg" entityName="getJMSMessageID:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.assertMessagesEqual() at 10403" successor="_baDTMbLWEeWT3tCwcp23sg" predecessor="_bZ7XYLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAmghLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_baDTMbLWEeWT3tCwcp23sg" entityName="getJMSMessageID:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.assertMessagesEqual() at 10403" successor="_baD6QLLWEeWT3tCwcp23sg" predecessor="_baDTMLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAmghLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_baD6QLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.assertMessagesEqual() at 10456" successor="_baD6QbLWEeWT3tCwcp23sg" predecessor="_baDTMbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_baD6QbLWEeWT3tCwcp23sg" entityName="run:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.assertDeliveryList() at 9971" successor="_baNrQLLWEeWT3tCwcp23sg" predecessor="_baD6QLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEdZQLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_bXzQcbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_baNrQLLWEeWT3tCwcp23sg" entityName="clear:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11116" successor="_baO5YLLWEeWT3tCwcp23sg" predecessor="_baD6QbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_bXypYLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_Gc8AErLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_baO5YLLWEeWT3tCwcp23sg" entityName="stop:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11157" successor="_baO5YrLWEeWT3tCwcp23sg" predecessor="_baNrQLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEcLILLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HN-bcbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_baO5YrLWEeWT3tCwcp23sg" entityName="stop:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11191" successor="_baQHgLLWEeWT3tCwcp23sg" predecessor="_baO5YLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEcLILLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HN-bcbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_baQHgLLWEeWT3tCwcp23sg" entityName="start:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11283" successor="_baQHgrLWEeWT3tCwcp23sg" predecessor="_baO5YrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEcLILLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HN-bcLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_baQHgrLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11347" successor="_baQHg7LWEeWT3tCwcp23sg" predecessor="_baQHgLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_baQHg7LWEeWT3tCwcp23sg" entityName="getPhysicalName:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11510" successor="_baQHhLLWEeWT3tCwcp23sg" predecessor="_baQHgrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EviDELLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_baQHhLLWEeWT3tCwcp23sg" entityName="getContainer:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11510" successor="_baQukLLWEeWT3tCwcp23sg" predecessor="_baQHg7LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEcLILLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HLr8cLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_baQukLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createSubscription() at 6711" successor="_baQukbLWEeWT3tCwcp23sg" predecessor="_baQHhLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_baQukbLWEeWT3tCwcp23sg" entityName="addMessageConsumer:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createSubscription() at 6903" successor="_baQukrLWEeWT3tCwcp23sg" predecessor="_baQukLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEcLILLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HLrVYLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_baQukrLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.createSubscription() from 6904 to 7048" successor="_baRVoLLWEeWT3tCwcp23sg" predecessor="_baQukbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_baRVoLLWEeWT3tCwcp23sg" entityName="run:  @position: org.activemq.test.MessageStoreTestSupport.java.MessageStoreTestSupport.closeAndReopenContainer() at 11706" successor="_bZujErLWEeWT3tCwcp23sg" predecessor="_baQukrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEdZQLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_bXzQcbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_bZujErLWEeWT3tCwcp23sg" predecessor="_baRVoLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

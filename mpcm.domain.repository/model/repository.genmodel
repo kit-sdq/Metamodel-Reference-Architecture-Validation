@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mpcm.domain.repository/src" modelPluginID="mpcm.domain.repository"
+    modelName="Repository" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../mpcm.paradigm.base/model/base.genmodel#//base ../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../mpcm.paradigm.repository/model/repository.genmodel#//repository ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units ../../mpcm.paradigm.variables/model/variables.genmodel#//variables"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>repository.ecore</foreignModel>
+  <genPackages prefix="Repository" disposableProviderFactory="true" ecorePackage="repository.ecore#/">
+    <genClasses ecoreClass="repository.ecore#//Repository">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute repository.ecore#//Repository/repositoryDescription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//Repository/components__Repository"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//Repository/interfaces__Repository"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//Repository/dataTypes__Repository"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//Repository/exceptionTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//Repository/exceptionOccurences"/>
+    </genClasses>
+    <genClasses ecoreClass="repository.ecore#//ExceptionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute repository.ecore#//ExceptionType/exceptionName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute repository.ecore#//ExceptionType/exceptionMessage"/>
+    </genClasses>
+    <genClasses ecoreClass="repository.ecore#//ExceptionOccurence">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference repository.ecore#//ExceptionOccurence/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference repository.ecore#//ExceptionOccurence/owner"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="repository.ecore#//ImplementationComponentType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//ImplementationComponentType/componentParameterUsage_ImplementationComponentType"/>
+      <genOperations ecoreOperation="repository.ecore#//ImplementationComponentType/RequiredInterfacesHaveToConformToCompleteType">
+        <genParameters ecoreParameter="repository.ecore#//ImplementationComponentType/RequiredInterfacesHaveToConformToCompleteType/diagnostics"/>
+        <genParameters ecoreParameter="repository.ecore#//ImplementationComponentType/RequiredInterfacesHaveToConformToCompleteType/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="repository.ecore#//ImplementationComponentType/providedInterfacesHaveToConformToCompleteType">
+        <genParameters ecoreParameter="repository.ecore#//ImplementationComponentType/providedInterfacesHaveToConformToCompleteType/diagnostics"/>
+        <genParameters ecoreParameter="repository.ecore#//ImplementationComponentType/providedInterfacesHaveToConformToCompleteType/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="repository.ecore#//ImplementationComponentType/ProvidedInterfaceHaveToConformToComponentType">
+        <genParameters ecoreParameter="repository.ecore#//ImplementationComponentType/ProvidedInterfaceHaveToConformToComponentType/diagnostics"/>
+        <genParameters ecoreParameter="repository.ecore#//ImplementationComponentType/ProvidedInterfaceHaveToConformToComponentType/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="repository.ecore#//ImplementationComponentType/ProvideSameOrMoreInterfacesAsCompleteComponentType">
+        <genParameters ecoreParameter="repository.ecore#//ImplementationComponentType/ProvideSameOrMoreInterfacesAsCompleteComponentType/diagnostics"/>
+        <genParameters ecoreParameter="repository.ecore#//ImplementationComponentType/ProvideSameOrMoreInterfacesAsCompleteComponentType/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="repository.ecore#//ImplementationComponentType/RequireSameOrFewerInterfacesAsCompleteComponentType">
+        <genParameters ecoreParameter="repository.ecore#//ImplementationComponentType/RequireSameOrFewerInterfacesAsCompleteComponentType/diagnostics"/>
+        <genParameters ecoreParameter="repository.ecore#//ImplementationComponentType/RequireSameOrFewerInterfacesAsCompleteComponentType/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="repository.ecore#//BasicComponent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//BasicComponent/serviceEffectSpecifications__BasicComponent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//BasicComponent/passiveResource_BasicComponent"/>
+      <genOperations ecoreOperation="repository.ecore#//BasicComponent/NoSeffTypeUsedTwice">
+        <genParameters ecoreParameter="repository.ecore#//BasicComponent/NoSeffTypeUsedTwice/diagnostics"/>
+        <genParameters ecoreParameter="repository.ecore#//BasicComponent/NoSeffTypeUsedTwice/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="repository.ecore#//ServiceEffectSpecification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute repository.ecore#//ServiceEffectSpecification/seffTypeID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference repository.ecore#//ServiceEffectSpecification/describedService__SEFF"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference repository.ecore#//ServiceEffectSpecification/basicComponent_ServiceEffectSpecification"/>
+      <genOperations ecoreOperation="repository.ecore#//ServiceEffectSpecification/ReferencedSignatureMustBelongToInterfaceReferencedByProvidedRole">
+        <genParameters ecoreParameter="repository.ecore#//ServiceEffectSpecification/ReferencedSignatureMustBelongToInterfaceReferencedByProvidedRole/diagnostics"/>
+        <genParameters ecoreParameter="repository.ecore#//ServiceEffectSpecification/ReferencedSignatureMustBelongToInterfaceReferencedByProvidedRole/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="repository.ecore#//PassiveResource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//PassiveResource/capacity_PassiveResource"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference repository.ecore#//PassiveResource/basicComponent_PassiveResource"/>
+    </genClasses>
+    <genClasses ecoreClass="repository.ecore#//OperationInterface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//OperationInterface/signatures__OperationInterface"/>
+      <genOperations ecoreOperation="repository.ecore#//OperationInterface/SignaturesHaveToBeUniqueForAnInterface">
+        <genParameters ecoreParameter="repository.ecore#//OperationInterface/SignaturesHaveToBeUniqueForAnInterface/diagnostics"/>
+        <genParameters ecoreParameter="repository.ecore#//OperationInterface/SignaturesHaveToBeUniqueForAnInterface/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="repository.ecore#//OperationSignature">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference repository.ecore#//OperationSignature/interface__OperationSignature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//OperationSignature/parameters__OperationSignature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference repository.ecore#//OperationSignature/returnType__OperationSignature"/>
+      <genOperations ecoreOperation="repository.ecore#//OperationSignature/ParameterNamesHaveToBeUniqueForASignature">
+        <genParameters ecoreParameter="repository.ecore#//OperationSignature/ParameterNamesHaveToBeUniqueForASignature/diagnostics"/>
+        <genParameters ecoreParameter="repository.ecore#//OperationSignature/ParameterNamesHaveToBeUniqueForASignature/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="repository.ecore#//OperationProvidedRole">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference repository.ecore#//OperationProvidedRole/providedInterface__OperationProvidedRole"/>
+    </genClasses>
+    <genClasses ecoreClass="repository.ecore#//OperationRequiredRole">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference repository.ecore#//OperationRequiredRole/requiredInterface__OperationRequiredRole"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

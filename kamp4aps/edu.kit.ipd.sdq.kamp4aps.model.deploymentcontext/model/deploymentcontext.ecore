@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="DeploymentContext" nsURI="http://sdq.ipd.kit.edu/KAPS_DeploymentContext/0.1"
+    nsPrefix="DeploymentContext">
+  <eClassifiers xsi:type="ecore:EClass" name="DeploymentContextRepository">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentCorrelation" upperBound="-1"
+        eType="#//ComponentCorrelation" containment="true" eOpposite="#//ComponentCorrelation/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentCorrelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DeploymentContextRepository" eOpposite="#//DeploymentContextRepository/componentCorrelation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.aps/model/aPS.ecore#//ComponentRepository/Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="program" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//Program"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableMapping" upperBound="-1"
+        eType="#//VariableMapping" containment="true" eOpposite="#//VariableMapping/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableMapping">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="programVariable" lowerBound="1"
+        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//GlobalVariable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceDeclaration" lowerBound="1"
+        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.aps/model/aPS.ecore#//InterfaceRepository/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//ComponentCorrelation" eOpposite="#//ComponentCorrelation/variableMapping"/>
+  </eClassifiers>
+</ecore:EPackage>

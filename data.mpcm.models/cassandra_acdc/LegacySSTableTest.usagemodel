@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_lhOPQo2BEeWUKKvQPqVU9Q" entityName="testVersions">
+    <scenarioBehaviour_UsageScenario id="_lhOPRY2BEeWUKKvQPqVU9Q" entityName="testVersions">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_lhOPQ42BEeWUKKvQPqVU9Q" successor="_lhYAMI2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_lhYAMI2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_lhOPRI2BEeWUKKvQPqVU9Q" predecessor="_lhOPQ42BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_lhYAMY2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersions() from 3260 to 3320">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_lhYAMo2BEeWUKKvQPqVU9Q" successor="_lhYAM42BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_lhYAM42BEeWUKKvQPqVU9Q" successor="_lhYARo2BEeWUKKvQPqVU9Q" predecessor="_lhYAMo2BEeWUKKvQPqVU9Q">
+            <branchTransitions_Branch branchProbability="1.0">
+              <branchedBehaviour_BranchTransition id="_lhYANI2BEeWUKKvQPqVU9Q" entityName="parent  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersions() from 3321 to 3384/ @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersions() at 3432">
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_lhYANY2BEeWUKKvQPqVU9Q" successor="_lhYAN42BEeWUKKvQPqVU9Q"/>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lhYAN42BEeWUKKvQPqVU9Q" entityName="open:  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion() at 3607" successor="_lhYAOI2BEeWUKKvQPqVU9Q" predecessor="_lhYANY2BEeWUKKvQPqVU9Q">
+                  <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WQwV1Y2BEeWUKKvQPqVU9Q"/>
+                  <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WtgjSI2BEeWUKKvQPqVU9Q"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_lhYAOI2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_lhYARY2BEeWUKKvQPqVU9Q" predecessor="_lhYAN42BEeWUKKvQPqVU9Q">
+                  <loopIteration_Loop specification="1"/>
+                  <bodyBehaviour_Loop id="_lhYAOY2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion() from 3608 to 3654">
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_lhYAOo2BEeWUKKvQPqVU9Q" successor="_lhYAO42BEeWUKKvQPqVU9Q"/>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lhYAO42BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion().Block at 3734" successor="_lhYAPI2BEeWUKKvQPqVU9Q" predecessor="_lhYAOo2BEeWUKKvQPqVU9Q">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lhYAPI2BEeWUKKvQPqVU9Q" entityName="decorateKey:  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion().Block at 3885" successor="_lhYAPY2BEeWUKKvQPqVU9Q" predecessor="_lhYAO42BEeWUKKvQPqVU9Q">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y7OJcI1xEeWUKKvQPqVU9Q"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lhYAPY2BEeWUKKvQPqVU9Q" entityName="singleton:  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion().Block at 3995" successor="_lhYAPo2BEeWUKKvQPqVU9Q" predecessor="_lhYAPI2BEeWUKKvQPqVU9Q">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_aQjmgY1xEeWUKKvQPqVU9Q"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_lhYAPo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion().Block from 3996 to 4050" successor="_lhYAP42BEeWUKKvQPqVU9Q" predecessor="_lhYAPY2BEeWUKKvQPqVU9Q">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lhYAP42BEeWUKKvQPqVU9Q" entityName="name:  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion().Block from 3996 to 4050" successor="_lhYARI2BEeWUKKvQPqVU9Q" predecessor="_lhYAPo2BEeWUKKvQPqVU9Q">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_lhYAQI2BEeWUKKvQPqVU9Q"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#__JMiMI1xEeWUKKvQPqVU9Q"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_lhYARI2BEeWUKKvQPqVU9Q" predecessor="_lhYAP42BEeWUKKvQPqVU9Q"/>
+                  </bodyBehaviour_Loop>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_lhYARY2BEeWUKKvQPqVU9Q" predecessor="_lhYAOI2BEeWUKKvQPqVU9Q"/>
+              </branchedBehaviour_BranchTransition>
+            </branchTransitions_Branch>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_lhYARo2BEeWUKKvQPqVU9Q" predecessor="_lhYAM42BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_lhOPRI2BEeWUKKvQPqVU9Q" predecessor="_lhYAMI2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_lhYAR42BEeWUKKvQPqVU9Q" entityName="testVersion">
+    <scenarioBehaviour_UsageScenario id="_lhYASo2BEeWUKKvQPqVU9Q" entityName="testVersion">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_lhYASI2BEeWUKKvQPqVU9Q" successor="_lhhxMI2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lhhxMI2BEeWUKKvQPqVU9Q" entityName="open:  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion() at 3607" successor="_lhhxMY2BEeWUKKvQPqVU9Q" predecessor="_lhYASI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WQwV1Y2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WtgjSI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_lhhxMY2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_lhYASY2BEeWUKKvQPqVU9Q" predecessor="_lhhxMI2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_lhhxMo2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion() from 3608 to 3654">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_lhhxM42BEeWUKKvQPqVU9Q" successor="_lhhxNI2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lhhxNI2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion().Block at 3734" successor="_lhhxNY2BEeWUKKvQPqVU9Q" predecessor="_lhhxM42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lhhxNY2BEeWUKKvQPqVU9Q" entityName="decorateKey:  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion().Block at 3885" successor="_lhhxNo2BEeWUKKvQPqVU9Q" predecessor="_lhhxNI2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y7OJcI1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lhhxNo2BEeWUKKvQPqVU9Q" entityName="singleton:  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion().Block at 3995" successor="_lhhxN42BEeWUKKvQPqVU9Q" predecessor="_lhhxNY2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_aQjmgY1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_lhhxN42BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion().Block from 3996 to 4050" successor="_lhhxOI2BEeWUKKvQPqVU9Q" predecessor="_lhhxNo2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_lhhxOI2BEeWUKKvQPqVU9Q" entityName="name:  @position: org.apache.cassandra.io.sstable.LegacySSTableTest.java.LegacySSTableTest.testVersion().Block from 3996 to 4050" successor="_lhhxO42BEeWUKKvQPqVU9Q" predecessor="_lhhxN42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_lhYAQI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#__JMiMI1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_lhhxO42BEeWUKKvQPqVU9Q" predecessor="_lhhxOI2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_lhYASY2BEeWUKKvQPqVU9Q" predecessor="_lhhxMY2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

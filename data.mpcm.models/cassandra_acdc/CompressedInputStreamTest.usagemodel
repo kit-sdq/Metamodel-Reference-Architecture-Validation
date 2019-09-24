@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_FtKyQI2CEeWUKKvQPqVU9Q" entityName="testCompressedRead">
+    <scenarioBehaviour_UsageScenario id="_FtKyQ42CEeWUKKvQPqVU9Q" entityName="testCompressedRead">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_FtKyQY2CEeWUKKvQPqVU9Q" successor="_FtdtMY2CEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_FtdtMY2CEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() at 2273" successor="_FtdtMo2CEeWUKKvQPqVU9Q" predecessor="_FtKyQY2CEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_FtdtMo2CEeWUKKvQPqVU9Q" entityName="fromFilename:  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() at 2347" successor="_FtdtM42CEeWUKKvQPqVU9Q" predecessor="_FtdtMY2CEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WRDQw42BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_FtdtM42CEeWUKKvQPqVU9Q" entityName="createCollector:  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() at 2446" successor="_FtdtNI2CEeWUKKvQPqVU9Q" predecessor="_FtdtMo2CEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WQwV1Y2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_ftJXw42BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_FtdtNI2CEeWUKKvQPqVU9Q" entityName="filenameFor:  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() at 2717" successor="_FtdtNY2CEeWUKKvQPqVU9Q" predecessor="_FtdtM42CEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XePcpI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_FtdtNY2CEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_Ftm3I42CEeWUKKvQPqVU9Q" predecessor="_FtdtNI2CEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_FtdtNo2CEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() from 2777 to 2817">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_FtdtN42CEeWUKKvQPqVU9Q" successor="_FtdtOI2CEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_FtdtOI2CEeWUKKvQPqVU9Q" entityName="getFilePointer:  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith().Block at 2878" successor="_Ftm3IY2CEeWUKKvQPqVU9Q" predecessor="_FtdtN42CEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_ftJXyI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1AP8YI1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Ftm3IY2CEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith().Block at 2918" successor="_Ftm3Io2CEeWUKKvQPqVU9Q" predecessor="_FtdtOI2CEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Ftm3Io2CEeWUKKvQPqVU9Q" predecessor="_Ftm3IY2CEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Ftm3I42CEeWUKKvQPqVU9Q" entityName="close:  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() at 2952" successor="_Ftm3JY2CEeWUKKvQPqVU9Q" predecessor="_FtdtNY2CEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_fvFReY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_i0v1II1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Ftm3JY2CEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() at 3039" successor="_Ftm3Jo2CEeWUKKvQPqVU9Q" predecessor="_Ftm3I42CEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Ftm3Jo2CEeWUKKvQPqVU9Q" entityName="create:  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() at 3039" successor="_Ftm3J42CEeWUKKvQPqVU9Q" predecessor="_Ftm3JY2CEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_fvFReY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_iWRwcI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_Ftm3J42CEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_Ftm3Lo2CEeWUKKvQPqVU9Q" predecessor="_Ftm3Jo2CEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_Ftm3KI2CEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() from 3117 to 3153">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Ftm3KY2CEeWUKKvQPqVU9Q" successor="_Ftm3K42CEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Ftm3K42CEeWUKKvQPqVU9Q" entityName="create:  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith().Block at 3268" successor="_Ftm3LI2CEeWUKKvQPqVU9Q" predecessor="_Ftm3KY2CEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_9dnKIY1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Ftm3LI2CEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith().Block at 3268" successor="_Ftm3LY2CEeWUKKvQPqVU9Q" predecessor="_Ftm3K42CEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Ftm3LY2CEeWUKKvQPqVU9Q" predecessor="_Ftm3LI2CEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Ftm3Lo2CEeWUKKvQPqVU9Q" entityName="getChunksForSections:  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() at 3360" successor="_Ftm3L42CEeWUKKvQPqVU9Q" predecessor="_Ftm3J42CEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_fvFReY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_i0vOEo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_Ftm3L42CEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_Ftm3No2CEeWUKKvQPqVU9Q" predecessor="_Ftm3Lo2CEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_Ftm3MI2CEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() from 3657 to 3707">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Ftm3MY2CEeWUKKvQPqVU9Q" successor="_Ftm3NI2CEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Ftm3NI2CEeWUKKvQPqVU9Q" predecessor="_Ftm3MY2CEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_Ftm3No2CEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_FtKyQo2CEeWUKKvQPqVU9Q" predecessor="_Ftm3L42CEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_Ftm3N42CEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith() from 4112 to 4162">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Ftm3OI2CEeWUKKvQPqVU9Q" successor="_Ftm3OY2CEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Ftm3OY2CEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith().Block at 4222" successor="_Ftm3Oo2CEeWUKKvQPqVU9Q" predecessor="_Ftm3OI2CEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Ftm3Oo2CEeWUKKvQPqVU9Q" entityName="position:  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith().Block at 4222" successor="_Ftm3PY2CEeWUKKvQPqVU9Q" predecessor="_Ftm3OY2CEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_Ftm3O42CEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_9-sd-41xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Ftm3PY2CEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.streaming.compress.CompressedInputStreamTest.java.CompressedInputStreamTest.testCompressedReadWith().Block at 4260" successor="_Ftm3Po2CEeWUKKvQPqVU9Q" predecessor="_Ftm3Oo2CEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Ftm3Po2CEeWUKKvQPqVU9Q" predecessor="_Ftm3PY2CEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_FtKyQo2CEeWUKKvQPqVU9Q" predecessor="_Ftm3No2CEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

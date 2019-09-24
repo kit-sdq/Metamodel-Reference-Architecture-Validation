@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mpcm.paradigm.activitysequence.usage/src" modelPluginID="mpcm.paradigm.activitysequence.usage"
+    modelName="Usage" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../mpcm.paradigm.base/model/base.genmodel#//base ../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units ../../mpcm.paradigm.variables/model/variables.genmodel#//variables"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>usage.ecore</foreignModel>
+  <genPackages prefix="Usage" disposableProviderFactory="true" ecorePackage="usage.ecore#/">
+    <genClasses ecoreClass="usage.ecore#//ScenarioBehaviour">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference usage.ecore#//ScenarioBehaviour/branchTransition_ScenarioBehaviour"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference usage.ecore#//ScenarioBehaviour/loop_ScenarioBehaviour"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usage.ecore#//ScenarioBehaviour/actions_ScenarioBehaviour"/>
+      <genOperations ecoreOperation="usage.ecore#//ScenarioBehaviour/Exactlyonestart">
+        <genParameters ecoreParameter="usage.ecore#//ScenarioBehaviour/Exactlyonestart/diagnostics"/>
+        <genParameters ecoreParameter="usage.ecore#//ScenarioBehaviour/Exactlyonestart/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="usage.ecore#//ScenarioBehaviour/Exactlyonestop">
+        <genParameters ecoreParameter="usage.ecore#//ScenarioBehaviour/Exactlyonestop/diagnostics"/>
+        <genParameters ecoreParameter="usage.ecore#//ScenarioBehaviour/Exactlyonestop/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="usage.ecore#//ScenarioBehaviour/EachuseractionexceptStartandStopmusthaveapredecessorandsuccessor">
+        <genParameters ecoreParameter="usage.ecore#//ScenarioBehaviour/EachuseractionexceptStartandStopmusthaveapredecessorandsuccessor/diagnostics"/>
+        <genParameters ecoreParameter="usage.ecore#//ScenarioBehaviour/EachuseractionexceptStartandStopmusthaveapredecessorandsuccessor/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="usage.ecore#//AbstractUserAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usage.ecore#//AbstractUserAction/successor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference usage.ecore#//AbstractUserAction/predecessor"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference usage.ecore#//AbstractUserAction/scenarioBehaviour_AbstractUserAction"/>
+    </genClasses>
+    <genClasses ecoreClass="usage.ecore#//Start">
+      <genOperations ecoreOperation="usage.ecore#//Start/StartHasNoPredecessor">
+        <genParameters ecoreParameter="usage.ecore#//Start/StartHasNoPredecessor/diagnostics"/>
+        <genParameters ecoreParameter="usage.ecore#//Start/StartHasNoPredecessor/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="usage.ecore#//Stop">
+      <genOperations ecoreOperation="usage.ecore#//Stop/StopHasNoSuccessor">
+        <genParameters ecoreParameter="usage.ecore#//Stop/StopHasNoSuccessor/diagnostics"/>
+        <genParameters ecoreParameter="usage.ecore#//Stop/StopHasNoSuccessor/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="usage.ecore#//Branch">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usage.ecore#//Branch/branchTransitions_Branch"/>
+      <genOperations ecoreOperation="usage.ecore#//Branch/AllBranchProbabilitiesMustSumUpTo1">
+        <genParameters ecoreParameter="usage.ecore#//Branch/AllBranchProbabilitiesMustSumUpTo1/diagnostics"/>
+        <genParameters ecoreParameter="usage.ecore#//Branch/AllBranchProbabilitiesMustSumUpTo1/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="usage.ecore#//BranchTransition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usage.ecore#//BranchTransition/branchProbability"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference usage.ecore#//BranchTransition/branch_BranchTransition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usage.ecore#//BranchTransition/branchedBehaviour_BranchTransition"/>
+    </genClasses>
+    <genClasses ecoreClass="usage.ecore#//Loop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usage.ecore#//Loop/loopIteration_Loop"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usage.ecore#//Loop/bodyBehaviour_Loop"/>
+    </genClasses>
+    <genClasses ecoreClass="usage.ecore#//Delay">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usage.ecore#//Delay/timeSpecification_Delay"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

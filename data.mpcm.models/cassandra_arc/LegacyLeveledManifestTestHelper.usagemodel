@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_ByW0YLLjEeWaL4cfYRKdZg" entityName="generateSSTable">
+    <scenarioBehaviour_UsageScenario id="_ByW0Y7LjEeWaL4cfYRKdZg" entityName="generateSSTable">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_ByW0YbLjEeWaL4cfYRKdZg" successor="_Bybs4LLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Bybs4LLjEeWaL4cfYRKdZg" entityName="createDirectory:  @position: org.apache.cassandra.db.compaction.LegacyLeveledManifestTestHelper.java.LegacyLeveledManifestTestHelper.generateSSTable() at 2251" successor="_BycT8LLjEeWaL4cfYRKdZg" predecessor="_ByW0YbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAnJ8LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_c9QU4LLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BycT8LLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.compaction.LegacyLeveledManifestTestHelper.java.LegacyLeveledManifestTestHelper.generateSSTable() at 2301" successor="_Bze1wLLjEeWaL4cfYRKdZg" predecessor="_Bybs4LLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_Bze1wLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_ByW0YrLjEeWaL4cfYRKdZg" predecessor="_BycT8LLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_Bze1wbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.db.compaction.LegacyLeveledManifestTestHelper.java.LegacyLeveledManifestTestHelper.generateSSTable() from 2389 to 2423">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Bze1wrLjEeWaL4cfYRKdZg" successor="_Bze1w7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Bze1w7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.prepare() from 4317 to 4346" successor="_Bzfc0LLjEeWaL4cfYRKdZg" predecessor="_Bze1wrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_Bzfc0LLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_BzjHMbLjEeWaL4cfYRKdZg" predecessor="_Bze1w7LjEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_Bzfc0bLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 5579 to 5614">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Bzfc0rLjEeWaL4cfYRKdZg" successor="_Bzfc07LjEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Bzfc07LjEeWaL4cfYRKdZg" entityName="getCFMetaData:  @position: db.org.apache.cassandra.db.ColumnFamily.java.ColumnFamily.Factory.create() from 17137 to 17212" successor="_BzgD4LLjEeWaL4cfYRKdZg" predecessor="_Bzfc0rLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__v5NYLLiEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ABCAsLLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BzgD4LLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write().Block at 5820" successor="_BzhSALLjEeWaL4cfYRKdZg" predecessor="_Bzfc07LjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BzhSALLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write().Block at 5820" successor="_Bzh5ELLjEeWaL4cfYRKdZg" predecessor="_BzgD4LLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Bzh5ELLjEeWaL4cfYRKdZg" entityName="addColumn:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write().Block at 5820" successor="_BzjHMLLjEeWaL4cfYRKdZg" predecessor="_BzhSALLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AArbYLLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AA0lULLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_BzjHMLLjEeWaL4cfYRKdZg" predecessor="_Bzh5ELLjEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzjHMbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 6821" successor="_BzjHMrLjEeWaL4cfYRKdZg" predecessor="_Bzfc0LLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_BzjHMrLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_BzmxkLLjEeWaL4cfYRKdZg" predecessor="_BzjHMbLjEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_BzjHM7LjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6822 to 6898">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_BzjHNLLjEeWaL4cfYRKdZg" successor="_BzjHNbLjEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzjHNbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 6969" successor="_BzjHNrLjEeWaL4cfYRKdZg" predecessor="_BzjHNLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzjHNrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 6969" successor="_BzjHN7LjEeWaL4cfYRKdZg" predecessor="_BzjHNbLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BzjHN7LjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_BzkVULLjEeWaL4cfYRKdZg" predecessor="_BzjHNrLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzkVULLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 6969" successor="_BzkVUbLjEeWaL4cfYRKdZg" predecessor="_BzjHN7LjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzkVUbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 6969" successor="_BzkVU7LjEeWaL4cfYRKdZg" predecessor="_BzkVULLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_BzkVU7LjEeWaL4cfYRKdZg" predecessor="_BzkVUbLjEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxkLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_BzmxkbLjEeWaL4cfYRKdZg" predecessor="_BzjHMrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxkbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_BzmxkrLjEeWaL4cfYRKdZg" predecessor="_BzmxkLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxkrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_Bzmxk7LjEeWaL4cfYRKdZg" predecessor="_BzmxkbLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Bzmxk7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_BzmxlLLjEeWaL4cfYRKdZg" predecessor="_BzmxkrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxlLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_BzmxlbLjEeWaL4cfYRKdZg" predecessor="_Bzmxk7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxlbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_BzmxlrLjEeWaL4cfYRKdZg" predecessor="_BzmxlLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxlrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_Bzmxl7LjEeWaL4cfYRKdZg" predecessor="_BzmxlbLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Bzmxl7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_BzmxmLLjEeWaL4cfYRKdZg" predecessor="_BzmxlrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxmLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_BzmxmbLjEeWaL4cfYRKdZg" predecessor="_Bzmxl7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxmbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_BzmxmrLjEeWaL4cfYRKdZg" predecessor="_BzmxmLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxmrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_Bzmxm7LjEeWaL4cfYRKdZg" predecessor="_BzmxmbLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Bzmxm7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_BzmxnLLjEeWaL4cfYRKdZg" predecessor="_BzmxmrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxnLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_BzmxnbLjEeWaL4cfYRKdZg" predecessor="_Bzmxm7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxnbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_BzmxnrLjEeWaL4cfYRKdZg" predecessor="_BzmxnLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzmxnrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_Bzmxn7LjEeWaL4cfYRKdZg" predecessor="_BzmxnbLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Bzmxn7LjEeWaL4cfYRKdZg" entityName="append:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_Bzn_sLLjEeWaL4cfYRKdZg" predecessor="_BzmxnrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AA7TALLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nR8QwbLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Bzn_sLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() from 1960 to 2009" successor="_Bzn_sbLjEeWaL4cfYRKdZg" predecessor="_Bzmxn7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Bzn_sbLjEeWaL4cfYRKdZg" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() at 2368" successor="_BzomwLLjEeWaL4cfYRKdZg" predecessor="_Bzn_sLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AA9IMLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_sY-cArLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzomwLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() from 2369 to 2407" successor="_BzomwbLjEeWaL4cfYRKdZg" predecessor="_Bzn_sbLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BzomwbLjEeWaL4cfYRKdZg" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7251" successor="_BzpN0LLjEeWaL4cfYRKdZg" predecessor="_BzomwLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AA9IMLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AA9vQLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BzpN0LLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7347" successor="_BzpN0bLjEeWaL4cfYRKdZg" predecessor="_BzomwbLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BzpN0bLjEeWaL4cfYRKdZg" entityName="closeAndOpenReader:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7470" successor="_Bzp04LLjEeWaL4cfYRKdZg" predecessor="_BzpN0LLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AA7TALLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AA-WUrLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_Bzp04LLjEeWaL4cfYRKdZg" successor="_Bzqb8rLjEeWaL4cfYRKdZg" predecessor="_BzpN0bLjEeWaL4cfYRKdZg">
+            <branchTransitions_Branch branchProbability="1.0">
+              <branchedBehaviour_BranchTransition id="_Bzp04bLjEeWaL4cfYRKdZg" entityName="parent  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7471 to 7542/ @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7543 to 7604">
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Bzp04rLjEeWaL4cfYRKdZg" successor="_Bzp047LjEeWaL4cfYRKdZg"/>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_Bzp047LjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_Bzqb8bLjEeWaL4cfYRKdZg" predecessor="_Bzp04rLjEeWaL4cfYRKdZg">
+                  <loopIteration_Loop specification="1"/>
+                  <bodyBehaviour_Loop id="_Bzp05LLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7543 to 7604">
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Bzp05bLjEeWaL4cfYRKdZg" successor="_Bzp05rLjEeWaL4cfYRKdZg"/>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Bzp05rLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7691" successor="_Bzp057LjEeWaL4cfYRKdZg" predecessor="_Bzp05bLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Bzp057LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7691" successor="_Bzp06LLjEeWaL4cfYRKdZg" predecessor="_Bzp05rLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Bzp06LLjEeWaL4cfYRKdZg" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7691" successor="_Bzqb8LLjEeWaL4cfYRKdZg" predecessor="_Bzp057LjEeWaL4cfYRKdZg">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AA9IMLLjEeWaL4cfYRKdZg"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AA9vQLLjEeWaL4cfYRKdZg"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Bzqb8LLjEeWaL4cfYRKdZg" predecessor="_Bzp06LLjEeWaL4cfYRKdZg"/>
+                  </bodyBehaviour_Loop>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Bzqb8bLjEeWaL4cfYRKdZg" predecessor="_Bzp047LjEeWaL4cfYRKdZg"/>
+              </branchedBehaviour_BranchTransition>
+            </branchTransitions_Branch>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Bzqb8rLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7692 to 7718" successor="_Bzqb87LjEeWaL4cfYRKdZg" predecessor="_Bzp04LLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Bzqb87LjEeWaL4cfYRKdZg" predecessor="_Bzqb8rLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_ByW0YrLjEeWaL4cfYRKdZg" predecessor="_Bze1wLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

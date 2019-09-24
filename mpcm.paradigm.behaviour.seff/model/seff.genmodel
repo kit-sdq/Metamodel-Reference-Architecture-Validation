@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mpcm.paradigm.activitysequence.seff/src" modelPluginID="mpcm.paradigm.activitysequence.seff"
+    modelName="Seff" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../mpcm.paradigm.base/model/base.genmodel#//base ../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units ../../mpcm.paradigm.variables/model/variables.genmodel#//variables"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>seff.ecore</foreignModel>
+  <genPackages prefix="Seff" disposableProviderFactory="true" ecorePackage="seff.ecore#/">
+    <genClasses ecoreClass="seff.ecore#//ResourceDemandingBehaviour">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference seff.ecore#//ResourceDemandingBehaviour/abstractLoopAction_ResourceDemandingBehaviour"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference seff.ecore#//ResourceDemandingBehaviour/abstractBranchTransition_ResourceDemandingBehaviour"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference seff.ecore#//ResourceDemandingBehaviour/steps_Behaviour"/>
+      <genOperations ecoreOperation="seff.ecore#//ResourceDemandingBehaviour/ExactlyOneStopAction">
+        <genParameters ecoreParameter="seff.ecore#//ResourceDemandingBehaviour/ExactlyOneStopAction/diagnostics"/>
+        <genParameters ecoreParameter="seff.ecore#//ResourceDemandingBehaviour/ExactlyOneStopAction/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="seff.ecore#//ResourceDemandingBehaviour/ExactlyOneStartAction">
+        <genParameters ecoreParameter="seff.ecore#//ResourceDemandingBehaviour/ExactlyOneStartAction/diagnostics"/>
+        <genParameters ecoreParameter="seff.ecore#//ResourceDemandingBehaviour/ExactlyOneStartAction/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="seff.ecore#//ResourceDemandingBehaviour/EachActionExceptStartActionandStopActionMustHhaveAPredecessorAndSuccessor">
+        <genParameters ecoreParameter="seff.ecore#//ResourceDemandingBehaviour/EachActionExceptStartActionandStopActionMustHhaveAPredecessorAndSuccessor/diagnostics"/>
+        <genParameters ecoreParameter="seff.ecore#//ResourceDemandingBehaviour/EachActionExceptStartActionandStopActionMustHhaveAPredecessorAndSuccessor/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="seff.ecore#//AbstractAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference seff.ecore#//AbstractAction/predecessor_AbstractAction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference seff.ecore#//AbstractAction/successor_AbstractAction"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference seff.ecore#//AbstractAction/resourceDemandingBehaviour_AbstractAction"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="seff.ecore#//AbstractInternalControlFlowAction"/>
+    <genClasses ecoreClass="seff.ecore#//StartAction">
+      <genOperations ecoreOperation="seff.ecore#//StartAction/StartActionPredecessorMustNotBeDefined">
+        <genParameters ecoreParameter="seff.ecore#//StartAction/StartActionPredecessorMustNotBeDefined/diagnostics"/>
+        <genParameters ecoreParameter="seff.ecore#//StartAction/StartActionPredecessorMustNotBeDefined/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="seff.ecore#//StopAction">
+      <genOperations ecoreOperation="seff.ecore#//StopAction/StopActionSuccessorMustNotBeDefined">
+        <genParameters ecoreParameter="seff.ecore#//StopAction/StopActionSuccessorMustNotBeDefined/diagnostics"/>
+        <genParameters ecoreParameter="seff.ecore#//StopAction/StopActionSuccessorMustNotBeDefined/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="seff.ecore#//InternalAction">
+      <genOperations ecoreOperation="seff.ecore#//InternalAction/MultipleInternalOccurrenceDescriptionsPerFailureTypeNotAllowed">
+        <genParameters ecoreParameter="seff.ecore#//InternalAction/MultipleInternalOccurrenceDescriptionsPerFailureTypeNotAllowed/diagnostics"/>
+        <genParameters ecoreParameter="seff.ecore#//InternalAction/MultipleInternalOccurrenceDescriptionsPerFailureTypeNotAllowed/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="seff.ecore#//InternalAction/SumOfInternalActionFailureProbabilitiesMustNotExceed1">
+        <genParameters ecoreParameter="seff.ecore#//InternalAction/SumOfInternalActionFailureProbabilitiesMustNotExceed1/diagnostics"/>
+        <genParameters ecoreParameter="seff.ecore#//InternalAction/SumOfInternalActionFailureProbabilitiesMustNotExceed1/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="seff.ecore#//BranchAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference seff.ecore#//BranchAction/branches_Branch"/>
+      <genOperations ecoreOperation="seff.ecore#//BranchAction/EitherGuardedBranchesOrProbabilisiticBranchTransitions">
+        <genParameters ecoreParameter="seff.ecore#//BranchAction/EitherGuardedBranchesOrProbabilisiticBranchTransitions/diagnostics"/>
+        <genParameters ecoreParameter="seff.ecore#//BranchAction/EitherGuardedBranchesOrProbabilisiticBranchTransitions/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="seff.ecore#//BranchAction/AllProbabilisticBranchProbabilitiesMustSumUpTo1">
+        <genParameters ecoreParameter="seff.ecore#//BranchAction/AllProbabilisticBranchProbabilitiesMustSumUpTo1/diagnostics"/>
+        <genParameters ecoreParameter="seff.ecore#//BranchAction/AllProbabilisticBranchProbabilitiesMustSumUpTo1/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="seff.ecore#//AbstractBranchTransition">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference seff.ecore#//AbstractBranchTransition/branchAction_AbstractBranchTransition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference seff.ecore#//AbstractBranchTransition/branchBehaviour_BranchTransition"/>
+    </genClasses>
+    <genClasses ecoreClass="seff.ecore#//ForkAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference seff.ecore#//ForkAction/asynchronousForkedBehaviours_ForkAction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference seff.ecore#//ForkAction/synchronisingBehaviours_ForkAction"/>
+    </genClasses>
+    <genClasses ecoreClass="seff.ecore#//ForkedBehaviour">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference seff.ecore#//ForkedBehaviour/synchronisationPoint_ForkedBehaviour"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference seff.ecore#//ForkedBehaviour/forkAction_ForkedBehaivour"/>
+    </genClasses>
+    <genClasses ecoreClass="seff.ecore#//SynchronisationPoint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference seff.ecore#//SynchronisationPoint/outputParameterUsage_SynchronisationPoint"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference seff.ecore#//SynchronisationPoint/forkAction_SynchronisationPoint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference seff.ecore#//SynchronisationPoint/synchronousForkedBehaviours_SynchronisationPoint"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="seff.ecore#//AbstractLoopAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference seff.ecore#//AbstractLoopAction/bodyBehaviour_Loop"/>
+    </genClasses>
+    <genClasses ecoreClass="seff.ecore#//LoopAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference seff.ecore#//LoopAction/iterationCount_LoopAction"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

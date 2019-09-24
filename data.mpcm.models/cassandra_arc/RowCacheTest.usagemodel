@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_IV6A8LLjEeWaL4cfYRKdZg" entityName="testRowCache">
+    <scenarioBehaviour_UsageScenario id="_IV6A87LjEeWaL4cfYRKdZg" entityName="testRowCache">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_IV6A8bLjEeWaL4cfYRKdZg" successor="_IV6A9LLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IV6A9LLjEeWaL4cfYRKdZg" entityName="disableAutoCompaction:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache() at 1521" successor="_IV6oALLjEeWaL4cfYRKdZg" predecessor="_IV6A8bLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAnJ8LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAf1MLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IV6oALLjEeWaL4cfYRKdZg" entityName="open:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache() at 1575" successor="_IV7PELLjEeWaL4cfYRKdZg" predecessor="_IV6A9LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAnxAbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IV7PELLjEeWaL4cfYRKdZg" entityName="getColumnFamilyStore:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache() at 1662" successor="_IV72ILLjEeWaL4cfYRKdZg" predecessor="_IV6oALLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AApmMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IV72ILLjEeWaL4cfYRKdZg" entityName="invalidateRowCache:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache() at 1746" successor="_IV9EQLLjEeWaL4cfYRKdZg" predecessor="_IV7PELLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeAVALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IV8dMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IV9EQLLjEeWaL4cfYRKdZg" entityName="setRowCacheCapacityInMB:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache() at 1850" successor="_IWFAELLjEeWaL4cfYRKdZg" predecessor="_IV72ILLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeAVALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IV9EQbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_IWFAELLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_IWcMcLLjEeWaL4cfYRKdZg" predecessor="_IV9EQLLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_IWFAEbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData() from 20955 to 21015">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_IWFAErLjEeWaL4cfYRKdZg" successor="_IWFAE7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWFAE7LjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21087" successor="_IWFnILLjEeWaL4cfYRKdZg" predecessor="_IWFAErLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IWFnILLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21157" successor="_IWFnIbLjEeWaL4cfYRKdZg" predecessor="_IWFAE7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWFnIbLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IWG1QLLjEeWaL4cfYRKdZg" predecessor="_IWFnILLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWG1QLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IWG1QbLjEeWaL4cfYRKdZg" predecessor="_IWFnIbLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IWG1QbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IWG1QrLjEeWaL4cfYRKdZg" predecessor="_IWG1QLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IWG1QrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IWG1Q7LjEeWaL4cfYRKdZg" predecessor="_IWG1QbLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IWG1Q7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IWG1RLLjEeWaL4cfYRKdZg" predecessor="_IWG1QrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IWG1RLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IWG1RbLjEeWaL4cfYRKdZg" predecessor="_IWG1Q7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWG1RbLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IWHcULLjEeWaL4cfYRKdZg" predecessor="_IWG1RLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWHcULLjEeWaL4cfYRKdZg" entityName="applyUnsafe:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21333" successor="_IWIDYLLjEeWaL4cfYRKdZg" predecessor="_IWG1RbLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYNykLLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_IWIDYLLjEeWaL4cfYRKdZg" predecessor="_IWHcULLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_IWcMcLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_IXNBcLLjEeWaL4cfYRKdZg" predecessor="_IWFAELLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_IWcMcbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache() from 1961 to 2071">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_IWcMcrLjEeWaL4cfYRKdZg" successor="_IWcMc7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWcMc7LjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_IWdakLLjEeWaL4cfYRKdZg" predecessor="_IWcMcrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IWdakLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 2485" successor="_IWdakbLjEeWaL4cfYRKdZg" predecessor="_IWcMc7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWdakbLjEeWaL4cfYRKdZg" entityName="getColumnFamily:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 2485" successor="_IWeBoLLjEeWaL4cfYRKdZg" predecessor="_IWdakLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_FzyCdbLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWeBoLLjEeWaL4cfYRKdZg" entityName="size:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 2486 to 2552" successor="_IWeosLLjEeWaL4cfYRKdZg" predecessor="_IWdakbLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeaksLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nsFPELLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWeosLLjEeWaL4cfYRKdZg" entityName="containsCachedRow:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 2553 to 2607" successor="_IWf20LLjEeWaL4cfYRKdZg" predecessor="_IWeBoLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IWeosbLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IWf20LLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 3177" successor="_IWf20bLjEeWaL4cfYRKdZg" predecessor="_IWeosLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IWf20bLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 3177" successor="_IWf20rLjEeWaL4cfYRKdZg" predecessor="_IWf20LLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWf20rLjEeWaL4cfYRKdZg" entityName="getColumnFamily:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 3177" successor="_IWgd4LLjEeWaL4cfYRKdZg" predecessor="_IWf20bLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_FzyCdbLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWgd4LLjEeWaL4cfYRKdZg" entityName="getSortedColumns:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 3241" successor="_IWhE8LLjEeWaL4cfYRKdZg" predecessor="_IWf20rLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AArbYLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_sV1ocbLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IWhE8LLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 3297" successor="_IWhE8bLjEeWaL4cfYRKdZg" predecessor="_IWgd4LLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IWhE8bLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 3297" successor="_IWhsALLjEeWaL4cfYRKdZg" predecessor="_IWhE8LLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWhsALLjEeWaL4cfYRKdZg" entityName="name:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 3339 to 3412" successor="_IWiTELLjEeWaL4cfYRKdZg" predecessor="_IWhE8bLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AMlwcLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nSdOILLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWiTELLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 3339 to 3412" successor="_IWkIQLLjEeWaL4cfYRKdZg" predecessor="_IWhsALLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWkIQLLjEeWaL4cfYRKdZg" entityName="value:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 3413 to 3487" successor="_IWoZsLLjEeWaL4cfYRKdZg" predecessor="_IWiTELLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AMlwcLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nShfkrLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IWoZsLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 3413 to 3487" successor="_IWpn0LLjEeWaL4cfYRKdZg" predecessor="_IWkIQLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_IWpn0LLjEeWaL4cfYRKdZg" predecessor="_IWoZsLLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_IXNBcLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_IXUWMbLjEeWaL4cfYRKdZg" predecessor="_IWcMcLLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_IXNBcbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache() from 3584 to 3624">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_IXNBcrLjEeWaL4cfYRKdZg" successor="_IXNBc7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IXNBc7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 4038" successor="_IXNBdLLjEeWaL4cfYRKdZg" predecessor="_IXNBcrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXNBdLLjEeWaL4cfYRKdZg" entityName="getColumnFamily:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 4038" successor="_IXOPkLLjEeWaL4cfYRKdZg" predecessor="_IXNBc7LjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_FzyCdbLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXOPkLLjEeWaL4cfYRKdZg" entityName="containsCachedRow:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 4039 to 4093" successor="_IXO2oLLjEeWaL4cfYRKdZg" predecessor="_IXNBdLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IWeosbLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IXO2oLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 4701" successor="_IXO2obLjEeWaL4cfYRKdZg" predecessor="_IXOPkLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IXO2obLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 4701" successor="_IXO2orLjEeWaL4cfYRKdZg" predecessor="_IXO2oLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXO2orLjEeWaL4cfYRKdZg" entityName="getColumnFamily:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 4701" successor="_IXPdsLLjEeWaL4cfYRKdZg" predecessor="_IXO2obLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_FzyCdbLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXPdsLLjEeWaL4cfYRKdZg" entityName="getSortedColumns:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 4765" successor="_IXQEwbLjEeWaL4cfYRKdZg" predecessor="_IXO2orLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AArbYLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_sV1ocbLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IXQEwbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 4821" successor="_IXQEwrLjEeWaL4cfYRKdZg" predecessor="_IXPdsLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IXQEwrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 4821" successor="_IXQr0LLjEeWaL4cfYRKdZg" predecessor="_IXQEwbLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXQr0LLjEeWaL4cfYRKdZg" entityName="name:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 4863 to 4936" successor="_IXRS4LLjEeWaL4cfYRKdZg" predecessor="_IXQEwrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AMlwcLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nSdOILLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXRS4LLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 4863 to 4936" successor="_IXShALLjEeWaL4cfYRKdZg" predecessor="_IXQr0LLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXShALLjEeWaL4cfYRKdZg" entityName="value:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 4937 to 5011" successor="_IXTIELLjEeWaL4cfYRKdZg" predecessor="_IXRS4LLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AMlwcLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nShfkrLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXTIELLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 4937 to 5011" successor="_IXUWMLLjEeWaL4cfYRKdZg" predecessor="_IXShALLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_IXUWMLLjEeWaL4cfYRKdZg" predecessor="_IXTIELLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IXUWMbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache() at 5091" successor="_IXWycLLjEeWaL4cfYRKdZg" predecessor="_IXNBcLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_IXWycLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_IXZOsLLjEeWaL4cfYRKdZg" predecessor="_IXUWMbLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_IXWycbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache() from 5092 to 5131">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_IXWycrLjEeWaL4cfYRKdZg" successor="_IXWyc7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXWyc7LjEeWaL4cfYRKdZg" entityName="invalidateCachedRow:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 5206" successor="_IXXZgLLjEeWaL4cfYRKdZg" predecessor="_IXWycrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nnaKcLLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXXZgLLjEeWaL4cfYRKdZg" entityName="size:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block from 5207 to 5276" successor="_IXYAkLLjEeWaL4cfYRKdZg" predecessor="_IXWyc7LjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeaksLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nsFPELLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IXYAkLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache().Block at 5300" successor="_IXYAkbLjEeWaL4cfYRKdZg" predecessor="_IXXZgLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_IXYAkbLjEeWaL4cfYRKdZg" predecessor="_IXYAkLLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXZOsLLjEeWaL4cfYRKdZg" entityName="setRowCacheCapacityInMB:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCache() at 5369" successor="_IV6A8rLjEeWaL4cfYRKdZg" predecessor="_IXWycLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeAVALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IV9EQbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_IV6A8rLjEeWaL4cfYRKdZg" predecessor="_IXZOsLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_IXac0LLjEeWaL4cfYRKdZg" entityName="testRowCacheLoad">
+    <scenarioBehaviour_UsageScenario id="_IXac07LjEeWaL4cfYRKdZg" entityName="testRowCacheLoad">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_IXac0bLjEeWaL4cfYRKdZg" successor="_IXac1LLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IXac1LLjEeWaL4cfYRKdZg" entityName="setRowCacheCapacityInMB:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCacheLoad() at 5502" successor="_IYHncLLjEeWaL4cfYRKdZg" predecessor="_IXac0bLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeAVALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IV9EQbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYHncLLjEeWaL4cfYRKdZg" entityName="disableAutoCompaction:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 5985" successor="_IYI1kLLjEeWaL4cfYRKdZg" predecessor="_IXac1LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAnJ8LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAf1MLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYI1kLLjEeWaL4cfYRKdZg" entityName="open:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6081" successor="_IYLR0LLjEeWaL4cfYRKdZg" predecessor="_IYHncLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAnxAbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYLR0LLjEeWaL4cfYRKdZg" entityName="getColumnFamilyStore:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6081" successor="_IYL44LLjEeWaL4cfYRKdZg" predecessor="_IYI1kLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AApmMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYL44LLjEeWaL4cfYRKdZg" entityName="invalidateRowCache:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6161" successor="_IYNuELLjEeWaL4cfYRKdZg" predecessor="_IYLR0LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeAVALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IV8dMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYNuELLjEeWaL4cfYRKdZg" entityName="size:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() from 6162 to 6220" successor="_IYOVILLjEeWaL4cfYRKdZg" predecessor="_IYL44LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeaksLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nsFPELLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_IYOVILLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_IYQxYrLjEeWaL4cfYRKdZg" predecessor="_IYNuELLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_IYOVIbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData() from 20955 to 21015">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_IYOVIrLjEeWaL4cfYRKdZg" successor="_IYOVI7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYOVI7LjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21087" successor="_IYO8MLLjEeWaL4cfYRKdZg" predecessor="_IYOVIrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYO8MLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21157" successor="_IYO8MbLjEeWaL4cfYRKdZg" predecessor="_IYOVI7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYO8MbLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYPjQLLjEeWaL4cfYRKdZg" predecessor="_IYO8MLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYPjQLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYQKULLjEeWaL4cfYRKdZg" predecessor="_IYO8MbLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYQKULLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYQKUbLjEeWaL4cfYRKdZg" predecessor="_IYPjQLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYQKUbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYQKUrLjEeWaL4cfYRKdZg" predecessor="_IYQKULLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYQKUrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYQKU7LjEeWaL4cfYRKdZg" predecessor="_IYQKUbLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYQKU7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYQKVLLjEeWaL4cfYRKdZg" predecessor="_IYQKUrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYQKVLLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYQxYLLjEeWaL4cfYRKdZg" predecessor="_IYQKU7LjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYQxYLLjEeWaL4cfYRKdZg" entityName="applyUnsafe:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21333" successor="_IYQxYbLjEeWaL4cfYRKdZg" predecessor="_IYQKVLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYNykLLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_IYQxYbLjEeWaL4cfYRKdZg" predecessor="_IYQxYLLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYQxYrLjEeWaL4cfYRKdZg" entityName="size:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() from 6380 to 6446" successor="_IYRYcLLjEeWaL4cfYRKdZg" predecessor="_IYOVILLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeaksLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nsFPELLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYRYcLLjEeWaL4cfYRKdZg" entityName="submitWrite:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6552" successor="_IYR_gLLjEeWaL4cfYRKdZg" predecessor="_IYQxYrLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BfHvULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pl2NELLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYR_gLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6552" successor="_IYR_gbLjEeWaL4cfYRKdZg" predecessor="_IYRYcLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYR_gbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6552" successor="_IYR_grLjEeWaL4cfYRKdZg" predecessor="_IYR_gLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYR_grLjEeWaL4cfYRKdZg" entityName="invalidateRowCache:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6673" successor="_IYSmkLLjEeWaL4cfYRKdZg" predecessor="_IYR_gbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeAVALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IV8dMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYSmkLLjEeWaL4cfYRKdZg" entityName="size:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() from 6674 to 6732" successor="_IYTNoLLjEeWaL4cfYRKdZg" predecessor="_IYR_grLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeaksLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nsFPELLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYTNoLLjEeWaL4cfYRKdZg" entityName="loadSaved:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() from 6733 to 6858" successor="_IYUbwLLjEeWaL4cfYRKdZg" predecessor="_IYSmkLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BfHvULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pl7FkLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYUbwLLjEeWaL4cfYRKdZg" entityName="setRowCacheCapacityInMB:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCacheLoad() at 5606" successor="_IXac0rLjEeWaL4cfYRKdZg" predecessor="_IYTNoLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeAVALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IV9EQbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_IXac0rLjEeWaL4cfYRKdZg" predecessor="_IYUbwLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_IYVC0LLjEeWaL4cfYRKdZg" entityName="testRowCachePartialLoad">
+    <scenarioBehaviour_UsageScenario id="_IYVC07LjEeWaL4cfYRKdZg" entityName="testRowCachePartialLoad">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_IYVC0bLjEeWaL4cfYRKdZg" successor="_IYVC1LLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYVC1LLjEeWaL4cfYRKdZg" entityName="setRowCacheCapacityInMB:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCachePartialLoad() at 5746" successor="_IYpy8LLjEeWaL4cfYRKdZg" predecessor="_IYVC0bLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeAVALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IV9EQbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYpy8LLjEeWaL4cfYRKdZg" entityName="disableAutoCompaction:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 5985" successor="_IYrBELLjEeWaL4cfYRKdZg" predecessor="_IYVC1LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAnJ8LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAf1MLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYrBELLjEeWaL4cfYRKdZg" entityName="open:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6081" successor="_IYroILLjEeWaL4cfYRKdZg" predecessor="_IYpy8LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAnxAbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYroILLjEeWaL4cfYRKdZg" entityName="getColumnFamilyStore:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6081" successor="_IYsPMLLjEeWaL4cfYRKdZg" predecessor="_IYrBELLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AApmMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYsPMLLjEeWaL4cfYRKdZg" entityName="invalidateRowCache:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6161" successor="_IYs2QLLjEeWaL4cfYRKdZg" predecessor="_IYroILLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeAVALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IV8dMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYs2QLLjEeWaL4cfYRKdZg" entityName="size:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() from 6162 to 6220" successor="_IYtdULLjEeWaL4cfYRKdZg" predecessor="_IYsPMLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeaksLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nsFPELLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_IYtdULLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_IYv5kbLjEeWaL4cfYRKdZg" predecessor="_IYs2QLLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_IYtdUbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData() from 20955 to 21015">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_IYtdUrLjEeWaL4cfYRKdZg" successor="_IYtdU7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYtdU7LjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21087" successor="_IYuEYLLjEeWaL4cfYRKdZg" predecessor="_IYtdUrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYuEYLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21157" successor="_IYuEYbLjEeWaL4cfYRKdZg" predecessor="_IYtdU7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYuEYbLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYurcLLjEeWaL4cfYRKdZg" predecessor="_IYuEYLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYurcLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYvSgLLjEeWaL4cfYRKdZg" predecessor="_IYuEYbLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYvSgLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYvSgbLjEeWaL4cfYRKdZg" predecessor="_IYurcLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYvSgbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYvSgrLjEeWaL4cfYRKdZg" predecessor="_IYvSgLLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYvSgrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYvSg7LjEeWaL4cfYRKdZg" predecessor="_IYvSgbLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYvSg7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYvShLLjEeWaL4cfYRKdZg" predecessor="_IYvSgrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYvShLLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21294" successor="_IYvShbLjEeWaL4cfYRKdZg" predecessor="_IYvSg7LjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYvShbLjEeWaL4cfYRKdZg" entityName="applyUnsafe:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.insertData().Block at 21333" successor="_IYv5kLLjEeWaL4cfYRKdZg" predecessor="_IYvShLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYNykLLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_IYv5kLLjEeWaL4cfYRKdZg" predecessor="_IYvShbLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYv5kbLjEeWaL4cfYRKdZg" entityName="size:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() from 6380 to 6446" successor="_IYxHsLLjEeWaL4cfYRKdZg" predecessor="_IYtdULLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeaksLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nsFPELLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYxHsLLjEeWaL4cfYRKdZg" entityName="submitWrite:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6552" successor="_IYxuwLLjEeWaL4cfYRKdZg" predecessor="_IYv5kbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BfHvULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pl2NELLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYxuwLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6552" successor="_IYxuwbLjEeWaL4cfYRKdZg" predecessor="_IYxHsLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_IYxuwbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6552" successor="_IYxuwrLjEeWaL4cfYRKdZg" predecessor="_IYxuwLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYxuwrLjEeWaL4cfYRKdZg" entityName="invalidateRowCache:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() at 6673" successor="_IYyV0LLjEeWaL4cfYRKdZg" predecessor="_IYxuwbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeAVALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IV8dMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYyV0LLjEeWaL4cfYRKdZg" entityName="size:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() from 6674 to 6732" successor="_IYy84LLjEeWaL4cfYRKdZg" predecessor="_IYxuwrLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeaksLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nsFPELLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYy84LLjEeWaL4cfYRKdZg" entityName="loadSaved:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.rowCacheLoad() from 6733 to 6858" successor="_IYzj8LLjEeWaL4cfYRKdZg" predecessor="_IYyV0LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BfHvULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pl7FkLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_IYzj8LLjEeWaL4cfYRKdZg" entityName="setRowCacheCapacityInMB:  @position: org.apache.cassandra.db.RowCacheTest.java.RowCacheTest.testRowCachePartialLoad() at 5835" successor="_IYVC0rLjEeWaL4cfYRKdZg" predecessor="_IYy84LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BeAVALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_IV9EQbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_IYVC0rLjEeWaL4cfYRKdZg" predecessor="_IYzj8LLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

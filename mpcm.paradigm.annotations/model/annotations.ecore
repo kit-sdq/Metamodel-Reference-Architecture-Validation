@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="annotations" nsURI="mpcm.paradigm.annotations" nsPrefix="mpcm.paradigm.annotations">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="This package contains elements to specify fixed QoS attributes of system-external services."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="AnnotationRoot" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="QoSAnnotations allow software architects and performance analysts to annotate Quality of Service (QoS) attributes to services (i.e., signatures of an interface). It is important to note that these annotations are specified and not derived. Usually the PCM uses the internal specification of a components behaviour (i.e., its RD-SEFFs) to determine its QoS. However, in a mixed top down and bottom up approach as favoured by the PCM, software architects have to combine components whose internals are not yet known with fully specified components. QoSAnnotations provide a first perforamnce (or reliability) abstraction of the services offered by a component using the SpecifiedQoSAnnotation. They furthermore define the output parameters of the services without describing its internal behviour.&#xD;&#xA;&#xD;&#xA;Notes:&#xD;&#xA;- Should the association of QoSAnnotations to services not be in the class QoSAnnotation instead of SpecifiedQoSAnnotation and SpecifiedOutputParameterAbstraction separately?"/>
+    </eAnnotations>
+    <eOperations name="MultipleReliabilityAnnotationsPerExternalCallNotAllowed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.specifiedQoSAnnotations_QoSAnnotations->select(oclIsTypeOf(mpcm::qosannotations::qos_reliability::SpecifiedReliabilityAnnotation))->forAll( x, y | ( x&lt;>y ) implies ( ( x.role_SpecifiedQoSAnnotation &lt;> y.role_SpecifiedQoSAnnotation )  or ( x.signature_SpecifiedQoSAnnation &lt;> y.signature_SpecifiedQoSAnnation ) ) )"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specifiedOutputParameterAbstractions_QoSAnnotations"
+        ordered="false" upperBound="-1" eType="#//ServiceOutputParameterAbstraction"
+        containment="true" eOpposite="#//ServiceOutputParameterAbstraction/qosAnnotations_SpecifiedOutputParameterAbstraction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specifiedQoSAnnotations_QoSAnnotations"
+        ordered="false" upperBound="-1" eType="#//ServicePropertyAnnotation" containment="true"
+        eOpposite="#//ServicePropertyAnnotation/qosAnnotations_SpecifiedQoSAnnotation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServicePropertyAnnotation" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>&#xD;&#xA;    SpecifiedQoSAnnotations&amp;nbsp;(as&amp;nbsp;an&amp;nbsp;abstract&amp;nbsp;class)&amp;nbsp;associate&amp;nbsp;specified&amp;nbsp;(see&amp;nbsp;QoSAnnotation)&amp;nbsp;QoS&amp;nbsp;properties&amp;nbsp;to&amp;nbsp;services&amp;nbsp;of&amp;nbsp;components.&amp;nbsp;A&amp;nbsp;service&amp;nbsp;is&amp;nbsp;thereby&amp;nbsp;determined&amp;nbsp;by&amp;nbsp;a&amp;nbsp;Signature&amp;nbsp;and&amp;nbsp;a&amp;nbsp;Role&amp;nbsp;(i.e.,&amp;nbsp;an&amp;nbsp;interface&amp;nbsp;bound&amp;nbsp;to&amp;nbsp;a&amp;nbsp;component).&#xD;&#xA;&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signature_SpecifiedQoSAnnation"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Signature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role_SpecifiedQoSAnnotation"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="qosAnnotations_SpecifiedQoSAnnotation"
+        ordered="false" lowerBound="1" eType="#//AnnotationRoot" eOpposite="#//AnnotationRoot/specifiedQoSAnnotations_QoSAnnotations"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceOutputParameterAbstraction" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="To specify the output parameters of a service (without associated RD-SEFF), software architects can associate a SpecifiedOutputParameterAbstraction to services (signature + role). SpecifiedOutputParameterAbstractions assign a single VariableUsage to that service that determines the output parameters in depency of its input parameters. Software architects can use stochastic expressions (package StoEx) to define the dependencies.&#xD;&#xA;&#xD;&#xA;Note:&#xD;&#xA;- Is it actually possible to define the output in dependency on the input parameters?&#xD;&#xA;&#xD;&#xA;"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signature_SpecifiedOutputParameterAbstraction"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Signature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role_SpecifiedOutputParameterAbstraction"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expectedExternalOutputs_SpecifiedOutputParameterAbstraction"
+        ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//VariableUsage"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="qosAnnotations_SpecifiedOutputParameterAbstraction"
+        ordered="false" lowerBound="1" eType="#//AnnotationRoot" eOpposite="#//AnnotationRoot/specifiedOutputParameterAbstractions_QoSAnnotations"/>
+  </eClassifiers>
+</ecore:EPackage>

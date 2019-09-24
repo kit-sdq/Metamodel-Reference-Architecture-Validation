@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="__y1MoLLiEeWaL4cfYRKdZg" entityName="testBigIntegerEndpointsA">
+    <scenarioBehaviour_UsageScenario id="__y1Mo7LiEeWaL4cfYRKdZg" entityName="testBigIntegerEndpointsA">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__y1MobLiEeWaL4cfYRKdZg" successor="__y1MpLLiEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__y1MpLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testBigIntegerEndpointsA() at 2211" successor="__y1zsLLiEeWaL4cfYRKdZg" predecessor="__y1MobLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__y1zsLLiEeWaL4cfYRKdZg" entityName="optsWithRF:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testBigIntegerEndpointsA() at 2351" successor="__zALwLLiEeWaL4cfYRKdZg" predecessor="__y1MpLLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__y2awLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__zALwLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.addEndpoint() at 5582" successor="__zALwbLiEeWaL4cfYRKdZg" predecessor="__y1zsLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__zALwbLiEeWaL4cfYRKdZg" entityName="updateNormalToken:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.addEndpoint() at 5843" successor="__zPcULLiEeWaL4cfYRKdZg" predecessor="__zALwLLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__zBZ4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qLSccrLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__zPcULLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.buildResult() at 5227" successor="__z6KsLLiEeWaL4cfYRKdZg" predecessor="__zALwbLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="__z6KsLLiEeWaL4cfYRKdZg" entityName="default loop count value" successor="__y1MorLiEeWaL4cfYRKdZg" predecessor="__zPcULLiEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="__z6KsbLiEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints() from 5976 to 6016">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__z6KsrLiEeWaL4cfYRKdZg" successor="__z6Ks7LiEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__z6Ks7LiEeWaL4cfYRKdZg" entityName="getNaturalEndpoints:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block at 6108" successor="__z7Y0LLiEeWaL4cfYRKdZg" predecessor="__z6KsrLiEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_gQcj8LLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="__z7Y0LLiEeWaL4cfYRKdZg" entityName="default loop count value" successor="__z9OArLiEeWaL4cfYRKdZg" predecessor="__z6Ks7LiEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="__z7Y0bLiEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block from 6109 to 6163">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__z7Y0rLiEeWaL4cfYRKdZg" successor="__z7Y07LiEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__z7Y07LiEeWaL4cfYRKdZg" entityName="toString:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block.Block at 6274" successor="__z9OALLiEeWaL4cfYRKdZg" predecessor="__z7Y0rLiEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__z8m8LLiEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_fyAUcLLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__z9OALLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block.Block at 6344" successor="__z9OAbLiEeWaL4cfYRKdZg" predecessor="__z7Y07LiEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__z9OAbLiEeWaL4cfYRKdZg" predecessor="__z9OALLiEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__z9OArLiEeWaL4cfYRKdZg" predecessor="__z7Y0LLiEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__y1MorLiEeWaL4cfYRKdZg" predecessor="__z6KsLLiEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="__z91ELLiEeWaL4cfYRKdZg" entityName="testBigIntegerEndpointsB">
+    <scenarioBehaviour_UsageScenario id="__z91E7LiEeWaL4cfYRKdZg" entityName="testBigIntegerEndpointsB">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__z91EbLiEeWaL4cfYRKdZg" successor="__z91FLLiEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__z91FLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testBigIntegerEndpointsB() at 3234" successor="__z91FbLiEeWaL4cfYRKdZg" predecessor="__z91EbLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__z91FbLiEeWaL4cfYRKdZg" entityName="optsWithRF:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testBigIntegerEndpointsB() at 3374" successor="__0LQcLLiEeWaL4cfYRKdZg" predecessor="__z91FLLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__y2awLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__0LQcLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.addEndpoint() at 5582" successor="__0LQcbLiEeWaL4cfYRKdZg" predecessor="__z91FbLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__0LQcbLiEeWaL4cfYRKdZg" entityName="updateNormalToken:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.addEndpoint() at 5843" successor="__0Yr0LLiEeWaL4cfYRKdZg" predecessor="__0LQcLLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__zBZ4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qLSccrLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__0Yr0LLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.buildResult() at 5227" successor="__1A98LLiEeWaL4cfYRKdZg" predecessor="__0LQcbLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="__1A98LLiEeWaL4cfYRKdZg" entityName="default loop count value" successor="__z91ErLiEeWaL4cfYRKdZg" predecessor="__0Yr0LLiEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="__1A98bLiEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints() from 5976 to 6016">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__1A98rLiEeWaL4cfYRKdZg" successor="__1A987LiEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__1A987LiEeWaL4cfYRKdZg" entityName="getNaturalEndpoints:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block at 6108" successor="__1DaMLLiEeWaL4cfYRKdZg" predecessor="__1A98rLiEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_gQcj8LLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="__1DaMLLiEeWaL4cfYRKdZg" entityName="default loop count value" successor="__1GdgrLiEeWaL4cfYRKdZg" predecessor="__1A987LiEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="__1DaMbLiEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block from 6109 to 6163">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__1DaMrLiEeWaL4cfYRKdZg" successor="__1DaM7LiEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__1DaM7LiEeWaL4cfYRKdZg" entityName="toString:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block.Block at 6274" successor="__1GdgLLiEeWaL4cfYRKdZg" predecessor="__1DaMrLiEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__z8m8LLiEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_fyAUcLLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__1GdgLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block.Block at 6344" successor="__1GdgbLiEeWaL4cfYRKdZg" predecessor="__1DaM7LiEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__1GdgbLiEeWaL4cfYRKdZg" predecessor="__1GdgLLiEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__1GdgrLiEeWaL4cfYRKdZg" predecessor="__1DaMLLiEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__z91ErLiEeWaL4cfYRKdZg" predecessor="__1A98LLiEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="__1HEkLLiEeWaL4cfYRKdZg" entityName="testBigIntegerEndpointsC">
+    <scenarioBehaviour_UsageScenario id="__1HEk7LiEeWaL4cfYRKdZg" entityName="testBigIntegerEndpointsC">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__1HEkbLiEeWaL4cfYRKdZg" successor="__1HElLLiEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__1HElLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testBigIntegerEndpointsC() at 4308" successor="__1HElbLiEeWaL4cfYRKdZg" predecessor="__1HEkbLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__1HElbLiEeWaL4cfYRKdZg" entityName="optsWithRF:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testBigIntegerEndpointsC() at 4448" successor="__1PncLLiEeWaL4cfYRKdZg" predecessor="__1HElLLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__y2awLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__1PncLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.addEndpoint() at 5582" successor="__1PncbLiEeWaL4cfYRKdZg" predecessor="__1HElbLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__1PncbLiEeWaL4cfYRKdZg" entityName="updateNormalToken:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.addEndpoint() at 5843" successor="__1Z_gLLiEeWaL4cfYRKdZg" predecessor="__1PncLLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__zBZ4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qLSccrLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__1Z_gLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.buildResult() at 5227" successor="__1uIkLLiEeWaL4cfYRKdZg" predecessor="__1PncbLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="__1uIkLLiEeWaL4cfYRKdZg" entityName="default loop count value" successor="__1HEkrLiEeWaL4cfYRKdZg" predecessor="__1Z_gLLiEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="__1uIkbLiEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints() from 5976 to 6016">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__1uIkrLiEeWaL4cfYRKdZg" successor="__1uIk7LiEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__1uIk7LiEeWaL4cfYRKdZg" entityName="getNaturalEndpoints:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block at 6108" successor="__15HsLLiEeWaL4cfYRKdZg" predecessor="__1uIkrLiEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_gQcj8LLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="__15HsLLiEeWaL4cfYRKdZg" entityName="default loop count value" successor="__2VMkrLiEeWaL4cfYRKdZg" predecessor="__1uIk7LiEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="__15HsbLiEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block from 6109 to 6163">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__15HsrLiEeWaL4cfYRKdZg" successor="__2SwULLiEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__2SwULLiEeWaL4cfYRKdZg" entityName="toString:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block.Block at 6274" successor="__2VMkLLiEeWaL4cfYRKdZg" predecessor="__15HsrLiEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__z8m8LLiEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_fyAUcLLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__2VMkLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testGetEndpoints().Block.Block at 6344" successor="__2VMkbLiEeWaL4cfYRKdZg" predecessor="__2SwULLiEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__2VMkbLiEeWaL4cfYRKdZg" predecessor="__2VMkLLiEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__2VMkrLiEeWaL4cfYRKdZg" predecessor="__15HsLLiEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__1HEkrLiEeWaL4cfYRKdZg" predecessor="__1uIkLLiEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="__2VzoLLiEeWaL4cfYRKdZg" entityName="testMoveLeft">
+    <scenarioBehaviour_UsageScenario id="__2Vzo7LiEeWaL4cfYRKdZg" entityName="testMoveLeft">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__2VzobLiEeWaL4cfYRKdZg" successor="__2VzpLLiEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__2VzpLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveLeft() at 6709" successor="__3RnwLLiEeWaL4cfYRKdZg" predecessor="__2VzobLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__3RnwLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15428" successor="__3RnwbLiEeWaL4cfYRKdZg" predecessor="__2VzpLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__3RnwbLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15428" successor="__3RnwrLiEeWaL4cfYRKdZg" predecessor="__3RnwLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__3RnwrLiEeWaL4cfYRKdZg" entityName="optsWithRF:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15741" successor="__3S14LLiEeWaL4cfYRKdZg" predecessor="__3RnwbLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__y2awLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__3S14LLiEeWaL4cfYRKdZg" entityName="getAddressRanges:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15836" successor="__3UrELLiEeWaL4cfYRKdZg" predecessor="__3RnwrLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_gQdLALLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__3UrELLiEeWaL4cfYRKdZg" entityName="getPendingAddressRanges:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15987" successor="__3b_0LLiEeWaL4cfYRKdZg" predecessor="__3S14LLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__3YVcLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__3b_0LLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 16133" successor="__3hfYLLiEeWaL4cfYRKdZg" predecessor="__3UrELLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__3hfYLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveLeft() at 7186" successor="__3jUkLLiEeWaL4cfYRKdZg" predecessor="__3b_0LLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__3jUkLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveLeft() at 7186" successor="__3o0ILLiEeWaL4cfYRKdZg" predecessor="__3hfYLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__3o0ILLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveLeft() at 7268" successor="__3o0IbLiEeWaL4cfYRKdZg" predecessor="__3jUkLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__3o0IbLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveLeft() at 7268" successor="__2VzorLiEeWaL4cfYRKdZg" predecessor="__3o0ILLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__2VzorLiEeWaL4cfYRKdZg" predecessor="__3o0IbLiEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="__3rQYLLiEeWaL4cfYRKdZg" entityName="testMoveRight">
+    <scenarioBehaviour_UsageScenario id="__3rQY7LiEeWaL4cfYRKdZg" entityName="testMoveRight">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__3rQYbLiEeWaL4cfYRKdZg" successor="__3rQZLLiEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__3rQZLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveRight() at 7529" successor="__4d6kLLiEeWaL4cfYRKdZg" predecessor="__3rQYbLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__4d6kLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15428" successor="__4d6kbLiEeWaL4cfYRKdZg" predecessor="__3rQZLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__4d6kbLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15428" successor="__4d6krLiEeWaL4cfYRKdZg" predecessor="__4d6kLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__4d6krLiEeWaL4cfYRKdZg" entityName="optsWithRF:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15741" successor="__4fIsLLiEeWaL4cfYRKdZg" predecessor="__4d6kbLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__y2awLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__4fIsLLiEeWaL4cfYRKdZg" entityName="getAddressRanges:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15836" successor="__428ILLiEeWaL4cfYRKdZg" predecessor="__4d6krLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_gQdLALLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__428ILLiEeWaL4cfYRKdZg" entityName="getPendingAddressRanges:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15987" successor="__45YYLLiEeWaL4cfYRKdZg" predecessor="__4fIsLLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__3YVcLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__45YYLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 16133" successor="__5GzwLLiEeWaL4cfYRKdZg" predecessor="__428ILLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__5GzwLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveRight() at 8073" successor="__5GzwbLiEeWaL4cfYRKdZg" predecessor="__45YYLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__5GzwbLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveRight() at 8073" successor="__5ToELLiEeWaL4cfYRKdZg" predecessor="__5GzwLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__5ToELLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveRight() at 8165" successor="__5ToEbLiEeWaL4cfYRKdZg" predecessor="__5GzwbLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__5ToEbLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveRight() at 8165" successor="__3rQYrLiEeWaL4cfYRKdZg" predecessor="__5ToELLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__3rQYrLiEeWaL4cfYRKdZg" predecessor="__5ToEbLiEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="__5ToErLiEeWaL4cfYRKdZg" entityName="testMoveMiddleOfRing">
+    <scenarioBehaviour_UsageScenario id="__5ToFbLiEeWaL4cfYRKdZg" entityName="testMoveMiddleOfRing">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__5ToE7LiEeWaL4cfYRKdZg" successor="__5ToFrLiEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__5ToFrLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveMiddleOfRing() at 8408" successor="__5mjALLiEeWaL4cfYRKdZg" predecessor="__5ToE7LiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__5mjALLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15428" successor="__5mjAbLiEeWaL4cfYRKdZg" predecessor="__5ToFrLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__5mjAbLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15428" successor="__5mjArLiEeWaL4cfYRKdZg" predecessor="__5mjALLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__5mjArLiEeWaL4cfYRKdZg" entityName="optsWithRF:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15741" successor="__5nxILLiEeWaL4cfYRKdZg" predecessor="__5mjAbLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__y2awLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__5nxILLiEeWaL4cfYRKdZg" entityName="getAddressRanges:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15836" successor="__5o_QLLiEeWaL4cfYRKdZg" predecessor="__5mjArLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_gQdLALLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__5o_QLLiEeWaL4cfYRKdZg" entityName="getPendingAddressRanges:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15987" successor="__6MY4LLiEeWaL4cfYRKdZg" predecessor="__5nxILLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__3YVcLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__6MY4LLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 16133" successor="__5ToFLLiEeWaL4cfYRKdZg" predecessor="__5o_QLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__5ToFLLiEeWaL4cfYRKdZg" predecessor="__6MY4LLiEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="__73z4LLiEeWaL4cfYRKdZg" entityName="testMoveAfterNextNeighbors">
+    <scenarioBehaviour_UsageScenario id="__73z47LiEeWaL4cfYRKdZg" entityName="testMoveAfterNextNeighbors">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__73z4bLiEeWaL4cfYRKdZg" successor="__73z5LLiEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__73z5LLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveAfterNextNeighbors() at 10090" successor="__8SDkLLiEeWaL4cfYRKdZg" predecessor="__73z4bLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__8SDkLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15428" successor="__8SDkbLiEeWaL4cfYRKdZg" predecessor="__73z5LLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__8SDkbLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15428" successor="__8SDkrLiEeWaL4cfYRKdZg" predecessor="__8SDkLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__8SDkrLiEeWaL4cfYRKdZg" entityName="optsWithRF:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15741" successor="__8TRsLLiEeWaL4cfYRKdZg" predecessor="__8SDkbLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__y2awLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__8TRsLLiEeWaL4cfYRKdZg" entityName="getAddressRanges:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15836" successor="__8T4wLLiEeWaL4cfYRKdZg" predecessor="__8SDkrLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_gQdLALLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__8T4wLLiEeWaL4cfYRKdZg" entityName="getPendingAddressRanges:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15987" successor="__8VG4LLiEeWaL4cfYRKdZg" predecessor="__8TRsLLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__3YVcLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__8VG4LLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 16133" successor="__73z4rLiEeWaL4cfYRKdZg" predecessor="__8T4wLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__73z4rLiEeWaL4cfYRKdZg" predecessor="__8VG4LLiEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="__8s6ULLiEeWaL4cfYRKdZg" entityName="testMoveBeforePreviousNeighbor">
+    <scenarioBehaviour_UsageScenario id="__8s6U7LiEeWaL4cfYRKdZg" entityName="testMoveBeforePreviousNeighbor">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__8s6UbLiEeWaL4cfYRKdZg" successor="__8s6VLLiEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__8s6VLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.testMoveBeforePreviousNeighbor() at 11671" successor="__9C4kLLiEeWaL4cfYRKdZg" predecessor="__8s6UbLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__9C4kLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15428" successor="__9C4kbLiEeWaL4cfYRKdZg" predecessor="__8s6VLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__9C4kbLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15428" successor="__9C4krLiEeWaL4cfYRKdZg" predecessor="__9C4kLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__9C4krLiEeWaL4cfYRKdZg" entityName="optsWithRF:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15741" successor="__9EGsLLiEeWaL4cfYRKdZg" predecessor="__9C4kbLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__y2awLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__9EGsLLiEeWaL4cfYRKdZg" entityName="getAddressRanges:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15836" successor="__9EtwLLiEeWaL4cfYRKdZg" predecessor="__9C4krLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_gQdLALLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="__9EtwLLiEeWaL4cfYRKdZg" entityName="getPendingAddressRanges:  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 15987" successor="__9SwMLLiEeWaL4cfYRKdZg" predecessor="__9EGsLLiEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__3YVcLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__9SwMLLiEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.OldNetworkTopologyStrategyTest.java.OldNetworkTopologyStrategyTest.calculateStreamAndFetchRanges() at 16133" successor="__8s6UrLiEeWaL4cfYRKdZg" predecessor="__9EtwLLiEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__8s6UrLiEeWaL4cfYRKdZg" predecessor="__9SwMLLiEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

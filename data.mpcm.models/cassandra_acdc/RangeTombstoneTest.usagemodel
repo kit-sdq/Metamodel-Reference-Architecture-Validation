@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_iRzs542BEeWUKKvQPqVU9Q" entityName="simpleQueryWithRangeTombstoneTest">
+    <scenarioBehaviour_UsageScenario id="_iRzs6o2BEeWUKKvQPqVU9Q" entityName="simpleQueryWithRangeTombstoneTest">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iRzs6I2BEeWUKKvQPqVU9Q" successor="_iRzs642BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iRzs642BEeWUKKvQPqVU9Q" entityName="open:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 1444" successor="_iRzs7I2BEeWUKKvQPqVU9Q" predecessor="_iRzs6I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWlo2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iRzs7I2BEeWUKKvQPqVU9Q" entityName="getColumnFamilyStore:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 1515" successor="_iRzs7Y2BEeWUKKvQPqVU9Q" predecessor="_iRzs642BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWmI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iRzs7Y2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 1684" successor="_iR820I2BEeWUKKvQPqVU9Q" predecessor="_iRzs7I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iR820I2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iR821o2BEeWUKKvQPqVU9Q" predecessor="_iRzs7Y2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iR820Y2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 1685 to 1724">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iR820o2BEeWUKKvQPqVU9Q" successor="_iR82042BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iR82042BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.b() from 7144 to 7183" successor="_iR821I2BEeWUKKvQPqVU9Q" predecessor="_iR820o2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XNZkR42BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iR821I2BEeWUKKvQPqVU9Q" entityName="add:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.add() at 7414" successor="_iR821Y2BEeWUKKvQPqVU9Q" predecessor="_iR82042BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F_HDY1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iR821Y2BEeWUKKvQPqVU9Q" predecessor="_iR821I2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iR821o2BEeWUKKvQPqVU9Q" entityName="apply:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 1771" successor="_iR82142BEeWUKKvQPqVU9Q" predecessor="_iR820I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F19F41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iR82142BEeWUKKvQPqVU9Q" entityName="forceBlockingFlush:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 1805" successor="_iR822I2BEeWUKKvQPqVU9Q" predecessor="_iR821o2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2yjAVo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iR822I2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 1871" successor="_iR822Y2BEeWUKKvQPqVU9Q" predecessor="_iR82142BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iR822Y2BEeWUKKvQPqVU9Q" entityName="addOrGet:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 1905" successor="_iR82242BEeWUKKvQPqVU9Q" predecessor="_iR822I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_iR822o2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iR82242BEeWUKKvQPqVU9Q" entityName="getComparator:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.delete() at 7775" successor="_iR823I2BEeWUKKvQPqVU9Q" predecessor="_iR822Y2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_16qWEo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iR823I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.delete() at 7775" successor="_iR823Y2BEeWUKKvQPqVU9Q" predecessor="_iR82242BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iR823Y2BEeWUKKvQPqVU9Q" entityName="delete:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.delete() at 7775" successor="_iR823o2BEeWUKKvQPqVU9Q" predecessor="_iR823I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W6xjOY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iR823o2BEeWUKKvQPqVU9Q" entityName="apply:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 1956" successor="_iR82342BEeWUKKvQPqVU9Q" predecessor="_iR823Y2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F19F41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iR82342BEeWUKKvQPqVU9Q" entityName="forceBlockingFlush:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 1990" successor="_iR824I2BEeWUKKvQPqVU9Q" predecessor="_iR823o2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2yjAVo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iR824I2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2056" successor="_iSGn0I2BEeWUKKvQPqVU9Q" predecessor="_iR82342BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iSGn0I2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iSGn1I2BEeWUKKvQPqVU9Q" predecessor="_iR824I2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iSGn0Y2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 2057 to 2096">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iSGn0o2BEeWUKKvQPqVU9Q" successor="_iSGn042BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iSGn042BEeWUKKvQPqVU9Q" predecessor="_iSGn0o2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iSGn1I2BEeWUKKvQPqVU9Q" entityName="apply:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2143" successor="_iSGn1Y2BEeWUKKvQPqVU9Q" predecessor="_iSGn0I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F19F41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iSGn1Y2BEeWUKKvQPqVU9Q" entityName="forceBlockingFlush:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2177" successor="_iSGn1o2BEeWUKKvQPqVU9Q" predecessor="_iSGn1I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2yjAVo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iSGn1o2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2243" successor="_iSGn142BEeWUKKvQPqVU9Q" predecessor="_iSGn1Y2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iSGn142BEeWUKKvQPqVU9Q" entityName="addOrGet:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2277" successor="_iSGn2I2BEeWUKKvQPqVU9Q" predecessor="_iSGn1o2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_iR822o2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iSGn2I2BEeWUKKvQPqVU9Q" entityName="apply:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2328" successor="_iSGn2Y2BEeWUKKvQPqVU9Q" predecessor="_iSGn142BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F19F41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iSGn2Y2BEeWUKKvQPqVU9Q" entityName="getComparator:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2637" successor="_iSGn242BEeWUKKvQPqVU9Q" predecessor="_iSGn2I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_16qWEo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iSGn242BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iSGn4I2BEeWUKKvQPqVU9Q" predecessor="_iSGn2Y2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iSGn3I2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 2638 to 2664">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iSGn3Y2BEeWUKKvQPqVU9Q" successor="_iSGn3o2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iSGn3o2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2695" successor="_iSGn342BEeWUKKvQPqVU9Q" predecessor="_iSGn3Y2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iSGn342BEeWUKKvQPqVU9Q" predecessor="_iSGn3o2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iSGn4I2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iUChgI2BEeWUKKvQPqVU9Q" predecessor="_iSGn242BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iSGn4Y2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 2696 to 2722">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iSGn4o2BEeWUKKvQPqVU9Q" successor="_iSGn442BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iSGn442BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2753" successor="_iSGn5I2BEeWUKKvQPqVU9Q" predecessor="_iSGn4o2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iSGn5I2BEeWUKKvQPqVU9Q" predecessor="_iSGn442BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iUChgI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2869" successor="_iUyIYI2BEeWUKKvQPqVU9Q" predecessor="_iSGn4I2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iUyIYI2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_iU75YI2BEeWUKKvQPqVU9Q" predecessor="_iUChgI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iU75YI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_iU75YY2BEeWUKKvQPqVU9Q" predecessor="_iUyIYI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iU75YY2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_iU75Yo2BEeWUKKvQPqVU9Q" predecessor="_iU75YI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iU75Yo2BEeWUKKvQPqVU9Q" entityName="getNamesFilter:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2869" successor="_iU75ZI2BEeWUKKvQPqVU9Q" predecessor="_iU75YY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WtqUQ42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_iU75Y42BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iU75ZI2BEeWUKKvQPqVU9Q" entityName="getColumnFamily:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 2869" successor="_iU75ZY2BEeWUKKvQPqVU9Q" predecessor="_iU75Yo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2ysKSo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iU75ZY2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iVFDVY2BEeWUKKvQPqVU9Q" predecessor="_iU75ZI2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iU75Zo2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 2870 to 2897">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iU75Z42BEeWUKKvQPqVU9Q" successor="_iU75aI2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iU75aI2BEeWUKKvQPqVU9Q" entityName="getColumn:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 2898 to 2984" successor="_iU75aY2BEeWUKKvQPqVU9Q" predecessor="_iU75Z42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1sW0Uo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iU75aY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.isLive() from 6979 to 7091" successor="_iVFDUI2BEeWUKKvQPqVU9Q" predecessor="_iU75aI2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVFDUI2BEeWUKKvQPqVU9Q" entityName="isMarkedForDelete:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.isLive() from 6979 to 7091" successor="_iVFDUY2BEeWUKKvQPqVU9Q" predecessor="_iU75aY2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_3QWWp41xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVFDUY2BEeWUKKvQPqVU9Q" entityName="deletionInfo:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.isLive() from 6979 to 7091" successor="_iVFDUo2BEeWUKKvQPqVU9Q" predecessor="_iVFDUI2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_169REY1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVFDUo2BEeWUKKvQPqVU9Q" entityName="isDeleted:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.isLive() from 6979 to 7091" successor="_iVFDVI2BEeWUKKvQPqVU9Q" predecessor="_iVFDUY2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_iVFDU42BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iVFDVI2BEeWUKKvQPqVU9Q" predecessor="_iVFDUo2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iVFDVY2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iVO0UI2BEeWUKKvQPqVU9Q" predecessor="_iU75ZY2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iVFDVo2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 2985 to 3011">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iVFDV42BEeWUKKvQPqVU9Q" successor="_iVFDWI2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVFDWI2BEeWUKKvQPqVU9Q" entityName="getColumn:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 3012 to 3102" successor="_iVFDWY2BEeWUKKvQPqVU9Q" predecessor="_iVFDV42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1sW0Uo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iVFDWY2BEeWUKKvQPqVU9Q" predecessor="_iVFDWI2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iVO0UI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 3278" successor="_iVO0UY2BEeWUKKvQPqVU9Q" predecessor="_iVFDVY2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVO0UY2BEeWUKKvQPqVU9Q" entityName="getSliceFilter:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 3278" successor="_iVO0Uo2BEeWUKKvQPqVU9Q" predecessor="_iVO0UI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WtqUQ42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_8QkvSI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVO0Uo2BEeWUKKvQPqVU9Q" entityName="getColumnFamily:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() at 3278" successor="_iVO0U42BEeWUKKvQPqVU9Q" predecessor="_iVO0UY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2ysKSo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iVO0U42BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iVO0WI2BEeWUKKvQPqVU9Q" predecessor="_iVO0Uo2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iVO0VI2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 3279 to 3350">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iVO0VY2BEeWUKKvQPqVU9Q" successor="_iVO0Vo2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVO0Vo2BEeWUKKvQPqVU9Q" entityName="getColumn:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 3351 to 3437" successor="_iVO0V42BEeWUKKvQPqVU9Q" predecessor="_iVO0VY2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1sW0Uo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iVO0V42BEeWUKKvQPqVU9Q" predecessor="_iVO0Vo2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iVO0WI2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iRzs6Y2BEeWUKKvQPqVU9Q" predecessor="_iVO0U42BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iVO0WY2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 3438 to 3527">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iVO0Wo2BEeWUKKvQPqVU9Q" successor="_iVO0W42BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVO0W42BEeWUKKvQPqVU9Q" entityName="getColumn:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.simpleQueryWithRangeTombstoneTest() from 3528 to 3618" successor="_iVO0XI2BEeWUKKvQPqVU9Q" predecessor="_iVO0Wo2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1sW0Uo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iVO0XI2BEeWUKKvQPqVU9Q" predecessor="_iVO0W42BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iRzs6Y2BEeWUKKvQPqVU9Q" predecessor="_iVO0WI2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_iVO0XY2BEeWUKKvQPqVU9Q" entityName="overlappingRangeTest">
+    <scenarioBehaviour_UsageScenario id="_iVO0YI2BEeWUKKvQPqVU9Q" entityName="overlappingRangeTest">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iVO0Xo2BEeWUKKvQPqVU9Q" successor="_iVO0YY2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVO0YY2BEeWUKKvQPqVU9Q" entityName="disableAutoCompaction:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 3757" successor="_iVO0Yo2BEeWUKKvQPqVU9Q" predecessor="_iVO0Xo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCYADo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_cz7H4Y2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVO0Yo2BEeWUKKvQPqVU9Q" entityName="open:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 3808" successor="_iVO0Y42BEeWUKKvQPqVU9Q" predecessor="_iVO0YY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWlo2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVO0Y42BEeWUKKvQPqVU9Q" entityName="getColumnFamilyStore:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 3879" successor="_iVO0ZI2BEeWUKKvQPqVU9Q" predecessor="_iVO0Yo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWmI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVO0ZI2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4048" successor="_iVYlUI2BEeWUKKvQPqVU9Q" predecessor="_iVO0Y42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iVYlUI2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iVYlVo2BEeWUKKvQPqVU9Q" predecessor="_iVO0ZI2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iVYlUY2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 4049 to 4085">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iVYlUo2BEeWUKKvQPqVU9Q" successor="_iVYlU42BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVYlU42BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.b() from 7144 to 7183" successor="_iVYlVI2BEeWUKKvQPqVU9Q" predecessor="_iVYlUo2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XNZkR42BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVYlVI2BEeWUKKvQPqVU9Q" entityName="add:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.add() at 7414" successor="_iVYlVY2BEeWUKKvQPqVU9Q" predecessor="_iVYlU42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F_HDY1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iVYlVY2BEeWUKKvQPqVU9Q" predecessor="_iVYlVI2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVYlVo2BEeWUKKvQPqVU9Q" entityName="apply:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4132" successor="_iVYlV42BEeWUKKvQPqVU9Q" predecessor="_iVYlUI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F19F41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVYlV42BEeWUKKvQPqVU9Q" entityName="forceBlockingFlush:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4166" successor="_iVYlWI2BEeWUKKvQPqVU9Q" predecessor="_iVYlVo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2yjAVo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVYlWI2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4232" successor="_iVYlWY2BEeWUKKvQPqVU9Q" predecessor="_iVYlV42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVYlWY2BEeWUKKvQPqVU9Q" entityName="addOrGet:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4266" successor="_iVhvQI2BEeWUKKvQPqVU9Q" predecessor="_iVYlWI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_iR822o2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvQI2BEeWUKKvQPqVU9Q" entityName="getComparator:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.delete() at 7775" successor="_iVhvQY2BEeWUKKvQPqVU9Q" predecessor="_iVYlWY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_16qWEo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iVhvQY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.delete() at 7775" successor="_iVhvQo2BEeWUKKvQPqVU9Q" predecessor="_iVhvQI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvQo2BEeWUKKvQPqVU9Q" entityName="delete:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.delete() at 7775" successor="_iVhvQ42BEeWUKKvQPqVU9Q" predecessor="_iVhvQY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W6xjOY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvQ42BEeWUKKvQPqVU9Q" entityName="apply:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4316" successor="_iVhvRI2BEeWUKKvQPqVU9Q" predecessor="_iVhvQo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F19F41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvRI2BEeWUKKvQPqVU9Q" entityName="forceBlockingFlush:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4350" successor="_iVhvRY2BEeWUKKvQPqVU9Q" predecessor="_iVhvQ42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2yjAVo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvRY2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4416" successor="_iVhvRo2BEeWUKKvQPqVU9Q" predecessor="_iVhvRI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvRo2BEeWUKKvQPqVU9Q" entityName="addOrGet:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4450" successor="_iVhvR42BEeWUKKvQPqVU9Q" predecessor="_iVhvRY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_iR822o2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvR42BEeWUKKvQPqVU9Q" entityName="apply:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4500" successor="_iVhvSI2BEeWUKKvQPqVU9Q" predecessor="_iVhvRo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F19F41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvSI2BEeWUKKvQPqVU9Q" entityName="forceBlockingFlush:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4534" successor="_iVhvSY2BEeWUKKvQPqVU9Q" predecessor="_iVhvR42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2yjAVo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvSY2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4600" successor="_iVhvSo2BEeWUKKvQPqVU9Q" predecessor="_iVhvSI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvSo2BEeWUKKvQPqVU9Q" entityName="addOrGet:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4634" successor="_iVhvS42BEeWUKKvQPqVU9Q" predecessor="_iVhvSY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_iR822o2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvS42BEeWUKKvQPqVU9Q" entityName="apply:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4683" successor="_iVhvTI2BEeWUKKvQPqVU9Q" predecessor="_iVhvSo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F19F41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iVhvTI2BEeWUKKvQPqVU9Q" entityName="forceBlockingFlush:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4717" successor="_iXUfAI2BEeWUKKvQPqVU9Q" predecessor="_iVhvS42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2yjAVo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iXUfAI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4828" successor="_iYNP0I2BEeWUKKvQPqVU9Q" predecessor="_iVhvTI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYNP0I2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_iYNP0Y2BEeWUKKvQPqVU9Q" predecessor="_iXUfAI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iYNP0Y2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_iYNP0o2BEeWUKKvQPqVU9Q" predecessor="_iYNP0I2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYNP0o2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_iYNP042BEeWUKKvQPqVU9Q" predecessor="_iYNP0Y2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYNP042BEeWUKKvQPqVU9Q" entityName="getIdentityFilter:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4828" successor="_iYNP1I2BEeWUKKvQPqVU9Q" predecessor="_iYNP0o2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WtqUQ42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_8QkvSY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYNP1I2BEeWUKKvQPqVU9Q" entityName="getColumnFamily:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 4828" successor="_iYXA0I2BEeWUKKvQPqVU9Q" predecessor="_iYNP042BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2ysKSo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iYXA0I2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iYgx0I2BEeWUKKvQPqVU9Q" predecessor="_iYNP1I2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iYXA0Y2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 4829 to 4865">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iYXA0o2BEeWUKKvQPqVU9Q" successor="_iYXA042BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYXA042BEeWUKKvQPqVU9Q" entityName="getColumn:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 4866 to 4952" successor="_iYXA1I2BEeWUKKvQPqVU9Q" predecessor="_iYXA0o2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1sW0Uo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iYXA1I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.isLive() from 6979 to 7091" successor="_iYXA1Y2BEeWUKKvQPqVU9Q" predecessor="_iYXA042BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYXA1Y2BEeWUKKvQPqVU9Q" entityName="isMarkedForDelete:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.isLive() from 6979 to 7091" successor="_iYXA1o2BEeWUKKvQPqVU9Q" predecessor="_iYXA1I2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_3QWWp41xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYXA1o2BEeWUKKvQPqVU9Q" entityName="deletionInfo:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.isLive() from 6979 to 7091" successor="_iYXA142BEeWUKKvQPqVU9Q" predecessor="_iYXA1Y2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_169REY1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYXA142BEeWUKKvQPqVU9Q" entityName="isDeleted:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.isLive() from 6979 to 7091" successor="_iYXA2I2BEeWUKKvQPqVU9Q" predecessor="_iYXA1o2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_iVFDU42BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iYXA2I2BEeWUKKvQPqVU9Q" predecessor="_iYXA142BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iYgx0I2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iYgx1Y2BEeWUKKvQPqVU9Q" predecessor="_iYXA0I2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iYgx0Y2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 4953 to 4990">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iYgx0o2BEeWUKKvQPqVU9Q" successor="_iYgx042BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYgx042BEeWUKKvQPqVU9Q" entityName="getColumn:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 4991 to 5077" successor="_iYgx1I2BEeWUKKvQPqVU9Q" predecessor="_iYgx0o2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1sW0Uo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iYgx1I2BEeWUKKvQPqVU9Q" predecessor="_iYgx042BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iYgx1Y2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iYgx2o2BEeWUKKvQPqVU9Q" predecessor="_iYgx0I2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iYgx1o2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 5078 to 5115">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iYgx142BEeWUKKvQPqVU9Q" successor="_iYgx2I2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYgx2I2BEeWUKKvQPqVU9Q" entityName="getColumn:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 5116 to 5206" successor="_iYgx2Y2BEeWUKKvQPqVU9Q" predecessor="_iYgx142BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1sW0Uo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iYgx2Y2BEeWUKKvQPqVU9Q" predecessor="_iYgx2I2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYgx2o2BEeWUKKvQPqVU9Q" entityName="performMaximal:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 5305" successor="_iYgx242BEeWUKKvQPqVU9Q" predecessor="_iYgx1Y2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCYADo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_-4Du441xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iYgx242BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 5415" successor="_iYgx3I2BEeWUKKvQPqVU9Q" predecessor="_iYgx2o2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYgx3I2BEeWUKKvQPqVU9Q" entityName="getIdentityFilter:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 5415" successor="_iYgx3Y2BEeWUKKvQPqVU9Q" predecessor="_iYgx242BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WtqUQ42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_8QkvSY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYgx3Y2BEeWUKKvQPqVU9Q" entityName="getColumnFamily:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() at 5415" successor="_iYp7wI2BEeWUKKvQPqVU9Q" predecessor="_iYgx3I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2ysKSo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iYp7wI2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iYp7xY2BEeWUKKvQPqVU9Q" predecessor="_iYgx3Y2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iYp7wY2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 5416 to 5452">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iYp7wo2BEeWUKKvQPqVU9Q" successor="_iYp7w42BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYp7w42BEeWUKKvQPqVU9Q" entityName="getColumn:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 5453 to 5539" successor="_iYp7xI2BEeWUKKvQPqVU9Q" predecessor="_iYp7wo2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1sW0Uo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iYp7xI2BEeWUKKvQPqVU9Q" predecessor="_iYp7w42BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iYp7xY2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iYp7yo2BEeWUKKvQPqVU9Q" predecessor="_iYp7wI2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iYp7xo2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 5540 to 5577">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iYp7x42BEeWUKKvQPqVU9Q" successor="_iYp7yI2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYp7yI2BEeWUKKvQPqVU9Q" entityName="getColumn:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 5578 to 5664" successor="_iYp7yY2BEeWUKKvQPqVU9Q" predecessor="_iYp7x42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1sW0Uo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iYp7yY2BEeWUKKvQPqVU9Q" predecessor="_iYp7yI2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iYp7yo2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iVO0X42BEeWUKKvQPqVU9Q" predecessor="_iYp7xY2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iYp7y42BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 5665 to 5702">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iYp7zI2BEeWUKKvQPqVU9Q" successor="_iYp7zY2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYp7zY2BEeWUKKvQPqVU9Q" entityName="getColumn:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.overlappingRangeTest() from 5703 to 5793" successor="_iYp7zo2BEeWUKKvQPqVU9Q" predecessor="_iYp7zI2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1sW0Uo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iYp7zo2BEeWUKKvQPqVU9Q" predecessor="_iYp7zY2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iVO0X42BEeWUKKvQPqVU9Q" predecessor="_iYp7yo2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_iYp7z42BEeWUKKvQPqVU9Q" entityName="reverseQueryTest">
+    <scenarioBehaviour_UsageScenario id="_iYp70o2BEeWUKKvQPqVU9Q" entityName="reverseQueryTest">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iYp70I2BEeWUKKvQPqVU9Q" successor="_iYp7042BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYp7042BEeWUKKvQPqVU9Q" entityName="open:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 5916" successor="_iYzswI2BEeWUKKvQPqVU9Q" predecessor="_iYp70I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWlo2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYzswI2BEeWUKKvQPqVU9Q" entityName="getColumnFamilyStore:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 5984" successor="_iYzswY2BEeWUKKvQPqVU9Q" predecessor="_iYp7042BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWmI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYzswY2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6153" successor="_iYzswo2BEeWUKKvQPqVU9Q" predecessor="_iYzswI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYzswo2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.b() from 7144 to 7183" successor="_iYzsw42BEeWUKKvQPqVU9Q" predecessor="_iYzswY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XNZkR42BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYzsw42BEeWUKKvQPqVU9Q" entityName="add:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.add() at 7414" successor="_iYzsxI2BEeWUKKvQPqVU9Q" predecessor="_iYzswo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F_HDY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYzsxI2BEeWUKKvQPqVU9Q" entityName="apply:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6196" successor="_iYzsxY2BEeWUKKvQPqVU9Q" predecessor="_iYzsw42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F19F41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYzsxY2BEeWUKKvQPqVU9Q" entityName="forceBlockingFlush:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6230" successor="_iYzsxo2BEeWUKKvQPqVU9Q" predecessor="_iYzsxI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2yjAVo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iYzsxo2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6296" successor="_iY82sI2BEeWUKKvQPqVU9Q" predecessor="_iYzsxY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iY82sI2BEeWUKKvQPqVU9Q" entityName="addOrGet:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6407" successor="_iY82sY2BEeWUKKvQPqVU9Q" predecessor="_iYzsxo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_iR822o2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iY82sY2BEeWUKKvQPqVU9Q" entityName="getComparator:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.delete() at 7775" successor="_iY82so2BEeWUKKvQPqVU9Q" predecessor="_iY82sI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_16qWEo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iY82so2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.delete() at 7775" successor="_iY82s42BEeWUKKvQPqVU9Q" predecessor="_iY82sY2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iY82s42BEeWUKKvQPqVU9Q" entityName="delete:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.delete() at 7775" successor="_iY82tI2BEeWUKKvQPqVU9Q" predecessor="_iY82so2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W6xjOY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iY82tI2BEeWUKKvQPqVU9Q" entityName="apply:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6450" successor="_iY82tY2BEeWUKKvQPqVU9Q" predecessor="_iY82s42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F19F41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iY82tY2BEeWUKKvQPqVU9Q" entityName="forceBlockingFlush:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6484" successor="_ibChYI2BEeWUKKvQPqVU9Q" predecessor="_iY82tI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2yjAVo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ibChYI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6710" successor="_ib75QI2BEeWUKKvQPqVU9Q" predecessor="_iY82tY2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ib75QI2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_ib75QY2BEeWUKKvQPqVU9Q" predecessor="_ibChYI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ib75QY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_ib75Qo2BEeWUKKvQPqVU9Q" predecessor="_ib75QI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ib75Qo2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_ib75Q42BEeWUKKvQPqVU9Q" predecessor="_ib75QY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ib75Q42BEeWUKKvQPqVU9Q" entityName="getSliceFilter:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6710" successor="_ib75RI2BEeWUKKvQPqVU9Q" predecessor="_ib75Qo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WtqUQ42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_8QkvSI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ib75RI2BEeWUKKvQPqVU9Q" entityName="getColumnFamily:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6710" successor="_ib75RY2BEeWUKKvQPqVU9Q" predecessor="_ib75Q42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2ysKSo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ib75RY2BEeWUKKvQPqVU9Q" entityName="isEmpty:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() from 6711 to 6741" successor="_icFqQI2BEeWUKKvQPqVU9Q" predecessor="_ib75RI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_16qWHI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_icFqQI2BEeWUKKvQPqVU9Q" entityName="getSortedColumns:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6811" successor="_icFqQo2BEeWUKKvQPqVU9Q" predecessor="_ib75RY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_1sglUI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_icFqQo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6811" successor="_icFqQ42BEeWUKKvQPqVU9Q" predecessor="_icFqQI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_icFqQ42BEeWUKKvQPqVU9Q" entityName="name:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6811" successor="_icFqRI2BEeWUKKvQPqVU9Q" predecessor="_icFqQo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_3QReII1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_icFqRI2BEeWUKKvQPqVU9Q" entityName="name:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6811" successor="_icFqRY2BEeWUKKvQPqVU9Q" predecessor="_icFqQ42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_3QReII1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_icFqRY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6811" successor="_icFqRo2BEeWUKKvQPqVU9Q" predecessor="_icFqRI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_icFqRo2BEeWUKKvQPqVU9Q" entityName="name:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.reverseQueryTest() at 6811" successor="_icFqR42BEeWUKKvQPqVU9Q" predecessor="_icFqRY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_3QReII1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_icFqR42BEeWUKKvQPqVU9Q" entityName="toInt:  @position: org.apache.cassandra.db.RangeTombstoneTest.java.RangeTombstoneTest.i() from 7236 to 7275" successor="_iYp70Y2BEeWUKKvQPqVU9Q" predecessor="_icFqRo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_b7ZX141xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iYp70Y2BEeWUKKvQPqVU9Q" predecessor="_icFqR42BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

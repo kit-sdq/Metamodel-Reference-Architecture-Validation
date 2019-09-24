@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_ipf0KI2BEeWUKKvQPqVU9Q" entityName="testWriteEndpointsDuringRelocate">
+    <scenarioBehaviour_UsageScenario id="_ipf0K42BEeWUKKvQPqVU9Q" entityName="testWriteEndpointsDuringRelocate">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_ipf0KY2BEeWUKKvQPqVU9Q" successor="_ip8gEI2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_ip8gEI2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iqFqAI2BEeWUKKvQPqVU9Q" predecessor="_ipf0KY2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_ip8gEY2BEeWUKKvQPqVU9Q" entityName=" @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing() from 3381 to 3419">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_ip8gEo2BEeWUKKvQPqVU9Q" successor="_ip8gE42BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ip8gE42BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block at 3523" successor="_ip8gFI2BEeWUKKvQPqVU9Q" predecessor="_ip8gEo2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ip8gFI2BEeWUKKvQPqVU9Q" entityName="initializeNodeUnsafe:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block at 3607" successor="_ip8gFY2BEeWUKKvQPqVU9Q" predecessor="_ip8gE42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eKpqRI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eNoFx42BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_ip8gFY2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_ip8gHI2BEeWUKKvQPqVU9Q" predecessor="_ip8gFI2BEeWUKKvQPqVU9Q">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_ip8gFo2BEeWUKKvQPqVU9Q" entityName=" @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block from 3665 to 3719">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_ip8gF42BEeWUKKvQPqVU9Q" successor="_ip8gGI2BEeWUKKvQPqVU9Q"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ip8gGI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block.Block at 3814" successor="_ip8gGo2BEeWUKKvQPqVU9Q" predecessor="_ip8gF42BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ip8gGo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block.Block at 3896" successor="_ip8gG42BEeWUKKvQPqVU9Q" predecessor="_ip8gGI2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_ip8gG42BEeWUKKvQPqVU9Q" predecessor="_ip8gGo2BEeWUKKvQPqVU9Q"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ip8gHI2BEeWUKKvQPqVU9Q" entityName="serialize:  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.tokens() at 6346" successor="_ip8gHY2BEeWUKKvQPqVU9Q" predecessor="_ip8gFY2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6POikI1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ip8gHY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.tokens() from 6470 to 6551" successor="_ip8gHo2BEeWUKKvQPqVU9Q" predecessor="_ip8gHI2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ip8gHo2BEeWUKKvQPqVU9Q" entityName="injectApplicationState:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block at 4070" successor="_ip8gH42BEeWUKKvQPqVU9Q" predecessor="_ip8gHY2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eKpqRI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eNx2xI2BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ip8gH42BEeWUKKvQPqVU9Q" entityName="getTokenFactory:  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.makeTokenString() from 4498 to 4582" successor="_ip8gII2BEeWUKKvQPqVU9Q" predecessor="_ip8gHo2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y192AI1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ip8gII2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.makeTokenString() from 4498 to 4582" successor="_ip8gIY2BEeWUKKvQPqVU9Q" predecessor="_ip8gH42BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ip8gIY2BEeWUKKvQPqVU9Q" entityName="versionString:  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.normal() from 4251 to 4411" successor="_ip8gIo2BEeWUKKvQPqVU9Q" predecessor="_ip8gII2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eKpqRI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eKpqQ42BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ip8gIo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block at 4177" successor="_ip8gI42BEeWUKKvQPqVU9Q" predecessor="_ip8gIY2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_ip8gI42BEeWUKKvQPqVU9Q" predecessor="_ip8gIo2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iqFqAI2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iqFqD42BEeWUKKvQPqVU9Q" predecessor="_ip8gEI2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iqFqAY2BEeWUKKvQPqVU9Q" entityName=" @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate() from 5006 to 5056">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iqFqAo2BEeWUKKvQPqVU9Q" successor="_iqFqA42BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iqFqA42BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block at 5178" successor="_iqFqBI2BEeWUKKvQPqVU9Q" predecessor="_iqFqAo2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iqFqBI2BEeWUKKvQPqVU9Q" entityName="sortedTokens:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block at 5355" successor="_iqFqBY2BEeWUKKvQPqVU9Q" predecessor="_iqFqA42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAm41xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iqFqBY2BEeWUKKvQPqVU9Q" entityName="ringIterator:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block at 5355" successor="_iqFqBo2BEeWUKKvQPqVU9Q" predecessor="_iqFqBI2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAnI1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iqFqBo2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iqFqDo2BEeWUKKvQPqVU9Q" predecessor="_iqFqBY2BEeWUKKvQPqVU9Q">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_iqFqB42BEeWUKKvQPqVU9Q" entityName=" @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block from 5356 to 5395">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iqFqCI2BEeWUKKvQPqVU9Q" successor="_iqFqCY2BEeWUKKvQPqVU9Q"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iqFqCY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block.Block at 5477" successor="_iqFqCo2BEeWUKKvQPqVU9Q" predecessor="_iqFqCI2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iqFqCo2BEeWUKKvQPqVU9Q" entityName="getEndpoint:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block.Block at 5477" successor="_iqFqC42BEeWUKKvQPqVU9Q" predecessor="_iqFqCY2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAno1xEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iqFqC42BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block.Block from 5478 to 5522" successor="_iqFqDI2BEeWUKKvQPqVU9Q" predecessor="_iqFqCo2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iqFqDI2BEeWUKKvQPqVU9Q" predecessor="_iqFqC42BEeWUKKvQPqVU9Q"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iqFqDo2BEeWUKKvQPqVU9Q" predecessor="_iqFqBo2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iqFqD42BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate() at 5806" successor="_iqsG8I2BEeWUKKvQPqVU9Q" predecessor="_iqFqAI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iqsG8I2BEeWUKKvQPqVU9Q" entityName="versionString:  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.relocating() from 5740 to 5903" successor="_iqsG8Y2BEeWUKKvQPqVU9Q" predecessor="_iqFqD42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eKpqRI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eKpqQ42BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iqsG8Y2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate() at 5997" successor="_iqsG8o2BEeWUKKvQPqVU9Q" predecessor="_iqsG8I2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iqsG8o2BEeWUKKvQPqVU9Q" entityName="isRelocating:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate() at 6050" successor="_iqsG842BEeWUKKvQPqVU9Q" predecessor="_iqsG8Y2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAvI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iqsG842BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate() at 6050" successor="_iq_B4I2BEeWUKKvQPqVU9Q" predecessor="_iqsG8o2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iq_B4I2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_ipf0Ko2BEeWUKKvQPqVU9Q" predecessor="_iqsG842BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_iq_B4Y2BEeWUKKvQPqVU9Q" entityName=" @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate() from 6098 to 6173">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iq_B4o2BEeWUKKvQPqVU9Q" successor="_iq_B442BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iq_B442BEeWUKKvQPqVU9Q" entityName="getKSMetaData:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.getStrategy() at 4456" successor="_iq_B5I2BEeWUKKvQPqVU9Q" predecessor="_iq_B4o2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_7ITfso1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iq_B5I2BEeWUKKvQPqVU9Q" entityName="createReplicationStrategy:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.getStrategy() from 4457 to 4688" successor="_iq_B5Y2BEeWUKKvQPqVU9Q" predecessor="_iq_B442BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_uI97Yo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iq_B5Y2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iq_B842BEeWUKKvQPqVU9Q" predecessor="_iq_B5I2BEeWUKKvQPqVU9Q">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_iq_B5o2BEeWUKKvQPqVU9Q" entityName=" @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block from 6239 to 6288">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iq_B542BEeWUKKvQPqVU9Q" successor="_iq_B6I2BEeWUKKvQPqVU9Q"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iq_B6I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block.Block at 6418" successor="_iq_B6Y2BEeWUKKvQPqVU9Q" predecessor="_iq_B542BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iq_B6Y2BEeWUKKvQPqVU9Q" entityName="cloneOnlyTokenMap:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block.Block at 6609" successor="_iq_B6o2BEeWUKKvQPqVU9Q" predecessor="_iq_B6I2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAkY1xEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iq_B6o2BEeWUKKvQPqVU9Q" entityName="calculateNaturalEndpoints:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block.Block at 6609" successor="_iq_B642BEeWUKKvQPqVU9Q" predecessor="_iq_B6Y2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_uI0KYY1xEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iq_B642BEeWUKKvQPqVU9Q" entityName="getWriteEndpoints:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block.Block at 6609" successor="_iq_B7I2BEeWUKKvQPqVU9Q" predecessor="_iq_B6o2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eK8lPI2BEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_iq_B7I2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_iq_B8o2BEeWUKKvQPqVU9Q" predecessor="_iq_B642BEeWUKKvQPqVU9Q">
+                <loopIteration_Loop specification="1"/>
+                <bodyBehaviour_Loop id="_iq_B7Y2BEeWUKKvQPqVU9Q" entityName=" @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block.Block from 6686 to 6742">
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iq_B7o2BEeWUKKvQPqVU9Q" successor="_iq_B8I2BEeWUKKvQPqVU9Q"/>
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iq_B8I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testWriteEndpointsDuringRelocate().Block.Block at 6816" successor="_iq_B8Y2BEeWUKKvQPqVU9Q" predecessor="_iq_B7o2BEeWUKKvQPqVU9Q">
+                    <timeSpecification_Delay specification="0"/>
+                  </actions_ScenarioBehaviour>
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iq_B8Y2BEeWUKKvQPqVU9Q" predecessor="_iq_B8I2BEeWUKKvQPqVU9Q"/>
+                </bodyBehaviour_Loop>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iq_B8o2BEeWUKKvQPqVU9Q" predecessor="_iq_B7I2BEeWUKKvQPqVU9Q"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iq_B842BEeWUKKvQPqVU9Q" predecessor="_iq_B5Y2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_ipf0Ko2BEeWUKKvQPqVU9Q" predecessor="_iq_B4I2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_iq_B9I2BEeWUKKvQPqVU9Q" entityName="testRelocationSuccess">
+    <scenarioBehaviour_UsageScenario id="_iq_B942BEeWUKKvQPqVU9Q" entityName="testRelocationSuccess">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iq_B9Y2BEeWUKKvQPqVU9Q" successor="_irle0I2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_irle0I2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_ir4ZwI2BEeWUKKvQPqVU9Q" predecessor="_iq_B9Y2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_irle0Y2BEeWUKKvQPqVU9Q" entityName=" @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing() from 3381 to 3419">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_irle0o2BEeWUKKvQPqVU9Q" successor="_irle042BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_irle042BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block at 3523" successor="_irle1I2BEeWUKKvQPqVU9Q" predecessor="_irle0o2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_irle1I2BEeWUKKvQPqVU9Q" entityName="initializeNodeUnsafe:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block at 3607" successor="_irle1Y2BEeWUKKvQPqVU9Q" predecessor="_irle042BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eKpqRI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eNoFx42BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_irle1Y2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_irle3I2BEeWUKKvQPqVU9Q" predecessor="_irle1I2BEeWUKKvQPqVU9Q">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_irle1o2BEeWUKKvQPqVU9Q" entityName=" @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block from 3665 to 3719">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_irle142BEeWUKKvQPqVU9Q" successor="_irle2I2BEeWUKKvQPqVU9Q"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_irle2I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block.Block at 3814" successor="_irle2o2BEeWUKKvQPqVU9Q" predecessor="_irle142BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_irle2o2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block.Block at 3896" successor="_irle242BEeWUKKvQPqVU9Q" predecessor="_irle2I2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_irle242BEeWUKKvQPqVU9Q" predecessor="_irle2o2BEeWUKKvQPqVU9Q"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_irle3I2BEeWUKKvQPqVU9Q" entityName="serialize:  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.tokens() at 6346" successor="_irle3Y2BEeWUKKvQPqVU9Q" predecessor="_irle1Y2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6POikI1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_irle3Y2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.tokens() from 6470 to 6551" successor="_irle3o2BEeWUKKvQPqVU9Q" predecessor="_irle3I2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_irle3o2BEeWUKKvQPqVU9Q" entityName="injectApplicationState:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block at 4070" successor="_iruowI2BEeWUKKvQPqVU9Q" predecessor="_irle3Y2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eKpqRI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eNx2xI2BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iruowI2BEeWUKKvQPqVU9Q" entityName="getTokenFactory:  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.makeTokenString() from 4498 to 4582" successor="_iruowY2BEeWUKKvQPqVU9Q" predecessor="_irle3o2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y192AI1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iruowY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.makeTokenString() from 4498 to 4582" successor="_iruowo2BEeWUKKvQPqVU9Q" predecessor="_iruowI2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iruowo2BEeWUKKvQPqVU9Q" entityName="versionString:  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.normal() from 4251 to 4411" successor="_iruow42BEeWUKKvQPqVU9Q" predecessor="_iruowY2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eKpqRI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eKpqQ42BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iruow42BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.createInitialRing().Block at 4177" successor="_iruoxI2BEeWUKKvQPqVU9Q" predecessor="_iruowo2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iruoxI2BEeWUKKvQPqVU9Q" predecessor="_iruow42BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ir4ZwI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 7272" successor="_isoAoI2BEeWUKKvQPqVU9Q" predecessor="_irle0I2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_isoAoI2BEeWUKKvQPqVU9Q" entityName="versionString:  @position: org.apache.cassandra.gms.VersionedValue.java.VersionedValue.VersionedValueFactory.relocating() from 5740 to 5903" successor="_isoAoY2BEeWUKKvQPqVU9Q" predecessor="_ir4ZwI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eKpqRI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eKpqQ42BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_isoAoY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 7512" successor="_isoAoo2BEeWUKKvQPqVU9Q" predecessor="_isoAoI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_isoAoo2BEeWUKKvQPqVU9Q" entityName="isRelocating:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 7561" successor="_isoAo42BEeWUKKvQPqVU9Q" predecessor="_isoAoY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAvI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_isoAo42BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 7561" successor="_isoApI2BEeWUKKvQPqVU9Q" predecessor="_isoAoo2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_isoApI2BEeWUKKvQPqVU9Q" entityName="getTokens:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 7728" successor="_ivAmQI2BEeWUKKvQPqVU9Q" predecessor="_isoAo42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJApo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ivAmQI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 7773" successor="_ivMzgI2BEeWUKKvQPqVU9Q" predecessor="_isoApI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ivMzgI2BEeWUKKvQPqVU9Q" entityName="injectApplicationState:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 7980" successor="_ivmcII2BEeWUKKvQPqVU9Q" predecessor="_ivAmQI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eKpqRI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eNx2xI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ivmcII2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 8063" successor="_iwDvII2BEeWUKKvQPqVU9Q" predecessor="_ivMzgI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iwDvII2BEeWUKKvQPqVU9Q" entityName="isRelocating:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 8276" successor="_iwDvIY2BEeWUKKvQPqVU9Q" predecessor="_ivmcII2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAvI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iwDvIY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 8276" successor="_iwDvIo2BEeWUKKvQPqVU9Q" predecessor="_iwDvII2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_iwDvIo2BEeWUKKvQPqVU9Q" entityName="getEndpoint:  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 8337" successor="_iwDvI42BEeWUKKvQPqVU9Q" predecessor="_iwDvIY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAno1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_iwDvI42BEeWUKKvQPqVU9Q" entityName="Delay  @position: service.org.apache.cassandra.service.RelocateTest.java.RelocateTest.testRelocationSuccess() at 8337" successor="_iq_B9o2BEeWUKKvQPqVU9Q" predecessor="_iwDvIo2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iq_B9o2BEeWUKKvQPqVU9Q" predecessor="_iwDvI42BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

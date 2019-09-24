@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated KAMP4aPSModificationmarks -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.presentation.KAMP4aPSModificationmarksModelWizardID"
+            name="%_UI_KAMP4aPSModificationmarksModelWizard_label"
+            class="edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.presentation.KAMP4aPSModificationmarksModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/KAMP4aPSModificationmarksModelFile.gif">
+         <description>%_UI_KAMP4aPSModificationmarksModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated KAMP4aPSModificationmarks -->
+      <editor
+            id="edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.presentation.KAMP4aPSModificationmarksEditorID"
+            name="%_UI_KAMP4aPSModificationmarksEditor_label"
+            icon="icons/full/obj16/KAMP4aPSModificationmarksModelFile.gif"
+            extensions="modificationmarks"
+            class="edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.presentation.KAMP4aPSModificationmarksEditor"
+            contributorClass="edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.presentation.KAMP4aPSModificationmarksActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.editor.objectContributionkaps1"
+            objectClass="edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationRepository">
+         <action
+               class="edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.editor.ArchitectureBasedWorkplanDerivationAction"
+               icon="../edu.kit.ipd.sdq.kamp/icons/run.png"
+               id="edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.editor.actionArchitectureBasedWorkplanDerivation"
+               label="Step 5: Calculate activities"
+               menubarPath="edit">
+         </action>
+         <action
+               class="edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.editor.ChangePropagationAction"
+               icon="../edu.kit.ipd.sdq.kamp/icons/run.png"
+               id="edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.editor.actionChangePropagation"
+               label="Step 3: Calculate change propagation"
+               menubarPath="edit">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

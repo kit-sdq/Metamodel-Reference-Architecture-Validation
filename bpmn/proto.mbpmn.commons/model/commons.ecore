@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="commons" nsURI="http://www.example.org/commons" nsPrefix="commons">
+  <eSubpackages name="common" nsURI="common.common" nsPrefix="common">
+    <eClassifiers xsi:type="ecore:EClass" name="Error" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tError"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="errorCode" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="errorCode"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="name"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="structureRef" ordered="false"
+          eType="#//common/ItemDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="structureRef"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Escalation" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tEscalation"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="escalationCode" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="escalationCode"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="name"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="structureRef" ordered="false"
+          eType="#//common/ItemDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="structureRef"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tExpression"/>
+        <details key="kind" value="mixed"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FormalExpression" eSuperTypes="#//common/Expression">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tFormalExpression"/>
+        <details key="kind" value="mixed"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false"
+          upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="elementWildcard"/>
+          <details key="name" value=":mixed"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          volatile="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="evaluatesToTypeRef" ordered="false"
+          lowerBound="1" eType="#//common/ItemDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="evaluatesToTypeRef"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="language"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ItemDefinition" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tItemDefinition"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCollection" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="isCollection"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="import" ordered="false"
+          eType="ecore:EClass ../../proto.mbpmn.infrastructure/model/infrastructure.ecore#//infrastructure/Import"
+          transient="true" derived="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="itemKind" ordered="false"
+          eType="#//common/ItemKind" defaultValueLiteral="Information">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="itemKind"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="structureRef" ordered="false"
+          eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="structureRef"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ItemKind">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tItemKind"/>
+      </eAnnotations>
+      <eLiterals name="Physical"/>
+      <eLiterals name="Information" value="1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tMessage"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="itemRef" ordered="false"
+          eType="#//common/ItemDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="itemRef"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="name"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageEventDefinition" eSuperTypes="#//common/events/EventDefinition">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tMessageEventDefinition"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="operationRef" ordered="false"
+          eType="ecore:EClass ../../proto.mbpmn.services/model/services.ecore#//services/Operation">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="operationRef"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageRef" ordered="false"
+          eType="#//common/Message">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="messageRef"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tResource"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceParameters" ordered="false"
+          upperBound="-1" eType="#//common/ResourceParameter" containment="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="resourceParameter"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="name"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceParameter" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tResourceParameter"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRequired" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="isRequired"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="name"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false"
+          eType="#//common/ItemDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="type"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CallableElement" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tCallableElement"/>
+        <details key="kind" value="elementOnly"/>
+        <details key="abstract" value="true"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="supportedInterfaceRefs"
+          ordered="false" upperBound="-1" eType="ecore:EClass ../../proto.mbpmn.services/model/services.ecore#//services/Interface">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="supportedInterfaceRef"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ioSpecification" ordered="false"
+          eType="ecore:EClass ../../proto.mbpmn.data/model/data.ecore#//data/InputOutputSpecification"
+          containment="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="ioSpecification"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ioBinding" ordered="false"
+          upperBound="-1" eType="ecore:EClass ../../proto.mbpmn.data/model/data.ecore#//data/InputOutputBinding"
+          containment="true">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="ioBinding"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="name"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PartnerEntity" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tPartnerEntity"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="participantRef" ordered="false"
+          upperBound="-1" eType="ecore:EClass ../../proto.mbpmn.collaborations/model/collaborations.ecore#//collaboration/Participant">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="participantRef"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="name"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PartnerRole" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="tPartnerRole"/>
+        <details key="kind" value="elementOnly"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="participantRef" ordered="false"
+          upperBound="-1" eType="ecore:EClass ../../proto.mbpmn.collaborations/model/collaborations.ecore#//collaboration/Participant">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="element"/>
+          <details key="name" value="participantRef"/>
+          <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="kind" value="attribute"/>
+          <details key="name" value="name"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eSubpackages name="artifacts">
+      <eClassifiers xsi:type="ecore:EClass" name="Artifact" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tArtifact"/>
+          <details key="kind" value="elementOnly"/>
+          <details key="abstract" value="true"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//common/artifacts/Artifact">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tAssociation"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="associationDirection"
+            ordered="false" eType="#//common/artifacts/AssociationDirection" defaultValueLiteral="None">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="associationDirection"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRef" ordered="false"
+            lowerBound="1" eType="ecore:EClass ../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="sourceRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" ordered="false"
+            lowerBound="1" eType="ecore:EClass ../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="targetRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="AssociationDirection">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tAssociationDirection"/>
+        </eAnnotations>
+        <eLiterals name="None"/>
+        <eLiterals name="One" value="1"/>
+        <eLiterals name="Both" value="2"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Category" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tCategory"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="categoryValue" ordered="false"
+            upperBound="-1" eType="#//common/artifacts/CategoryValue" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="categoryValue"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="name"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CategoryValue" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tCategoryValue"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="value"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="categorizedFlowElements"
+            ordered="false" upperBound="-1" eType="#//common/flows/FlowElement" changeable="false"
+            volatile="true" transient="true" derived="true" resolveProxies="false"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Group" eSuperTypes="#//common/artifacts/Artifact">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tGroup"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="categoryValueRef" ordered="false"
+            eType="#//common/artifacts/CategoryValue">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="categoryValueRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TextAnnotation" eSuperTypes="#//common/artifacts/Artifact">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tTextAnnotation"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="text"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="textFormat" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+            defaultValueLiteral="text/plain">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="textFormat"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="correlations" nsURI="correlation.correlation" nsPrefix="correlation">
+      <eClassifiers xsi:type="ecore:EClass" name="CorrelationKey" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tCorrelationKey"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="correlationPropertyRef"
+            ordered="false" upperBound="-1" eType="#//common/correlations/CorrelationProperty">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="correlationPropertyRef"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="name"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CorrelationProperty" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tCorrelationProperty"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="correlationPropertyRetrievalExpression"
+            ordered="false" lowerBound="1" upperBound="-1" eType="#//common/correlations/CorrelationPropertyRetrievalExpression"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="correlationPropertyRetrievalExpression"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="name"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false"
+            eType="#//common/ItemDefinition">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="type"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CorrelationPropertyBinding" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tCorrelationPropertyBinding"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="dataPath" ordered="false"
+            lowerBound="1" eType="#//common/FormalExpression" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="dataPath"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="correlationPropertyRef"
+            ordered="false" lowerBound="1" eType="#//common/correlations/CorrelationProperty">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="correlationPropertyRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CorrelationPropertyRetrievalExpression"
+          eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tCorrelationPropertyRetrievalExpression"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="messagePath" ordered="false"
+            lowerBound="1" eType="#//common/FormalExpression" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="messagePath"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="messageRef" ordered="false"
+            lowerBound="1" eType="#//common/Message">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="messageRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CorrelationSubscription" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tCorrelationSubscription"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="correlationPropertyBinding"
+            ordered="false" upperBound="-1" eType="#//common/correlations/CorrelationPropertyBinding"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="correlationPropertyBinding"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="correlationKeyRef"
+            ordered="false" lowerBound="1" eType="#//common/correlations/CorrelationKey">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="correlationKeyRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="events" nsURI="events.events" nsPrefix="events">
+      <eClassifiers xsi:type="ecore:EClass" name="BoundaryEvent" eSuperTypes="#//common/events/CatchEvent">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tBoundaryEvent"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="attachedToRef" ordered="false"
+            lowerBound="1" eType="ecore:EClass ../../proto.mbpmn.activities/model/activities.ecore#//activities/Activity"
+            resolveProxies="false" eOpposite="../../proto.mbpmn.activities/model/activities.ecore#//activities/Activity/boundaryEventRefs">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="attachedToRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="cancelActivity" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+            defaultValueLiteral="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="cancelActivity"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CatchEvent" abstract="true" eSuperTypes="#//common/events/Event">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tCatchEvent"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutputs" ordered="false"
+            upperBound="-1" eType="ecore:EClass ../../proto.mbpmn.data/model/data.ecore#//data/DataOutput"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="dataOutput"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutputAssociation"
+            ordered="false" upperBound="-1" eType="ecore:EClass ../../proto.mbpmn.data/model/data.ecore#//data/DataOutputAssociation"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="dataOutputAssociation"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="outputSet" ordered="false"
+            eType="ecore:EClass ../../proto.mbpmn.data/model/data.ecore#//data/OutputSet"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="outputSet"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="eventDefinitions" ordered="false"
+            upperBound="-1" eType="#//common/events/EventDefinition" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="eventDefinition"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+            <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="eventDefinitionRefs"
+            ordered="false" upperBound="-1" eType="#//common/events/EventDefinition">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="eventDefinitionRef"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="parallelMultiple" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="parallelMultiple"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="EndEvent" eSuperTypes="#//common/events/ThrowEvent">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tEndEvent"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Event" abstract="true" eSuperTypes="#//common/flows/FlowNode ../../proto.mbpmn.collaborations/model/collaborations.ecore#//collaboration/InteractionNode">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tEvent"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="properties" ordered="false"
+            upperBound="-1" eType="ecore:EClass ../../proto.mbpmn.data/model/data.ecore#//data/Property"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="property"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="EventDefinition" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tEventDefinition"/>
+          <details key="kind" value="elementOnly"/>
+          <details key="abstract" value="true"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ImplicitThrowEvent" eSuperTypes="#//common/events/ThrowEvent">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tImplicitThrowEvent"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="IntermediateCatchEvent" eSuperTypes="#//common/events/CatchEvent">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tIntermediateCatchEvent"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="IntermediateThrowEvent" eSuperTypes="#//common/events/ThrowEvent">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tIntermediateThrowEvent"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="StartEvent" eSuperTypes="#//common/events/CatchEvent">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tStartEvent"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInterrupting" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+            defaultValueLiteral="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="isInterrupting"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ThrowEvent" abstract="true" eSuperTypes="#//common/events/Event">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tThrowEvent"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="dataInputs" ordered="false"
+            upperBound="-1" eType="ecore:EClass ../../proto.mbpmn.data/model/data.ecore#//data/DataInput"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="dataInput"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="dataInputAssociation"
+            ordered="false" upperBound="-1" eType="ecore:EClass ../../proto.mbpmn.data/model/data.ecore#//data/DataInputAssociation"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="dataInputAssociation"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="inputSet" ordered="false"
+            eType="ecore:EClass ../../proto.mbpmn.data/model/data.ecore#//data/InputSet"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="inputSet"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="eventDefinitions" ordered="false"
+            upperBound="-1" eType="#//common/events/EventDefinition" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="eventDefinition"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+            <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="eventDefinitionRefs"
+            ordered="false" upperBound="-1" eType="#//common/events/EventDefinition">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="eventDefinitionRef"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CancelEventDefinition" eSuperTypes="#//common/events/EventDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tCancelEventDefinition"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CompensateEventDefinition" eSuperTypes="#//common/events/EventDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tCompensateEventDefinition"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="activityRef" ordered="false"
+            eType="ecore:EClass ../../proto.mbpmn.activities/model/activities.ecore#//activities/Activity">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="activityRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="waitForCompletion"
+            ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="waitForCompletion"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ConditionalEventDefinition" eSuperTypes="#//common/events/EventDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tConditionalEventDefinition"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="condition" ordered="false"
+            lowerBound="1" eType="#//common/Expression" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="condition"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ErrorEventDefinition" eSuperTypes="#//common/events/EventDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tErrorEventDefinition"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="errorRef" ordered="false"
+            eType="#//common/Error">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="errorRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="EscalationEventDefinition" eSuperTypes="#//common/events/EventDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tEscalationEventDefinition"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="escalationRef" ordered="false"
+            eType="#//common/Escalation">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="escalationRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LinkEventDefinition" eSuperTypes="#//common/events/EventDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tLinkEventDefinition"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="source" ordered="false"
+            upperBound="-1" eType="#//common/events/LinkEventDefinition" eOpposite="#//common/events/LinkEventDefinition/target">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="source"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="target" ordered="false"
+            eType="#//common/events/LinkEventDefinition" eOpposite="#//common/events/LinkEventDefinition/source">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="target"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="name"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Signal" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/RootElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tSignal"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="name"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="structureRef" ordered="false"
+            eType="#//common/ItemDefinition">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="structureRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="SignalEventDefinition" eSuperTypes="#//common/events/EventDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tSignalEventDefinition"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="signalRef" ordered="false"
+            eType="#//common/events/Signal">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="signalRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TerminateEventDefinition" eSuperTypes="#//common/events/EventDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tTerminateEventDefinition"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TimerEventDefinition" eSuperTypes="#//common/events/EventDefinition">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tTimerEventDefinition"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="timeDate" ordered="false"
+            eType="#//common/Expression" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="timeDate"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="timeDuration" ordered="false"
+            eType="#//common/Expression" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="timeDuration"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="timeCycle" ordered="false"
+            eType="#//common/Expression" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="timeCycle"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="gateways" nsURI="gateways.gateways" nsPrefix="gateways">
+      <eClassifiers xsi:type="ecore:EClass" name="ComplexGateway" eSuperTypes="#//common/gateways/Gateway">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tComplexGateway"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="activationCondition"
+            ordered="false" eType="#//common/Expression" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="activationCondition"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="default" ordered="false"
+            eType="#//common/flows/SequenceFlow" resolveProxies="false">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="default"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="EventBasedGateway" eSuperTypes="#//common/gateways/Gateway">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tEventBasedGateway"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventGatewayType" ordered="false"
+            eType="#//common/gateways/EventBasedGatewayType" defaultValueLiteral="Exclusive">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="eventGatewayType"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="instantiate" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+            defaultValueLiteral="false">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="instantiate"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="EventBasedGatewayType">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tEventBasedGatewayType"/>
+        </eAnnotations>
+        <eLiterals name="Parallel"/>
+        <eLiterals name="Exclusive" value="1"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ExclusiveGateway" eSuperTypes="#//common/gateways/Gateway">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tExclusiveGateway"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="default" ordered="false"
+            eType="#//common/flows/SequenceFlow" resolveProxies="false">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="default"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Gateway" abstract="true" eSuperTypes="#//common/flows/FlowNode">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tGateway"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="gatewayDirection" ordered="false"
+            eType="#//common/gateways/GatewayDirection" defaultValueLiteral="Unspecified">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="gatewayDirection"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="GatewayDirection">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tGatewayDirection"/>
+        </eAnnotations>
+        <eLiterals name="Unspecified"/>
+        <eLiterals name="Converging" value="1"/>
+        <eLiterals name="Diverging" value="2"/>
+        <eLiterals name="Mixed" value="3"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="InclusiveGateway" eSuperTypes="#//common/gateways/Gateway">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tInclusiveGateway"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="default" ordered="false"
+            eType="#//common/flows/SequenceFlow" resolveProxies="false">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="default"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ParallelGateway" eSuperTypes="#//common/gateways/Gateway">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tParallelGateway"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="flows" nsURI="flows.flows" nsPrefix="flows">
+      <eClassifiers xsi:type="ecore:EClass" name="FlowElement" abstract="true" eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tFlowElement"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="auditing" ordered="false"
+            eType="ecore:EClass ../../proto.mbpmn.processes/model/processes.ecore#//process/Auditing"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="auditing"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="monitoring" ordered="false"
+            eType="ecore:EClass ../../proto.mbpmn.processes/model/processes.ecore#//process/Monitoring"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="monitoring"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="categoryValueRef" ordered="false"
+            upperBound="-1" eType="#//common/artifacts/CategoryValue">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="categoryValueRef"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="name"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FlowElementsContainer" abstract="true"
+          eSuperTypes="../../proto.mbpmn.foundation/model/foundation.ecore#//foundation/BaseElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="laneSets" ordered="false"
+            upperBound="-1" eType="ecore:EClass ../../proto.mbpmn.processes/model/processes.ecore#//process/LaneSet"
+            containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="laneSet"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="flowElements" ordered="false"
+            upperBound="-1" eType="#//common/flows/FlowElement" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="flowElement"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+            <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FlowNode" abstract="true" eSuperTypes="#//common/flows/FlowElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tFlowNode"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" ordered="false"
+            upperBound="-1" eType="#//common/flows/SequenceFlow" resolveProxies="false"
+            eOpposite="#//common/flows/SequenceFlow/targetRef">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="incoming"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lanes" ordered="false"
+            upperBound="-1" eType="ecore:EClass ../../proto.mbpmn.processes/model/processes.ecore#//process/Lane"
+            transient="true" derived="true" eOpposite="../../proto.mbpmn.processes/model/processes.ecore#//process/Lane/flowNodeRefs"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" upperBound="-1"
+            eType="#//common/flows/SequenceFlow" resolveProxies="false" eOpposite="#//common/flows/SequenceFlow/sourceRef">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="outgoing"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="SequenceFlow" eSuperTypes="#//common/flows/FlowElement">
+        <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+          <details key="name" value="tSequenceFlow"/>
+          <details key="kind" value="elementOnly"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="conditionExpression"
+            ordered="false" eType="#//common/Expression" containment="true">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="element"/>
+            <details key="name" value="conditionExpression"/>
+            <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="isImmediate" ordered="false"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="isImmediate"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRef" ordered="false"
+            lowerBound="1" eType="#//common/flows/FlowNode" resolveProxies="false"
+            eOpposite="#//common/flows/FlowNode/outgoing">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="sourceRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" ordered="false"
+            lowerBound="1" eType="#//common/flows/FlowNode" resolveProxies="false"
+            eOpposite="#//common/flows/FlowNode/incoming">
+          <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+            <details key="kind" value="attribute"/>
+            <details key="name" value="targetRef"/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

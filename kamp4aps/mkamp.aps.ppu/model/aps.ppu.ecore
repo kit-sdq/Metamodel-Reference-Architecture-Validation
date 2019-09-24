@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ppu" nsURI="ppu" nsPrefix="ppu">
+  <eSubpackages name="components" nsURI="components" nsPrefix="components">
+    <eClassifiers xsi:type="ecore:EClass" name="PowerSplitter" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Splitter">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="powersupply" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/PowerSupply"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OpticalSensor" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Sensor"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PneumaticPipe" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Pipe"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PneumaticSplitter" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Splitter">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="pneumaticsupply" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//interfaces/PneumaticSupply"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MonostableCylinder" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Cylinder">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="housing" lowerBound="1"
+          eType="#//mechanicalcomponents/Housing" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="spring" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//mechanicalcomponents/ReturnSpring"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="reedSwitches" lowerBound="1"
+          upperBound="-1" eType="#//components/ReedSwitch" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="cylinderPart" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/CylinderPart"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="valve" lowerBound="1"
+          upperBound="-1" eType="#//components/RegularValve" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="busSlave" lowerBound="1"
+          upperBound="-1" eType="#//buscomponents/ProfibusDPSlave" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="pusher" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/Pusher"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PresenceSensor" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Sensor"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RegularValve" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Valve"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Frame" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/MechanicalAssembly">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conveyorbelt" upperBound="-1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/ConveyorBelt"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InductiveSensor" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Sensor"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ReedSwitch" eSuperTypes="../../mkamp.aps/model/aps.ecore#//electroniccomponents/Switch"/>
+    <eClassifiers xsi:type="ecore:EClass" name="VacuumSwitch" eSuperTypes="../../mkamp.aps/model/aps.ecore#//electroniccomponents/Switch"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ProportionalCylinder" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Cylinder"/>
+    <eClassifiers xsi:type="ecore:EClass" name="BistableCylinder" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Cylinder"/>
+    <eClassifiers xsi:type="ecore:EClass" name="WaterSplitter" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Splitter">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="watersupply" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//interfaces/WaterSupply"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OperationPanel" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Panel">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="screwing_rack" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//interfaces/Screwing"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="leds" upperBound="-1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//electroniccomponents/LED"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="buttons" upperBound="-1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//electroniccomponents/Button"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PowerCable" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Cable"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PressureSensor" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/Sensor"/>
+    <eClassifiers xsi:type="ecore:EClass" name="BottleSeperator" eSuperTypes="../../mkamp.as/model/as.ecore#//ComponentRepository/Component">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="signalinterface" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//interfaces/SignalInterface"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="pneumaticsupply" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//interfaces/PneumaticSupply"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="powersupply" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/PowerSupply"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="screwing_to_rack" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//interfaces/Screwing"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="../../mkamp.as/model/as.ecore#//ComponentRepository/Component">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="powersupply" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/PowerSupply"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="controllerOf" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//structures/ControlCabinet"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="buscomponents" nsURI="buscomponents" nsPrefix="buscomponents">
+    <eClassifiers xsi:type="ecore:EClass" name="ProfibusDPSlave" eSuperTypes="../../mkamp.aps/model/aps.ecore#//buscomponents/BusSlave"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EtherCATSlave" eSuperTypes="../../mkamp.aps/model/aps.ecore#//buscomponents/BusSlave"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ProfibusDPCable" eSuperTypes="../../mkamp.aps/model/aps.ecore#//buscomponents/BusCable"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ProfibusDPBox" eSuperTypes="../../mkamp.aps/model/aps.ecore#//buscomponents/BusBox"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ProfibusDPMaster" eSuperTypes="../../mkamp.aps/model/aps.ecore#//buscomponents/BusMaster"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EtherCATBox" eSuperTypes="../../mkamp.aps/model/aps.ecore#//buscomponents/BusBox"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EtherCATMaster" eSuperTypes="../../mkamp.aps/model/aps.ecore#//buscomponents/BusMaster"/>
+    <eClassifiers xsi:type="ecore:EClass" name="EtherCATCable" eSuperTypes="../../mkamp.aps/model/aps.ecore#//buscomponents/BusCable"/>
+  </eSubpackages>
+  <eSubpackages name="mechanicalcomponents" nsURI="mechanicalcomponents" nsPrefix="mechanicalcomponents">
+    <eClassifiers xsi:type="ecore:EClass" name="Arm" eSuperTypes="../../mkamp.aps/model/aps.ecore#//components/MechanicalAssembly">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mountedTo" lowerBound="1"
+          eType="#//structures/Crane" eOpposite="#//structures/Crane/arm"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Housing" eSuperTypes="../../mkamp.aps/model/aps.ecore#//mechanicalcomponents/MechanicalPart"/>
+  </eSubpackages>
+  <eSubpackages name="structures" nsURI="structures" nsPrefix="structures">
+    <eClassifiers xsi:type="ecore:EClass" name="Conveyor" eSuperTypes="../../mkamp.as/model/as.ecore#//StructureRepository/Structure">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="belts" upperBound="-1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/ConveyorBelt"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PneumaticNetwork" eSuperTypes="../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CommunicationNetwork" eSuperTypes="../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PowerNetwork" eSuperTypes="../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Crane" eSuperTypes="../../mkamp.as/model/as.ecore#//StructureRepository/Structure">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="arm" lowerBound="1" eType="#//mechanicalcomponents/Arm"
+          eOpposite="#//mechanicalcomponents/Arm/mountedTo"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mountedOn" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/TurningTable"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="vacuumgripper" lowerBound="1"
+          eType="#//modules/VacuumGripperModule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PowerWiring" eSuperTypes="../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LogicalWiring" eSuperTypes="../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+  </eSubpackages>
+  <eSubpackages name="modules" nsURI="modules" nsPrefix="modules">
+    <eClassifiers xsi:type="ecore:EClass" name="PotentiometerModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="poti" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//electroniccomponents/Potentiometer"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InductiveSensorModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inductiveSensor" lowerBound="1"
+          upperBound="-1" eType="#//components/InductiveSensor" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="busSlave" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//buscomponents/BusSlave"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PressureSensorModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PusherModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RampModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+    <eClassifiers xsi:type="ecore:EClass" name="MicroswitchModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="busSlave" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//buscomponents/BusSlave"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="switch" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//electroniccomponents/MicroSwitch"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="turningtable" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/TurningTable"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MotorModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="simpleMotor" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//components/SimpleMotor"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="busSlave" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//buscomponents/BusSlave"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="busBox" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//buscomponents/BusBox"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="busCable" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//buscomponents/BusCable"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MonostableCylinderModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+    <eClassifiers xsi:type="ecore:EClass" name="VacuumGripperModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PresenceSensorModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="presenceSensor" lowerBound="1"
+          upperBound="-1" eType="#//components/PresenceSensor" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="busSlave" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//buscomponents/BusSlave"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OpticalSensorModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="opticalSensor" lowerBound="1"
+          upperBound="-1" eType="#//components/OpticalSensor" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="busSlave" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//buscomponents/BusSlave"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ConveyorBeltModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rubberBand" lowerBound="1"
+          eType="ecore:EClass ../../mkamp.aps/model/aps.ecore#//mechanicalcomponents/RubberBand"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="frame" lowerBound="1"
+          eType="#//components/Frame" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SensorModule" eSuperTypes="../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+  </eSubpackages>
+  <eSubpackages name="interfaces" nsURI="interfaces" nsPrefix="interfaces">
+    <eClassifiers xsi:type="ecore:EClass" name="SuspensionRack" abstract="true" eSuperTypes="../../mkamp.aps/model/aps.ecore#//interfaces/Suspension"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SuspensionArm" abstract="true" eSuperTypes="../../mkamp.aps/model/aps.ecore#//interfaces/Suspension"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ScrewingSplitter" abstract="true"
+        eSuperTypes="../../mkamp.aps/model/aps.ecore#//interfaces/Screwing"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ScrewingMotor" abstract="true" eSuperTypes="../../mkamp.aps/model/aps.ecore#//interfaces/Screwing"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ScrewingPotentiometer" abstract="true"
+        eSuperTypes="../../mkamp.aps/model/aps.ecore#//interfaces/Screwing"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ScrewingFixture" abstract="true" eSuperTypes="../../mkamp.aps/model/aps.ecore#//interfaces/Screwing"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ScrewingRack" abstract="true" eSuperTypes="../../mkamp.aps/model/aps.ecore#//interfaces/Screwing"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ScrewingCylinder" abstract="true"
+        eSuperTypes="../../mkamp.aps/model/aps.ecore#//interfaces/Screwing"/>
+  </eSubpackages>
+</ecore:EPackage>

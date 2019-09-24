@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smartgridtopo:SmartGridTopology xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:smartgridtopo="http://sdq.ipd.uka.de/smartgridtopo/1.1">
+  <ContainsNE xsi:type="smartgridtopo:ControlCenter" id="2" name="Zentrale" ConnectedTo="1" LinkedBy="//@ContainsPC.0" CommunicatesBy="//@ContainsLC.0 //@ContainsLC.1"/>
+  <ContainsNE xsi:type="smartgridtopo:SmartMeter" id="4" name="SM1" ConnectedTo="6" LinkedBy="//@ContainsPC.2" CommunicatesBy="//@ContainsLC.0"/>
+  <ContainsNE xsi:type="smartgridtopo:SmartMeter" id="8" name="SM2" ConnectedTo="9" LinkedBy="//@ContainsPC.4" CommunicatesBy="//@ContainsLC.1"/>
+  <ContainsNE xsi:type="smartgridtopo:NetworkNode" id="3" name="KnotenZentrale" ConnectedTo="1" LinkedBy="//@ContainsPC.0 //@ContainsPC.1 //@ContainsPC.5"/>
+  <ContainsNE xsi:type="smartgridtopo:NetworkNode" id="5" name="Knoten1" ConnectedTo="6" LinkedBy="//@ContainsPC.1 //@ContainsPC.2 //@ContainsPC.3"/>
+  <ContainsNE xsi:type="smartgridtopo:NetworkNode" id="7" name="Knoten2" ConnectedTo="9" LinkedBy="//@ContainsPC.3 //@ContainsPC.4 //@ContainsPC.5"/>
+  <ContainsPGN id="1" name="StromZentrale"/>
+  <ContainsPGN id="6" name="Strom1"/>
+  <ContainsPGN id="9" name="Strom2"/>
+  <ContainsPC Links="2 3"/>
+  <ContainsPC Links="3 5"/>
+  <ContainsPC Links="5 4"/>
+  <ContainsPC Links="5 7"/>
+  <ContainsPC Links="7 8"/>
+  <ContainsPC Links="7 3"/>
+  <ContainsLC Links="2 4"/>
+  <ContainsLC Links="8 2"/>
+</smartgridtopo:SmartGridTopology>

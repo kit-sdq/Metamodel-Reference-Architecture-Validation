@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="graph" nsURI="http://www.example.org/graph" nsPrefix="graph">
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkEntity" abstract="true" eSuperTypes="../../msmartgrid.paradigm.base/model/base.ecore#//NamedIdentifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConnectedTo" lowerBound="1"
+        upperBound="-1" eType="#//PowerGridNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="LinkedBy" upperBound="-1"
+        eType="#//PhysicalConnection" eOpposite="#//PhysicalConnection/Links"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PowerGridNode" eSuperTypes="../../msmartgrid.paradigm.base/model/base.ecore#//NamedIdentifier"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalConnection" eSuperTypes="../../msmartgrid.paradigm.base/model/base.ecore#//NamedEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Links" lowerBound="2" upperBound="2"
+        eType="#//NetworkEntity" eOpposite="#//NetworkEntity/LinkedBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicatingEntity" abstract="true"
+      eSuperTypes="#//NetworkEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CommunicatesBy" upperBound="-1"
+        eType="#//LogicalCommunication" eOpposite="#//LogicalCommunication/Links"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalCommunication" eSuperTypes="../../msmartgrid.paradigm.base/model/base.ecore#//NamedEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Links" lowerBound="2" upperBound="2"
+        eType="#//CommunicatingEntity" eOpposite="#//CommunicatingEntity/CommunicatesBy"/>
+  </eClassifiers>
+</ecore:EPackage>

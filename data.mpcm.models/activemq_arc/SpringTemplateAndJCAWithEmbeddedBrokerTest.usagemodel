@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_ob0ckJhMEeWKgoTb5jIgDA" entityName="testRun">
+    <scenarioBehaviour_UsageScenario id="_ob0ck5hMEeWKgoTb5jIgDA" entityName="testRun">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_ob0ckZhMEeWKgoTb5jIgDA" successor="_ohVOsJhMEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ohVOsJhMEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.jca.SpringTemplateAndJCAWithEmbeddedBrokerTest.java.SpringTemplateAndJCAWithEmbeddedBrokerTest.testRun() from 1653 to 1699" successor="_okAvQJhMEeWKgoTb5jIgDA" predecessor="_ob0ckZhMEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_okAvQJhMEeWKgoTb5jIgDA" entityName="waitForMessagesToArrive:  @position: org.activemq.jca.SpringTemplateAndJCAWithEmbeddedBrokerTest.java.SpringTemplateAndJCAWithEmbeddedBrokerTest.testRun() at 1982" successor="_okJ5MZhMEeWKgoTb5jIgDA" predecessor="_ohVOsJhMEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_V47wMZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_okJ5MJhMEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_okJ5MZhMEeWKgoTb5jIgDA" entityName="flushMessages:  @position: org.activemq.jca.SpringTemplateAndJCAWithEmbeddedBrokerTest.java.SpringTemplateAndJCAWithEmbeddedBrokerTest.testRun() at 2029" successor="_olpuAZhMEeWKgoTb5jIgDA" predecessor="_okAvQJhMEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_V47wMZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_okJ5MphMEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_olpuAZhMEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.jca.SpringTemplateAndJCAWithEmbeddedBrokerTest.java.SpringTemplateAndJCAWithEmbeddedBrokerTest.testRun() at 2104" successor="_ob0ckphMEeWKgoTb5jIgDA" predecessor="_okJ5MZhMEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_ob0ckphMEeWKgoTb5jIgDA" predecessor="_olpuAZhMEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

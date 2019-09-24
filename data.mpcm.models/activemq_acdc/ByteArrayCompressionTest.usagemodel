@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_i8ei0LLWEeWT3tCwcp23sg" entityName="testCompression">
+    <scenarioBehaviour_UsageScenario id="_i8ei07LWEeWT3tCwcp23sg" entityName="testCompression">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_i8ei0bLWEeWT3tCwcp23sg" successor="_i8ei1LLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_i8ei1LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.testCompression() at 1322" successor="_i8fJ4LLWEeWT3tCwcp23sg" predecessor="_i8ei0bLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8fJ4LLWEeWT3tCwcp23sg" entityName="setCompressionLimit:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.testCompression() at 1433" successor="_i8hmILLWEeWT3tCwcp23sg" predecessor="_i8ei1LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_dwipcLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HBZYArLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8hmILLWEeWT3tCwcp23sg" entityName="isCompressed:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.testCompression() at 1493" successor="_i8hmIbLWEeWT3tCwcp23sg" predecessor="_i8fJ4LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_dwipcLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HBYw8LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8hmIbLWEeWT3tCwcp23sg" entityName="deflate:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.testCompression() at 1540" successor="_i8jbULLWEeWT3tCwcp23sg" predecessor="_i8hmILLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_dwipcLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HBZ_ErLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_i8jbULLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.testCompression() at 1577" successor="_i8lQgLLWEeWT3tCwcp23sg" predecessor="_i8hmIbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8lQgLLWEeWT3tCwcp23sg" entityName="isCompressed:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.testCompression() at 1642" successor="_i8nFsLLWEeWT3tCwcp23sg" predecessor="_i8jbULLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_dwipcLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HBYw8LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8nFsLLWEeWT3tCwcp23sg" entityName="getLength:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.testCompression() at 1701" successor="_i8nswLLWEeWT3tCwcp23sg" predecessor="_i8lQgLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E3AkEbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8nswLLWEeWT3tCwcp23sg" entityName="getLength:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.testCompression() at 1701" successor="_i8nswbLWEeWT3tCwcp23sg" predecessor="_i8nFsLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E3AkEbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8nswbLWEeWT3tCwcp23sg" entityName="inflate:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.testCompression() at 1748" successor="_i8ph8LLWEeWT3tCwcp23sg" predecessor="_i8nswLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_dwipcLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HBYw8bLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8ph8LLWEeWT3tCwcp23sg" entityName="isCompressed:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.testCompression() at 1823" successor="_i8tMULLWEeWT3tCwcp23sg" predecessor="_i8nswbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_dwipcLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HBYw8LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8tMULLWEeWT3tCwcp23sg" entityName="getLength:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.isSame() at 2011" successor="_i8tMUbLWEeWT3tCwcp23sg" predecessor="_i8ph8LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E3AkEbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8tMUbLWEeWT3tCwcp23sg" entityName="getLength:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.isSame() at 2011" successor="_i8tzYLLWEeWT3tCwcp23sg" predecessor="_i8tMULLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E3AkEbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_i8tzYLLWEeWT3tCwcp23sg" entityName="default loop count value" successor="_i8tzZrLWEeWT3tCwcp23sg" predecessor="_i8tMUbLWEeWT3tCwcp23sg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_i8tzYbLWEeWT3tCwcp23sg" entityName=" @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.isSame() from 2012 to 2058">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_i8tzYrLWEeWT3tCwcp23sg" successor="_i8tzY7LWEeWT3tCwcp23sg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8tzY7LWEeWT3tCwcp23sg" entityName="get:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.isSame().Block at 2105" successor="_i8tzZLLWEeWT3tCwcp23sg" predecessor="_i8tzYrLWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E3BLILLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_i8tzZLLWEeWT3tCwcp23sg" entityName="get:  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.isSame().Block at 2105" successor="_i8tzZbLWEeWT3tCwcp23sg" predecessor="_i8tzY7LWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E3BLILLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_i8tzZbLWEeWT3tCwcp23sg" predecessor="_i8tzZLLWEeWT3tCwcp23sg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_i8tzZrLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.message.util.ByteArrayCompressionTest.java.ByteArrayCompressionTest.isSame() from 2116 to 2138" successor="_i8ei0rLWEeWT3tCwcp23sg" predecessor="_i8tzYLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_i8ei0rLWEeWT3tCwcp23sg" predecessor="_i8tzZrLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

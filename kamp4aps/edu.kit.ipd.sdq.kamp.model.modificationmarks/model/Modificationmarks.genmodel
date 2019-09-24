@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kamp.model.modificationmarks/src"
+    modelPluginID="edu.kit.ipd.sdq.kamp.model.modificationmarks" modelName="Modificationmarks"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>Modificationmarks.ecore</foreignModel>
+  <genPackages prefix="Modificationmarks" basePackage="edu.kit.ipd.sdq.kamp.model"
+      disposableProviderFactory="true" ecorePackage="Modificationmarks.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Modificationmarks.ecore#//AcceptanceAndConfirmationState">
+      <genEnumLiterals ecoreEnumLiteral="Modificationmarks.ecore#//AcceptanceAndConfirmationState/NODECISION"/>
+      <genEnumLiterals ecoreEnumLiteral="Modificationmarks.ecore#//AcceptanceAndConfirmationState/CONFIRMED"/>
+      <genEnumLiterals ecoreEnumLiteral="Modificationmarks.ecore#//AcceptanceAndConfirmationState/EXCLUDED"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="Modificationmarks.ecore#//AbstractModificationRepository">
+      <genTypeParameters ecoreTypeParameter="Modificationmarks.ecore#//AbstractModificationRepository/S"/>
+      <genTypeParameters ecoreTypeParameter="Modificationmarks.ecore#//AbstractModificationRepository/T"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Modificationmarks.ecore#//AbstractModificationRepository/seedModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Modificationmarks.ecore#//AbstractModificationRepository/changePropagationSteps"/>
+    </genClasses>
+    <genClasses ecoreClass="Modificationmarks.ecore#//ModificationRepository"/>
+    <genClasses image="false" ecoreClass="Modificationmarks.ecore#//AbstractSeedModifications"/>
+    <genClasses ecoreClass="Modificationmarks.ecore#//SeedModifications">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Modificationmarks.ecore#//SeedModifications/seedElements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Modificationmarks.ecore#//AbstractChangePropagationStep"/>
+    <genClasses ecoreClass="Modificationmarks.ecore#//ChangePropagationStep"/>
+    <genClasses image="false" ecoreClass="Modificationmarks.ecore#//AbstractModification">
+      <genTypeParameters ecoreTypeParameter="Modificationmarks.ecore#//AbstractModification/S"/>
+      <genTypeParameters ecoreTypeParameter="Modificationmarks.ecore#//AbstractModification/T"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Modificationmarks.ecore#//AbstractModification/affectedElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Modificationmarks.ecore#//AbstractModification/causingElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Modificationmarks.ecore#//AbstractModification/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Modificationmarks.ecore#//AbstractModification/toolderived"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Modificationmarks.ecore#//AbstractModification/userDecision"/>
+    </genClasses>
+    <genClasses ecoreClass="Modificationmarks.ecore#//Modification"/>
+  </genPackages>
+</genmodel:GenModel>

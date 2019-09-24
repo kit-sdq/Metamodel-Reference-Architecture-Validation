@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="repository" nsURI="mpcm.domain.repository" nsPrefix="mpcm.domain.repository">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="This  set of abstract meta-classes gives a conceptual view on interfaces, entities and their relationships: Two roles can be identified a software entity can take relative to an interface. Any entity can claim to implement the functionality specified in an interface as well as to request that functionality. &#xD;&#xA;&#xD;&#xA;Base of the inheritance hierarchy are Identifier and NamedElement, both of which Entity and all inheriting classes are derived from. &#xD;&#xA;&#xD;&#xA;The relationship of Entities and Interfaces is described with the three meta classes InterfaceProvidingEntity, InterfaceRequiringEntity, and InterfaceProvidingRequiringEntity. The abstract meta-class InterfaceProvidingEntity is inherited by all entities which can potentially offer interface implementations. Similarly, the meta-class InterfaceRequiringEntity is inherited by all entities which are allowed to request functionality offer by entities providing this functionality. InterfaceProvidingRequiringEntity inherits from both of them and thus combines their properties. "/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="The main package contributing component types and interfaces."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Repository" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The repository entity allows storing components, data types, and interfaces to be fetched and reused for construction of component instances as well as new component types."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="repositoryDescription"
+        ordered="false" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents a description of the repository."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components__Repository"
+        ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//RepositoryComponent"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the provides component types stored in the repository."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces__Repository"
+        ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Interface"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the interfaces stored in the repository."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataTypes__Repository"
+        ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/DataType"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the data types stored in the repository."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exceptionTypes" upperBound="-1"
+        eType="#//ExceptionType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exceptionOccurences" upperBound="-1"
+        eType="#//ExceptionOccurence" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExceptionType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This entity represents a type of an exception."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exceptionName" ordered="false"
+        unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property denotes the name of the exception. In addition to the exception message, this is another piece of information that can be used for identification of the exception that has appeared."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exceptionMessage" ordered="false"
+        unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property holds the text message of the exception."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExceptionOccurence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//ExceptionType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Signature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImplementationComponentType" abstract="true"
+      eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//RepositoryComponent">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This entity represents an abstraction of a component, where both sets of provided and required interfaces as well as the implementation is visible. It fully specifies the component type. The specification of&#xD;&#xA;the internal structure depends on the way the component is realised. In general, components can either be implemented from the scratch or composed out of other components. In the first case, the implemented behaviour of each provided service needs to be specified with a service effect specification (SEFF) to describe the component’s abstract internal structure. We refer to such components as basic components, since they form the basic building blocks of a software architecture. On the other hand, developers can use existing components to assemble new, composite components.&#xD;&#xA;&#xD;&#xA;TODO: ? Possibly add constraint that the VariableUsages must have unique names within one component. Maybe this constraint can even be added to the VariableUsage in general (for each containment of VariableUsages, each name inside must be unique, for example). "/>
+    </eAnnotations>
+    <eOperations name="RequiredInterfacesHaveToConformToCompleteType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="-- ImplementationTypes required Interfaces have to be a subset&#xD;&#xA;-- of CompleteComponentType required Interfaces #&#xD;&#xA;--&#xD;&#xA;-- ACCx are used to accumulate Sets/Bags; usually only the very inner ACCx is used at all.&#xD;&#xA;--&#xD;&#xA;-- Recursive Query for parent Interface IDs&#xD;&#xA;-- see 'lpar2005.pdf' (Second-order principles in specification languages for Object-Oriented Programs; Beckert, Tretelman) pp. 11 #&#xD;&#xA;--let parentInterfaces : Bag(Interface) =&#xD;&#xA;--&#x9;self.parentCompleteComponentTypes->iterate(pt : CompleteComponentType; acc1 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;acc1->union(pt.requiredRoles->iterate(r : RequiredRole; acc2 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;&#x9;acc2->union(r.requiredInterface.parentInterface->asBag()) -- asBag required to allow Set operations #&#xD;&#xA;--&#x9;&#x9;))&#xD;&#xA;--&#x9;) in&#xD;&#xA;--let anchestorInterfaces : Bag(Interface) =&#xD;&#xA;--&#x9;self.parentCompleteComponentTypes->iterate(pt : CompleteComponentType; acc3 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;acc3->union(pt.requiredRoles->iterate(r : RequiredRole; acc4 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;&#x9;acc4->union(r.requiredInterface.parentInterface->asBag()) -- asBag required to allow Set operations #&#xD;&#xA;--&#x9;&#x9;))&#xD;&#xA;--&#x9;)->union( -- union with anchestors found in former recursion #&#xD;&#xA;--&#x9;&#x9;self.parentCompleteComponentTypes->iterate(pt : CompleteComponentType; acc5 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;&#x9;acc5->union(pt.requiredRoles->iterate(r : RequiredRole; acc6 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;&#x9;&#x9;acc6->union(r.requiredInterface.parentInterface.anchestorInterfaces) --already Set/Bag&#xD;&#xA;--&#x9;&#x9;&#x9;))&#xD;&#xA;--&#x9;&#x9;)&#xD;&#xA;--&#x9;) in&#xD;&#xA;-- Directly required interfaces need to be a subset of required anchestorInterfaces of Supertype #&#xD;&#xA;--anchestorInterfaces.identifier.id->includesAll(&#xD;&#xA;--&#x9;self.requiredRoles->iterate(p : RequiredRole; acc7 : Bag(String) = Bag{} |&#xD;&#xA;--&#x9;&#x9;acc7->union(p.requiredInterface.identifier.id->asBag())&#xD;&#xA;--&#x9;)&#x9;&#xD;&#xA;--)&#xD;&#xA;true"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="providedInterfacesHaveToConformToCompleteType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="-- ### EXACT COPY FROM ABOVE ###&#xD;&#xA;-- ImplementationComponentTypes provided Interfaces have to be a superset&#xD;&#xA;-- of CompleteComponentType provided Interfaces #&#xD;&#xA;--&#xD;&#xA;-- ACCx are used to accumulate Sets/Bags; usually only the very inner ACCx is used at all.&#xD;&#xA;--&#xD;&#xA;-- Recursive Query for parent Interface IDs&#xD;&#xA;-- see 'lpar2005.pdf' (Second-order principles in specification languages for Object-Oriented Programs; Beckert, Tretelman) pp. 11 #&#xD;&#xA;--let parentInterfaces : Bag(Interface) =&#xD;&#xA;--&#x9;self.providedRoles->iterate(r : ProvidedRole; acc2 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;acc2->union(r.providedInterface.parentInterface->asBag()) -- asBag required to allow Set operations #&#xD;&#xA;--&#x9;) in&#xD;&#xA;--let anchestorInterfaces : Bag(Interface) =&#xD;&#xA;--&#x9;self.providedRoles->iterate(r : ProvidedRole; acc4 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;acc4->union(r.providedInterface.parentInterface->asBag()) -- asBag required to allow Set operations #&#xD;&#xA;--&#x9;)->union( -- union with anchestors found in former recursion #&#xD;&#xA;--&#x9;&#x9;self.providedRoles->iterate(r : ProvidedRole; acc6 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;&#x9;acc6->union(r.providedInterface.parentInterface.anchestorInterfaces) --already Set/Bag&#xD;&#xA;--&#x9;&#x9;)&#xD;&#xA;--&#x9;) in&#xD;&#xA;&#x9;-- Directly provided anchestorInterfaces need to be a superset of provided interfaces of Supertype #&#xD;&#xA;--&#x9;anchestorInterfaces.identifier.id->includesAll(&#xD;&#xA;--&#x9;&#x9;self.parentProvidesComponentTypes->iterate(pt : ProvidesComponentType; acc1 : Bag(String) = Bag{} |&#xD;&#xA;--&#x9;&#x9;&#x9;pt.providedRoles->iterate(r : ProvidedRole; acc2 : Bag(String) = Bag{} |&#xD;&#xA;--&#x9;&#x9;&#x9;&#x9;acc2->union(r.providedInterface.identifier.id->asBag()) -- asBag required to allow Set operations #&#xD;&#xA;--&#x9;&#x9;&#x9;)&#xD;&#xA;--&#x9;&#x9;)&#xD;&#xA;--&#x9;)&#xD;&#xA;true"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="ProvidedInterfaceHaveToConformToComponentType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="-- assures that InfrastructureComponents only have InfrastructureInterfaces and that BusinessComponents only have OperationInterfaces or EventGroups&#xD;&#xA;if self.componentType = ComponentType::INFRASTRUCTURE_COMPONENT then&#xD;&#xA;&#x9;self.providedRoles_InterfaceProvidingEntity->select(role | role.oclIsTypeOf(OperationInterface) or role.oclIsTypeOf(EventGroup))->size() = 0&#xD;&#xA;else if self.componentType = ComponentType::BUSINESS_COMPONENT then&#xD;&#xA;&#x9;self.providedRoles_InterfaceProvidingEntity->select(role | role.oclIsTypeOf(InfrastructureInterface))->size() = 0&#xD;&#xA;else&#xD;&#xA;&#x9;1 = 0&#xD;&#xA;endif&#xD;&#xA;endif"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="ProvideSameOrMoreInterfacesAsCompleteComponentType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="-- ImplementationComponent has to provide the same or more interfaces like the CompleteComponentType (if set) #&#xD;&#xA;&#x9;if&#xD;&#xA;&#x9;&#x9; -- apply constraint only for non-empty CompleteComponentTypes #&#xD;&#xA;&#x9;&#x9;self.parentCompleteComponentTypes->notEmpty()&#xD;&#xA;&#x9;then&#xD;&#xA;&#x9;&#x9;let&#xD;&#xA;&#x9;&#x9;&#x9;--own interfaces:&#xD;&#xA;&#x9;&#x9;&#x9;ownInterfaces : Set(OperationInterface)&#xD;&#xA;&#x9;&#x9;&#x9;  = self.providedRoles_InterfaceProvidingEntity->select(pr|pr.oclIsTypeOf(OperationProvidedRole))->collect(pr : ProvidedRole | pr.oclAsType (OperationProvidedRole).providedInterface__OperationProvidedRole)->asSet()&#xD;&#xA;    in    &#xD;&#xA;    &#x9;--complete type interfaces:&#xD;&#xA;    &#x9;self.parentCompleteComponentTypes->forAll&#xD;&#xA;      ( p : CompleteComponentType |&#xD;&#xA;        (&#xD;&#xA;        &#x9;p.providedRoles_InterfaceProvidingEntity->select(pr|pr.oclIsTypeOf(OperationProvidedRole))->collect(pr : ProvidedRole | pr.oclAsType (OperationProvidedRole).providedInterface__OperationProvidedRole)->asSet()&#xD;&#xA;        &#x9;-&#xD;&#xA;        &#x9;ownInterfaces&#xD;&#xA;      &#x9;)->isEmpty()&#xD;&#xA;    &#x9;)&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;true&#xD;&#xA;&#x9;endif"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="RequireSameOrFewerInterfacesAsCompleteComponentType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="-- ImplementationComponent has to require the same or fewer interfaces like the CompleteComponentType (if set) #&#xD;&#xA;&#x9;if&#xD;&#xA;&#x9;&#x9;-- apply constraint only for non-empty CompleteComponentTypes #&#xD;&#xA;&#x9;&#x9;self.parentCompleteComponentTypes->notEmpty()&#xD;&#xA;&#x9;then&#xD;&#xA;&#x9;    let&#xD;&#xA;&#x9;      --own interfaces:&#xD;&#xA;&#x9;      ownInterfaces : Set(OperationInterface) &#xD;&#xA;&#x9;        = self.requiredRoles_InterfaceRequiringEntity->select(rr|rr.oclIsTypeOf(OperationRequiredRole))->collect(rr : RequiredRole | rr.oclAsType (OperationRequiredRole).requiredInterface__OperationRequiredRole)->asSet()&#xD;&#xA;&#x9;    in&#xD;&#xA;&#x9;      --complete type interfaces:&#xD;&#xA;&#x9;      self.parentCompleteComponentTypes->forAll&#xD;&#xA;&#x9;      ( p : CompleteComponentType |&#xD;&#xA;&#x9;      &#x9;(&#xD;&#xA;&#x9;&#x9;      &#x9;ownInterfaces&#xD;&#xA;&#x9;&#x9;        -&#xD;&#xA;&#x9;&#x9;        p.requiredRoles_InterfaceRequiringEntity->select(rr|rr.oclIsTypeOf(OperationRequiredRole))->collect(rr : RequiredRole | rr.oclAsType (OperationRequiredRole).requiredInterface__OperationRequiredRole)->asSet()&#xD;&#xA;&#x9;      &#x9;)->isEmpty()&#xD;&#xA;&#x9;    &#x9;)&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;true&#xD;&#xA;&#x9;endif"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentParameterUsage_ImplementationComponentType"
+        ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//VariableUsage"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property specified the variables of the component that are to be initialized using the assembly context to parametrize the component."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicComponent" eSuperTypes="#//ImplementationComponentType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This entity represents a black-box component implementation. Basic components are atomic building blocks of a software architecture. They cannot be further subdivided into smaller components and are built from scratch, i.e, not by assembling other components. Component developers specify basic components by associating interfaces to them in a providing or requiring role."/>
+    </eAnnotations>
+    <eOperations name="NoSeffTypeUsedTwice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.serviceEffectSpecifications__BasicComponent->forAll(p1, p2 |&#xD;&#xA;  p1 &lt;> p2 implies (p1.describedService__SEFF = p2.describedService__SEFF implies p1.seffTypeID &lt;> p2.seffTypeID))"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceEffectSpecifications__BasicComponent"
+        ordered="false" upperBound="-1" eType="#//ServiceEffectSpecification" containment="true"
+        eOpposite="#//ServiceEffectSpecification/basicComponent_ServiceEffectSpecification">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property contains the service effect specification for services provided by this basic component."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="passiveResource_BasicComponent"
+        ordered="false" upperBound="-1" eType="#//PassiveResource" containment="true"
+        eOpposite="#//PassiveResource/basicComponent_PassiveResource">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the passive resources, e.g., semaphores, that are owned by this basic component."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceEffectSpecification" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Service Effect Specification Models the effect of invoking a specific service of a basic component. Therefore, it references a Signature from an Interface, for which the component takes a ProvidedRole, to identify the described service. This class is abstract and SEFFs for specific analysis purposes need to inherit from this class. A BasicComponent may have an arbitrary number of SEFFs. It can have multiple SEFFs of a different type for a single provided service. For example, one SEFF can express all external service calls with no particular order, while another one includes a restricted order, or still another one expresses resource demands of the service.&#xD;&#xA;While different SEFF types have been proposed, the only type currently included in the meta-model is the ResourceDemandingSEFF for performance prediction. Different types of SEFFs should not contradict each other if the languages are equally powerful. For example, the order of allowed external service calls should be the same for each SEFF type modelling sequences of such calls if the modelling languages have the same expressiveness. SEFFs are part of a component and not part of an interface, because they are implementation dependent. The SEFFs of a CompositeComponent are not represented in the meta-model and can be derived automatically by connecting the SEFFs of the encapsulated components of its nested AssemblyContexts. Different SEFFs of a single component access the same component parameter specifications. That means that parameter dependencies to the same component parameters in different SEFF types refer also to the same characterisations."/>
+    </eAnnotations>
+    <eOperations name="ReferencedSignatureMustBelongToInterfaceReferencedByProvidedRole"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="if self.describedService__SEFF.oclIsKindOf(mpcm::repository::OperationSignature) then&#xD;&#xA;&#x9;self.basicComponent_ServiceEffectSpecification.providedRoles_InterfaceProvidingEntity->exists(p | p.oclIsKindOf(mpcm::repository::OperationProvidedRole) and (p.oclAsType(mpcm::repository::OperationProvidedRole).providedInterface__OperationProvidedRole = self.describedService__SEFF.oclAsType(mpcm::repository::OperationSignature).interface__OperationSignature))&#xD;&#xA;else&#xD;&#xA;&#x9;if self.describedService__SEFF.oclIsKindOf(mpcm::repository::EventType) then&#xD;&#xA;&#x9;&#x9;self.basicComponent_ServiceEffectSpecification.providedRoles_InterfaceProvidingEntity->exists(p | p.oclIsKindOf(mpcm::repository::SinkRole) and (p.oclAsType(mpcm::repository::SinkRole).eventGroup__SinkRole = self.describedService__SEFF.oclAsType(mpcm::repository::EventType).eventGroup__EventType))&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;&#x9;true&#xD;&#xA;&#x9;endif&#xD;&#xA;endif"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="seffTypeID" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="describedService__SEFF"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Signature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basicComponent_ServiceEffectSpecification"
+        ordered="false" lowerBound="1" eType="#//BasicComponent" eOpposite="#//BasicComponent/serviceEffectSpecifications__BasicComponent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PassiveResource" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This entity represents a passive resource, e.g., a semaphore."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capacity_PassiveResource"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property holds the capacity of this passive resource."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="basicComponent_PassiveResource"
+        ordered="false" lowerBound="1" eType="#//BasicComponent" eOpposite="#//BasicComponent/passiveResource_BasicComponent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationInterface" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//Interface">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The OperationInterface is a specific type of interface related to operation calls. For this, it also refereferences a set of operation interfaces. Operations can represent methods, functions or any comparable concept."/>
+    </eAnnotations>
+    <eOperations name="SignaturesHaveToBeUniqueForAnInterface" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="-- full signature has to be unique &#xD;&#xA;-- (use of ocl-tupels) #&#xD;&#xA;let sigs : Bag(&#xD;&#xA;&#x9;-- parameters: Sequence of DataType, NOT name #&#xD;&#xA;&#x9;-- exceptions have not to be considered #&#xD;&#xA;&#x9;Tuple(returnType : DataType, serviceName : String, parameters : Sequence(DataType) ) &#xD;&#xA;) = &#xD;&#xA;self.signatures__OperationInterface->collect(sig : OperationSignature |&#xD;&#xA;&#x9;Tuple{&#xD;&#xA;&#x9;&#x9;returnType : DataType = sig.returnType__OperationSignature,&#xD;&#xA;&#x9;&#x9;serviceName : String = sig.entityName,&#xD;&#xA;&#x9;&#x9;parameters : Sequence(DataType) = sig.parameters__OperationSignature.dataType__Parameter&#xD;&#xA;&#x9;}&#xD;&#xA;)&#xD;&#xA;in&#xD;&#xA;sigs->isUnique(s|s)"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signatures__OperationInterface"
+        ordered="false" upperBound="-1" eType="#//OperationSignature" containment="true"
+        eOpposite="#//OperationSignature/interface__OperationSignature">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the set of signatures of which the interface consists."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationSignature" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//Signature">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An interface specific to operations and a operation specific association to parameters and return values."/>
+    </eAnnotations>
+    <eOperations name="ParameterNamesHaveToBeUniqueForASignature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.parameters__OperationSignature->isUnique(p : Parameter |&#xD;&#xA;&#x9;p.parameterName&#xD;&#xA;)"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface__OperationSignature"
+        ordered="false" eType="#//OperationInterface" eOpposite="#//OperationInterface/signatures__OperationInterface">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the interface that contains the method with this signature."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters__OperationSignature"
+        upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Parameter"
+        containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the list of parameters of the corresponding method."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnType__OperationSignature"
+        ordered="false" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/DataType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the return type of the corresponding method."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationProvidedRole" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//ProvidedRole">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This entity represents the provided operation interfaces. The PCM uses the association of an operation interface to a component to determine its role. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedInterface__OperationProvidedRole"
+        ordered="false" lowerBound="1" eType="#//OperationInterface">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the corresponding interface that is provided by this role."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationRequiredRole" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//RequiredRole">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This entity represents the required operation interfaces. The PCM uses the association of an operation interface to a component to determine its role. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredInterface__OperationRequiredRole"
+        ordered="false" lowerBound="1" eType="#//OperationInterface">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the interfaces that is required by this role."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

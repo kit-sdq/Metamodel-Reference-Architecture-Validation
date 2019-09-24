@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="expressions" nsURI="http://www.example.org/expressions" nsPrefix="expressions">
+  <eClassifiers xsi:type="ecore:EClass" name="FormalExpression" eSuperTypes="#//Expression">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tFormalExpression"/>
+      <details key="kind" value="mixed"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="name" value=":mixed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" volatile="true"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evaluatesToTypeRef" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//ItemDefinition">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="evaluatesToTypeRef"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="language"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataPath" eType="ecore:EClass ../../mbpmn.correlations/model/correlations.ecore#//CorrelationPropertyBinding"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messagePath" eType="ecore:EClass ../../mbpmn.correlations/model/correlations.ecore#//CorrelationPropertyRetrievalExpression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="complexbehaviordefinition"
+        eType="ecore:EClass ../../mbpmn.looping/model/looping.ecore#//ComplexBehaviorDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transformation" eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//DataAssociation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="../../mbpmn.core/model/core.ecore#//RootElement">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="tExpression"/>
+      <details key="kind" value="mixed"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//Assignment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="ecore:EClass ../../mbpmn.data/model/data.ecore#//Assignment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activationCondition" eType="ecore:EClass ../../mbpmn.gateways/model/gateways.ecore#//ComplexGateway"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditionExpression" eType="ecore:EClass ../../mbpmn.flows/model/flows.ecore#//SequenceFlow"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataPathLoop" eType="ecore:EClass ../../mbpmn.looping/model/looping.ecore#//StandardLoopCharacteristics"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceassignmentexpression"
+        eType="ecore:EClass ../../mbpmn.resources/model/resources.ecore#//ResourceAssignmentExpression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceparameterbinding"
+        eType="ecore:EClass ../../mbpmn.resources/model/resources.ecore#//ResourceParameterBinding"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loopCardinality" eType="ecore:EClass ../../mbpmn.looping/model/looping.ecore#//MultiInstanceLoopCharacteristics"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="completionCondition" eType="ecore:EClass ../../mbpmn.looping/model/looping.ecore#//MultiInstanceLoopCharacteristics"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="completionConditionSubProcess"
+        eType="ecore:EClass ../../mbpmn.subprocesses/model/subprocesses.ecore#//AdHocSubProcess"/>
+  </eClassifiers>
+</ecore:EPackage>

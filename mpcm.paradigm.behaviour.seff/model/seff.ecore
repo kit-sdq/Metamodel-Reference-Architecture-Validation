@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="seff" nsURI="mpcm.paradigm.behaviour.seff" nsPrefix="mpcm.paradigm.behaviour.seff">
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceDemandingBehaviour" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Models the behaviour of a component service as a sequence of internal actions with resource demands, control flow constructs, and external&#xD;&#xA;calls. Therefore, the class contains a chain of AbstractActions. The emphasis in this type of behaviour is on the resource demands attached to internal actions, which mainly influence performance analysis.&#xD;&#xA;Each action in a ResourceDemandingBehaviour references a predecessor and a successor action. Exceptions are the first and last action, which do not reference a predecessor and a successor respectively. A behaviour is valid, if there is a continuous path from the first to last action, which includes all actions. The chain must not include cycles. To specify control flow branches, loops, or forks, component developers need to use special types of actions, which contain nested inner ResourceDemandingBehaviours to specify the behaviour inside branches or loop bodies. Any ResourceDemandingBehaviour can have at most one starting and one finishing action."/>
+    </eAnnotations>
+    <eOperations name="ExactlyOneStopAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.steps_Behaviour->select(s|s.oclIsTypeOf(StopAction))->size() = 1"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="ExactlyOneStartAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.steps_Behaviour->select(s|s.oclIsTypeOf(StartAction))->size() = 1"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="EachActionExceptStartActionandStopActionMustHhaveAPredecessorAndSuccessor"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="not self.steps_Behaviour->select(s|not s.oclIsTypeOf(StartAction) and not s.oclIsTypeOf(StopAction))->exists(a|a.oclAsType(AbstractAction).predecessor_AbstractAction.oclIsUndefined()) and not self.steps_Behaviour->select(s|not s.oclIsTypeOf(StartAction) and not s.oclIsTypeOf(StopAction))->exists(a|a.oclAsType(AbstractAction).successor_AbstractAction.oclIsUndefined())"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractLoopAction_ResourceDemandingBehaviour"
+        ordered="false" eType="#//AbstractLoopAction" eOpposite="#//AbstractLoopAction/bodyBehaviour_Loop"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractBranchTransition_ResourceDemandingBehaviour"
+        ordered="false" eType="#//AbstractBranchTransition" eOpposite="#//AbstractBranchTransition/branchBehaviour_BranchTransition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="steps_Behaviour" ordered="false"
+        upperBound="-1" eType="#//AbstractAction" containment="true" eOpposite="#//AbstractAction/resourceDemandingBehaviour_AbstractAction"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractAction" abstract="true" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="AbstractActions&amp;nbsp;model&amp;nbsp;either&amp;nbsp;a&amp;nbsp;service's&amp;nbsp;internal&amp;nbsp;computations&amp;nbsp;or&amp;nbsp;calls&amp;nbsp;to&amp;nbsp;external&amp;nbsp;(i.e.,&amp;nbsp;required)&amp;nbsp;services,&amp;nbsp;or&amp;nbsp;describe&amp;nbsp;some&amp;nbsp;form&amp;nbsp;of&amp;nbsp;control&amp;nbsp;flow&amp;nbsp;alteration&amp;nbsp;(i.e.,&amp;nbsp;branching,&amp;nbsp;loop,&amp;nbsp;or&amp;nbsp;fork).&amp;nbsp;The&amp;nbsp;following&amp;nbsp;first&amp;nbsp;clarifies&amp;nbsp;the&amp;nbsp;notions&amp;nbsp;of&amp;nbsp;internal&amp;nbsp;and&amp;nbsp;external&amp;nbsp;actions,&amp;nbsp;whose&amp;nbsp;meta-classes&amp;nbsp;both&amp;nbsp;inherit&amp;nbsp;from&amp;nbsp;AbstractAction.&lt;br />&#xD;&#xA;The&amp;nbsp;RDSEFF&amp;nbsp;defines&amp;nbsp;the&amp;nbsp;control&amp;nbsp;flow&amp;nbsp;between&amp;nbsp;internal&amp;nbsp;and&amp;nbsp;external&amp;nbsp;actions&amp;nbsp;with&amp;nbsp;the&amp;nbsp;predecessor/successor&amp;nbsp;relationship&amp;nbsp;between&amp;nbsp;AbstractActions&amp;nbsp;to&amp;nbsp;model&amp;nbsp;sequential&amp;nbsp;executions.&amp;nbsp;Additionally,&amp;nbsp;special&amp;nbsp;actions&amp;nbsp;for&amp;nbsp;branching,&amp;nbsp;loops,&amp;nbsp;and&amp;nbsp;forks&amp;nbsp;allow&amp;nbsp;other&amp;nbsp;kinds&amp;nbsp;of&amp;nbsp;control&amp;nbsp;flow.&amp;nbsp;Other&amp;nbsp;than&amp;nbsp;flowcharts&amp;nbsp;or&amp;nbsp;UML&amp;nbsp;activity&amp;nbsp;diagrams,&amp;nbsp;the&amp;nbsp;RDSEFF&amp;nbsp;language&amp;nbsp;(as&amp;nbsp;well&amp;nbsp;as&amp;nbsp;the&amp;nbsp;usage&amp;nbsp;model&amp;nbsp;language)&amp;nbsp;requires&amp;nbsp;developers&amp;nbsp;to&amp;nbsp;make&amp;nbsp;the&amp;nbsp;branching,&amp;nbsp;loop,&amp;nbsp;fork&amp;nbsp;bodies&amp;nbsp;explicit&amp;nbsp;using&amp;nbsp;nested&amp;nbsp;ResourceDemandingBehaviours.&amp;nbsp;It&amp;nbsp;disallows&amp;nbsp;backward&amp;nbsp;references&amp;nbsp;in&amp;nbsp;the&amp;nbsp;chain&amp;nbsp;of&amp;nbsp;AbstractActions,&amp;nbsp;which&amp;nbsp;are&amp;nbsp;basically&lt;br />&#xD;&#xA;goto&amp;nbsp;statements&amp;nbsp;and&amp;nbsp;can&amp;nbsp;lead&amp;nbsp;to&amp;nbsp;ambiguities&amp;nbsp;and&amp;nbsp;difficult&amp;nbsp;maintainability.&amp;nbsp;For&amp;nbsp;example,&amp;nbsp;this&amp;nbsp;might&amp;nbsp;lead&amp;nbsp;to&amp;nbsp;intertwined&amp;nbsp;control&amp;nbsp;flows&amp;nbsp;as&amp;nbsp;in&amp;nbsp;the&amp;nbsp;example&amp;nbsp;in&amp;nbsp;Fig.&amp;nbsp;4.9(a),&amp;nbsp;where&amp;nbsp;both&amp;nbsp;the&amp;nbsp;sequences&amp;nbsp;'abcabcdbcd'&amp;nbsp;and&amp;nbsp;'abcdbcabcd'&amp;nbsp;could&amp;nbsp;be&amp;nbsp;occur&amp;nbsp;if&amp;nbsp;each&amp;nbsp;backward&amp;nbsp;reference&amp;nbsp;is&amp;nbsp;executed&amp;nbsp;once,&amp;nbsp;which&amp;nbsp;might&amp;nbsp;lead&amp;nbsp;to&amp;nbsp;different&amp;nbsp;execution&amp;nbsp;times.&amp;nbsp;Backward&amp;nbsp;references&amp;nbsp;also&amp;nbsp;allow&amp;nbsp;the&amp;nbsp;specification&amp;nbsp;of&amp;nbsp;loops&amp;nbsp;with&amp;nbsp;multiple&amp;nbsp;entry&amp;nbsp;points&amp;nbsp;as&amp;nbsp;in&amp;nbsp;Fig.&amp;nbsp;4.9(b).&amp;nbsp;This&amp;nbsp;is&amp;nbsp;not&amp;nbsp;desirable,&amp;nbsp;as&amp;nbsp;the&amp;nbsp;number&amp;nbsp;of&amp;nbsp;loop&amp;nbsp;iterations&amp;nbsp;cannot&amp;nbsp;be&amp;nbsp;specified&amp;nbsp;directly&amp;nbsp;in&amp;nbsp;these&amp;nbsp;cases,&amp;nbsp;which&amp;nbsp;is&amp;nbsp;however&amp;nbsp;necessary&amp;nbsp;for&amp;nbsp;accurate&amp;nbsp;performance&amp;nbsp;prediction.&amp;nbsp;If&amp;nbsp;a&amp;nbsp;developer&amp;nbsp;would&amp;nbsp;specify&amp;nbsp;that&amp;nbsp;each&amp;nbsp;backward&amp;nbsp;link&amp;nbsp;in&amp;nbsp;Fig.&amp;nbsp;4.9(b)&amp;nbsp;is&amp;nbsp;executed&amp;nbsp;only&amp;nbsp;once,&amp;nbsp;both&amp;nbsp;sequences&amp;nbsp;'ababc'&amp;nbsp;and&amp;nbsp;'abcababc'&amp;nbsp;would&amp;nbsp;be&amp;nbsp;possible&amp;nbsp;although&amp;nbsp;they&amp;nbsp;would&amp;nbsp;have&amp;nbsp;different&amp;nbsp;execution&amp;nbsp;times,&amp;nbsp;as&amp;nbsp;'a'&amp;nbsp;is&amp;nbsp;executed&amp;nbsp;three&amp;nbsp;times&amp;nbsp;in&amp;nbsp;the&amp;nbsp;latter&amp;nbsp;case.&amp;nbsp;To&amp;nbsp;avoid&amp;nbsp;such&amp;nbsp;ambiguities,&amp;nbsp;control&amp;nbsp;flow&amp;nbsp;in&amp;nbsp;the&amp;nbsp;PCM&amp;nbsp;RDSEFF&amp;nbsp;and&amp;nbsp;usage&amp;nbsp;model&amp;nbsp;must&amp;nbsp;be&amp;nbsp;specified&amp;nbsp;without&amp;nbsp;backward&amp;nbsp;references&amp;nbsp;in&amp;nbsp;the&amp;nbsp;chain&amp;nbsp;of&amp;nbsp;AbstractActions.&amp;nbsp;Branches,&amp;nbsp;loops,&amp;nbsp;forks,&amp;nbsp;and&amp;nbsp;their&amp;nbsp;respective&amp;nbsp;bodies&amp;nbsp;have&amp;nbsp;to&amp;nbsp;be&amp;nbsp;made&amp;nbsp;explicit&amp;nbsp;in&amp;nbsp;the&amp;nbsp;specification&amp;nbsp;using&amp;nbsp;nested&amp;nbsp;ResourceDemandingBehaviours."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predecessor_AbstractAction"
+        ordered="false" eType="#//AbstractAction" eOpposite="#//AbstractAction/successor_AbstractAction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="successor_AbstractAction"
+        ordered="false" eType="#//AbstractAction" eOpposite="#//AbstractAction/predecessor_AbstractAction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceDemandingBehaviour_AbstractAction"
+        ordered="false" eType="#//ResourceDemandingBehaviour" eOpposite="#//ResourceDemandingBehaviour/steps_Behaviour"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractInternalControlFlowAction" abstract="true"
+      eSuperTypes="#//AbstractAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>&#xD;&#xA;    Abstract parent class of any internal control flow (e.g. InternalAction)&#xD;&#xA;&lt;/p>"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StartAction" eSuperTypes="#//AbstractInternalControlFlowAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="StartActions initiate a scenario behaviour and contain only a successor."/>
+    </eAnnotations>
+    <eOperations name="StartActionPredecessorMustNotBeDefined" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.predecessor_AbstractAction.oclIsUndefined()"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StopAction" eSuperTypes="#//AbstractInternalControlFlowAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="StopActions end a scenario behaviour and contain only a predecessor."/>
+    </eAnnotations>
+    <eOperations name="StopActionSuccessorMustNotBeDefined" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.successor_AbstractAction.oclIsUndefined()"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalAction" eSuperTypes="#//AbstractInternalControlFlowAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Internal Action Combines the execution of a number of internal computations by a component service in a single model entity. It models calculations inside a component service, which do not include calls to required services. For a desired high abstraction level, an RDSEFF has only one InternalAction for all instructions between two calls to required services. A high abstraction level is needed to keep the model tractable for mathematical analysis methods. However, in principle it is also possible to use multiple InternalActions in direct succession to model on a lower abstraction level and enable more accurate predictions.&#xD;&#xA;InternalActions provide an abstraction from the complete behaviour (i.e., control and data flow) of a component service, as they can hide different possible control and data flows not affecting external service calls and express their resource demands as a single stochastic expression. This abstraction underlies the assumption that the resource demands of a number of instruction can be captured sufficiently accurate enough in one such expression"/>
+    </eAnnotations>
+    <eOperations name="MultipleInternalOccurrenceDescriptionsPerFailureTypeNotAllowed"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.internalFailureOccurrenceDescriptions__InternalAction->forAll(x:mpcm::reliability::InternalFailureOccurrenceDescription,y:mpcm::reliability::InternalFailureOccurrenceDescription  | x&lt;>y implies x.softwareInducedFailureType__InternalFailureOccurrenceDescription &lt;> y.softwareInducedFailureType__InternalFailureOccurrenceDescription )&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="SumOfInternalActionFailureProbabilitiesMustNotExceed1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.internalFailureOccurrenceDescriptions__InternalAction.failureProbability.oclAsType(Real)->sum()&lt;=1.0&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BranchAction" eSuperTypes="#//AbstractInternalControlFlowAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The BranchAction splits the RDSEFF control flow with an XOR-semantic, meaning that the control flow continues on exactly one of its attached AbstractBranchTransitions. The RDSEFF supports two different kinds of branch transitions, GuardedBranchTransitions, and  ProbabilisticBranchTransitions. RDSEFFs do not allow to use both kinds of transitions on a single BranchAction. Analysis or simulation tools must select exactly one transition based on the included guard or probability, before continuing at a BranchAction."/>
+    </eAnnotations>
+    <eOperations name="EitherGuardedBranchesOrProbabilisiticBranchTransitions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.branches_Branch->forAll(bt|bt.oclIsTypeOf(ProbabilisticBranchTransition)) &#xD;&#xA;or self.branches_Branch->forAll(bt|bt.oclIsTypeOf(GuardedBranchTransition))"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="AllProbabilisticBranchProbabilitiesMustSumUpTo1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="if self.branches_Branch->forAll(oclIsTypeOf(ProbabilisticBranchTransition)) then &#xD;&#xA;&#x9;self.branches_Branch->select(pbt|pbt.oclIsTypeOf(ProbabilisticBranchTransition))->collect(pbt|pbt.oclAsType(ProbabilisticBranchTransition).branchProbability)->sum() > 0.9999 &#xD;&#xA;&#x9;and self.branches_Branch->select(pbt|pbt.oclIsTypeOf(ProbabilisticBranchTransition))->collect(pbt|pbt.oclAsType(ProbabilisticBranchTransition).branchProbability)->sum() &lt; 1.0001 &#xD;&#xA;&#x9;else true &#xD;&#xA;endif"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="branches_Branch" ordered="false"
+        upperBound="-1" eType="#//AbstractBranchTransition" containment="true" eOpposite="#//AbstractBranchTransition/branchAction_AbstractBranchTransition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractBranchTransition" abstract="true"
+      eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Two types of branch transitions exist which correspond to the two types of branches. The types cannot be mixed. Either all branch transitions of one BranchAction are probabilistic or guarded."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="branchAction_AbstractBranchTransition"
+        ordered="false" lowerBound="1" eType="#//BranchAction" eOpposite="#//BranchAction/branches_Branch"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="branchBehaviour_BranchTransition"
+        ordered="false" lowerBound="1" eType="#//ResourceDemandingBehaviour" containment="true"
+        eOpposite="#//ResourceDemandingBehaviour/abstractBranchTransition_ResourceDemandingBehaviour"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ForkAction" eSuperTypes="#//AbstractInternalControlFlowAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>Fork Action Splits the RDSEFF control flow with an AND-semantic, meaning that it invokes several ForkedBehaviours concurrently.  ForkActions&#xD;&#xA;allow both asynchronously and synchronously forked behaviours. &lt;/p>&#xD;&#xA;&#xD;&#xA;&lt;p>By default, the ForkedBehaviours inside a ForkAction are asynchronous. This means that all inner ForkedBehaviours execute concurrently, but the control flow does not wait for them to terminate and continues immediately after their invocation with the successor action of the ForkAction. Thus, in this case, the ForkAction does not wait for any inner ForkedBehaviour.  It is furthermore not possible to refer to results or output parameters of asynchronously ForkedBehaviours in the rest of the RDSEFF, as it is unclear when these results will be available.&lt;/p>&#xD;&#xA;&#xD;&#xA;&lt;p>To model synchronization, a SynchronizationPoint can be added to the ForkAction. Then, all ForkedBehaviours &lt;strong>within&lt;/strong> the SynchronizationPoint execute concurrently and the control flow waits for each of these behaviours to terminate before continuing. If a SynchronizationPoint is used, the ForkAction blocks and waits for all ForkedBehaviours inside the SynchronizationPoint before continuing. Thus, in this case, the successor action of the ForkAction is only executed after all ForkedBehaviours inside the SynchronizationPoint have completed execution. Component developers can specify a result of the computations with its attached VariableUsages.&lt;/p>&#xD;&#xA;&#xD;&#xA;&lt;p>Each ForkedBehaviour can be considered as a program thread. All parameter characterisations from the surrounding RDSEFF are also valid inside the ForkedBehaviours and can be used to parameterise resource demands or control flow constructs. &#xD;&#xA;The parameter characterisations are the same in each ForkedBehaviour. &lt;/p>&#xD;&#xA;&#xD;&#xA;&lt;p> The same Fork Action can contain asynchronous and synchronousForkedbehaviours at the same time. In that case, all forked behaviours are started. The control flow waits for all synchronous behaviours to finish execution and only then continues. &lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asynchronousForkedBehaviours_ForkAction"
+        ordered="false" upperBound="-1" eType="#//ForkedBehaviour" containment="true"
+        eOpposite="#//ForkedBehaviour/forkAction_ForkedBehaivour"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="synchronisingBehaviours_ForkAction"
+        ordered="false" eType="#//SynchronisationPoint" containment="true" eOpposite="#//SynchronisationPoint/forkAction_SynchronisationPoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ForkedBehaviour" eSuperTypes="#//ResourceDemandingBehaviour">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A ForkedBehaviour can be considered as a program thread. All parameter characterisations from the surrounding RDSEFF are also valid inside the ForkedBehaviours and can be used to parameterise resource demands or control flow constructs. The parameter characterisations are the same in each ForkedBehaviour."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="synchronisationPoint_ForkedBehaviour"
+        ordered="false" eType="#//SynchronisationPoint" eOpposite="#//SynchronisationPoint/synchronousForkedBehaviours_SynchronisationPoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forkAction_ForkedBehaivour"
+        ordered="false" eType="#//ForkAction" eOpposite="#//ForkAction/asynchronousForkedBehaviours_ForkAction"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SynchronisationPoint" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Component developers can use a SynchronisationPoint to join synchronously ForkedBehaviours and specify a result of the computations with its attached VariableUsages.&#xD;&#xA;See ForkAction for a more detailed description. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputParameterUsage_SynchronisationPoint"
+        ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//VariableUsage"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forkAction_SynchronisationPoint"
+        ordered="false" lowerBound="1" eType="#//ForkAction" eOpposite="#//ForkAction/synchronisingBehaviours_ForkAction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="synchronousForkedBehaviours_SynchronisationPoint"
+        ordered="false" lowerBound="1" upperBound="-1" eType="#//ForkedBehaviour"
+        containment="true" eOpposite="#//ForkedBehaviour/synchronisationPoint_ForkedBehaviour"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractLoopAction" abstract="true"
+      eSuperTypes="#//AbstractInternalControlFlowAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>&#xD;&#xA;    Abstract parent class of any loop (e.g. LoopAction)&#xD;&#xA;&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyBehaviour_Loop" ordered="false"
+        lowerBound="1" eType="#//ResourceDemandingBehaviour" containment="true" eOpposite="#//ResourceDemandingBehaviour/abstractLoopAction_ResourceDemandingBehaviour"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LoopAction" eSuperTypes="#//AbstractLoopAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Models the repeated execution of its inner ResourceDemandingBehaviour for the loop body. The number of repetitions is specified by a random variable evaluating to integer or an IntPMF. The number of iterations specified by the random variable always needs to be bounded, i.e., the probabilities in an IntPMF for iteration numbers above a certain threshold must be zero. Otherwise, it would be possible that certain requests do not terminate, which would complicate performance analyses. The stochastic expression defining the iteration random variable may include references to input or component parameters to model dependencies between the usage profile and the number of loop iterations. Notice, that loop actions should only be modelled if the loop body contains either external service calls or resource demands directed at special resources. Otherwise, control flow loops in component behaviour should be abstracted by subsuming them in InternalAction, which combine a number of instructions. The influence of different iterations length of such internal loops need to be reflected stochastically by the random variable specifying the ParametricResource-Demand of that InternalAction.&#xD;&#xA;Other than Markov chains, RDSEFFs do not specify control flow loops with an reentrance and exit probability on each iteration. Such a specification binds the number of loop iterations to a geometrical distribution, which reflects reality only in very seldom cases. But in many practical cases, the number of iterations is a constant, or the probability for higher iteration numbers is higher than for lower ones. This cannot be expressed directly via a Markov chain (also see [DG00]). &#xD;&#xA;Inside the ResourceDemandingBehaviour of LoopActions, it is assumed that random variables are stochastically independent. This is not true in reality, and for example leads to wrong predictions if the same random variable is used twice in succession inside a loop body. In this case, the second occurrence is stochastically dependent to the first occurrence, as the value does not change between two occurrences. Therefore, component developers should be aware of such inaccuracies when using random variables twice inside the body behaviour of a LoopAction."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iterationCount_LoopAction"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

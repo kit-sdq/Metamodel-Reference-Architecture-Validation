@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bppcm" nsURI="de.uhd.ifi.se.pcm.bp" nsPrefix="bppcm">
+  <eSubpackages name="bpusagemodel" nsURI="http://palladiosimulator.org/PalladioComponentModel/5.1/bp/bpUsageModel"
+      nsPrefix="bpusagemodel">
+    <eClassifiers xsi:type="ecore:EClass" name="ActorStep" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/AbstractUserAction">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="processingTime" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="restingTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="responsibleRole" eType="#//organizationenvironmentmodel/Role"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="continuouslyPerformed"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="interruptable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outputDataObjects" upperBound="-1">
+        <eGenericType eClassifier="#//datamodel/DataObject">
+          <eTypeArguments/>
+        </eGenericType>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputDataObjects" upperBound="-1">
+        <eGenericType eClassifier="#//datamodel/DataObject">
+          <eTypeArguments/>
+        </eGenericType>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/AbstractUserAction">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" lowerBound="1"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/ScenarioBehaviour"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ProcessWorkload" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/OpenWorkload">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="processTriggerPeriods"
+          lowerBound="1" upperBound="-1" eType="#//bpusagemodel/ProcessTriggerPeriod"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ProcessTriggerPeriod" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="interArrivalTime_ProcessWorkload"
+          lowerBound="1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="periodStartTimePoint"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="periodEndTimePoint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AcquireDeviceResourceAction" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/AbstractUserAction">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="passiveresource_AcquireAction"
+          lowerBound="1" eType="#//organizationenvironmentmodel/DeviceResource"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeout" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeoutValue" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ReleaseDeviceResourceAction" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//usagemodel/AbstractUserAction">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="passiveresource_ReleaseAction"
+          lowerBound="1" eType="#//organizationenvironmentmodel/DeviceResource"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="organizationenvironmentmodel" nsURI="http://palladiosimulator.org/PalladioComponentModel/5.1/bp/OrganizationEnvironmentModel"
+      nsPrefix="organizationenvironmentmodel">
+    <eClassifiers xsi:type="ecore:EClass" name="OrganizationEnvironmentModel" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
+          eType="#//organizationenvironmentmodel/Role" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="actorResources" upperBound="-1"
+          eType="#//organizationenvironmentmodel/ActorResource" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="deviceResources" upperBound="-1"
+          eType="#//organizationenvironmentmodel/DeviceResource" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="actors" upperBound="-1"
+          eType="#//organizationenvironmentmodel/ActorResource" eOpposite="#//organizationenvironmentmodel/ActorResource/roles"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ActorResource" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="workingPeriods" lowerBound="1"
+          upperBound="-1" eType="#//organizationenvironmentmodel/WorkingPeriod" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="roles" lowerBound="1"
+          upperBound="-1" eType="#//organizationenvironmentmodel/Role" eOpposite="#//organizationenvironmentmodel/Role/actors"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DeviceResource" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="capacity" lowerBound="1"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="WorkingPeriod" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="periodStartTimePoint"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="0.0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="periodEndTimePoint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="0.0"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="datamodel" nsURI="http://palladiosimulator.org/PalladioComponentModel/5.1/bp/DataModel"
+      nsPrefix="datamodel">
+    <eClassifiers xsi:type="ecore:EClass" name="DataObject" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+      <eTypeParameters name="T">
+        <eBounds eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
+      </eTypeParameters>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataModel" lowerBound="1"
+          eType="#//datamodel/DataModel" eOpposite="#//datamodel/DataModel/dataObjects"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataTypes" upperBound="-1">
+        <eGenericType eTypeParameter="#//datamodel/DataObject/T"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CollectionDataObject">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerDataObjects" ordered="false"
+          upperBound="-1">
+        <eGenericType eClassifier="#//datamodel/DataObject">
+          <eTypeArguments/>
+        </eGenericType>
+      </eStructuralFeatures>
+      <eGenericSuperTypes eClassifier="#//datamodel/DataObject">
+        <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/CollectionDataType"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CompositeDataObject">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerDataObjectDeclarations"
+          ordered="false" upperBound="-1" eType="#//datamodel/InnerDataObjectDeclaration"
+          containment="true" eOpposite="#//datamodel/InnerDataObjectDeclaration/compositeDataObject"/>
+      <eGenericSuperTypes eClassifier="#//datamodel/DataObject">
+        <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/CompositeDataType"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DataModel">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataObjects" ordered="false"
+          upperBound="-1" containment="true" eOpposite="#//datamodel/DataObject/dataModel">
+        <eGenericType eClassifier="#//datamodel/DataObject">
+          <eTypeArguments/>
+        </eGenericType>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InnerDataObjectDeclaration" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/NamedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataObject" ordered="false"
+          lowerBound="1">
+        <eGenericType eClassifier="#//datamodel/DataObject">
+          <eTypeArguments/>
+        </eGenericType>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="compositeDataObject"
+          ordered="false" lowerBound="1" eType="#//datamodel/CompositeDataObject"
+          eOpposite="#//datamodel/CompositeDataObject/innerDataObjectDeclarations"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

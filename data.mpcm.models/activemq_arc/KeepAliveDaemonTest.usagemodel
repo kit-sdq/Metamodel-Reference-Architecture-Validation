@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_dXdWRJhXEeWKgoTb5jIgDA" entityName="testKeepAliveProperty">
+    <scenarioBehaviour_UsageScenario id="_dXdWR5hXEeWKgoTb5jIgDA" entityName="testKeepAliveProperty">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_dXdWRZhXEeWKgoTb5jIgDA" successor="_dXdWSJhXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dXdWSJhXEeWKgoTb5jIgDA" entityName="create:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testKeepAliveProperty() at 1534" successor="_dYWuIJhXEeWKgoTb5jIgDA" predecessor="_dXdWRZhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_YbqLophMEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dYWuIJhXEeWKgoTb5jIgDA" entityName="getKeepAliveTimeout:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testKeepAliveProperty() at 1594" successor="_dYWuI5hXEeWKgoTb5jIgDA" predecessor="_dXdWSJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuIZhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_81qK7JhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dYWuI5hXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testKeepAliveProperty() at 1594" successor="_dXdWRphXEeWKgoTb5jIgDA" predecessor="_dYWuIJhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_dXdWRphXEeWKgoTb5jIgDA" predecessor="_dYWuI5hXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_dYWuJJhXEeWKgoTb5jIgDA" entityName="testNoDisconnectOnChannelWithNoTimeout">
+    <scenarioBehaviour_UsageScenario id="_dYWuJ5hXEeWKgoTb5jIgDA" entityName="testNoDisconnectOnChannelWithNoTimeout">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_dYWuJZhXEeWKgoTb5jIgDA" successor="_dYWuKZhXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dYWuKZhXEeWKgoTb5jIgDA" entityName="setKeepAliveTimeout:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnChannelWithNoTimeout() at 1909" successor="_dYWuK5hXEeWKgoTb5jIgDA" predecessor="_dYWuJZhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuIZhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_dYWuKphXEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dYWuK5hXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnChannelWithNoTimeout() at 1995" successor="_dYWuLJhXEeWKgoTb5jIgDA" predecessor="_dYWuKZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dYWuLJhXEeWKgoTb5jIgDA" entityName="setCheckInterval:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnChannelWithNoTimeout() at 2078" successor="_dYWuMJhXEeWKgoTb5jIgDA" predecessor="_dYWuK5hXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_dYWuLZhXEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dYWuMJhXEeWKgoTb5jIgDA" entityName="addMonitoredChannel:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnChannelWithNoTimeout() at 2112" successor="_dYWuMZhXEeWKgoTb5jIgDA" predecessor="_dYWuLJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_72B54JhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dYWuMZhXEeWKgoTb5jIgDA" entityName="start:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnChannelWithNoTimeout() at 2125" successor="_dYWuM5hXEeWKgoTb5jIgDA" predecessor="_dYWuMJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_743LcZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dYWuM5hXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnChannelWithNoTimeout() at 2240" successor="_dYWuJphXEeWKgoTb5jIgDA" predecessor="_dYWuMZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_dYWuJphXEeWKgoTb5jIgDA" predecessor="_dYWuM5hXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_dZ174JhXEeWKgoTb5jIgDA" entityName="testNoDisconnectOnFreshChannel">
+    <scenarioBehaviour_UsageScenario id="_dZ1745hXEeWKgoTb5jIgDA" entityName="testNoDisconnectOnFreshChannel">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_dZ174ZhXEeWKgoTb5jIgDA" successor="_dZ175JhXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dZ175JhXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnFreshChannel() at 2727" successor="_dZ175phXEeWKgoTb5jIgDA" predecessor="_dZ174ZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dZ175phXEeWKgoTb5jIgDA" entityName="setKeepAliveTimeout:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnFreshChannel() at 2776" successor="_dZ1755hXEeWKgoTb5jIgDA" predecessor="_dZ175JhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuIZhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_dYWuKphXEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dZ1755hXEeWKgoTb5jIgDA" entityName="setCheckInterval:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnFreshChannel() at 2859" successor="_dZ176JhXEeWKgoTb5jIgDA" predecessor="_dZ175phXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_dYWuLZhXEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dZ176JhXEeWKgoTb5jIgDA" entityName="addMonitoredChannel:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnFreshChannel() at 2893" successor="_dZ176ZhXEeWKgoTb5jIgDA" predecessor="_dZ1755hXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_72B54JhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dZ176ZhXEeWKgoTb5jIgDA" entityName="start:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnFreshChannel() at 2906" successor="_dZ1765hXEeWKgoTb5jIgDA" predecessor="_dZ176JhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_743LcZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dZ1765hXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testNoDisconnectOnFreshChannel() at 3021" successor="_dZ174phXEeWKgoTb5jIgDA" predecessor="_dZ176ZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_dZ174phXEeWKgoTb5jIgDA" predecessor="_dZ1765hXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_dbVJoJhXEeWKgoTb5jIgDA" entityName="testForcedDisconnect">
+    <scenarioBehaviour_UsageScenario id="_dbVJo5hXEeWKgoTb5jIgDA" entityName="testForcedDisconnect">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_dbVJoZhXEeWKgoTb5jIgDA" successor="_dbVJpJhXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dbVJpJhXEeWKgoTb5jIgDA" entityName="getLastCheckTime:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testForcedDisconnect() at 3586" successor="_dbVJp5hXEeWKgoTb5jIgDA" predecessor="_dbVJoZhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_dbVJpZhXEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dbVJp5hXEeWKgoTb5jIgDA" entityName="setKeepAliveTimeout:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testForcedDisconnect() at 3635" successor="_dbVJqJhXEeWKgoTb5jIgDA" predecessor="_dbVJpJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuIZhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_dYWuKphXEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dbVJqJhXEeWKgoTb5jIgDA" entityName="setCheckInterval:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testForcedDisconnect() at 3703" successor="_dbe6oJhXEeWKgoTb5jIgDA" predecessor="_dbVJp5hXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_dYWuLZhXEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dbe6oJhXEeWKgoTb5jIgDA" entityName="addMonitoredChannel:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testForcedDisconnect() at 3737" successor="_dbe6oZhXEeWKgoTb5jIgDA" predecessor="_dbVJqJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_72B54JhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dbe6oZhXEeWKgoTb5jIgDA" entityName="start:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testForcedDisconnect() at 3750" successor="_dbe6ophXEeWKgoTb5jIgDA" predecessor="_dbe6oJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_743LcZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dbe6ophXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testForcedDisconnect() at 3968" successor="_dbVJophXEeWKgoTb5jIgDA" predecessor="_dbe6oZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_dbVJophXEeWKgoTb5jIgDA" predecessor="_dbe6ophXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_ddklUJhXEeWKgoTb5jIgDA" entityName="testIdleChannelThatRespondsInTime">
+    <scenarioBehaviour_UsageScenario id="_ddklU5hXEeWKgoTb5jIgDA" entityName="testIdleChannelThatRespondsInTime">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_ddklUZhXEeWKgoTb5jIgDA" successor="_ddklVJhXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ddklVJhXEeWKgoTb5jIgDA" entityName="setKeepAliveTimeout:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testIdleChannelThatRespondsInTime() at 4573" successor="_ddklVZhXEeWKgoTb5jIgDA" predecessor="_ddklUZhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuIZhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_dYWuKphXEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ddklVZhXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testIdleChannelThatRespondsInTime() at 4678" successor="_ddtvQJhXEeWKgoTb5jIgDA" predecessor="_ddklVJhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ddtvQJhXEeWKgoTb5jIgDA" entityName="setCheckInterval:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testIdleChannelThatRespondsInTime() at 4761" successor="_ddtvQZhXEeWKgoTb5jIgDA" predecessor="_ddklVZhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_dYWuLZhXEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ddtvQZhXEeWKgoTb5jIgDA" entityName="addMonitoredChannel:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testIdleChannelThatRespondsInTime() at 4795" successor="_ddtvQphXEeWKgoTb5jIgDA" predecessor="_ddtvQJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_72B54JhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ddtvQphXEeWKgoTb5jIgDA" entityName="start:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testIdleChannelThatRespondsInTime() at 4808" successor="_ddtvQ5hXEeWKgoTb5jIgDA" predecessor="_ddtvQZhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_743LcZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ddtvQ5hXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testIdleChannelThatRespondsInTime() at 4986" successor="_ddklUphXEeWKgoTb5jIgDA" predecessor="_ddtvQphXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_ddklUphXEeWKgoTb5jIgDA" predecessor="_ddtvQ5hXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_df9K8JhXEeWKgoTb5jIgDA" entityName="testStoppedChannelsAreStoppedBeingMonitored">
+    <scenarioBehaviour_UsageScenario id="_df9K85hXEeWKgoTb5jIgDA" entityName="testStoppedChannelsAreStoppedBeingMonitored">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_df9K8ZhXEeWKgoTb5jIgDA" successor="_dgGU4ZhXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dgGU4ZhXEeWKgoTb5jIgDA" entityName="setKeepAliveTimeout:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testStoppedChannelsAreStoppedBeingMonitored() at 5792" successor="_dgGU4phXEeWKgoTb5jIgDA" predecessor="_df9K8ZhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuIZhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_dYWuKphXEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dgGU4phXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testStoppedChannelsAreStoppedBeingMonitored() at 5878" successor="_dgGU45hXEeWKgoTb5jIgDA" predecessor="_dgGU4ZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dgGU45hXEeWKgoTb5jIgDA" entityName="setCheckInterval:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testStoppedChannelsAreStoppedBeingMonitored() at 5961" successor="_dgGU5JhXEeWKgoTb5jIgDA" predecessor="_dgGU4phXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_dYWuLZhXEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dgGU5JhXEeWKgoTb5jIgDA" entityName="addMonitoredChannel:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testStoppedChannelsAreStoppedBeingMonitored() at 5995" successor="_dgGU5ZhXEeWKgoTb5jIgDA" predecessor="_dgGU45hXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_72B54JhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dgGU5ZhXEeWKgoTb5jIgDA" entityName="start:  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testStoppedChannelsAreStoppedBeingMonitored() at 6008" successor="_dgGU55hXEeWKgoTb5jIgDA" predecessor="_dgGU5JhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_dYWuLphXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_743LcZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dgGU55hXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.transport.reliable.KeepAliveDaemonTest.java.KeepAliveDaemonTest.testStoppedChannelsAreStoppedBeingMonitored() at 6148" successor="_df9K8phXEeWKgoTb5jIgDA" predecessor="_dgGU5ZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_df9K8phXEeWKgoTb5jIgDA" predecessor="_dgGU55hXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

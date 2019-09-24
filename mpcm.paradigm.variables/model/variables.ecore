@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="variables" nsURI="mpcm.paradigm.variables" nsPrefix="mpcm.paradigm.variables">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="The parameter package allows to model data dependent performance characteristics of software systems. It is mainly used to specify performance dependencies on input and output parameters of single service calls. It can also be used to describe dependencies on the state of components by the use of component parameters. The latter describe stochastically a component state which does not change over time. &#xD;&#xA;&#xD;&#xA;Parameters are described by the use of variable usages which on the one side contain a performance abstraction of the variable's value and on the other side the name of the variable for refering to the variable. Characterisations available include Structure (information on the data's internal structure like &quot;sorted&quot; or &quot;unsorted&quot; for an array), Number of Elements (size of a collection), Value (the actuall variable value), Bytesize (the variable's memory footprint), or type (the type of the variable in polymorphic cases).&#xD;&#xA;&#xD;&#xA;Example for variable usages may be a.NUMBER_OF_ELEMENTS = 10 (array &quot;a&quot; contains 10 elements), tree.STRUCTURE = &quot;balanced&quot; (tree &quot;tree&quot; is a balanced tree), and so on."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableUsage">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Variable usages are used to characterise variables like input and output variables or component parameters. They contain the specification of the variable as VariableCharacterisation and also refer to the name of the characterised variable in its namedReference association. Note that it was an explicit design decision to refer to variable names instead of the actual variables (i.e., by refering to Parameter class). It eased the writing of transformations (DSolver as well as SimuCom) but put some complexity in the frontend for entering the variable usages."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableCharacterisation_VariableUsage"
+        ordered="false" upperBound="-1" eType="#//VariableCharacterisation" containment="true"
+        eOpposite="#//VariableCharacterisation/variableUsage_VariableCharacterisation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This association contains the information which abstract information on a specific variable is available. For example, whether we know something on the variable's value, its structure or memory footprint. There can be multiple characterisations of the same variable if more than one type of information is available."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namedReference__VariableUsage"
+        ordered="false" lowerBound="1" eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#//AbstractNamedReference"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableCharacterisation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Variable characterisations store performance critical meta-information on a variable. For example, if a variable's value is used in a long running loop, the value of the variable is performance critical. Or as an other example, for Q-Sort it is performancewise important to know how much elements are in a given array and whether the array is sorted or not. Variable characterisations contain a type which tells what kind of meta-information is stored (STRUCTURE, NUMBER_OF_ELEMENTS, ...) and a PCMRandomVariable for storing the value of the characterisation.&#xD;&#xA;&#xD;&#xA;For example, in &quot;a.NUMBER_OF_ELEMENTS=10&quot; the a is the name of the variable, NUMBER_OF_ELEMENTS is the characterisation type and &quot;10&quot; would be the specification (as PCMRandomVariable) of the characterisation's value."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" lowerBound="1"
+        eType="#//VariableCharacterisationType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The type specifies the kind of the variable characterisation. There are 5 types available: STRUCTURE, NUMBER_OF_ELEMENTS, VALUE, BYTESIZE, and TYPE."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specification_VariableCharacterisation"
+        ordered="false" lowerBound="1" eType="#//PCMRandomVariable" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The specification contains the value of a variable characterisation. It is a stoachastic expression which may also contain references to other variable characterisations (that is the reason why it is a PCMRandomVariable). "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableUsage_VariableCharacterisation"
+        ordered="false" eType="#//VariableUsage" eOpposite="#//VariableUsage/variableCharacterisation_VariableUsage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharacterisedVariable" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#//Variable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A characterised variable is a special variable which contains a performance abstraction of a data type. It can be transformed in a named reference and a variable characterisation. It has to end always with a variable characterisation type. Examples are &quot;a.NUMBER_OF_ELEMENTS&quot; or &quot;array.STRUCTURE&quot;."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characterisationType" ordered="false"
+        lowerBound="1" eType="#//VariableCharacterisationType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The type of the characterisation of the characterised variable. The type can be any of the varibale characterisation types, i.e., STRUCTURE, NUMBER_OF_ELEMENTS, TYPE, VALUE, or BYTESIZE."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VariableCharacterisationType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The variable characterisation types determine the set of available meta-informations on variables. Possible values are STRUCTURE, NUMBER_OF_ELEMENTS, VALUE, BYTESIZE, and TYPE."/>
+    </eAnnotations>
+    <eLiterals name="STRUCTURE">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The structure characterisation type is used to describe the structure of the data. With structure we refer to performance relevant properties of data like for example whether an array is sorted, a tree is balanced, a collection is indexed, and so on.... The allowed set of value of the structure characterisation has to be specified by the component developer for a particular component."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="NUMBER_OF_ELEMENTS" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The number of elements of a collection data type describe the amount of data objects contained in the collection."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="VALUE" value="2">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The value characterisation can be used to specify the actual value of a parameter. It is only available for parameters having a primitive type. The value characterisation should be used with care as it increased the complexity of the resulting analysis model significantly. It should be only used in performance-critical cases."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="BYTESIZE" value="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The bytesize characterisation specifies the memory footprint of a data object."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="TYPE" value="4">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The type characterisation specifies the actual data type of polymorphic data objects in cases where the actual type has an impact on performance. For example in a shape drawing application the actual shape of a geometric object has an impact on the performance as drawing a circle is much more time consuming than drawing a simple line."/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PCMRandomVariable" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#//RandomVariable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Random variables are used to describe user and component behaviour. They allow not only constant values (e.g., 3 loop iterations), but also probabilistic values (e.g., 2 loop iterations with a probability of 0.4 and 3 loop iterations with a probability of 0.6). They are well-suited for capturing uncertainty when modelling systems during early development stages. Examples where developers may use random variables are:&#xD;&#xA;- Characterisations of Input Parameters: Describes the QoS relevant characteristics of parameters of component services.&#xD;&#xA;- Inter-Arrival Time: Describes how much time passes between the arrival of two subsequent users.&#xD;&#xA;- Think Time: Describes how much time passes between the execution of a user scenario and the start of the next execution of this scenario.&#xD;&#xA;- Loop Iteration Count: Describes the number of repetitions of a loop.&#xD;&#xA;- Guarded Branch Transitions: Used to determine whether to conditionally execute a certain behaviour.&#xD;&#xA;&#xD;&#xA;PCMRandomVariable extends RandomVariable in a way, that the only type of variables available in the PCMRandomVariable are references to variable characterisations like a.NUMBER_OF_ELEMENTS. The corresponding editors ensure that the user can enter only valid expressions."/>
+    </eAnnotations>
+    <eOperations name="SpecificationMustNotBeNULL" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="not self.specification.oclIsUndefined() and self.specification &lt;> ''"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+</ecore:EPackage>

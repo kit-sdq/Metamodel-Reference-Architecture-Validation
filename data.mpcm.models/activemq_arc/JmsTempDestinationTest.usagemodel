@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_N9kC0JhREeWKgoTb5jIgDA" entityName="testTempQueueHoldsMessagesWithConsumers">
+    <scenarioBehaviour_UsageScenario id="_N9kC05hREeWKgoTb5jIgDA" entityName="testTempQueueHoldsMessagesWithConsumers">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_N9kC0ZhREeWKgoTb5jIgDA" successor="_OCVOEJhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_OCVOEJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTempDestinationTest.java.JmsTempDestinationTest.testTempQueueHoldsMessagesWithConsumers() at 1957" successor="_N9kC0phREeWKgoTb5jIgDA" predecessor="_N9kC0ZhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_N9kC0phREeWKgoTb5jIgDA" predecessor="_OCVOEJhREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_PcL88JhREeWKgoTb5jIgDA" entityName="testTempQueueHoldsMessagesWithoutConsumers">
+    <scenarioBehaviour_UsageScenario id="_PcL885hREeWKgoTb5jIgDA" entityName="testTempQueueHoldsMessagesWithoutConsumers">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_PcL88ZhREeWKgoTb5jIgDA" successor="_Pg9IMJhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Pg9IMJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTempDestinationTest.java.JmsTempDestinationTest.testTempQueueHoldsMessagesWithoutConsumers() at 3018" successor="_PcL88phREeWKgoTb5jIgDA" predecessor="_PcL88ZhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_PcL88phREeWKgoTb5jIgDA" predecessor="_Pg9IMJhREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_Q7jd8JhREeWKgoTb5jIgDA" entityName="testTmpQueueWorksUnderLoad">
+    <scenarioBehaviour_UsageScenario id="_Q7jd85hREeWKgoTb5jIgDA" entityName="testTmpQueueWorksUnderLoad">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Q7jd8ZhREeWKgoTb5jIgDA" successor="_RAUpMJhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_RAUpMJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTempDestinationTest.java.JmsTempDestinationTest.testTmpQueueWorksUnderLoad() at 4084" successor="_Q7jd8phREeWKgoTb5jIgDA" predecessor="_Q7jd8ZhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Q7jd8phREeWKgoTb5jIgDA" predecessor="_RAUpMJhREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_SH_b4JhREeWKgoTb5jIgDA" entityName="testPublishFailsForClosedConnection">
+    <scenarioBehaviour_UsageScenario id="_SH_b45hREeWKgoTb5jIgDA" entityName="testPublishFailsForClosedConnection">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_SH_b4ZhREeWKgoTb5jIgDA" successor="_SH_b5JhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_SH_b5JhREeWKgoTb5jIgDA" entityName="createConnection:  @position: org.activemq.JmsTempDestinationTest.java.JmsTempDestinationTest.testPublishFailsForClosedConnection() at 5153" successor="_SMwnIJhREeWKgoTb5jIgDA" predecessor="_SH_b4ZhREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_TcLZ4ZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_ZKckQZhMEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_SMwnIJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTempDestinationTest.java.JmsTempDestinationTest.testPublishFailsForClosedConnection() at 5246" successor="_SH_b4phREeWKgoTb5jIgDA" predecessor="_SH_b5JhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_SH_b4phREeWKgoTb5jIgDA" predecessor="_SMwnIJhREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_S9ybcJhREeWKgoTb5jIgDA" entityName="testPublishFailsForDestoryedTempDestination">
+    <scenarioBehaviour_UsageScenario id="_S9ybc5hREeWKgoTb5jIgDA" entityName="testPublishFailsForDestoryedTempDestination">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_S9ybcZhREeWKgoTb5jIgDA" successor="_S95JIJhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_S95JIJhREeWKgoTb5jIgDA" entityName="createConnection:  @position: org.activemq.JmsTempDestinationTest.java.JmsTempDestinationTest.testPublishFailsForDestoryedTempDestination() at 6611" successor="_TC2hoJhREeWKgoTb5jIgDA" predecessor="_S9ybcZhREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_TcLZ4ZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_ZKckQZhMEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_TC2hoJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTempDestinationTest.java.JmsTempDestinationTest.testPublishFailsForDestoryedTempDestination() at 6704" successor="_S9ybcphREeWKgoTb5jIgDA" predecessor="_S95JIJhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_S9ybcphREeWKgoTb5jIgDA" predecessor="_TC2hoJhREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_T0LQ4JhREeWKgoTb5jIgDA" entityName="testDeleteDestinationWithSubscribersFails">
+    <scenarioBehaviour_UsageScenario id="_T0LQ45hREeWKgoTb5jIgDA" entityName="testDeleteDestinationWithSubscribersFails">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_T0LQ4ZhREeWKgoTb5jIgDA" successor="_T0LQ5JhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_T0LQ5JhREeWKgoTb5jIgDA" entityName="createConnection:  @position: org.activemq.JmsTempDestinationTest.java.JmsTempDestinationTest.testDeleteDestinationWithSubscribersFails() at 8000" successor="_T48cIJhREeWKgoTb5jIgDA" predecessor="_T0LQ4ZhREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_TcLZ4ZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_ZKckQZhMEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_T48cIJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTempDestinationTest.java.JmsTempDestinationTest.testDeleteDestinationWithSubscribersFails() at 8085" successor="_T0LQ4phREeWKgoTb5jIgDA" predecessor="_T0LQ5JhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_T0LQ4phREeWKgoTb5jIgDA" predecessor="_T48cIJhREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

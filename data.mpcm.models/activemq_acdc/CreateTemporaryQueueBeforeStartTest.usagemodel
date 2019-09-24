@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_nzYAULLWEeWT3tCwcp23sg" entityName="testCreateTemporaryQueue">
+    <scenarioBehaviour_UsageScenario id="_nzYAU7LWEeWT3tCwcp23sg" entityName="testCreateTemporaryQueue">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_nzYAUbLWEeWT3tCwcp23sg" successor="_nzq7QLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_nzq7QLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.CreateTemporaryQueueBeforeStartTest.java.CreateTemporaryQueueBeforeStartTest.testCreateTemporaryQueue() at 1683" successor="_nzYAUrLWEeWT3tCwcp23sg" predecessor="_nzYAUbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_nzYAUrLWEeWT3tCwcp23sg" predecessor="_nzq7QLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_nz_EULLWEeWT3tCwcp23sg" entityName="testTryToReproduceNullPointerBug">
+    <scenarioBehaviour_UsageScenario id="_nz_EU7LWEeWT3tCwcp23sg" entityName="testTryToReproduceNullPointerBug">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_nz_EUbLWEeWT3tCwcp23sg" successor="_nz_EVLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_nz_EVLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.CreateTemporaryQueueBeforeStartTest.java.CreateTemporaryQueueBeforeStartTest.testTryToReproduceNullPointerBug() at 2014" successor="_nz_EVbLWEeWT3tCwcp23sg" predecessor="_nz_EUbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_nz_EVbLWEeWT3tCwcp23sg" entityName="createQueueConnection:  @position: org.activemq.usecases.CreateTemporaryQueueBeforeStartTest.java.CreateTemporaryQueueBeforeStartTest.testTryToReproduceNullPointerBug() at 2169" successor="_nz_rYLLWEeWT3tCwcp23sg" predecessor="_nz_EVLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZwWxgLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_aF-cMLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_nz_rYLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.CreateTemporaryQueueBeforeStartTest.java.CreateTemporaryQueueBeforeStartTest.testTryToReproduceNullPointerBug() at 2212" successor="_nz_EUrLWEeWT3tCwcp23sg" predecessor="_nz_EVbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_nz_EUrLWEeWT3tCwcp23sg" predecessor="_nz_rYLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_n0bwQLLWEeWT3tCwcp23sg" entityName="testTemporaryQueueConsumer">
+    <scenarioBehaviour_UsageScenario id="_n0bwQ7LWEeWT3tCwcp23sg" entityName="testTemporaryQueueConsumer">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_n0bwQbLWEeWT3tCwcp23sg" successor="_n0bwRLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n0bwRLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.CreateTemporaryQueueBeforeStartTest.java.CreateTemporaryQueueBeforeStartTest.testTemporaryQueueConsumer() at 2653" successor="_n1UhELLWEeWT3tCwcp23sg" predecessor="_n0bwQbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_n1UhELLWEeWT3tCwcp23sg" entityName="default loop count value" successor="_n0bwQrLWEeWT3tCwcp23sg" predecessor="_n0bwRLLWEeWT3tCwcp23sg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_n1UhEbLWEeWT3tCwcp23sg" entityName=" @position: org.activemq.usecases.CreateTemporaryQueueBeforeStartTest.java.CreateTemporaryQueueBeforeStartTest.testTemporaryQueueConsumer() from 2716 to 2754">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_n1UhErLWEeWT3tCwcp23sg" successor="_n1VIILLWEeWT3tCwcp23sg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n1VIILLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.CreateTemporaryQueueBeforeStartTest.java.CreateTemporaryQueueBeforeStartTest.testTemporaryQueueConsumer().Block at 3680" successor="_n1VIIbLWEeWT3tCwcp23sg" predecessor="_n1UhErLWEeWT3tCwcp23sg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_n1VIIbLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.CreateTemporaryQueueBeforeStartTest.java.CreateTemporaryQueueBeforeStartTest.testTemporaryQueueConsumer().Block at 3680" successor="_n1VII7LWEeWT3tCwcp23sg" predecessor="_n1VIILLWEeWT3tCwcp23sg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_n1VII7LWEeWT3tCwcp23sg" predecessor="_n1VIIbLWEeWT3tCwcp23sg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_n0bwQrLWEeWT3tCwcp23sg" predecessor="_n1UhELLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

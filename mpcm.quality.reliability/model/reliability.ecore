@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="reliability" nsURI="mpcm.quality.reliability" nsPrefix="mpcm.quality.reliability">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="This package contains reliability-relevant classes such as the definition of failure types."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="FailureOccurrenceDescription" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>&#xD;&#xA;    Abstract superclass that connects a failure type definition to an occurrence probability. Used to describe the failure&#xD;&#xA;    potential of certain points of failure within the control and data flow (i.e. Actions within&#xD;&#xA;    ResourceDemandingBehaviours).&#xD;&#xA;&lt;/p>"/>
+    </eAnnotations>
+    <eOperations name="EnsureValidFailureProbabilityRange" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="(self.failureProbability.oclAsType(Real) &lt;= 1.0) and (self.failureProbability.oclAsType(Real) >= 0.0)"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="failureProbability" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eSubpackages name="seff" nsURI="mpcm.quality.reliability.seff" nsPrefix="mpcm.quality.reliability.seff">
+    <eClassifiers xsi:type="ecore:EClass" name="InternalFailureOccurrenceDescription"
+        eSuperTypes="#//FailureOccurrenceDescription">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Special&amp;nbsp;case&amp;nbsp;of&amp;nbsp;a&amp;nbsp;FailureOccurenceDescription&amp;nbsp;specifying the software-induced failure potential of&#xD;&#xA;InternalActions."/>
+      </eAnnotations>
+      <eOperations name="NoResourceTimeoutFailureAllowedForInternalFailureOccurrenceDescription"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="not self.softwareInducedFailureType__InternalFailureOccurrenceDescription.oclIsTypeOf(ResourceTimeoutFailureType)"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="ResourceTimeoutFailures are software-induced failure types, but are not annotated to InternalActions (they are only meant&#xD;&#xA;for passive resource timeouts)."/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalAction__InternalFailureOccurrenceDescription"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//InternalAction"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="softwareInducedFailureType__InternalFailureOccurrenceDescription"
+          ordered="false" lowerBound="1" eType="#//failuretypes/SoftwareInducedFailureType"
+          eOpposite="#//failuretypes/SoftwareInducedFailureType/internalFailureOccurrenceDescriptions__SoftwareInducedFailureType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RecoveryAction" eSuperTypes="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractInternalControlFlowAction">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Recover block actions are a generic failure handling technique. A recovery block consists of a a primary algorithm and one&#xD;&#xA;or more alternatives that can be used in case of failure. If the primary algorithm fails, the next alternative is chosen.&#xD;&#xA;Here the alternatives also support failure types. Alternatives may specify which kind of failures they can handle."/>
+      </eAnnotations>
+      <eOperations name="PrimaryBehaviourOfRecoveryActionMustBeSet" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="self.primaryBehaviour__RecoveryAction &lt;> null"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="primaryBehaviour__RecoveryAction"
+          ordered="false" lowerBound="1" eType="#//seff/RecoveryActionBehaviour"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="recoveryActionBehaviours__RecoveryAction"
+          ordered="false" lowerBound="2" upperBound="-1" eType="#//seff/RecoveryActionBehaviour"
+          containment="true" eOpposite="#//seff/RecoveryActionBehaviour/recoveryAction__RecoveryActionBehaviour"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RecoveryActionBehaviour" eSuperTypes="#//seff/FailureHandlingEntity ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//ResourceDemandingBehaviour">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>&#xD;&#xA;    Recovery block alternative haviours represent alternatives of recovery blocks. They are resource demanding behaviours,&#xD;&#xA;    thus any behaviour can be defined as an alternative.&#xD;&#xA;&lt;/p>&#xD;&#xA;&lt;p>&#xD;&#xA;    The alternatives of a recovery block form a chain. They are failure handling entities, i.e.&amp;nbsp;they can handle&#xD;&#xA;    failures that occur in previous alternatives. If one alternative fails, the next alternative is executed that can&#xD;&#xA;    handle the failure type.&#xD;&#xA;&lt;/p>"/>
+      </eAnnotations>
+      <eOperations name="RecoveryActionBehaviourHasOnlyOnePredecessor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="not self.recoveryAction__RecoveryActionBehaviour.recoveryActionBehaviours__RecoveryAction->&#xD;&#xA;&#x9;exists(x,y:RecoveryActionBehaviour | x&lt;>y&#xD;&#xA;&#x9;&#x9;and x.failureHandlingAlternatives__RecoveryActionBehaviour->includes(self)&#xD;&#xA;&#x9;&#x9;and y.failureHandlingAlternatives__RecoveryActionBehaviour->includes(self))"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="RecoveryActionBehaviourIsNotSuccessorOfItself" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="not self.failureHandlingAlternatives__RecoveryActionBehaviour->includes(self)"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="SuccessorsOfRecoveryActionBehaviourHandleDisjointFailureTypes"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="not self.failureHandlingAlternatives__RecoveryActionBehaviour->&#xD;&#xA;&#x9;exists(x,y:RecoveryActionBehaviour | x&lt;>y and&#xD;&#xA;&#x9;x.failureTypes_FailureHandlingEntity->&#xD;&#xA;&#x9;&#x9;exists(f:mpcm::reliability::FailureType |&#xD;&#xA;&#x9;&#x9;y.failureTypes_FailureHandlingEntity->includes(f)))"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="failureHandlingAlternatives__RecoveryActionBehaviour"
+          ordered="false" upperBound="-1" eType="#//seff/RecoveryActionBehaviour"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="recoveryAction__RecoveryActionBehaviour"
+          ordered="false" lowerBound="1" eType="#//seff/RecoveryAction" eOpposite="#//seff/RecoveryAction/recoveryActionBehaviours__RecoveryAction"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FailureHandlingEntity" abstract="true"
+        eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>&#xD;&#xA;    Failure handling entities are any program constructs that can handle failures. Instances of failure handling entities&#xD;&#xA;    specify any number of failure types that can be handled.&#xD;&#xA;&lt;/p>"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="failureTypes_FailureHandlingEntity"
+          ordered="false" upperBound="-1" eType="#//failuretypes/FailureType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FailureHandlingExternalCallAction"
+        eSuperTypes="#//seff/FailureHandlingEntity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1"
+          eType="ecore:EClass ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ExternalCallAction"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AcquireActionTimeout">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1"
+          eType="ecore:EClass ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//AcquireAction"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeoutValue" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="&lt;p>&#xD;&#xA;    Specifies a timeout value, in case the AcquireAction has a timeout (see the documentation of the &quot;timeout&quot; attribute&#xD;&#xA;    for further information).&#xD;&#xA;&lt;/p>"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="repository" nsURI="mpcm.quality.reliability.repository" nsPrefix="mpcm.quality.reliability.repository">
+    <eClassifiers xsi:type="ecore:EClass" name="ReliabilityContainer">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This container can server as container for the repository as well as the seff content, as the repository contains the seffs"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="failureDeclarations"
+          upperBound="-1" eType="#//repository/FailureDeclaration" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="failureHandlingExternalCallActions"
+          upperBound="-1" eType="#//seff/FailureHandlingExternalCallAction" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalFailureOccurenceDescriptions"
+          upperBound="-1" eType="#//seff/InternalFailureOccurrenceDescription" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="acquireActionTimeout"
+          upperBound="-1" eType="#//seff/AcquireActionTimeout" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FailureDeclaration">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
+          eType="#//failuretypes/FailureType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1"
+          eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Signature"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="failuretypes" nsURI="mpcm.quality.reliability.failuretypes"
+      nsPrefix="mpcm.quality.reliability.failuretypes">
+    <eClassifiers xsi:type="ecore:EClass" name="FailureTypesRoot">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="failureTypes" upperBound="-1"
+          eType="#//failuretypes/FailureType" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FailureType" abstract="true" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>&#xD;&#xA;    Abstract super class that&amp;nbsp;provides a type definition for&amp;nbsp;any failure-on-demand occurrence during service&#xD;&#xA;    execution.&amp;nbsp;&#xD;&#xA;&lt;/p>"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NetworkInducedFailureType" eSuperTypes="#//failuretypes/FailureType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>&#xD;&#xA;    Type definition for a network-induced failure, i.e. a failure-on-demand occurrence&amp;nbsp;due to a communication link&#xD;&#xA;    fault. One standard type&amp;nbsp;is pre-defined according to the pre-defined CommunicationLinkResourceType: LAN.&#xD;&#xA;&lt;/p>"/>
+      </eAnnotations>
+      <eOperations name="NetworkInducedFailureTypeHasCommunicationLinkResourceType"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="self.communicationLinkResourceType__NetworkInducedFailureType &lt;> null"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="communicationLinkResourceType__NetworkInducedFailureType"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/CommunicationLinkResourceType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="HardwareInducedFailureType" eSuperTypes="#//failuretypes/FailureType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>&#xD;&#xA;    Type definition for a hardware-induced failure, i.e. a failure-on-demand occurrence&amp;nbsp;due to an unavailable&#xD;&#xA;    resource. Standard types&amp;nbsp;are pre-defined according to the pre-defined ProcessingResourceTypes: CPU, HDD, DELAY.&#xD;&#xA;    Further types may be defined by the modeller for a certain PCM instance, together with a custom ProcessingResourceType.&#xD;&#xA;&lt;/p>"/>
+      </eAnnotations>
+      <eOperations name="HardwareInducedFailureTypeHasProcessingResourceType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="( self.processingResourceType__HardwareInducedFailureType &lt;> null ) and ( not ( self.processingResourceType__HardwareInducedFailureType.oclIsTypeOf( mpcm::resourcetype::CommunicationLinkResourceType ) ) )"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="processingResourceType__HardwareInducedFailureType"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/ProcessingResourceType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SoftwareInducedFailureType" eSuperTypes="#//failuretypes/FailureType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>&#xD;&#xA;    Type definition for a software-induced failure, i.e. a failure-on-demand occurrence&amp;nbsp;due to a software fault. Type&#xD;&#xA;    definitions are created by modellers for a certain PCM instance to distinguish&amp;nbsp;different types of software&#xD;&#xA;    failure-on-demand occurrences. Possible examples are: &quot;EncryptionFailure&quot;, &quot;ProtocolFailure&quot;, &quot;WebServerFailure&quot;.&#xD;&#xA;&lt;/p>"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalFailureOccurrenceDescriptions__SoftwareInducedFailureType"
+          ordered="false" upperBound="-1" eType="#//seff/InternalFailureOccurrenceDescription"
+          eOpposite="#//seff/InternalFailureOccurrenceDescription/softwareInducedFailureType__InternalFailureOccurrenceDescription"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceTimeoutFailureType" eSuperTypes="#//failuretypes/SoftwareInducedFailureType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>&#xD;&#xA;    Type definition for a timeout failure-on-demand related to an AcquireAction for a certain PassiveResource (see the&#xD;&#xA;    documentation of the &quot;timeout&quot; attribute of the &quot;AcquireAction&quot; for further information).&#xD;&#xA;&lt;/p>"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="passiveResource__ResourceTimeoutFailureType"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.domain.repository/model/repository.ecore#//PassiveResource">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The passive resource&amp;nbsp;whose&amp;nbsp;acquiring timeout is represented by this failure type&amp;nbsp;(see the documentation of&#xD;&#xA;the &quot;timeout&quot; attribute of the &quot;AcquireAction&quot; for further information)."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="resources" nsURI="mpcm.quality.reliability.resourceenvironment"
+      nsPrefix="mpcm.quality.reliability.resourceenvironment">
+    <eClassifiers xsi:type="ecore:EClass" name="ReliabilityResourceRoot">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="processingResourceReliabilitySpecification"
+          upperBound="-1" eType="#//resources/ProcessingResourceReliabilitySpecification"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="communicationLinkResourceReliabilitySpecifications"
+          upperBound="-1" eType="#//resources/CommunicationLinkResourceReliabilitySpecification"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ProcessingResourceReliabilitySpecification">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="MTTR" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="0.0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The Mean Time To Repair (MTTR) of a physical resource is the expected timespan from breakdown of this physical resource to its repair or replacement."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="MTTF" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="0.0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The Mean Time To Failure (MTTF) of a physical resource is the expected timespan from the start of its usage until breakdown."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1"
+          eType="ecore:EClass ../../mpcm.domain.environment.resources/model/resources.ecore#//ProcessingResourceSpecification"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CommunicationLinkResourceReliabilitySpecification">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="failureProbability" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="0.0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Specifies the probability that a service call over this communication link fails. The failure could be due to message loss or overload, for example."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1"
+          eType="ecore:EClass ../../mpcm.domain.environment.resources/model/resources.ecore#//CommunicationLinkResourceSpecification"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="composition" nsURI="mpcm.paradigm.composition" nsPrefix="mpcm.paradigm.composition">
+  <eClassifiers xsi:type="ecore:EClass" name="Containable" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComposedStructure" abstract="true" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="TODO/FIXME: The distinction between ComposedStructure and ComposedProvidingRequiringStructure does not make sense at the moment, because the ComposedStructure already talks about inner provided / required delegation connectors, which only make sense if there are outer roles for interfaces -> ComposedProvidingRequiringStructure. IDEA: Move the delegation connector attributes to ComposedProvidingRequiringStructure. I'm not sure about the assembly connectors. SEE ALSO: ComposedProvidingRequiringStructure &#xD;&#xA;However, as AssemblyContexts of ComposedStructure always contain InterfaceProvidingRequiringEntities at the moment, the above might not help... -- Anne"/>
+    </eAnnotations>
+    <eOperations name="MultipleConnectorsConstraint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.connectors__ComposedStructure->select(conn | conn.oclIsTypeOf(mpcm::core::composition::ProvidedDelegationConnector)).oclAsType(mpcm::core::composition::ProvidedDelegationConnector)->forAll( c1, c2 | c1 &lt;> c2 implies c1.outerProvidedRole_ProvidedDelegationConnector &lt;> c2.outerProvidedRole_ProvidedDelegationConnector)&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="MultipleConnectorsConstraintForAssemblyConnectors" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.connectors__ComposedStructure->select(conn | conn.oclIsTypeOf(mpcm::core::composition::AssemblyConnector)).oclAsType(AssemblyConnector)->forAll( c1, c2 | ( (c1 &lt;> c2) and ( c1.requiringAssemblyContext_AssemblyConnector = c2.requiringAssemblyContext_AssemblyConnector ) ) implies c1.requiredRole_AssemblyConnector &lt;> c2.requiredRole_AssemblyConnector )&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
+        eType="#//Containable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComposedProvidingRequiringEntity" abstract="true"
+      eSuperTypes="#//ComposedStructure ../../mpcm.paradigm.repository/model/repository.ecore#//InterfaceProvidingRequiringEntity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The ComposedProvidingRequiringEntity combines the properties of an InterfaceProvidingRequiringEntity and a ComposedStructure. It is inherited by all classes that, on the one hand,  claim to implement the functionality specified in an interface as well as to request that functionality, and, on the other hand, are composed out of some inner entities. &#xD;&#xA;&#xD;&#xA;Valid ComposedProvidingRequiringEntities need to have their ProvidedRoles bound to ProvidedRoles of the contained entities.  &#xD;&#xA;&#xD;&#xA;Prominent examples are System, SubSystem, and CompositeComponents&#xD;&#xA;&#xD;&#xA;TODO/FIXME: The distinction between ComposedStructure and ComposedProvidingRequiringStructure does not make sense at the moment, because the ComposedStructure already talks about inner provided / required delegation connectors, which only make sense if there are outer roles for interfaces -> ComposedProvidingRequiringStructure. IDEA: Move the delegation connector attributes to ComposedProvidingRequiringStructure. I'm not sure about the assembly connectors. SEE ALSO: ComposedStructure &#xD;&#xA;However, as AssemblyContexts of ComposedStructure always contain InterfaceProvidingRequiringEntities at the moment, the above might not help... and we may just want to merge the meta classes. --Anne"/>
+    </eAnnotations>
+    <eOperations name="ProvidedRolesMustBeBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.providedRoles_InterfaceProvidingEntity->forAll(role|self.connectors__ComposedStructure->select(conn | conn.oclIsTypeOf(mpcm::core::composition::ProvidedDelegationConnector)).oclAsType(mpcm::core::composition::ProvidedDelegationConnector)->exists(connector|connector.outerProvidedRole_ProvidedDelegationConnector = role))&#xD;&#xA;&#xD;&#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This constraint ensures that all outer provided roles of a system have a provided delegation conector that binds them to something. It does not check whether the binding is correct (inner role not null and matching interfaces)."/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssemblyContext" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity #//Containable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An AssemblyContext uniquely identifies an assembly instance of an AssemblyContext."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentStructure__AssemblyContext"
+        ordered="false" lowerBound="1" eType="#//ComposedStructure"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="encapsulatedComponent__AssemblyContext"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//RepositoryComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configParameterUsages__AssemblyContext"
+        ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//VariableUsage"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connector" abstract="true" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity #//Containable">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>&#xD;&#xA;    Abstract superclass for all connectors.&#xD;&#xA;&lt;/p>&#xD;&#xA;&lt;p>&#xD;&#xA;    TODO:&amp;nbsp;We&amp;nbsp;might&amp;nbsp;want&amp;nbsp;to&amp;nbsp;add&amp;nbsp;a&amp;nbsp;constraint&amp;nbsp;that&amp;nbsp;both&amp;nbsp;sides&amp;nbsp;of&amp;nbsp;the&amp;nbsp;connector&amp;nbsp;must&amp;nbsp;be&amp;nbsp;not&amp;nbsp;null.&amp;nbsp;Then,&amp;nbsp;we&amp;nbsp;don't&amp;nbsp;have&amp;nbsp;to&amp;nbsp;specify&amp;nbsp;that&amp;nbsp;for&amp;nbsp;example&amp;nbsp;for&amp;nbsp;ComposedProvidingRequiringEntities&amp;nbsp;that&amp;nbsp;the&amp;nbsp;ProvidedDelegationConnector&amp;nbsp;actually&amp;nbsp;points&amp;nbsp;to&amp;nbsp;something&amp;nbsp;inner.&amp;nbsp;If&amp;nbsp;you&amp;nbsp;decide&amp;nbsp;not&amp;nbsp;to&amp;nbsp;add&amp;nbsp;a&amp;nbsp;constraint&amp;nbsp;here,&amp;nbsp;then&amp;nbsp;we&amp;nbsp;need&amp;nbsp;a&amp;nbsp;constraint&amp;nbsp;there&amp;nbsp;and&amp;nbsp;maybe&amp;nbsp;at&amp;nbsp;other&amp;nbsp;places&amp;nbsp;--&amp;nbsp;Anne&#xD;&#xA;&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentStructure__Connector"
+        ordered="false" lowerBound="1" eType="#//ComposedStructure"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DelegationConnector" abstract="true"
+      eSuperTypes="#//Connector">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This entity represents a delegation connector, i.e., connector used for connecting a provided/required role of a component woth provided/reqiured port of its subcomponent."/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_pljIkbLWEeWT3tCwcp23sg" entityName="testMessage">
+    <scenarioBehaviour_UsageScenario id="_pljIlLLWEeWT3tCwcp23sg" entityName="testMessage">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_pljIkrLWEeWT3tCwcp23sg" successor="_plvV0LLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_plvV0LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createMessage() at 7022" successor="_plyZILLWEeWT3tCwcp23sg" predecessor="_pljIkrLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_plyZILLWEeWT3tCwcp23sg" entityName="writePacket:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() at 8525" successor="_plzAMbLWEeWT3tCwcp23sg" predecessor="_plvV0LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_oA6tE7LWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_plzAMbLWEeWT3tCwcp23sg" entityName="readPacket:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() at 8594" successor="_plznQLLWEeWT3tCwcp23sg" predecessor="_plyZILLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_oBJ9oLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_plznQLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() from 8595 to 8617" successor="_pmpUwLLWEeWT3tCwcp23sg" predecessor="_plzAMbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmpUwLLWEeWT3tCwcp23sg" entityName="getBooleanProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 5416" successor="_pmpUwbLWEeWT3tCwcp23sg" predecessor="_plznQLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAl5cbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmpUwbLWEeWT3tCwcp23sg" entityName="getBooleanProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 5416" successor="_pmp70LLWEeWT3tCwcp23sg" predecessor="_pmpUwLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAl5cbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmp70LLWEeWT3tCwcp23sg" entityName="getByteProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 5529" successor="_pmp70bLWEeWT3tCwcp23sg" predecessor="_pmpUwbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3RbkbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmp70bLWEeWT3tCwcp23sg" entityName="getByteProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 5529" successor="_pmp70rLWEeWT3tCwcp23sg" predecessor="_pmp70LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3RbkbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmp70rLWEeWT3tCwcp23sg" entityName="getEntryBrokerName:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 5721" successor="_pmp707LWEeWT3tCwcp23sg" predecessor="_pmp70bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENWjF7LWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmp707LWEeWT3tCwcp23sg" entityName="getEntryBrokerName:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 5721" successor="_pmp71LLWEeWT3tCwcp23sg" predecessor="_pmp70rLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENWjF7LWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmp71LLWEeWT3tCwcp23sg" entityName="getJMSClientID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 5813" successor="_pmp71bLWEeWT3tCwcp23sg" predecessor="_pmp707LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAlSZLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmp71bLWEeWT3tCwcp23sg" entityName="getJMSClientID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 5813" successor="_pmp71rLWEeWT3tCwcp23sg" predecessor="_pmp71LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAlSZLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmp71rLWEeWT3tCwcp23sg" entityName="getJMSCorrelationID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 5920" successor="_pmp717LWEeWT3tCwcp23sg" predecessor="_pmp71bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENWjFbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmp717LWEeWT3tCwcp23sg" entityName="getJMSCorrelationID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 5920" successor="_pmp72LLWEeWT3tCwcp23sg" predecessor="_pmp71rLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENWjFbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmp72LLWEeWT3tCwcp23sg" entityName="getJMSDeliveryMode:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6024" successor="_pmp72bLWEeWT3tCwcp23sg" predecessor="_pmp717LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAsAEbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmp72bLWEeWT3tCwcp23sg" entityName="getJMSDeliveryMode:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6024" successor="_pmqi4LLWEeWT3tCwcp23sg" predecessor="_pmp72LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAsAEbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi4LLWEeWT3tCwcp23sg" entityName="getJMSDestination:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6125" successor="_pmqi4bLWEeWT3tCwcp23sg" predecessor="_pmp72bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EApj0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi4bLWEeWT3tCwcp23sg" entityName="getJMSDestination:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6125" successor="_pmqi4rLWEeWT3tCwcp23sg" predecessor="_pmqi4LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EApj0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi4rLWEeWT3tCwcp23sg" entityName="getJMSExpiration:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6223" successor="_pmqi47LWEeWT3tCwcp23sg" predecessor="_pmqi4bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAhA8LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi47LWEeWT3tCwcp23sg" entityName="getJMSExpiration:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6223" successor="_pmqi5LLWEeWT3tCwcp23sg" predecessor="_pmqi4rLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAhA8LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi5LLWEeWT3tCwcp23sg" entityName="getJMSMessageID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6318" successor="_pmqi5bLWEeWT3tCwcp23sg" predecessor="_pmqi47LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAmghLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi5bLWEeWT3tCwcp23sg" entityName="getJMSMessageID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6318" successor="_pmqi5rLWEeWT3tCwcp23sg" predecessor="_pmqi5LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAmghLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi5rLWEeWT3tCwcp23sg" entityName="getJMSPriority:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6410" successor="_pmqi57LWEeWT3tCwcp23sg" predecessor="_pmqi5bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENjXYrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi57LWEeWT3tCwcp23sg" entityName="getJMSPriority:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6410" successor="_pmqi6LLWEeWT3tCwcp23sg" predecessor="_pmqi5rLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENjXYrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi6LLWEeWT3tCwcp23sg" entityName="getJMSReplyTo:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6499" successor="_pmqi6bLWEeWT3tCwcp23sg" predecessor="_pmqi57LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENXKIrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi6bLWEeWT3tCwcp23sg" entityName="getJMSReplyTo:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6499" successor="_pmqi6rLWEeWT3tCwcp23sg" predecessor="_pmqi6LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENXKIrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi6rLWEeWT3tCwcp23sg" entityName="getJMSType:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6579" successor="_pmqi67LWEeWT3tCwcp23sg" predecessor="_pmqi6bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAl5cLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi67LWEeWT3tCwcp23sg" entityName="getJMSType:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6579" successor="_pmqi7LLWEeWT3tCwcp23sg" predecessor="_pmqi6rLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAl5cLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi7LLWEeWT3tCwcp23sg" entityName="getStringProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6793" successor="_pmqi7bLWEeWT3tCwcp23sg" predecessor="_pmqi67LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAlSZbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmqi7bLWEeWT3tCwcp23sg" entityName="getStringProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6793" successor="_pmrJ8LLWEeWT3tCwcp23sg" predecessor="_pmqi7LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAlSZbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmrJ8LLWEeWT3tCwcp23sg" entityName="getTransactionId:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6891" successor="_pmrJ8bLWEeWT3tCwcp23sg" predecessor="_pmqi7bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENXKIbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pmrJ8bLWEeWT3tCwcp23sg" entityName="getTransactionId:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMessage() at 6891" successor="_pljIk7LWEeWT3tCwcp23sg" predecessor="_pmrJ8LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENXKIbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_pljIk7LWEeWT3tCwcp23sg" predecessor="_pmrJ8bLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_pmrJ8rLWEeWT3tCwcp23sg" entityName="testTextMessage">
+    <scenarioBehaviour_UsageScenario id="_pmrJ9bLWEeWT3tCwcp23sg" entityName="testTextMessage">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_pmrJ87LWEeWT3tCwcp23sg" successor="_pm9d0LLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_pm9d0LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createTextMessage() at 2724" successor="_pm9d0bLWEeWT3tCwcp23sg" predecessor="_pmrJ87LWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm9d0bLWEeWT3tCwcp23sg" entityName="setText:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createTextMessage() at 2769" successor="_pm9d0rLWEeWT3tCwcp23sg" predecessor="_pm9d0LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E3EOcLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm9d0rLWEeWT3tCwcp23sg" entityName="setBooleanProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7220" successor="_pm9d07LWEeWT3tCwcp23sg" predecessor="_pm9d0bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4dPULLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm9d07LWEeWT3tCwcp23sg" entityName="setByteProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7274" successor="_pm9d1LLWEeWT3tCwcp23sg" predecessor="_pm9d0rLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4dPUrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm9d1LLWEeWT3tCwcp23sg" entityName="setConsumerIdentifer:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7325" successor="_pm9d1bLWEeWT3tCwcp23sg" predecessor="_pm9d07LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAgZ4LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm9d1bLWEeWT3tCwcp23sg" entityName="setEntryBrokerName:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7375" successor="_pm9d1rLWEeWT3tCwcp23sg" predecessor="_pm9d1LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAmggbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm9d1rLWEeWT3tCwcp23sg" entityName="setJMSClientID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7420" successor="_pm9d17LWEeWT3tCwcp23sg" predecessor="_pm9d1bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENEPMLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm9d17LWEeWT3tCwcp23sg" entityName="setJMSCorrelationID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7475" successor="_pm-E4LLWEeWT3tCwcp23sg" predecessor="_pm9d1rLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRDgrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_pm-E4LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7535" successor="_pm-E4bLWEeWT3tCwcp23sg" predecessor="_pm9d17LWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm-E4bLWEeWT3tCwcp23sg" entityName="setJMSExpiration:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7638" successor="_pm-E4rLWEeWT3tCwcp23sg" predecessor="_pm-E4LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRqkbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm-E4rLWEeWT3tCwcp23sg" entityName="setJMSMessageID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7685" successor="_pm-E47LWEeWT3tCwcp23sg" predecessor="_pm-E4bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENBL4LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm-E47LWEeWT3tCwcp23sg" entityName="setJMSPriority:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7719" successor="_pm-E5LLWEeWT3tCwcp23sg" predecessor="_pm-E4rLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRDgLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_pm-E5LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7781" successor="_pm-E5bLWEeWT3tCwcp23sg" predecessor="_pm-E47LWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm-E5bLWEeWT3tCwcp23sg" entityName="setJMSType:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7819" successor="_pm-E5rLWEeWT3tCwcp23sg" predecessor="_pm-E5LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRDg7LWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm-E5rLWEeWT3tCwcp23sg" entityName="setStringProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7877" successor="_pm-E57LWEeWT3tCwcp23sg" predecessor="_pm-E5bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4eddLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm-E57LWEeWT3tCwcp23sg" entityName="setTransactionId:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7921" successor="_pm-E6LLWEeWT3tCwcp23sg" predecessor="_pm-E5rLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENMLALLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pm-E6LLWEeWT3tCwcp23sg" entityName="setExternalMessageId:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7964" successor="_pnBIMLLWEeWT3tCwcp23sg" predecessor="_pm-E57LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENAk0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnBIMLLWEeWT3tCwcp23sg" entityName="writePacket:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() at 8525" successor="_pnBvQLLWEeWT3tCwcp23sg" predecessor="_pm-E6LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_oA6tE7LWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnBvQLLWEeWT3tCwcp23sg" entityName="readPacket:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() at 8594" successor="_pnBvQbLWEeWT3tCwcp23sg" predecessor="_pnBIMLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_oBJ9oLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_pnBvQbLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() from 8595 to 8617" successor="_pnUDILLWEeWT3tCwcp23sg" predecessor="_pnBvQLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnUDILLWEeWT3tCwcp23sg" entityName="getText:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertTextMessage() at 2577" successor="_pnUDIbLWEeWT3tCwcp23sg" predecessor="_pnBvQbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E3EOcrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnUDIbLWEeWT3tCwcp23sg" entityName="getText:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertTextMessage() at 2577" successor="_pmrJ9LLWEeWT3tCwcp23sg" predecessor="_pnUDILLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E3EOcrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_pmrJ9LLWEeWT3tCwcp23sg" predecessor="_pnUDIbLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_pnUqMLLWEeWT3tCwcp23sg" entityName="testObjectMessage">
+    <scenarioBehaviour_UsageScenario id="_pnUqM7LWEeWT3tCwcp23sg" entityName="testObjectMessage">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_pnUqMbLWEeWT3tCwcp23sg" successor="_pnpaULLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_pnpaULLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createObjectMessage() at 3226" successor="_pnpaUbLWEeWT3tCwcp23sg" predecessor="_pnUqMbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnpaUbLWEeWT3tCwcp23sg" entityName="setObject:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createObjectMessage() at 3273" successor="_pnpaUrLWEeWT3tCwcp23sg" predecessor="_pnpaULLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E9eYcLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnpaUrLWEeWT3tCwcp23sg" entityName="setBooleanProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7220" successor="_pnpaU7LWEeWT3tCwcp23sg" predecessor="_pnpaUbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4dPULLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnpaU7LWEeWT3tCwcp23sg" entityName="setByteProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7274" successor="_pnpaVLLWEeWT3tCwcp23sg" predecessor="_pnpaUrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4dPUrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnpaVLLWEeWT3tCwcp23sg" entityName="setConsumerIdentifer:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7325" successor="_pnpaVbLWEeWT3tCwcp23sg" predecessor="_pnpaU7LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAgZ4LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnpaVbLWEeWT3tCwcp23sg" entityName="setEntryBrokerName:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7375" successor="_pnpaVrLWEeWT3tCwcp23sg" predecessor="_pnpaVLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAmggbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnpaVrLWEeWT3tCwcp23sg" entityName="setJMSClientID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7420" successor="_pnpaV7LWEeWT3tCwcp23sg" predecessor="_pnpaVbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENEPMLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnpaV7LWEeWT3tCwcp23sg" entityName="setJMSCorrelationID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7475" successor="_pnqBYLLWEeWT3tCwcp23sg" predecessor="_pnpaVrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRDgrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_pnqBYLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7535" successor="_pnqBYbLWEeWT3tCwcp23sg" predecessor="_pnpaV7LWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnqBYbLWEeWT3tCwcp23sg" entityName="setJMSExpiration:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7638" successor="_pnqBYrLWEeWT3tCwcp23sg" predecessor="_pnqBYLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRqkbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnqBYrLWEeWT3tCwcp23sg" entityName="setJMSMessageID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7685" successor="_pnqBY7LWEeWT3tCwcp23sg" predecessor="_pnqBYbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENBL4LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnqBY7LWEeWT3tCwcp23sg" entityName="setJMSPriority:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7719" successor="_pnqBZLLWEeWT3tCwcp23sg" predecessor="_pnqBYrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRDgLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_pnqBZLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7781" successor="_pnqBZbLWEeWT3tCwcp23sg" predecessor="_pnqBY7LWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnqBZbLWEeWT3tCwcp23sg" entityName="setJMSType:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7819" successor="_pnqBZrLWEeWT3tCwcp23sg" predecessor="_pnqBZLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRDg7LWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnqBZrLWEeWT3tCwcp23sg" entityName="setStringProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7877" successor="_pnqBZ7LWEeWT3tCwcp23sg" predecessor="_pnqBZbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4eddLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnqBZ7LWEeWT3tCwcp23sg" entityName="setTransactionId:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7921" successor="_pnqBaLLWEeWT3tCwcp23sg" predecessor="_pnqBZrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENMLALLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pnqBaLLWEeWT3tCwcp23sg" entityName="setExternalMessageId:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7964" successor="_pntEsLLWEeWT3tCwcp23sg" predecessor="_pnqBZ7LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENAk0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pntEsLLWEeWT3tCwcp23sg" entityName="writePacket:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() at 8525" successor="_pntrwbLWEeWT3tCwcp23sg" predecessor="_pnqBaLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_oA6tE7LWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pntrwbLWEeWT3tCwcp23sg" entityName="readPacket:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() at 8594" successor="_pnuS0LLWEeWT3tCwcp23sg" predecessor="_pntEsLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_oBJ9oLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_pnuS0LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() from 8595 to 8617" successor="_pn88ULLWEeWT3tCwcp23sg" predecessor="_pntrwbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pn88ULLWEeWT3tCwcp23sg" entityName="getObject:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertObjectMessage() at 3071" successor="_pn9jYLLWEeWT3tCwcp23sg" predecessor="_pnuS0LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E9eYcrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pn9jYLLWEeWT3tCwcp23sg" entityName="getObject:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertObjectMessage() at 3071" successor="_pnUqMrLWEeWT3tCwcp23sg" predecessor="_pn88ULLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E9eYcrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_pnUqMrLWEeWT3tCwcp23sg" predecessor="_pn9jYLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_pn9jYbLWEeWT3tCwcp23sg" entityName="testMapMessage">
+    <scenarioBehaviour_UsageScenario id="_pn9jZLLWEeWT3tCwcp23sg" entityName="testMapMessage">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_pn9jYrLWEeWT3tCwcp23sg" successor="_poJwoLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_poJwoLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createMapMessage() at 4626" successor="_poJwobLWEeWT3tCwcp23sg" predecessor="_pn9jYrLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poJwobLWEeWT3tCwcp23sg" entityName="setBooleanProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createMapMessage() at 4683" successor="_poJworLWEeWT3tCwcp23sg" predecessor="_poJwoLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4dPULLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poJworLWEeWT3tCwcp23sg" entityName="setByteProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createMapMessage() at 4742" successor="_poJwo7LWEeWT3tCwcp23sg" predecessor="_poJwobLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4dPUrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poJwo7LWEeWT3tCwcp23sg" entityName="setDoubleProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createMapMessage() at 4803" successor="_poJwpLLWEeWT3tCwcp23sg" predecessor="_poJworLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4oOc7LWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poJwpLLWEeWT3tCwcp23sg" entityName="setFloatProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createMapMessage() at 4872" successor="_poKXsLLWEeWT3tCwcp23sg" predecessor="_poJwo7LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4o1gbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poKXsLLWEeWT3tCwcp23sg" entityName="setIntProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createMapMessage() at 4927" successor="_poKXsbLWEeWT3tCwcp23sg" predecessor="_poJwpLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4pckbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poKXsbLWEeWT3tCwcp23sg" entityName="setLongProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createMapMessage() at 4988" successor="_poKXsrLWEeWT3tCwcp23sg" predecessor="_poKXsLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4qDobLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poKXsrLWEeWT3tCwcp23sg" entityName="setShortProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createMapMessage() at 5052" successor="_poKXs7LWEeWT3tCwcp23sg" predecessor="_poKXsbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4rRwLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poKXs7LWEeWT3tCwcp23sg" entityName="setStringProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.createMapMessage() at 5125" successor="_poKXtLLWEeWT3tCwcp23sg" predecessor="_poKXsrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4eddLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poKXtLLWEeWT3tCwcp23sg" entityName="setBooleanProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7220" successor="_poKXtbLWEeWT3tCwcp23sg" predecessor="_poKXs7LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4dPULLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poKXtbLWEeWT3tCwcp23sg" entityName="setByteProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7274" successor="_poKXtrLWEeWT3tCwcp23sg" predecessor="_poKXtLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4dPUrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poKXtrLWEeWT3tCwcp23sg" entityName="setConsumerIdentifer:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7325" successor="_poK-wLLWEeWT3tCwcp23sg" predecessor="_poKXtbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAgZ4LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poK-wLLWEeWT3tCwcp23sg" entityName="setEntryBrokerName:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7375" successor="_poK-wbLWEeWT3tCwcp23sg" predecessor="_poKXtrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAmggbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poK-wbLWEeWT3tCwcp23sg" entityName="setJMSClientID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7420" successor="_poK-wrLWEeWT3tCwcp23sg" predecessor="_poK-wLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENEPMLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poK-wrLWEeWT3tCwcp23sg" entityName="setJMSCorrelationID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7475" successor="_poK-w7LWEeWT3tCwcp23sg" predecessor="_poK-wbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRDgrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_poK-w7LWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7535" successor="_poK-xLLWEeWT3tCwcp23sg" predecessor="_poK-wrLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poK-xLLWEeWT3tCwcp23sg" entityName="setJMSExpiration:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7638" successor="_poK-xbLWEeWT3tCwcp23sg" predecessor="_poK-w7LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRqkbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poK-xbLWEeWT3tCwcp23sg" entityName="setJMSMessageID:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7685" successor="_poK-xrLWEeWT3tCwcp23sg" predecessor="_poK-xLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENBL4LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poK-xrLWEeWT3tCwcp23sg" entityName="setJMSPriority:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7719" successor="_poK-x7LWEeWT3tCwcp23sg" predecessor="_poK-xbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRDgLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_poK-x7LWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7781" successor="_poK-yLLWEeWT3tCwcp23sg" predecessor="_poK-xrLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poK-yLLWEeWT3tCwcp23sg" entityName="setJMSType:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7819" successor="_poK-ybLWEeWT3tCwcp23sg" predecessor="_poK-x7LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENRDg7LWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poK-ybLWEeWT3tCwcp23sg" entityName="setStringProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7877" successor="_poK-yrLWEeWT3tCwcp23sg" predecessor="_poK-yLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_d4eddLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poK-yrLWEeWT3tCwcp23sg" entityName="setTransactionId:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7921" successor="_poLl0LLWEeWT3tCwcp23sg" predecessor="_poK-ybLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENMLALLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poLl0LLWEeWT3tCwcp23sg" entityName="setExternalMessageId:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.configureMessage() at 7964" successor="_poOpILLWEeWT3tCwcp23sg" predecessor="_poK-yrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ENAk0LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poOpILLWEeWT3tCwcp23sg" entityName="writePacket:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() at 8525" successor="_poPQMLLWEeWT3tCwcp23sg" predecessor="_poLl0LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_oA6tE7LWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poPQMLLWEeWT3tCwcp23sg" entityName="readPacket:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() at 8594" successor="_poPQMbLWEeWT3tCwcp23sg" predecessor="_poOpILLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_oBJ9oLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_poPQMbLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.writeThenReadPacket() from 8595 to 8617" successor="_poxbsLLWEeWT3tCwcp23sg" predecessor="_poPQMLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poxbsLLWEeWT3tCwcp23sg" entityName="getBooleanProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 3618" successor="_poxbsbLWEeWT3tCwcp23sg" predecessor="_poPQMbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAl5cbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poxbsbLWEeWT3tCwcp23sg" entityName="getBooleanProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 3618" successor="_poxbsrLWEeWT3tCwcp23sg" predecessor="_poxbsLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAl5cbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poxbsrLWEeWT3tCwcp23sg" entityName="getByteProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 3738" successor="_poxbs7LWEeWT3tCwcp23sg" predecessor="_poxbsbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3RbkbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poxbs7LWEeWT3tCwcp23sg" entityName="getByteProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 3738" successor="_poyCwLLWEeWT3tCwcp23sg" predecessor="_poxbsrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3RbkbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyCwLLWEeWT3tCwcp23sg" entityName="getDoubleProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 3868" successor="_poyCwbLWEeWT3tCwcp23sg" predecessor="_poxbs7LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k4HJELLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyCwbLWEeWT3tCwcp23sg" entityName="getDoubleProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 3868" successor="_poyCwrLWEeWT3tCwcp23sg" predecessor="_poyCwLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k4HJELLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyCwrLWEeWT3tCwcp23sg" entityName="getFloatProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 3993" successor="_poyCw7LWEeWT3tCwcp23sg" predecessor="_poyCwbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3kWgbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyCw7LWEeWT3tCwcp23sg" entityName="getFloatProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 3993" successor="_poyCxLLWEeWT3tCwcp23sg" predecessor="_poyCwrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3kWgbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyCxLLWEeWT3tCwcp23sg" entityName="getIntProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 4108" successor="_poyCxbLWEeWT3tCwcp23sg" predecessor="_poyCw7LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3algbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyCxbLWEeWT3tCwcp23sg" entityName="getIntProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 4108" successor="_poyCxrLWEeWT3tCwcp23sg" predecessor="_poyCxLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3algbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyCxrLWEeWT3tCwcp23sg" entityName="getLongProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 4228" successor="_poyp0LLWEeWT3tCwcp23sg" predecessor="_poyCxbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3feAbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyp0LLWEeWT3tCwcp23sg" entityName="getLongProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 4228" successor="_poyp0bLWEeWT3tCwcp23sg" predecessor="_poyCxrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3feAbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyp0bLWEeWT3tCwcp23sg" entityName="getShortProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 4353" successor="_poyp0rLWEeWT3tCwcp23sg" predecessor="_poyp0LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3WUELLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyp0rLWEeWT3tCwcp23sg" entityName="getShortProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 4353" successor="_poyp07LWEeWT3tCwcp23sg" predecessor="_poyp0bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_k3WUELLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyp07LWEeWT3tCwcp23sg" entityName="getStringProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 4483" successor="_poyp1LLWEeWT3tCwcp23sg" predecessor="_poyp0rLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAlSZbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_poyp1LLWEeWT3tCwcp23sg" entityName="getStringProperty:  @position: org.activemq.test.WireFormatTestSupport.java.WireFormatTestSupport.assertMapMessage() at 4483" successor="_pn9jY7LWEeWT3tCwcp23sg" predecessor="_poyp07LWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EAlSZbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_pn9jY7LWEeWT3tCwcp23sg" predecessor="_poyp1LLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

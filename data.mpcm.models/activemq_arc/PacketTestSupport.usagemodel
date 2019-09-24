@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_JL4VIphUEeWKgoTb5jIgDA" entityName="testWireFormat">
+    <scenarioBehaviour_UsageScenario id="_JL4VJZhUEeWKgoTb5jIgDA" entityName="testWireFormat">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_JL4VI5hUEeWKgoTb5jIgDA" successor="_JL4VJ5hUEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JL4VJ5hUEeWKgoTb5jIgDA" entityName="getPacketType:  @position: org.activemq.message.PacketTestSupport.java.PacketTestSupport.testWireFormat() at 1125" successor="_JL4VKZhUEeWKgoTb5jIgDA" predecessor="_JL4VI5hUEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SLaVl5hMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_81Ne8ZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JL4VKZhUEeWKgoTb5jIgDA" entityName="writePacket:  @position: org.activemq.message.PacketTestSupport.java.PacketTestSupport.testWireFormat() at 1308" successor="_JMCGIphUEeWKgoTb5jIgDA" predecessor="_JL4VJ5hUEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_Y9ZU05hOEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JMCGIphUEeWKgoTb5jIgDA" entityName="readPacket:  @position: org.activemq.message.PacketTestSupport.java.PacketTestSupport.testWireFormat() at 1620" successor="_JL4VJJhUEeWKgoTb5jIgDA" predecessor="_JL4VKZhUEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_JMCGI5hUEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_JL4VJJhUEeWKgoTb5jIgDA" predecessor="_JMCGIphUEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_JMCGJZhUEeWKgoTb5jIgDA" entityName="testToFromBytes">
+    <scenarioBehaviour_UsageScenario id="_JMCGKJhUEeWKgoTb5jIgDA" entityName="testToFromBytes">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_JMCGJphUEeWKgoTb5jIgDA" successor="_JMCGKphUEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JMCGKphUEeWKgoTb5jIgDA" entityName="toBytes:  @position: org.activemq.message.PacketTestSupport.java.PacketTestSupport.testToFromBytes() at 2166" successor="_JMCGLJhUEeWKgoTb5jIgDA" predecessor="_JMCGJphUEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_91vH0ZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JMCGLJhUEeWKgoTb5jIgDA" entityName="fromBytes:  @position: org.activemq.message.PacketTestSupport.java.PacketTestSupport.testToFromBytes() at 2293" successor="_JMCGJ5hUEeWKgoTb5jIgDA" predecessor="_JMCGKphUEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_91vH05hJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_JMCGJ5hUEeWKgoTb5jIgDA" predecessor="_JMCGLJhUEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_JMCGLZhUEeWKgoTb5jIgDA" entityName="testReadAndWriteDataInOut">
+    <scenarioBehaviour_UsageScenario id="_JMCGMJhUEeWKgoTb5jIgDA" entityName="testReadAndWriteDataInOut">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_JMCGLphUEeWKgoTb5jIgDA" successor="_JMCGMphUEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JMCGMphUEeWKgoTb5jIgDA" entityName="writePacket:  @position: org.activemq.message.PacketTestSupport.java.PacketTestSupport.testReadAndWriteDataInOut() at 2627" successor="_JMLQEphUEeWKgoTb5jIgDA" predecessor="_JMCGLphUEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_Y9ZU05hOEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JMLQEphUEeWKgoTb5jIgDA" entityName="readPacket:  @position: org.activemq.message.PacketTestSupport.java.PacketTestSupport.testReadAndWriteDataInOut() at 2900" successor="_JMCGL5hUEeWKgoTb5jIgDA" predecessor="_JMCGMphUEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_JMLQE5hUEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_JMCGL5hUEeWKgoTb5jIgDA" predecessor="_JMLQEphUEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_JMLQFJhUEeWKgoTb5jIgDA" entityName="testReadAndWriteDataInOutLoop">
+    <scenarioBehaviour_UsageScenario id="_JMLQF5hUEeWKgoTb5jIgDA" entityName="testReadAndWriteDataInOutLoop">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_JMLQFZhUEeWKgoTb5jIgDA" successor="_JMLQGZhUEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_JMLQGZhUEeWKgoTb5jIgDA" entityName="default loop count value" successor="_JMLQH5hUEeWKgoTb5jIgDA" predecessor="_JMLQFZhUEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_JMLQGphUEeWKgoTb5jIgDA" entityName=" @position: org.activemq.message.PacketTestSupport.java.PacketTestSupport.testReadAndWriteDataInOutLoop() from 3195 to 3241">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_JMLQG5hUEeWKgoTb5jIgDA" successor="_JMLQHJhUEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JMLQHJhUEeWKgoTb5jIgDA" entityName="writePacket:  @position: org.activemq.message.PacketTestSupport.java.PacketTestSupport.testReadAndWriteDataInOutLoop().Block at 3292" successor="_JMLQHZhUEeWKgoTb5jIgDA" predecessor="_JMLQG5hUEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_Y9ZU05hOEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_JMLQHZhUEeWKgoTb5jIgDA" predecessor="_JMLQHJhUEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_JMLQH5hUEeWKgoTb5jIgDA" entityName="default loop count value" successor="_JMLQFphUEeWKgoTb5jIgDA" predecessor="_JMLQGZhUEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_JMLQIJhUEeWKgoTb5jIgDA" entityName=" @position: org.activemq.message.PacketTestSupport.java.PacketTestSupport.testReadAndWriteDataInOutLoop() from 3402 to 3447">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_JMLQIZhUEeWKgoTb5jIgDA" successor="_JMLQIphUEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_JMLQIphUEeWKgoTb5jIgDA" entityName="readPacket:  @position: org.activemq.message.PacketTestSupport.java.PacketTestSupport.testReadAndWriteDataInOutLoop().Block at 3503" successor="_JMLQI5hUEeWKgoTb5jIgDA" predecessor="_JMLQIZhUEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_JMLQE5hUEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_JMLQI5hUEeWKgoTb5jIgDA" predecessor="_JMLQIphUEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_JMLQFphUEeWKgoTb5jIgDA" predecessor="_JMLQH5hUEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

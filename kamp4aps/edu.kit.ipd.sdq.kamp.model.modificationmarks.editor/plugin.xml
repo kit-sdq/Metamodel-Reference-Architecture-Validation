@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Modificationmarks -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.ipd.sdq.kamp.model.modificationmarks.presentation.ModificationmarksModelWizardID"
+            name="%_UI_ModificationmarksModelWizard_label"
+            class="edu.kit.ipd.sdq.kamp.model.modificationmarks.presentation.ModificationmarksModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ModificationmarksModelFile.gif">
+         <description>%_UI_ModificationmarksModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Modificationmarks -->
+      <editor
+            id="edu.kit.ipd.sdq.kamp.model.modificationmarks.presentation.ModificationmarksEditorID"
+            name="%_UI_ModificationmarksEditor_label"
+            icon="icons/full/obj16/ModificationmarksModelFile.gif"
+            extensions="modificationmarks"
+            class="edu.kit.ipd.sdq.kamp.model.modificationmarks.presentation.ModificationmarksEditor"
+            contributorClass="edu.kit.ipd.sdq.kamp.model.modificationmarks.presentation.ModificationmarksActionBarContributor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModificationID"
+            objectClass="edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification">
+         <action
+               class="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.UserDecisionNoDecisionAction"
+               id="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.UserDecisionNoDecisionActionID"
+               label="No decision"
+               menubarPath="edit"
+               style="push">
+         </action>
+         <action
+               class="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.UserDecisionConfirmAction"
+               id="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.UserDecisionConfirmActionID"
+               label="Confirm"
+               menubarPath="edit"
+               style="push">
+         </action>
+         <action
+               class="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.UserDecisionExcludeAction"
+               id="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.UserDecisionExcludeActionID"
+               label="Exclude"
+               menubarPath="edit"
+               style="push">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModificationRepositoryID"
+            objectClass="edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModificationRepository">
+         <action
+               class="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.UserDecisionApplyAction"
+               icon="../edu.kit.ipd.sdq.kamp/icons/run.png"
+               id="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.UserDecisionApplyActionID"
+               label="Step 4: Consider user decisions"
+               menubarPath="edit">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

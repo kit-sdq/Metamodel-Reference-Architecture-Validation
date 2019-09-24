@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_27-1442BEeWUKKvQPqVU9Q" entityName="testRegularMode">
+    <scenarioBehaviour_UsageScenario id="_27-15o2BEeWUKKvQPqVU9Q" entityName="testRegularMode">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_27-15I2BEeWUKKvQPqVU9Q" successor="_27-1542BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_27-1542BEeWUKKvQPqVU9Q" entityName="createAllDirectories:  @position: org.apache.cassandra.SchemaLoader.java.SchemaLoader.mkdirs() at 20824" successor="_28Im4I2BEeWUKKvQPqVU9Q" predecessor="_27-15I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_i4GQ-I2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_r8TPhY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_28Im4I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testRegularMode() at 2381" successor="_28Im4Y2BEeWUKKvQPqVU9Q" predecessor="_27-1542BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_28Im4Y2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_27-15Y2BEeWUKKvQPqVU9Q" predecessor="_28Im4I2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_28Im4o2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testRegularMode() from 2382 to 2454">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_28Im442BEeWUKKvQPqVU9Q" successor="_28Im5Y2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_28Im5Y2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testRegularMode().Block at 2571" successor="_28Im5o2BEeWUKKvQPqVU9Q" predecessor="_28Im442BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_28Im5o2BEeWUKKvQPqVU9Q" predecessor="_28Im5Y2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_27-15Y2BEeWUKKvQPqVU9Q" predecessor="_28Im4Y2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_28Rw0I2BEeWUKKvQPqVU9Q" entityName="testGetAllRangesEmpty">
+    <scenarioBehaviour_UsageScenario id="_28Rw042BEeWUKKvQPqVU9Q" entityName="testGetAllRangesEmpty">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_28Rw0Y2BEeWUKKvQPqVU9Q" successor="_28Rw1I2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_28Rw1I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testGetAllRangesEmpty() at 3052" successor="_28Rw0o2BEeWUKKvQPqVU9Q" predecessor="_28Rw0Y2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_28Rw0o2BEeWUKKvQPqVU9Q" predecessor="_28Rw1I2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_2_HCYI2BEeWUKKvQPqVU9Q" entityName="testSnapshot">
+    <scenarioBehaviour_UsageScenario id="_2_HCY42BEeWUKKvQPqVU9Q" entityName="testSnapshot">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_2_HCYY2BEeWUKKvQPqVU9Q" successor="_2_QzYI2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_2_QzYI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testSnapshot() at 3409" successor="_2_HCYo2BEeWUKKvQPqVU9Q" predecessor="_2_HCYY2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_2_HCYo2BEeWUKKvQPqVU9Q" predecessor="_2_QzYI2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_2_QzYY2BEeWUKKvQPqVU9Q" entityName="testColumnFamilySnapshot">
+    <scenarioBehaviour_UsageScenario id="_2_QzZI2BEeWUKKvQPqVU9Q" entityName="testColumnFamilySnapshot">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_2_QzYo2BEeWUKKvQPqVU9Q" successor="_2_QzZY2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_2_QzZY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testColumnFamilySnapshot() at 3743" successor="_2_QzY42BEeWUKKvQPqVU9Q" predecessor="_2_QzYo2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_2_QzY42BEeWUKKvQPqVU9Q" predecessor="_2_QzZY2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_2_QzZo2BEeWUKKvQPqVU9Q" entityName="testPrimaryRangesWithNetworkTopologyStrategy">
+    <scenarioBehaviour_UsageScenario id="_2_QzaY2BEeWUKKvQPqVU9Q" entityName="testPrimaryRangesWithNetworkTopologyStrategy">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_2_QzZ42BEeWUKKvQPqVU9Q" successor="_2_akYI2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_2_akYI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 3923" successor="_2_akYY2BEeWUKKvQPqVU9Q" predecessor="_2_QzZ42BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_2_akYY2BEeWUKKvQPqVU9Q" entityName="clearUnsafe:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 3955" successor="_2_akYo2BEeWUKKvQPqVU9Q" predecessor="_2_akYI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eIj_ko2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_2_akYo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4064" successor="_2_akY42BEeWUKKvQPqVU9Q" predecessor="_2_akYY2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_2_akY42BEeWUKKvQPqVU9Q" entityName="updateNormalToken:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4064" successor="_2_akZI2BEeWUKKvQPqVU9Q" predecessor="_2_akYo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAqY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_2_akZI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4158" successor="_2_akZY2BEeWUKKvQPqVU9Q" predecessor="_2_akY42BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_2_akZY2BEeWUKKvQPqVU9Q" entityName="updateNormalToken:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4158" successor="_2_akZo2BEeWUKKvQPqVU9Q" predecessor="_2_akZI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAqY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_2_akZo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4267" successor="_2_akZ42BEeWUKKvQPqVU9Q" predecessor="_2_akZY2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_2_akZ42BEeWUKKvQPqVU9Q" entityName="updateNormalToken:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4267" successor="_2_juUI2BEeWUKKvQPqVU9Q" predecessor="_2_akZo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAqY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_2_juUI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4361" successor="_2_juUY2BEeWUKKvQPqVU9Q" predecessor="_2_akZ42BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_2_juUY2BEeWUKKvQPqVU9Q" entityName="updateNormalToken:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4361" successor="_2_juVI2BEeWUKKvQPqVU9Q" predecessor="_2_juUI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAqY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_2_juVI2BEeWUKKvQPqVU9Q" entityName="clear:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4553" successor="_2_juVo2BEeWUKKvQPqVU9Q" predecessor="_2_juUY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2_juVY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_2_juVo2BEeWUKKvQPqVU9Q" entityName="newKeyspace:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4665" successor="_2_juWI2BEeWUKKvQPqVU9Q" predecessor="_2_juVI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2_juV42BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_2_juWI2BEeWUKKvQPqVU9Q" entityName="setKeyspaceDefinition:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4718" successor="_2_tfUI2BEeWUKKvQPqVU9Q" predecessor="_2_juVo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_7JDGg41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_2_tfUI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategy() at 4868" successor="_2_QzaI2BEeWUKKvQPqVU9Q" predecessor="_2_juWI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_2_QzaI2BEeWUKKvQPqVU9Q" predecessor="_2_tfUI2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_3ATVMY2BEeWUKKvQPqVU9Q" entityName="testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly">
+    <scenarioBehaviour_UsageScenario id="_3ATVNI2BEeWUKKvQPqVU9Q" entityName="testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_3ATVMo2BEeWUKKvQPqVU9Q" successor="_3ATVNY2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3ATVNY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6004" successor="_3AdGMI2BEeWUKKvQPqVU9Q" predecessor="_3ATVMo2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3AdGMI2BEeWUKKvQPqVU9Q" entityName="clearUnsafe:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6036" successor="_3AdGMY2BEeWUKKvQPqVU9Q" predecessor="_3ATVNY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eIj_ko2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3AdGMY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6145" successor="_3AdGMo2BEeWUKKvQPqVU9Q" predecessor="_3AdGMI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3AdGMo2BEeWUKKvQPqVU9Q" entityName="updateNormalToken:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6145" successor="_3AdGM42BEeWUKKvQPqVU9Q" predecessor="_3AdGMY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAqY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3AdGM42BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6239" successor="_3AdGNI2BEeWUKKvQPqVU9Q" predecessor="_3AdGMo2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3AdGNI2BEeWUKKvQPqVU9Q" entityName="updateNormalToken:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6239" successor="_3AdGNY2BEeWUKKvQPqVU9Q" predecessor="_3AdGM42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAqY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3AdGNY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6348" successor="_3AdGNo2BEeWUKKvQPqVU9Q" predecessor="_3AdGNI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3AdGNo2BEeWUKKvQPqVU9Q" entityName="updateNormalToken:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6348" successor="_3AdGN42BEeWUKKvQPqVU9Q" predecessor="_3AdGNY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAqY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3AdGN42BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6442" successor="_3AdGOI2BEeWUKKvQPqVU9Q" predecessor="_3AdGNo2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3AdGOI2BEeWUKKvQPqVU9Q" entityName="updateNormalToken:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6442" successor="_3AdGOo2BEeWUKKvQPqVU9Q" predecessor="_3AdGN42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAqY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3AdGOo2BEeWUKKvQPqVU9Q" entityName="clear:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6595" successor="_3AdGO42BEeWUKKvQPqVU9Q" predecessor="_3AdGOI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2_juVY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3AdGO42BEeWUKKvQPqVU9Q" entityName="newKeyspace:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6707" successor="_3AdGPI2BEeWUKKvQPqVU9Q" predecessor="_3AdGOo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2_juV42BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3AdGPI2BEeWUKKvQPqVU9Q" entityName="setKeyspaceDefinition:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6760" successor="_3AmQII2BEeWUKKvQPqVU9Q" predecessor="_3AdGO42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_7JDGg41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3AmQII2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithNetworkTopologyStrategyOneDCOnly() at 6968" successor="_3ATVM42BEeWUKKvQPqVU9Q" predecessor="_3AdGPI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_3ATVM42BEeWUKKvQPqVU9Q" predecessor="_3AmQII2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_3BMtEI2BEeWUKKvQPqVU9Q" entityName="testPrimaryRangesWithVnodes">
+    <scenarioBehaviour_UsageScenario id="_3BMtE42BEeWUKKvQPqVU9Q" entityName="testPrimaryRangesWithVnodes">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_3BMtEY2BEeWUKKvQPqVU9Q" successor="_3BMtFI2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3BMtFI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithVnodes() at 8150" successor="_3BMtFY2BEeWUKKvQPqVU9Q" predecessor="_3BMtEY2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3BMtFY2BEeWUKKvQPqVU9Q" entityName="clearUnsafe:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithVnodes() at 8182" successor="_3BWeEI2BEeWUKKvQPqVU9Q" predecessor="_3BMtFI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eIj_ko2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3BWeEI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithVnodes() at 8263" successor="_3BpZAI2BEeWUKKvQPqVU9Q" predecessor="_3BMtFY2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3BpZAI2BEeWUKKvQPqVU9Q" entityName="updateNormalTokens:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithVnodes() at 8755" successor="_3BpZAY2BEeWUKKvQPqVU9Q" predecessor="_3BWeEI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAoI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3BpZAY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithVnodes() at 8836" successor="_3Byi8I2BEeWUKKvQPqVU9Q" predecessor="_3BpZAI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3Byi8I2BEeWUKKvQPqVU9Q" entityName="updateNormalTokens:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithVnodes() at 9328" successor="_3B8T8Y2BEeWUKKvQPqVU9Q" predecessor="_3BpZAY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAoI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3B8T8Y2BEeWUKKvQPqVU9Q" entityName="clear:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithVnodes() at 9481" successor="_3B8T8o2BEeWUKKvQPqVU9Q" predecessor="_3Byi8I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2_juVY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3B8T8o2BEeWUKKvQPqVU9Q" entityName="newKeyspace:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithVnodes() at 9593" successor="_3B8T842BEeWUKKvQPqVU9Q" predecessor="_3B8T8Y2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2_juV42BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3B8T842BEeWUKKvQPqVU9Q" entityName="setKeyspaceDefinition:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithVnodes() at 9646" successor="_3CGE8I2BEeWUKKvQPqVU9Q" predecessor="_3B8T8o2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_7JDGg41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3CGE8I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithVnodes() at 9854" successor="_3BMtEo2BEeWUKKvQPqVU9Q" predecessor="_3B8T842BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_3BMtEo2BEeWUKKvQPqVU9Q" predecessor="_3CGE8I2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_3Cr60I2BEeWUKKvQPqVU9Q" entityName="testPrimaryRangesWithSimpleStrategy">
+    <scenarioBehaviour_UsageScenario id="_3Cr6042BEeWUKKvQPqVU9Q" entityName="testPrimaryRangesWithSimpleStrategy">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_3Cr60Y2BEeWUKKvQPqVU9Q" successor="_3C1r0I2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3C1r0I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12144" successor="_3C1r0Y2BEeWUKKvQPqVU9Q" predecessor="_3Cr60Y2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3C1r0Y2BEeWUKKvQPqVU9Q" entityName="clearUnsafe:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12176" successor="_3C1r0o2BEeWUKKvQPqVU9Q" predecessor="_3C1r0I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_eIj_ko2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3C1r0o2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12271" successor="_3C1r042BEeWUKKvQPqVU9Q" predecessor="_3C1r0Y2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3C1r042BEeWUKKvQPqVU9Q" entityName="updateNormalToken:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12271" successor="_3C1r1I2BEeWUKKvQPqVU9Q" predecessor="_3C1r0o2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAqY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3C1r1I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12365" successor="_3C1r1Y2BEeWUKKvQPqVU9Q" predecessor="_3C1r042BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3C1r1Y2BEeWUKKvQPqVU9Q" entityName="updateNormalToken:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12365" successor="_3C1r1o2BEeWUKKvQPqVU9Q" predecessor="_3C1r1I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAqY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3C1r1o2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12459" successor="_3C1r142BEeWUKKvQPqVU9Q" predecessor="_3C1r1Y2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3C1r142BEeWUKKvQPqVU9Q" entityName="updateNormalToken:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12459" successor="_3C1r2Y2BEeWUKKvQPqVU9Q" predecessor="_3C1r1o2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_eIj_k42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tuJAqY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3C1r2Y2BEeWUKKvQPqVU9Q" entityName="clear:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12627" successor="_3C1r2o2BEeWUKKvQPqVU9Q" predecessor="_3C1r142BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2_juVY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3C1r2o2BEeWUKKvQPqVU9Q" entityName="newKeyspace:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12730" successor="_3C1r242BEeWUKKvQPqVU9Q" predecessor="_3C1r2Y2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2_juV42BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_3C1r242BEeWUKKvQPqVU9Q" entityName="setKeyspaceDefinition:  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12783" successor="_3C-1wI2BEeWUKKvQPqVU9Q" predecessor="_3C1r2o2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_7JDGg41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_3C-1wI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.service.StorageServiceServerTest.java.StorageServiceServerTest.testPrimaryRangesWithSimpleStrategy() at 12933" successor="_3Cr60o2BEeWUKKvQPqVU9Q" predecessor="_3C1r242BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_3Cr60o2BEeWUKKvQPqVU9Q" predecessor="_3C-1wI2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

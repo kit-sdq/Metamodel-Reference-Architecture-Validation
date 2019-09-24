@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_paRssLLWEeWT3tCwcp23sg" entityName="testAdvisories">
+    <scenarioBehaviour_UsageScenario id="_paRss7LWEeWT3tCwcp23sg" entityName="testAdvisories">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_paRssbLWEeWT3tCwcp23sg" successor="_paSTwLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_paSTwLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.advisories.ProducerAdvisorTest.java.ProducerAdvisorTest.testAdvisories() at 2336" successor="_paSTwbLWEeWT3tCwcp23sg" predecessor="_paRssbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_paSTwbLWEeWT3tCwcp23sg" entityName="addListener:  @position: org.activemq.advisories.ProducerAdvisorTest.java.ProducerAdvisorTest.testAdvisories() at 2368" successor="_pa4wsLLWEeWT3tCwcp23sg" predecessor="_paSTwLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_k8vKYLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_paSTwrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_pa4wsLLWEeWT3tCwcp23sg" entityName="start:  @position: org.activemq.advisories.ProducerAdvisorTest.java.ProducerAdvisorTest.testAdvisories() at 2390" successor="_pa-QQLLWEeWT3tCwcp23sg" predecessor="_paSTwbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_k8vKYLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_En9bcLLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_pa-QQLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.advisories.ProducerAdvisorTest.java.ProducerAdvisorTest.testAdvisories() at 2462" successor="_paRssrLWEeWT3tCwcp23sg" predecessor="_pa4wsLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_paRssrLWEeWT3tCwcp23sg" predecessor="_pa-QQLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

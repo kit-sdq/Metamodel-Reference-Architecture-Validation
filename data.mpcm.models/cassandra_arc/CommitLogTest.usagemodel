@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_CEVVMLLjEeWaL4cfYRKdZg" entityName="testRecoveryWithEmptyLog">
+    <scenarioBehaviour_UsageScenario id="_CEVVM7LjEeWaL4cfYRKdZg" entityName="testRecoveryWithEmptyLog">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CEVVMbLjEeWaL4cfYRKdZg" successor="_CEa0wLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CEa0wLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.tmpFile() at 7421" successor="_CEbb0LLjEeWaL4cfYRKdZg" predecessor="_CEVVMbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CEbb0LLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.tmpFile() from 7460 to 7483" successor="_CEbb0bLjEeWaL4cfYRKdZg" predecessor="_CEa0wLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CEbb0bLjEeWaL4cfYRKdZg" entityName="recover:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testRecoveryWithEmptyLog() at 1523" successor="_CEVVMrLjEeWaL4cfYRKdZg" predecessor="_CEbb0LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CEbb0rLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CEVVMrLjEeWaL4cfYRKdZg" predecessor="_CEbb0bLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CEcp8LLjEeWaL4cfYRKdZg" entityName="testRecoveryWithShortLog">
+    <scenarioBehaviour_UsageScenario id="_CEcp87LjEeWaL4cfYRKdZg" entityName="testRecoveryWithShortLog">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CEcp8bLjEeWaL4cfYRKdZg" successor="_CE7LELLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CE7LELLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testRecoveryWithBadSizeArgument() at 6699" successor="_CEcp8rLjEeWaL4cfYRKdZg" predecessor="_CEcp8bLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CEcp8rLjEeWaL4cfYRKdZg" predecessor="_CE7LELLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CE7yILLjEeWaL4cfYRKdZg" entityName="testRecoveryWithShortSize">
+    <scenarioBehaviour_UsageScenario id="_CE7yI7LjEeWaL4cfYRKdZg" entityName="testRecoveryWithShortSize">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CE7yIbLjEeWaL4cfYRKdZg" successor="_CFDG4LLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CFDG4LLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.tmpFile() at 7421" successor="_CFDG4rLjEeWaL4cfYRKdZg" predecessor="_CE7yIbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CFDG4rLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.tmpFile() from 7460 to 7483" successor="_CFDt8LLjEeWaL4cfYRKdZg" predecessor="_CFDG4LLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CFDt8LLjEeWaL4cfYRKdZg" entityName="recover:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testRecovery() at 7802" successor="_CE7yIrLjEeWaL4cfYRKdZg" predecessor="_CFDG4rLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CEbb0rLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CE7yIrLjEeWaL4cfYRKdZg" predecessor="_CFDt8LLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CFE8ELLjEeWaL4cfYRKdZg" entityName="testRecoveryWithShortCheckSum">
+    <scenarioBehaviour_UsageScenario id="_CFE8E7LjEeWaL4cfYRKdZg" entityName="testRecoveryWithShortCheckSum">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CFE8EbLjEeWaL4cfYRKdZg" successor="_CFS-gLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CFS-gLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.tmpFile() at 7421" successor="_CFTlkLLjEeWaL4cfYRKdZg" predecessor="_CFE8EbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CFTlkLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.tmpFile() from 7460 to 7483" successor="_CFUMoLLjEeWaL4cfYRKdZg" predecessor="_CFS-gLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CFUMoLLjEeWaL4cfYRKdZg" entityName="recover:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testRecovery() at 7802" successor="_CFE8ErLjEeWaL4cfYRKdZg" predecessor="_CFTlkLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CEbb0rLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CFE8ErLjEeWaL4cfYRKdZg" predecessor="_CFUMoLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CFWo4LLjEeWaL4cfYRKdZg" entityName="testRecoveryWithGarbageLog">
+    <scenarioBehaviour_UsageScenario id="_CFWo47LjEeWaL4cfYRKdZg" entityName="testRecoveryWithGarbageLog">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CFWo4bLjEeWaL4cfYRKdZg" successor="_CFWo5LLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CFWo5LLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testRecoveryWithGarbageLog() at 2062" successor="_CFgZ4LLjEeWaL4cfYRKdZg" predecessor="_CFWo4bLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CFgZ4LLjEeWaL4cfYRKdZg" entityName="recover:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testRecovery() at 7802" successor="_CFWo4rLjEeWaL4cfYRKdZg" predecessor="_CFWo5LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CEbb0rLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CFWo4rLjEeWaL4cfYRKdZg" predecessor="_CFgZ4LLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CFhoALLjEeWaL4cfYRKdZg" entityName="testRecoveryWithBadSizeChecksum">
+    <scenarioBehaviour_UsageScenario id="_CFhoA7LjEeWaL4cfYRKdZg" entityName="testRecoveryWithBadSizeChecksum">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CFhoAbLjEeWaL4cfYRKdZg" successor="_CFhoBLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CFhoBLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testRecoveryWithBadSizeChecksum() at 2277" successor="_CF4NULLjEeWaL4cfYRKdZg" predecessor="_CFhoAbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CF4NULLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.tmpFile() at 7421" successor="_CF40YLLjEeWaL4cfYRKdZg" predecessor="_CFhoBLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CF40YLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.tmpFile() from 7460 to 7483" successor="_CF40YrLjEeWaL4cfYRKdZg" predecessor="_CF4NULLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CF40YrLjEeWaL4cfYRKdZg" entityName="recover:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testRecovery() at 7802" successor="_CFhoArLjEeWaL4cfYRKdZg" predecessor="_CF40YLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CEbb0rLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CFhoArLjEeWaL4cfYRKdZg" predecessor="_CF40YrLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CF6CgLLjEeWaL4cfYRKdZg" entityName="testRecoveryWithZeroSegmentSizeArgument">
+    <scenarioBehaviour_UsageScenario id="_CF6Cg7LjEeWaL4cfYRKdZg" entityName="testRecoveryWithZeroSegmentSizeArgument">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CF6CgbLjEeWaL4cfYRKdZg" successor="_CGTrILLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CGTrILLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testRecoveryWithBadSizeArgument() at 6699" successor="_CF6CgrLjEeWaL4cfYRKdZg" predecessor="_CF6CgbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CF6CgrLjEeWaL4cfYRKdZg" predecessor="_CGTrILLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CGUSMLLjEeWaL4cfYRKdZg" entityName="testRecoveryWithNegativeSizeArgument">
+    <scenarioBehaviour_UsageScenario id="_CGUSM7LjEeWaL4cfYRKdZg" entityName="testRecoveryWithNegativeSizeArgument">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CGUSMbLjEeWaL4cfYRKdZg" successor="_CGpCULLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CGpCULLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testRecoveryWithBadSizeArgument() at 6699" successor="_CGUSMrLjEeWaL4cfYRKdZg" predecessor="_CGUSMbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CGUSMrLjEeWaL4cfYRKdZg" predecessor="_CGpCULLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CGppYLLjEeWaL4cfYRKdZg" entityName="testDontDeleteIfDirty">
+    <scenarioBehaviour_UsageScenario id="_CGppY7LjEeWaL4cfYRKdZg" entityName="testDontDeleteIfDirty">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CGppYbLjEeWaL4cfYRKdZg" successor="_CGppZLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CGppZLLjEeWaL4cfYRKdZg" entityName="resetUnsafe:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3042" successor="_CGq3gLLjEeWaL4cfYRKdZg" predecessor="_CGppYbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_BnBuIbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CGq3gLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3143" successor="_CGsssLLjEeWaL4cfYRKdZg" predecessor="_CGppZLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CGsssLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3257" successor="_CGtTwLLjEeWaL4cfYRKdZg" predecessor="_CGq3gLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CGtTwLLjEeWaL4cfYRKdZg" entityName="getCommitLogSegmentSize:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3257" successor="_CGuh4LLjEeWaL4cfYRKdZg" predecessor="_CGsssLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AR3SALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qgq2kbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CGuh4LLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3257" successor="_CGvI8LLjEeWaL4cfYRKdZg" predecessor="_CGtTwLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CGvI8LLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3323" successor="_CGvwALLjEeWaL4cfYRKdZg" predecessor="_CGuh4LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKhAYLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CGvwALLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3359" successor="_CGwXELLjEeWaL4cfYRKdZg" predecessor="_CGvI8LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKhAYLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CGwXELLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3395" successor="_CGxlMLLjEeWaL4cfYRKdZg" predecessor="_CGvwALLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKhAYLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CGxlMLLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3431" successor="_CGyzULLjEeWaL4cfYRKdZg" predecessor="_CGwXELLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKhAYLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CGyzULLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3467" successor="_CG0BcLLjEeWaL4cfYRKdZg" predecessor="_CGxlMLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKhAYLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CG0BcLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3581" successor="_CG3EwLLjEeWaL4cfYRKdZg" predecessor="_CGyzULLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CG3EwLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3651" successor="_CG4S4LLjEeWaL4cfYRKdZg" predecessor="_CG0BcLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CG4S4LLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3651" successor="_CG458LLjEeWaL4cfYRKdZg" predecessor="_CG3EwLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CG458LLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3688" successor="_CG6IELLjEeWaL4cfYRKdZg" predecessor="_CG4S4LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKhAYLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CG6IELLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() from 3689 to 3815" successor="_CG6vILLjEeWaL4cfYRKdZg" predecessor="_CG458LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CG6vILLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() from 3689 to 3815" successor="_CG-ZgLLjEeWaL4cfYRKdZg" predecessor="_CG6IELLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CG-ZgLLjEeWaL4cfYRKdZg" entityName="getColumnFamilyIds:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3881" successor="_CG_AkLLjEeWaL4cfYRKdZg" predecessor="_CG6vILLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYOZoLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CG_AkLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3881" successor="_CG_AkbLjEeWaL4cfYRKdZg" predecessor="_CG-ZgLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CG_AkbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3881" successor="_CG_AkrLjEeWaL4cfYRKdZg" predecessor="_CG_AkLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CG_AkrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3881" successor="_CHA1wLLjEeWaL4cfYRKdZg" predecessor="_CG_AkbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHA1wLLjEeWaL4cfYRKdZg" entityName="getContext:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3980" successor="_CHBc0LLjEeWaL4cfYRKdZg" predecessor="_CG_AkrLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKiOgLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHBc0LLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3980" successor="_CHBc0bLjEeWaL4cfYRKdZg" predecessor="_CHA1wLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHBc0bLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3980" successor="_CHBc0rLjEeWaL4cfYRKdZg" predecessor="_CHBc0LLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHBc0rLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3980" successor="_CHBc07LjEeWaL4cfYRKdZg" predecessor="_CHBc0bLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHBc07LjEeWaL4cfYRKdZg" entityName="discardCompletedSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() at 3980" successor="_CHCD4LLjEeWaL4cfYRKdZg" predecessor="_CHBc0rLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKfyQLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHCD4LLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() from 3981 to 4156" successor="_CHCq8LLjEeWaL4cfYRKdZg" predecessor="_CHBc07LjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHCq8LLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDontDeleteIfDirty() from 3981 to 4156" successor="_CGppYrLjEeWaL4cfYRKdZg" predecessor="_CHCD4LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CGppYrLjEeWaL4cfYRKdZg" predecessor="_CHCq8LLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CHD5ELLjEeWaL4cfYRKdZg" entityName="testDeleteIfNotDirty">
+    <scenarioBehaviour_UsageScenario id="_CHD5E7LjEeWaL4cfYRKdZg" entityName="testDeleteIfNotDirty">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CHD5EbLjEeWaL4cfYRKdZg" successor="_CHD5FLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHD5FLLjEeWaL4cfYRKdZg" entityName="resetUnsafe:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4277" successor="_CHFHMLLjEeWaL4cfYRKdZg" predecessor="_CHD5EbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_BnBuIbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHFHMLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4378" successor="_CHGVULLjEeWaL4cfYRKdZg" predecessor="_CHD5FLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHGVULLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4492" successor="_CHG8YLLjEeWaL4cfYRKdZg" predecessor="_CHFHMLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHG8YLLjEeWaL4cfYRKdZg" entityName="getCommitLogSegmentSize:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4492" successor="_CHIKgLLjEeWaL4cfYRKdZg" predecessor="_CHGVULLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AR3SALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qgq2kbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHIKgLLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4492" successor="_CHIxkLLjEeWaL4cfYRKdZg" predecessor="_CHG8YLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHIxkLLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4579" successor="_CHJYoLLjEeWaL4cfYRKdZg" predecessor="_CHIKgLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKhAYLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHJYoLLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4615" successor="_CHKmwLLjEeWaL4cfYRKdZg" predecessor="_CHIxkLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKhAYLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHKmwLLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() from 4616 to 4741" successor="_CHLN0LLjEeWaL4cfYRKdZg" predecessor="_CHJYoLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHLN0LLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() from 4616 to 4741" successor="_CHORILLjEeWaL4cfYRKdZg" predecessor="_CHKmwLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHORILLjEeWaL4cfYRKdZg" entityName="getColumnFamilyIds:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4853" successor="_CHO4MLLjEeWaL4cfYRKdZg" predecessor="_CHLN0LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYOZoLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHO4MLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4853" successor="_CHO4MbLjEeWaL4cfYRKdZg" predecessor="_CHORILLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHO4MbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4853" successor="_CHO4MrLjEeWaL4cfYRKdZg" predecessor="_CHO4MLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHO4MrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4853" successor="_CHR7gLLjEeWaL4cfYRKdZg" predecessor="_CHO4MbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHR7gLLjEeWaL4cfYRKdZg" entityName="getContext:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4952" successor="_CHSikLLjEeWaL4cfYRKdZg" predecessor="_CHO4MrLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKiOgLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHSikLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4952" successor="_CHSikbLjEeWaL4cfYRKdZg" predecessor="_CHR7gLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHSikbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4952" successor="_CHSikrLjEeWaL4cfYRKdZg" predecessor="_CHSikLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHSikrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4952" successor="_CHSik7LjEeWaL4cfYRKdZg" predecessor="_CHSikbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHSik7LjEeWaL4cfYRKdZg" entityName="discardCompletedSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 4952" successor="_CHTwsLLjEeWaL4cfYRKdZg" predecessor="_CHSikrLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKfyQLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHTwsLLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() from 4953 to 5078" successor="_CHUXwLLjEeWaL4cfYRKdZg" predecessor="_CHSik7LjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHUXwLLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() from 4953 to 5078" successor="_CHU-0LLjEeWaL4cfYRKdZg" predecessor="_CHTwsLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHU-0LLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5266" successor="_CHWM8LLjEeWaL4cfYRKdZg" predecessor="_CHUXwLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHWM8LLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5381" successor="_CHW0ALLjEeWaL4cfYRKdZg" predecessor="_CHU-0LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHW0ALLjEeWaL4cfYRKdZg" entityName="getCommitLogSegmentSize:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5381" successor="_CHYCILLjEeWaL4cfYRKdZg" predecessor="_CHWM8LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AR3SALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qgq2kbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHYCILLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5381" successor="_CHYpMLLjEeWaL4cfYRKdZg" predecessor="_CHW0ALLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHYpMLLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5418" successor="_CHZQQLLjEeWaL4cfYRKdZg" predecessor="_CHYCILLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKhAYLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHZQQLLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5554" successor="_CHaeYLLjEeWaL4cfYRKdZg" predecessor="_CHYpMLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKhAYLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHaeYLLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() from 5555 to 5681" successor="_CHc6oLLjEeWaL4cfYRKdZg" predecessor="_CHZQQLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHc6oLLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() from 5555 to 5681" successor="_CHglALLjEeWaL4cfYRKdZg" predecessor="_CHaeYLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHglALLjEeWaL4cfYRKdZg" entityName="getColumnFamilyIds:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5900" successor="_CHhMELLjEeWaL4cfYRKdZg" predecessor="_CHc6oLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYOZoLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHhMELLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5900" successor="_CHhMEbLjEeWaL4cfYRKdZg" predecessor="_CHglALLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHhMEbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5900" successor="_CHhMErLjEeWaL4cfYRKdZg" predecessor="_CHhMELLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHhMErLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5900" successor="_CHjoULLjEeWaL4cfYRKdZg" predecessor="_CHhMEbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHjoULLjEeWaL4cfYRKdZg" entityName="getContext:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5999" successor="_CHkPYLLjEeWaL4cfYRKdZg" predecessor="_CHhMErLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKiOgLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHkPYLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5999" successor="_CHkPYbLjEeWaL4cfYRKdZg" predecessor="_CHjoULLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHkPYbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5999" successor="_CHkPYrLjEeWaL4cfYRKdZg" predecessor="_CHkPYLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CHkPYrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5999" successor="_CHkPY7LjEeWaL4cfYRKdZg" predecessor="_CHkPYbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHkPY7LjEeWaL4cfYRKdZg" entityName="discardCompletedSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() at 5999" successor="_CHldgLLjEeWaL4cfYRKdZg" predecessor="_CHkPYrLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKfyQLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHldgLLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() from 6000 to 6174" successor="_CHmEkLLjEeWaL4cfYRKdZg" predecessor="_CHkPY7LjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHmEkLLjEeWaL4cfYRKdZg" entityName="activeSegments:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testDeleteIfNotDirty() from 6000 to 6174" successor="_CHD5ErLjEeWaL4cfYRKdZg" predecessor="_CHldgLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_CG6IEbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CHD5ErLjEeWaL4cfYRKdZg" predecessor="_CHmEkLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CHnSsLLjEeWaL4cfYRKdZg" entityName="testExceedSegmentSizeWithOverhead">
+    <scenarioBehaviour_UsageScenario id="_CHnSs7LjEeWaL4cfYRKdZg" entityName="testExceedSegmentSizeWithOverhead">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CHnSsbLjEeWaL4cfYRKdZg" successor="_CHnStLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHnStLLjEeWaL4cfYRKdZg" entityName="resetUnsafe:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testExceedSegmentSizeWithOverhead() at 6330" successor="_CHn5wLLjEeWaL4cfYRKdZg" predecessor="_CHnSsbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_BnBuIbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHn5wLLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testExceedSegmentSizeWithOverhead() at 6398" successor="_CHpu8LLjEeWaL4cfYRKdZg" predecessor="_CHnStLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHpu8LLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testExceedSegmentSizeWithOverhead() at 6517" successor="_CHqWALLjEeWaL4cfYRKdZg" predecessor="_CHn5wLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHqWALLjEeWaL4cfYRKdZg" entityName="getCommitLogSegmentSize:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testExceedSegmentSizeWithOverhead() at 6517" successor="_CHrkILLjEeWaL4cfYRKdZg" predecessor="_CHpu8LLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AR3SALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qgq2kbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHrkILLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testExceedSegmentSizeWithOverhead() at 6517" successor="_CHsLMLLjEeWaL4cfYRKdZg" predecessor="_CHqWALLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CHsLMLLjEeWaL4cfYRKdZg" entityName="add:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testExceedSegmentSizeWithOverhead() at 6553" successor="_CHnSsrLjEeWaL4cfYRKdZg" predecessor="_CHrkILLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BnDjULLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKhAYLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CHnSsrLjEeWaL4cfYRKdZg" predecessor="_CHsLMLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_CHtZULLjEeWaL4cfYRKdZg" entityName="testVersions">
+    <scenarioBehaviour_UsageScenario id="_CHtZU7LjEeWaL4cfYRKdZg" entityName="testVersions">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_CHtZUbLjEeWaL4cfYRKdZg" successor="_CH3KULLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CH3KULLjEeWaL4cfYRKdZg" entityName="isValid:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testVersions() at 8002" successor="_CH_GILLjEeWaL4cfYRKdZg" predecessor="_CHtZUbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_CH3xYLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pFeq8LLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CH_GILLjEeWaL4cfYRKdZg" entityName="isValid:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testVersions() at 8097" successor="_CIIQELLjEeWaL4cfYRKdZg" predecessor="_CH3KULLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_CH3xYLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pFeq8LLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CIIQELLjEeWaL4cfYRKdZg" entityName="isValid:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testVersions() at 8192" successor="_CITPMLLjEeWaL4cfYRKdZg" predecessor="_CH_GILLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_CH3xYLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pFeq8LLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CITPMLLjEeWaL4cfYRKdZg" entityName="isValid:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testVersions() at 8289" successor="_CIbLALLjEeWaL4cfYRKdZg" predecessor="_CIIQELLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_CH3xYLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pFeq8LLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CIbLALLjEeWaL4cfYRKdZg" entityName="isValid:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testVersions() at 8389" successor="_CIifwLLjEeWaL4cfYRKdZg" predecessor="_CITPMLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_CH3xYLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pFeq8LLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CIifwLLjEeWaL4cfYRKdZg" entityName="fromFileName:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testVersions() at 8517" successor="_CIp0gLLjEeWaL4cfYRKdZg" predecessor="_CIbLALLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_CH3xYLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pFcOsLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CIp0gLLjEeWaL4cfYRKdZg" entityName="getMessagingVersion:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testVersions() at 8650" successor="_CIqbkLLjEeWaL4cfYRKdZg" predecessor="_CIifwLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_CH3xYLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pFcOsbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_CIqbkLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testVersions() at 8758" successor="_CIyXYLLjEeWaL4cfYRKdZg" predecessor="_CIp0gLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CIyXYLLjEeWaL4cfYRKdZg" entityName="fromFileName:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testVersions() at 8888" successor="_CIy-cLLjEeWaL4cfYRKdZg" predecessor="_CIqbkLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_CH3xYLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pFcOsLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_CIy-cLLjEeWaL4cfYRKdZg" entityName="getMessagingVersion:  @position: org.apache.cassandra.db.CommitLogTest.java.CommitLogTest.testVersions() at 8888" successor="_CHtZUrLjEeWaL4cfYRKdZg" predecessor="_CIyXYLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_CH3xYLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_pFcOsbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_CHtZUrLjEeWaL4cfYRKdZg" predecessor="_CIy-cLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

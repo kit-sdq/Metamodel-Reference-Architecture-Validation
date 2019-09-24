@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mpcm.quality.reliability/src" modelPluginID="mpcm.quality.reliability"
+    modelName="Reliability" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>reliability.ecore</foreignModel>
+  <genPackages prefix="Reliability" disposableProviderFactory="true" ecorePackage="reliability.ecore#/">
+    <genClasses image="false" ecoreClass="reliability.ecore#//FailureOccurrenceDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute reliability.ecore#//FailureOccurrenceDescription/failureProbability"/>
+      <genOperations ecoreOperation="reliability.ecore#//FailureOccurrenceDescription/EnsureValidFailureProbabilityRange">
+        <genParameters ecoreParameter="reliability.ecore#//FailureOccurrenceDescription/EnsureValidFailureProbabilityRange/diagnostics"/>
+        <genParameters ecoreParameter="reliability.ecore#//FailureOccurrenceDescription/EnsureValidFailureProbabilityRange/context"/>
+      </genOperations>
+    </genClasses>
+    <nestedGenPackages prefix="Seff" disposableProviderFactory="true" ecorePackage="reliability.ecore#//seff">
+      <genClasses ecoreClass="reliability.ecore#//seff/InternalFailureOccurrenceDescription">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//seff/InternalFailureOccurrenceDescription/internalAction__InternalFailureOccurrenceDescription"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//seff/InternalFailureOccurrenceDescription/softwareInducedFailureType__InternalFailureOccurrenceDescription"/>
+        <genOperations ecoreOperation="reliability.ecore#//seff/InternalFailureOccurrenceDescription/NoResourceTimeoutFailureAllowedForInternalFailureOccurrenceDescription">
+          <genParameters ecoreParameter="reliability.ecore#//seff/InternalFailureOccurrenceDescription/NoResourceTimeoutFailureAllowedForInternalFailureOccurrenceDescription/diagnostics"/>
+          <genParameters ecoreParameter="reliability.ecore#//seff/InternalFailureOccurrenceDescription/NoResourceTimeoutFailureAllowedForInternalFailureOccurrenceDescription/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="reliability.ecore#//seff/RecoveryAction">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//seff/RecoveryAction/primaryBehaviour__RecoveryAction"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference reliability.ecore#//seff/RecoveryAction/recoveryActionBehaviours__RecoveryAction"/>
+        <genOperations ecoreOperation="reliability.ecore#//seff/RecoveryAction/PrimaryBehaviourOfRecoveryActionMustBeSet">
+          <genParameters ecoreParameter="reliability.ecore#//seff/RecoveryAction/PrimaryBehaviourOfRecoveryActionMustBeSet/diagnostics"/>
+          <genParameters ecoreParameter="reliability.ecore#//seff/RecoveryAction/PrimaryBehaviourOfRecoveryActionMustBeSet/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="reliability.ecore#//seff/RecoveryActionBehaviour">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//seff/RecoveryActionBehaviour/failureHandlingAlternatives__RecoveryActionBehaviour"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference reliability.ecore#//seff/RecoveryActionBehaviour/recoveryAction__RecoveryActionBehaviour"/>
+        <genOperations ecoreOperation="reliability.ecore#//seff/RecoveryActionBehaviour/RecoveryActionBehaviourHasOnlyOnePredecessor">
+          <genParameters ecoreParameter="reliability.ecore#//seff/RecoveryActionBehaviour/RecoveryActionBehaviourHasOnlyOnePredecessor/diagnostics"/>
+          <genParameters ecoreParameter="reliability.ecore#//seff/RecoveryActionBehaviour/RecoveryActionBehaviourHasOnlyOnePredecessor/context"/>
+        </genOperations>
+        <genOperations ecoreOperation="reliability.ecore#//seff/RecoveryActionBehaviour/RecoveryActionBehaviourIsNotSuccessorOfItself">
+          <genParameters ecoreParameter="reliability.ecore#//seff/RecoveryActionBehaviour/RecoveryActionBehaviourIsNotSuccessorOfItself/diagnostics"/>
+          <genParameters ecoreParameter="reliability.ecore#//seff/RecoveryActionBehaviour/RecoveryActionBehaviourIsNotSuccessorOfItself/context"/>
+        </genOperations>
+        <genOperations ecoreOperation="reliability.ecore#//seff/RecoveryActionBehaviour/SuccessorsOfRecoveryActionBehaviourHandleDisjointFailureTypes">
+          <genParameters ecoreParameter="reliability.ecore#//seff/RecoveryActionBehaviour/SuccessorsOfRecoveryActionBehaviourHandleDisjointFailureTypes/diagnostics"/>
+          <genParameters ecoreParameter="reliability.ecore#//seff/RecoveryActionBehaviour/SuccessorsOfRecoveryActionBehaviourHandleDisjointFailureTypes/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false" ecoreClass="reliability.ecore#//seff/FailureHandlingEntity">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//seff/FailureHandlingEntity/failureTypes_FailureHandlingEntity"/>
+      </genClasses>
+      <genClasses ecoreClass="reliability.ecore#//seff/FailureHandlingExternalCallAction">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//seff/FailureHandlingExternalCallAction/owner"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Repository" disposableProviderFactory="true" ecorePackage="reliability.ecore#//repository">
+      <genClasses ecoreClass="reliability.ecore#//repository/ReliabilityContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference reliability.ecore#//repository/ReliabilityContainer/failureDeclarations"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//repository/ReliabilityContainer/failureHandlingExternalCallActions"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference reliability.ecore#//repository/ReliabilityContainer/internalFailureOccurenceDescriptions"/>
+      </genClasses>
+      <genClasses ecoreClass="reliability.ecore#//repository/FailureDeclaration">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//repository/FailureDeclaration/types"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//repository/FailureDeclaration/owner"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Failuretypes" disposableProviderFactory="true" ecorePackage="reliability.ecore#//failuretypes">
+      <genClasses ecoreClass="reliability.ecore#//failuretypes/FailureTypesRoot">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference reliability.ecore#//failuretypes/FailureTypesRoot/failureTypes"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="reliability.ecore#//failuretypes/FailureType"/>
+      <genClasses ecoreClass="reliability.ecore#//failuretypes/NetworkInducedFailureType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//failuretypes/NetworkInducedFailureType/communicationLinkResourceType__NetworkInducedFailureType"/>
+        <genOperations ecoreOperation="reliability.ecore#//failuretypes/NetworkInducedFailureType/NetworkInducedFailureTypeHasCommunicationLinkResourceType">
+          <genParameters ecoreParameter="reliability.ecore#//failuretypes/NetworkInducedFailureType/NetworkInducedFailureTypeHasCommunicationLinkResourceType/diagnostics"/>
+          <genParameters ecoreParameter="reliability.ecore#//failuretypes/NetworkInducedFailureType/NetworkInducedFailureTypeHasCommunicationLinkResourceType/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="reliability.ecore#//failuretypes/HardwareInducedFailureType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//failuretypes/HardwareInducedFailureType/processingResourceType__HardwareInducedFailureType"/>
+        <genOperations ecoreOperation="reliability.ecore#//failuretypes/HardwareInducedFailureType/HardwareInducedFailureTypeHasProcessingResourceType">
+          <genParameters ecoreParameter="reliability.ecore#//failuretypes/HardwareInducedFailureType/HardwareInducedFailureTypeHasProcessingResourceType/diagnostics"/>
+          <genParameters ecoreParameter="reliability.ecore#//failuretypes/HardwareInducedFailureType/HardwareInducedFailureTypeHasProcessingResourceType/context"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="reliability.ecore#//failuretypes/SoftwareInducedFailureType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//failuretypes/SoftwareInducedFailureType/internalFailureOccurrenceDescriptions__SoftwareInducedFailureType"/>
+      </genClasses>
+      <genClasses ecoreClass="reliability.ecore#//failuretypes/ResourceTimeoutFailureType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference reliability.ecore#//failuretypes/ResourceTimeoutFailureType/passiveResource__ResourceTimeoutFailureType"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Resourceenvironment" disposableProviderFactory="true"
+        ecorePackage="reliability.ecore#//resourceenvironment"/>
+  </genPackages>
+  <genPackages prefix="Seff" ecorePackage="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#/">
+    <genClasses ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/abstractLoopAction_ResourceDemandingBehaviour"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/abstractBranchTransition_ResourceDemandingBehaviour"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/steps_Behaviour"/>
+      <genOperations ecoreOperation="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/ExactlyOneStopAction">
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/ExactlyOneStopAction/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/ExactlyOneStopAction/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/ExactlyOneStartAction">
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/ExactlyOneStartAction/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/ExactlyOneStartAction/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/EachActionExceptStartActionandStopActionMustHhaveAPredecessorAndSuccessor">
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/EachActionExceptStartActionandStopActionMustHhaveAPredecessorAndSuccessor/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//Behaviour/EachActionExceptStartActionandStopActionMustHhaveAPredecessorAndSuccessor/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractAction/predecessor_AbstractAction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractAction/successor_AbstractAction"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractAction/resourceDemandingBehaviour_AbstractAction"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractInternalControlFlowAction"/>
+    <genClasses ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//StartAction">
+      <genOperations ecoreOperation="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//StartAction/StartActionPredecessorMustNotBeDefined">
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//StartAction/StartActionPredecessorMustNotBeDefined/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//StartAction/StartActionPredecessorMustNotBeDefined/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//StopAction">
+      <genOperations ecoreOperation="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//StopAction/StopActionSuccessorMustNotBeDefined">
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//StopAction/StopActionSuccessorMustNotBeDefined/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//StopAction/StopActionSuccessorMustNotBeDefined/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//InternalAction">
+      <genOperations ecoreOperation="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//InternalAction/MultipleInternalOccurrenceDescriptionsPerFailureTypeNotAllowed">
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//InternalAction/MultipleInternalOccurrenceDescriptionsPerFailureTypeNotAllowed/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//InternalAction/MultipleInternalOccurrenceDescriptionsPerFailureTypeNotAllowed/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//InternalAction/SumOfInternalActionFailureProbabilitiesMustNotExceed1">
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//InternalAction/SumOfInternalActionFailureProbabilitiesMustNotExceed1/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//InternalAction/SumOfInternalActionFailureProbabilitiesMustNotExceed1/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//BranchAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//BranchAction/branches_Branch"/>
+      <genOperations ecoreOperation="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//BranchAction/EitherGuardedBranchesOrProbabilisiticBranchTransitions">
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//BranchAction/EitherGuardedBranchesOrProbabilisiticBranchTransitions/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//BranchAction/EitherGuardedBranchesOrProbabilisiticBranchTransitions/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//BranchAction/AllProbabilisticBranchProbabilitiesMustSumUpTo1">
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//BranchAction/AllProbabilisticBranchProbabilitiesMustSumUpTo1/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//BranchAction/AllProbabilisticBranchProbabilitiesMustSumUpTo1/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractBranchTransition">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractBranchTransition/branchAction_AbstractBranchTransition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractBranchTransition/branchBehaviour_BranchTransition"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//ForkAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//ForkAction/asynchronousForkedBehaviours_ForkAction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//ForkAction/synchronisingBehaviours_ForkAction"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//ForkedBehaviour">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//ForkedBehaviour/synchronisationPoint_ForkedBehaviour"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//ForkedBehaviour/forkAction_ForkedBehaivour"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//SynchronisationPoint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//SynchronisationPoint/outputParameterUsage_SynchronisationPoint"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//SynchronisationPoint/forkAction_SynchronisationPoint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//SynchronisationPoint/synchronousForkedBehaviours_SynchronisationPoint"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractLoopAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractLoopAction/bodyBehaviour_Loop"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//LoopAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//LoopAction/iterationCount_LoopAction"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Identifier" ecorePackage="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/">
+    <genClasses image="false" ecoreClass="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier/id"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Base" ecorePackage="../../mpcm.paradigm.base/model/base.ecore#/">
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.base/model/base.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.paradigm.base/model/base.ecore#//NamedElement/entityName"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.base/model/base.ecore#//Entity"/>
+    <genClasses ecoreClass="../../mpcm.paradigm.base/model/base.ecore#//DummyClass"/>
+  </genPackages>
+  <genPackages prefix="Behaviourseff" ecorePackage="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#/">
+    <genClasses ecoreClass="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//BehaviourSEFF">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//BehaviourSEFF/behaviour"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ProbabilisticBranchTransition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ProbabilisticBranchTransition/branchProbability"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//GuardedBranchTransition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//GuardedBranchTransition/branchCondition_GuardedBranchTransition"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//CollectionIteratorAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//CollectionIteratorAction/parameter_CollectionIteratorAction"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//CallAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//CallAction/inputVariableUsages__CallAction"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//CallReturnAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//CallReturnAction/returnVariableUsage__CallReturnAction"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ExternalCallAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ExternalCallAction/calledService_ExternalService"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ExternalCallAction/role_ExternalService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ExternalCallAction/retryCount"/>
+      <genOperations ecoreOperation="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ExternalCallAction/SignatureBelongsToRole">
+        <genParameters ecoreParameter="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ExternalCallAction/SignatureBelongsToRole/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ExternalCallAction/SignatureBelongsToRole/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ExternalCallAction/OperationRequiredRoleMustBeReferencedByContainer">
+        <genParameters ecoreParameter="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ExternalCallAction/OperationRequiredRoleMustBeReferencedByContainer/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ExternalCallAction/OperationRequiredRoleMustBeReferencedByContainer/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//AcquireAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//AcquireAction/passiveresource_AcquireAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//AcquireAction/timeout"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//AcquireAction/timeoutValue"/>
+      <genOperations ecoreOperation="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//AcquireAction/TimeoutValueOfAcquireActionMustNotBeNegative">
+        <genParameters ecoreParameter="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//AcquireAction/TimeoutValueOfAcquireActionMustNotBeNegative/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//AcquireAction/TimeoutValueOfAcquireActionMustNotBeNegative/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ReleaseAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//ReleaseAction/passiveResource_ReleaseAction"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//SetVariableAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//SetVariableAction/localVariableUsages_SetVariableAction"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Repository" ecorePackage="../../mpcm.paradigm.repository/model/repository.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../mpcm.paradigm.repository/model/repository.ecore#//ParameterModifier">
+      <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.repository/model/repository.ecore#//ParameterModifier/none"/>
+      <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.repository/model/repository.ecore#//ParameterModifier/in"/>
+      <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.repository/model/repository.ecore#//ParameterModifier/out"/>
+      <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.repository/model/repository.ecore#//ParameterModifier/inout"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//Interface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//Interface/parentInterfaces__Interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//Interface/protocols__Interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//Interface/requiredCharacterisations"/>
+      <genOperations ecoreOperation="../../mpcm.paradigm.repository/model/repository.ecore#//Interface/NoProtocolTypeIDUsedTwice">
+        <genParameters ecoreParameter="../../mpcm.paradigm.repository/model/repository.ecore#//Interface/NoProtocolTypeIDUsedTwice/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.paradigm.repository/model/repository.ecore#//Interface/NoProtocolTypeIDUsedTwice/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//Protocol">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.paradigm.repository/model/repository.ecore#//Protocol/protocolTypeID"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//Signature"/>
+    <genClasses ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//RequiredCharacterisation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.paradigm.repository/model/repository.ecore#//RequiredCharacterisation/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//RequiredCharacterisation/parameter"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//RequiredCharacterisation/interface_RequiredCharacterisation"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//Parameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//Parameter/dataType__Parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.paradigm.repository/model/repository.ecore#//Parameter/parameterName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.paradigm.repository/model/repository.ecore#//Parameter/modifier__Parameter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//Role"/>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//ProvidedRole">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//ProvidedRole/providingEntity_ProvidedRole"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//RequiredRole">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//RequiredRole/requiringEntity_RequiredRole"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//InterfaceProvidingEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//InterfaceProvidingEntity/providedRoles_InterfaceProvidingEntity"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//InterfaceRequiringEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//InterfaceRequiringEntity/requiredRoles_InterfaceRequiringEntity"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//InterfaceProvidingRequiringEntity"/>
+    <genClasses image="false" ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//RepositoryComponent"/>
+    <nestedGenPackages prefix="Datatypes" disposableProviderFactory="true" ecorePackage="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/PrimitiveTypeEnum">
+        <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/PrimitiveTypeEnum/INT"/>
+        <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/PrimitiveTypeEnum/STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/PrimitiveTypeEnum/BOOL"/>
+        <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/PrimitiveTypeEnum/DOUBLE"/>
+        <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/PrimitiveTypeEnum/CHAR"/>
+        <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/PrimitiveTypeEnum/BYTE"/>
+        <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/PrimitiveTypeEnum/LONG"/>
+      </genEnums>
+      <genClasses image="false" ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/DataType"/>
+      <genClasses ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/PrimitiveDataType">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/PrimitiveDataType/type"/>
+      </genClasses>
+      <genClasses ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/CollectionDataType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/CollectionDataType/innerType_CollectionDataType"/>
+      </genClasses>
+      <genClasses ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/CompositeDataType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/CompositeDataType/parentType_CompositeDataType"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/CompositeDataType/innerDeclaration_CompositeDataType"/>
+      </genClasses>
+      <genClasses ecoreClass="../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/InnerDeclaration">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/InnerDeclaration/datatype_InnerDeclaration"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.repository/model/repository.ecore#//datatypes/InnerDeclaration/compositeDataType_InnerDeclaration"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+  <genPackages prefix="Repository" ecorePackage="../../mpcm.domain.repository/model/repository.ecore#/">
+    <genClasses ecoreClass="../../mpcm.domain.repository/model/repository.ecore#//Repository">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.domain.repository/model/repository.ecore#//Repository/repositoryDescription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//Repository/components__Repository"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//Repository/interfaces__Repository"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//Repository/dataTypes__Repository"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//Repository/exceptionTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//Repository/exceptionOccurences"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.repository/model/repository.ecore#//ExceptionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.domain.repository/model/repository.ecore#//ExceptionType/exceptionName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.domain.repository/model/repository.ecore#//ExceptionType/exceptionMessage"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.repository/model/repository.ecore#//ExceptionOccurence">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//ExceptionOccurence/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//ExceptionOccurence/owner"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/componentParameterUsage_ImplementationComponentType"/>
+      <genOperations ecoreOperation="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/RequiredInterfacesHaveToConformToCompleteType">
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/RequiredInterfacesHaveToConformToCompleteType/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/RequiredInterfacesHaveToConformToCompleteType/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/providedInterfacesHaveToConformToCompleteType">
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/providedInterfacesHaveToConformToCompleteType/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/providedInterfacesHaveToConformToCompleteType/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/ProvidedInterfaceHaveToConformToComponentType">
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/ProvidedInterfaceHaveToConformToComponentType/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/ProvidedInterfaceHaveToConformToComponentType/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/ProvideSameOrMoreInterfacesAsCompleteComponentType">
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/ProvideSameOrMoreInterfacesAsCompleteComponentType/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/ProvideSameOrMoreInterfacesAsCompleteComponentType/context"/>
+      </genOperations>
+      <genOperations ecoreOperation="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/RequireSameOrFewerInterfacesAsCompleteComponentType">
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/RequireSameOrFewerInterfacesAsCompleteComponentType/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType/RequireSameOrFewerInterfacesAsCompleteComponentType/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.repository/model/repository.ecore#//BasicComponent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//BasicComponent/serviceEffectSpecifications__BasicComponent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//BasicComponent/passiveResource_BasicComponent"/>
+      <genOperations ecoreOperation="../../mpcm.domain.repository/model/repository.ecore#//BasicComponent/NoSeffTypeUsedTwice">
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//BasicComponent/NoSeffTypeUsedTwice/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//BasicComponent/NoSeffTypeUsedTwice/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.domain.repository/model/repository.ecore#//ServiceEffectSpecification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.domain.repository/model/repository.ecore#//ServiceEffectSpecification/seffTypeID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//ServiceEffectSpecification/describedService__SEFF"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//ServiceEffectSpecification/basicComponent_ServiceEffectSpecification"/>
+      <genOperations ecoreOperation="../../mpcm.domain.repository/model/repository.ecore#//ServiceEffectSpecification/ReferencedSignatureMustBelongToInterfaceReferencedByProvidedRole">
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ServiceEffectSpecification/ReferencedSignatureMustBelongToInterfaceReferencedByProvidedRole/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//ServiceEffectSpecification/ReferencedSignatureMustBelongToInterfaceReferencedByProvidedRole/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.repository/model/repository.ecore#//PassiveResource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//PassiveResource/capacity_PassiveResource"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//PassiveResource/basicComponent_PassiveResource"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.repository/model/repository.ecore#//OperationInterface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//OperationInterface/signatures__OperationInterface"/>
+      <genOperations ecoreOperation="../../mpcm.domain.repository/model/repository.ecore#//OperationInterface/SignaturesHaveToBeUniqueForAnInterface">
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//OperationInterface/SignaturesHaveToBeUniqueForAnInterface/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//OperationInterface/SignaturesHaveToBeUniqueForAnInterface/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.repository/model/repository.ecore#//OperationSignature">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//OperationSignature/interface__OperationSignature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//OperationSignature/parameters__OperationSignature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//OperationSignature/returnType__OperationSignature"/>
+      <genOperations ecoreOperation="../../mpcm.domain.repository/model/repository.ecore#//OperationSignature/ParameterNamesHaveToBeUniqueForASignature">
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//OperationSignature/ParameterNamesHaveToBeUniqueForASignature/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.domain.repository/model/repository.ecore#//OperationSignature/ParameterNamesHaveToBeUniqueForASignature/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.repository/model/repository.ecore#//OperationProvidedRole">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//OperationProvidedRole/providedInterface__OperationProvidedRole"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.repository/model/repository.ecore#//OperationRequiredRole">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../mpcm.domain.repository/model/repository.ecore#//OperationRequiredRole/requiredInterface__OperationRequiredRole"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Resourcetype" ecorePackage="../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype">
+    <genClasses ecoreClass="../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/ResourceRepository">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/ResourceRepository/schedulingPolicies__ResourceRepository"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/ResourceRepository/availableResourceTypes_ResourceRepository"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/ResourceType">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/ResourceType/resourceRepository_ResourceType"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/ProcessingResourceType"/>
+    <genClasses ecoreClass="../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/SchedulingPolicy">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/SchedulingPolicy/resourceRepository__SchedulingPolicy"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/CommunicationLinkResourceType"/>
+  </genPackages>
+  <genPackages prefix="Variables" ecorePackage="../../mpcm.paradigm.variables/model/variables.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../mpcm.paradigm.variables/model/variables.ecore#//VariableCharacterisationType">
+      <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.variables/model/variables.ecore#//VariableCharacterisationType/STRUCTURE"/>
+      <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.variables/model/variables.ecore#//VariableCharacterisationType/NUMBER_OF_ELEMENTS"/>
+      <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.variables/model/variables.ecore#//VariableCharacterisationType/VALUE"/>
+      <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.variables/model/variables.ecore#//VariableCharacterisationType/BYTESIZE"/>
+      <genEnumLiterals ecoreEnumLiteral="../../mpcm.paradigm.variables/model/variables.ecore#//VariableCharacterisationType/TYPE"/>
+    </genEnums>
+    <genClasses ecoreClass="../../mpcm.paradigm.variables/model/variables.ecore#//VariableUsage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.variables/model/variables.ecore#//VariableUsage/variableCharacterisation_VariableUsage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.variables/model/variables.ecore#//VariableUsage/namedReference__VariableUsage"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.paradigm.variables/model/variables.ecore#//VariableCharacterisation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.paradigm.variables/model/variables.ecore#//VariableCharacterisation/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../mpcm.paradigm.variables/model/variables.ecore#//VariableCharacterisation/specification_VariableCharacterisation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../mpcm.paradigm.variables/model/variables.ecore#//VariableCharacterisation/variableUsage_VariableCharacterisation"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.paradigm.variables/model/variables.ecore#//CharacterisedVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../mpcm.paradigm.variables/model/variables.ecore#//CharacterisedVariable/characterisationType"/>
+    </genClasses>
+    <genClasses ecoreClass="../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable">
+      <genOperations ecoreOperation="../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable/SpecificationMustNotBeNULL">
+        <genParameters ecoreParameter="../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable/SpecificationMustNotBeNULL/diagnostics"/>
+        <genParameters ecoreParameter="../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable/SpecificationMustNotBeNULL/context"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Units" ecorePackage="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitNames">
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitNames/UNITLESS"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitNames/BYTE"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitNames/SECOND"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitNames/METER"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitCarryingElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitCarryingElement/unit"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//Unit"/>
+    <genClasses ecoreClass="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//BaseUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//BaseUnit/name"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitRepository">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitRepository/units"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitMultiplication">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitMultiplication/units"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitPower">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitPower/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitPower/exponent"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitDivision">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitDivision/dividend"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitDivision/divisor"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

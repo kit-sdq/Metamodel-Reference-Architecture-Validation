@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_krlI8LLWEeWT3tCwcp23sg" entityName="testDestroyDestination">
+    <scenarioBehaviour_UsageScenario id="_krlI87LWEeWT3tCwcp23sg" entityName="testDestroyDestination">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_krlI8bLWEeWT3tCwcp23sg" successor="_krqogLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_krqogLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.BrokerAdminCommandsTest.java.BrokerAdminCommandsTest.testDestroyDestination() at 1674" successor="_ks4wgLLWEeWT3tCwcp23sg" predecessor="_krlI8bLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ks4wgLLWEeWT3tCwcp23sg" entityName="destroyDestination:  @position: org.activemq.BrokerAdminCommandsTest.java.BrokerAdminCommandsTest.testDestroyDestination() at 2221" successor="_ktAsULLWEeWT3tCwcp23sg" predecessor="_krqogLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZwWxgLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_ks4wgbLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ktAsULLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.BrokerAdminCommandsTest.java.BrokerAdminCommandsTest.testDestroyDestination() at 2297" successor="_krlI8rLWEeWT3tCwcp23sg" predecessor="_ks4wgLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_krlI8rLWEeWT3tCwcp23sg" predecessor="_ktAsULLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

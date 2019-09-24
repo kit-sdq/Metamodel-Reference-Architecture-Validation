@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="ASCII"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" id="_e9zbUXgqEea49PdDTFshrw">
+  <components__Repository xsi:type="repository:BasicComponent" id="_g9OVYHgqEea49PdDTFshrw" entityName="UserDBAdapterImpl">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_g998QHgqEea49PdDTFshrw" entityName="UserDBAdapterImpl_provides_IUserDBAdapter" providedInterface__OperationProvidedRole="_g9W4QHgqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0lBdngqEea49PdDTFshrw" entityName="UserDBAdapterImpl_requires_DbManager" requiredInterface__OperationRequiredRole="_kOi8MHgqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0pS4HgqEea49PdDTFshrw" describedService__SEFF="_g9XfUHgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1JCIHgqEea49PdDTFshrw" successor_AbstractAction="_k1UoUHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k1UoUHgqEea49PdDTFshrw" entityName="saveUser @position: edu.kit.ipd.sdq.mediastore.ejb.userdbadapter.UserDBAdapterImpl.java.UserDBAdapterImpl.addUser() from 1488 to 1579" predecessor_AbstractAction="_k1JCIHgqEea49PdDTFshrw" successor_AbstractAction="_k1JCIXgqEea49PdDTFshrw" calledService_ExternalService="_kOi8MXgqEea49PdDTFshrw" role_ExternalService="_k0lBdngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1JCIXgqEea49PdDTFshrw" predecessor_AbstractAction="_k1UoUHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rIEHgqEea49PdDTFshrw" describedService__SEFF="_g9roYHgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1WdgHgqEea49PdDTFshrw" successor_AbstractAction="_k1XEkHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k1XEkHgqEea49PdDTFshrw" entityName="findUser @position: edu.kit.ipd.sdq.mediastore.ejb.userdbadapter.UserDBAdapterImpl.java.UserDBAdapterImpl.getUserData() from 1717 to 1843" predecessor_AbstractAction="_k1WdgHgqEea49PdDTFshrw" successor_AbstractAction="_k1WdgXgqEea49PdDTFshrw" calledService_ExternalService="_kOi8MngqEea49PdDTFshrw" role_ExternalService="_k0lBdngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1WdgXgqEea49PdDTFshrw" predecessor_AbstractAction="_k1XEkHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rIEXgqEea49PdDTFshrw" describedService__SEFF="_g95q0HgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1XEkXgqEea49PdDTFshrw" successor_AbstractAction="_k1XEk3gqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k1XEk3gqEea49PdDTFshrw" entityName="clearTable @position: edu.kit.ipd.sdq.mediastore.ejb.userdbadapter.UserDBAdapterImpl.java.UserDBAdapterImpl.removeAllData() at 1940" predecessor_AbstractAction="_k1XEkXgqEea49PdDTFshrw" successor_AbstractAction="_k1XEkngqEea49PdDTFshrw" calledService_ExternalService="_kOi8M3gqEea49PdDTFshrw" role_ExternalService="_k0lBdngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1XEkngqEea49PdDTFshrw" predecessor_AbstractAction="_k1XEk3gqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_g9_xcHgqEea49PdDTFshrw" entityName="DbManager">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_jH9upHgqEea49PdDTFshrw" entityName="DbManager_provides_DbManager" providedInterface__OperationProvidedRole="_g9_xcXgqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rIEngqEea49PdDTFshrw" describedService__SEFF="_g-A_kHgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1XElHgqEea49PdDTFshrw" successor_AbstractAction="_k1XroHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k1XroHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.DbManager.java.DbManager.saveAudioFile() at 1518" predecessor_AbstractAction="_k1XElHgqEea49PdDTFshrw" successor_AbstractAction="_k1XElXgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1XElXgqEea49PdDTFshrw" predecessor_AbstractAction="_k1XroHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rIE3gqEea49PdDTFshrw" describedService__SEFF="_g-SsYHgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1aH4HgqEea49PdDTFshrw" successor_AbstractAction="_k1aH4ngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k1aH4ngqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.DbManager.java.DbManager.getAllAudios() at 2067" predecessor_AbstractAction="_k1aH4HgqEea49PdDTFshrw" successor_AbstractAction="_k1aH4XgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1aH4XgqEea49PdDTFshrw" predecessor_AbstractAction="_k1aH4ngqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rIFHgqEea49PdDTFshrw" describedService__SEFF="_jH9uoHgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1bWAHgqEea49PdDTFshrw" successor_AbstractAction="_k1bWAngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k1bWAngqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.DbManager.java.DbManager.getAudioByID() at 2716" predecessor_AbstractAction="_k1bWAHgqEea49PdDTFshrw" successor_AbstractAction="_k1bWAXgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1bWAXgqEea49PdDTFshrw" predecessor_AbstractAction="_k1bWAngqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rIFXgqEea49PdDTFshrw" describedService__SEFF="_jH9uoXgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1ckIHgqEea49PdDTFshrw" successor_AbstractAction="_k1ckIngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k1ckIngqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.DbManager.java.DbManager.clearTable() at 3298" predecessor_AbstractAction="_k1ckIHgqEea49PdDTFshrw" successor_AbstractAction="_k1ckIXgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1ckIXgqEea49PdDTFshrw" predecessor_AbstractAction="_k1ckIngqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rIFngqEea49PdDTFshrw" describedService__SEFF="_jH9uongqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1ckI3gqEea49PdDTFshrw" successor_AbstractAction="_k1ckJXgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k1ckJXgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.DbManager.java.DbManager.clearExceptFromUser() at 3470" predecessor_AbstractAction="_k1ckI3gqEea49PdDTFshrw" successor_AbstractAction="_k1ckJHgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1ckJHgqEea49PdDTFshrw" predecessor_AbstractAction="_k1ckJXgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rIF3gqEea49PdDTFshrw" describedService__SEFF="_jH9uo3gqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1ckJngqEea49PdDTFshrw" successor_AbstractAction="_k1dLMHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k1dLMHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.DbManager.java.DbManager.getAudioCount() at 3617" predecessor_AbstractAction="_k1ckJngqEea49PdDTFshrw" successor_AbstractAction="_k1ckJ3gqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1ckJ3gqEea49PdDTFshrw" predecessor_AbstractAction="_k1dLMHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_jH-VsHgqEea49PdDTFshrw" entityName="AudioWatermarkingImpl">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_jYW7EHgqEea49PdDTFshrw" entityName="AudioWatermarkingImpl_provides_IDownloadAudioWatermarking" providedInterface__OperationProvidedRole="_jH-VsXgqEea49PdDTFshrw"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_jYW7EXgqEea49PdDTFshrw" entityName="AudioWatermarkingImpl_provides_IDownload" providedInterface__OperationProvidedRole="_jH-VsngqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0lBcXgqEea49PdDTFshrw" entityName="AudioWatermarkingImpl_requires_IDownload" requiredInterface__OperationRequiredRole="_jH-VsngqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rIGHgqEea49PdDTFshrw" describedService__SEFF="_jH-Vs3gqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1dLMXgqEea49PdDTFshrw" successor_AbstractAction="_k1eZUHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k1eZUHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.audiowatermarking.AudioWatermarkingImpl.java.AudioWatermarkingImpl.download() from 3707 to 3748" predecessor_AbstractAction="_k1dLMXgqEea49PdDTFshrw" successor_AbstractAction="_k1eZUXgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k1eZUXgqEea49PdDTFshrw" entityName="download @position: edu.kit.ipd.sdq.mediastore.ejb.audiowatermarking.AudioWatermarkingImpl.java.AudioWatermarkingImpl.download() at 4286" predecessor_AbstractAction="_k1eZUHgqEea49PdDTFshrw" successor_AbstractAction="_k1eZUngqEea49PdDTFshrw" calledService_ExternalService="_jH-Vs3gqEea49PdDTFshrw" role_ExternalService="_k0lBcXgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k1eZUngqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.audiowatermarking.AudioWatermarkingImpl.java.AudioWatermarkingImpl.download() at 4427" predecessor_AbstractAction="_k1eZUXgqEea49PdDTFshrw" successor_AbstractAction="_k1dLMngqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1dLMngqEea49PdDTFshrw" predecessor_AbstractAction="_k1eZUngqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_jYW7EngqEea49PdDTFshrw" entityName="CacheImpl">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_jYYJM3gqEea49PdDTFshrw" entityName="CacheImpl_provides_IDownloadCache" providedInterface__OperationProvidedRole="_jYYJMHgqEea49PdDTFshrw"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_jYYJNHgqEea49PdDTFshrw" entityName="CacheImpl_provides_ICacheMaintenance" providedInterface__OperationProvidedRole="_jYYJMXgqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0logHgqEea49PdDTFshrw" entityName="CacheImpl_requires_IDownload" requiredInterface__OperationRequiredRole="_jH-VsngqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rIGXgqEea49PdDTFshrw" describedService__SEFF="_jH-Vs3gqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k16eMHgqEea49PdDTFshrw" successor_AbstractAction="_k16eMngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k16eMngqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.cache.CacheImpl.java.CacheImpl.download() at 2353" predecessor_AbstractAction="_k16eMHgqEea49PdDTFshrw" successor_AbstractAction="_k186cHgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_k186cHgqEea49PdDTFshrw" entityName=" @position: edu.kit.ipd.sdq.mediastore.ejb.cache.CacheImpl.java.CacheImpl.download() from 3092 to 3168" predecessor_AbstractAction="_k16eMngqEea49PdDTFshrw" successor_AbstractAction="_k16eMXgqEea49PdDTFshrw">
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_k186cXgqEea49PdDTFshrw" entityName="SoMoX default branch probability" branchProbability="1.0">
+          <branchBehaviour_BranchTransition id="_k186cngqEea49PdDTFshrw">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_k186c3gqEea49PdDTFshrw" successor_AbstractAction="_k186dHgqEea49PdDTFshrw"/>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k186dHgqEea49PdDTFshrw" entityName="download @position: edu.kit.ipd.sdq.mediastore.ejb.cache.CacheImpl.java.CacheImpl.download().Block at 3316" predecessor_AbstractAction="_k186c3gqEea49PdDTFshrw" successor_AbstractAction="_k186dXgqEea49PdDTFshrw" calledService_ExternalService="_jH-Vs3gqEea49PdDTFshrw" role_ExternalService="_k0logHgqEea49PdDTFshrw"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_k186dXgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.cache.CacheImpl.java.CacheImpl.download().Block from 3317 to 3443" predecessor_AbstractAction="_k186dHgqEea49PdDTFshrw" successor_AbstractAction="_k19hgHgqEea49PdDTFshrw">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_k19hgHgqEea49PdDTFshrw" predecessor_AbstractAction="_k186dXgqEea49PdDTFshrw"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k16eMXgqEea49PdDTFshrw" predecessor_AbstractAction="_k186cHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rIGngqEea49PdDTFshrw" describedService__SEFF="_jYYJMngqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k19hgXgqEea49PdDTFshrw" successor_AbstractAction="_k1-IkHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k1-IkHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.cache.CacheSingleton.java.CacheSingleton.clear() at 2803" predecessor_AbstractAction="_k19hgXgqEea49PdDTFshrw" successor_AbstractAction="_k19hgngqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k19hgngqEea49PdDTFshrw" predecessor_AbstractAction="_k1-IkHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_jYYJNXgqEea49PdDTFshrw" entityName="PackagingImpl">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_jYYJOHgqEea49PdDTFshrw" entityName="PackagingImpl_provides_IPackaging" providedInterface__OperationProvidedRole="_jYYJNngqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvIHgqEea49PdDTFshrw" describedService__SEFF="_jYYJN3gqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1-IkXgqEea49PdDTFshrw" successor_AbstractAction="_k1-Ik3gqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k1-Ik3gqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.packaging.PackagingImpl.java.PackagingImpl.zip() at 2369" predecessor_AbstractAction="_k1-IkXgqEea49PdDTFshrw" successor_AbstractAction="_k1-IkngqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1-IkngqEea49PdDTFshrw" predecessor_AbstractAction="_k1-Ik3gqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_jYYwQHgqEea49PdDTFshrw" entityName="FacadeImpl">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_kOiVIngqEea49PdDTFshrw" entityName="FacadeImpl_provides_IFacade" providedInterface__OperationProvidedRole="_jYYwQXgqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0jzUHgqEea49PdDTFshrw" entityName="FacadeImpl_requires_IUserManagement" requiredInterface__OperationRequiredRole="_k0h-JHgqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0kaYHgqEea49PdDTFshrw" entityName="FacadeImpl_requires_IMediaManagement" requiredInterface__OperationRequiredRole="_kOjjQXgqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvIXgqEea49PdDTFshrw" describedService__SEFF="_jYYwQngqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1-voHgqEea49PdDTFshrw" successor_AbstractAction="_k1_WsHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k1_WsHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.initUserManagement() from 2850 to 2891" predecessor_AbstractAction="_k1-voHgqEea49PdDTFshrw" successor_AbstractAction="_k1_9wHgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k1_9wHgqEea49PdDTFshrw" entityName="register @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.register() from 3162 to 3213" predecessor_AbstractAction="_k1_WsHgqEea49PdDTFshrw" successor_AbstractAction="_k1-voXgqEea49PdDTFshrw" calledService_ExternalService="_k0h-JXgqEea49PdDTFshrw" role_ExternalService="_k0jzUHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1-voXgqEea49PdDTFshrw" predecessor_AbstractAction="_k1_9wHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvIngqEea49PdDTFshrw" describedService__SEFF="_jYYwQ3gqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k1_9wXgqEea49PdDTFshrw" successor_AbstractAction="_k2Ak0HgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2Ak0HgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.initUserManagement() from 2850 to 2891" predecessor_AbstractAction="_k1_9wXgqEea49PdDTFshrw" successor_AbstractAction="_k2Ak0XgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2Ak0XgqEea49PdDTFshrw" entityName="login @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.login() from 3411 to 3473" predecessor_AbstractAction="_k2Ak0HgqEea49PdDTFshrw" successor_AbstractAction="_k1_9wngqEea49PdDTFshrw" calledService_ExternalService="_k0h-JngqEea49PdDTFshrw" role_ExternalService="_k0jzUHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k1_9wngqEea49PdDTFshrw" predecessor_AbstractAction="_k2Ak0XgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvI3gqEea49PdDTFshrw" describedService__SEFF="_jYYwRHgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2Ak0ngqEea49PdDTFshrw" successor_AbstractAction="_k2BL4HgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2BL4HgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.initMediaManager() from 2624 to 2666" predecessor_AbstractAction="_k2Ak0ngqEea49PdDTFshrw" successor_AbstractAction="_k2BL4XgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2BL4XgqEea49PdDTFshrw" entityName="upload @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.upload() from 3643 to 3693" predecessor_AbstractAction="_k2BL4HgqEea49PdDTFshrw" successor_AbstractAction="_k2Ak03gqEea49PdDTFshrw" calledService_ExternalService="_kOjjQngqEea49PdDTFshrw" role_ExternalService="_k0kaYHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2Ak03gqEea49PdDTFshrw" predecessor_AbstractAction="_k2BL4XgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvJHgqEea49PdDTFshrw" describedService__SEFF="_jYYwRXgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2BL4ngqEea49PdDTFshrw" successor_AbstractAction="_k2By8HgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2By8HgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.initMediaManager() from 2624 to 2666" predecessor_AbstractAction="_k2BL4ngqEea49PdDTFshrw" successor_AbstractAction="_k2By8XgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2By8XgqEea49PdDTFshrw" entityName="getFileList @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.getFileList() from 3823 to 3874" predecessor_AbstractAction="_k2By8HgqEea49PdDTFshrw" successor_AbstractAction="_k2BL43gqEea49PdDTFshrw" calledService_ExternalService="_kOjjQ3gqEea49PdDTFshrw" role_ExternalService="_k0kaYHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2BL43gqEea49PdDTFshrw" predecessor_AbstractAction="_k2By8XgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvJXgqEea49PdDTFshrw" describedService__SEFF="_kOiVIHgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2By8ngqEea49PdDTFshrw" successor_AbstractAction="_k2By9HgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2By9HgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.download() at 4134" predecessor_AbstractAction="_k2By8ngqEea49PdDTFshrw" successor_AbstractAction="_k2CaAHgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2CaAHgqEea49PdDTFshrw" entityName="download @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.download() from 4169 to 4246" predecessor_AbstractAction="_k2By9HgqEea49PdDTFshrw" successor_AbstractAction="_k2By83gqEea49PdDTFshrw" calledService_ExternalService="_kkO4UHgqEea49PdDTFshrw" role_ExternalService="_k0kaYHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2By83gqEea49PdDTFshrw" predecessor_AbstractAction="_k2CaAHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvJngqEea49PdDTFshrw" describedService__SEFF="_kOiVIXgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2CaAXgqEea49PdDTFshrw" successor_AbstractAction="_k2DBEHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2DBEHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.initMediaManager() from 2624 to 2666" predecessor_AbstractAction="_k2CaAXgqEea49PdDTFshrw" successor_AbstractAction="_k2DBEXgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2DBEXgqEea49PdDTFshrw" entityName="download @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.downloadTest() at 4570" predecessor_AbstractAction="_k2DBEHgqEea49PdDTFshrw" successor_AbstractAction="_k2DBEngqEea49PdDTFshrw" calledService_ExternalService="_kkO4UHgqEea49PdDTFshrw" role_ExternalService="_k0kaYHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2DBEngqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.facade.FacadeImpl.java.FacadeImpl.downloadTest() at 4599" predecessor_AbstractAction="_k2DBEXgqEea49PdDTFshrw" successor_AbstractAction="_k2CaAngqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2CaAngqEea49PdDTFshrw" predecessor_AbstractAction="_k2DBEngqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_kOiVI3gqEea49PdDTFshrw" entityName="DbManager">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_kOi8NHgqEea49PdDTFshrw" entityName="DbManager_provides_DbManager" providedInterface__OperationProvidedRole="_kOi8MHgqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvJ3gqEea49PdDTFshrw" describedService__SEFF="_kOi8MXgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2DBE3gqEea49PdDTFshrw" successor_AbstractAction="_k2DoIHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2DoIHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.userdbadapter.DbManager.java.DbManager.saveUser() at 1729" predecessor_AbstractAction="_k2DBE3gqEea49PdDTFshrw" successor_AbstractAction="_k2DBFHgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2DBFHgqEea49PdDTFshrw" predecessor_AbstractAction="_k2DoIHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvKHgqEea49PdDTFshrw" describedService__SEFF="_kOi8MngqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2EPMHgqEea49PdDTFshrw" successor_AbstractAction="_k2EPMngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2EPMngqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.userdbadapter.DbManager.java.DbManager.findUser() at 2493" predecessor_AbstractAction="_k2EPMHgqEea49PdDTFshrw" successor_AbstractAction="_k2EPMXgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2EPMXgqEea49PdDTFshrw" predecessor_AbstractAction="_k2EPMngqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvKXgqEea49PdDTFshrw" describedService__SEFF="_kOi8M3gqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2E2QHgqEea49PdDTFshrw" successor_AbstractAction="_k2E2QngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2E2QngqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.userdbadapter.DbManager.java.DbManager.clearTable() at 2840" predecessor_AbstractAction="_k2E2QHgqEea49PdDTFshrw" successor_AbstractAction="_k2E2QXgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2E2QXgqEea49PdDTFshrw" predecessor_AbstractAction="_k2E2QngqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_kOi8NXgqEea49PdDTFshrw" entityName="ReEncoderImpl">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_kOi8N3gqEea49PdDTFshrw" entityName="ReEncoderImpl_provides_IDownloadReEncoder" providedInterface__OperationProvidedRole="_kOi8NngqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0lBcngqEea49PdDTFshrw" entityName="ReEncoderImpl_requires_IDownload" requiredInterface__OperationRequiredRole="_jH-VsngqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvKngqEea49PdDTFshrw" describedService__SEFF="_jH-Vs3gqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2E2Q3gqEea49PdDTFshrw" successor_AbstractAction="_k2E2RXgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2E2RXgqEea49PdDTFshrw" entityName="download @position: edu.kit.ipd.sdq.mediastore.ejb.reencoder.ReEncoderImpl.java.ReEncoderImpl.download() at 3038" predecessor_AbstractAction="_k2E2Q3gqEea49PdDTFshrw" successor_AbstractAction="_k2FdUHgqEea49PdDTFshrw" calledService_ExternalService="_jH-Vs3gqEea49PdDTFshrw" role_ExternalService="_k0lBcngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2FdUHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.reencoder.ReEncoderImpl.java.ReEncoderImpl.download() from 3039 to 3154" predecessor_AbstractAction="_k2E2RXgqEea49PdDTFshrw" successor_AbstractAction="_k2E2RHgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2E2RHgqEea49PdDTFshrw" predecessor_AbstractAction="_k2FdUHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_kOjjQHgqEea49PdDTFshrw" entityName="MediaManagementImpl">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_kkO4UXgqEea49PdDTFshrw" entityName="MediaManagementImpl_provides_IMediaManagement" providedInterface__OperationProvidedRole="_kOjjQXgqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0lBc3gqEea49PdDTFshrw" entityName="MediaManagementImpl_requires_IDownload" requiredInterface__OperationRequiredRole="_jH-VsngqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0lBdHgqEea49PdDTFshrw" entityName="MediaManagementImpl_requires_IMediaAccess" requiredInterface__OperationRequiredRole="_kkPfZHgqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0lBdXgqEea49PdDTFshrw" entityName="MediaManagementImpl_requires_IPackaging" requiredInterface__OperationRequiredRole="_jYYJNngqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0rvK3gqEea49PdDTFshrw" describedService__SEFF="_kOjjQngqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2HSgHgqEea49PdDTFshrw" successor_AbstractAction="_k2H5kHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2H5kHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediamanagement.MediaManagementImpl.java.MediaManagementImpl.initMediaAdapter() from 2028 to 2067" predecessor_AbstractAction="_k2HSgHgqEea49PdDTFshrw" successor_AbstractAction="_k2H5kXgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2H5kXgqEea49PdDTFshrw" entityName="upload @position: edu.kit.ipd.sdq.mediastore.ejb.mediamanagement.MediaManagementImpl.java.MediaManagementImpl.upload() from 3497 to 3544" predecessor_AbstractAction="_k2H5kHgqEea49PdDTFshrw" successor_AbstractAction="_k2HSgXgqEea49PdDTFshrw" calledService_ExternalService="_kkPfZXgqEea49PdDTFshrw" role_ExternalService="_k0lBdHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2HSgXgqEea49PdDTFshrw" predecessor_AbstractAction="_k2H5kXgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0sWMHgqEea49PdDTFshrw" describedService__SEFF="_kOjjQ3gqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2H5kngqEea49PdDTFshrw" successor_AbstractAction="_k2IgoHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2IgoHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediamanagement.MediaManagementImpl.java.MediaManagementImpl.initMediaAdapter() from 2028 to 2067" predecessor_AbstractAction="_k2H5kngqEea49PdDTFshrw" successor_AbstractAction="_k2IgoXgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2IgoXgqEea49PdDTFshrw" entityName="getFileList @position: edu.kit.ipd.sdq.mediastore.ejb.mediamanagement.MediaManagementImpl.java.MediaManagementImpl.getFileList() from 3674 to 3722" predecessor_AbstractAction="_k2IgoHgqEea49PdDTFshrw" successor_AbstractAction="_k2H5k3gqEea49PdDTFshrw" calledService_ExternalService="_kkPfZngqEea49PdDTFshrw" role_ExternalService="_k0lBdHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2H5k3gqEea49PdDTFshrw" predecessor_AbstractAction="_k2IgoXgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0sWMXgqEea49PdDTFshrw" describedService__SEFF="_kkO4UHgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2IgongqEea49PdDTFshrw" successor_AbstractAction="_k2IgpHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2IgpHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediamanagement.MediaManagementImpl.java.MediaManagementImpl.download() from 3934 to 3993" predecessor_AbstractAction="_k2IgongqEea49PdDTFshrw" successor_AbstractAction="_k2JHsHgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2JHsHgqEea49PdDTFshrw" entityName="download @position: edu.kit.ipd.sdq.mediastore.ejb.mediamanagement.MediaManagementImpl.java.MediaManagementImpl.download() at 4446" predecessor_AbstractAction="_k2IgpHgqEea49PdDTFshrw" successor_AbstractAction="_k2JHsXgqEea49PdDTFshrw" calledService_ExternalService="_jH-Vs3gqEea49PdDTFshrw" role_ExternalService="_k0lBc3gqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2JHsXgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediamanagement.MediaManagementImpl.java.MediaManagementImpl.download() at 4559" predecessor_AbstractAction="_k2JHsHgqEea49PdDTFshrw" successor_AbstractAction="_k2JHsngqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_k2JHsngqEea49PdDTFshrw" entityName=" @position: edu.kit.ipd.sdq.mediastore.ejb.mediamanagement.MediaManagementImpl.java.MediaManagementImpl.download() from 4560 to 4660" predecessor_AbstractAction="_k2JHsXgqEea49PdDTFshrw" successor_AbstractAction="_k2Igo3gqEea49PdDTFshrw">
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_k2JuwHgqEea49PdDTFshrw" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_k2JuwXgqEea49PdDTFshrw">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_k2JuwngqEea49PdDTFshrw" successor_AbstractAction="_k2Juw3gqEea49PdDTFshrw"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_k2Juw3gqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediamanagement.MediaManagementImpl.java.MediaManagementImpl.download().Block at 4648" predecessor_AbstractAction="_k2JuwngqEea49PdDTFshrw" successor_AbstractAction="_k2JuxHgqEea49PdDTFshrw">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_k2JuxHgqEea49PdDTFshrw" predecessor_AbstractAction="_k2Juw3gqEea49PdDTFshrw"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_k2JuxXgqEea49PdDTFshrw" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_k2JuxngqEea49PdDTFshrw">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_k2Jux3gqEea49PdDTFshrw" successor_AbstractAction="_k2JuyHgqEea49PdDTFshrw"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_k2JuyHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediamanagement.MediaManagementImpl.java.MediaManagementImpl.initPackaging() from 3023 to 3059" predecessor_AbstractAction="_k2Jux3gqEea49PdDTFshrw" successor_AbstractAction="_k2JuyXgqEea49PdDTFshrw">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2JuyXgqEea49PdDTFshrw" entityName="zip @position: edu.kit.ipd.sdq.mediastore.ejb.mediamanagement.MediaManagementImpl.java.MediaManagementImpl.download().Block at 4753" predecessor_AbstractAction="_k2JuyHgqEea49PdDTFshrw" successor_AbstractAction="_k2JuyngqEea49PdDTFshrw" calledService_ExternalService="_jYYJN3gqEea49PdDTFshrw" role_ExternalService="_k0lBdXgqEea49PdDTFshrw"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_k2JuyngqEea49PdDTFshrw" predecessor_AbstractAction="_k2JuyXgqEea49PdDTFshrw"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2Igo3gqEea49PdDTFshrw" predecessor_AbstractAction="_k2JHsngqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_kkPfYHgqEea49PdDTFshrw" entityName="TagWatermarkingImpl">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_kkPfYngqEea49PdDTFshrw" entityName="TagWatermarkingImpl_provides_IDownloadTagWatermarking" providedInterface__OperationProvidedRole="_kkPfYXgqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0kaYXgqEea49PdDTFshrw" entityName="TagWatermarkingImpl_requires_IDownload" requiredInterface__OperationRequiredRole="_jH-VsngqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0sWMngqEea49PdDTFshrw" describedService__SEFF="_jH-Vs3gqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2KV0HgqEea49PdDTFshrw" successor_AbstractAction="_k2KV0ngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2KV0ngqEea49PdDTFshrw" entityName="download @position: edu.kit.ipd.sdq.mediastore.ejb.tagwatermarking.TagWatermarkingImpl.java.TagWatermarkingImpl.download() at 2600" predecessor_AbstractAction="_k2KV0HgqEea49PdDTFshrw" successor_AbstractAction="_k2KV03gqEea49PdDTFshrw" calledService_ExternalService="_jH-Vs3gqEea49PdDTFshrw" role_ExternalService="_k0kaYXgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2KV03gqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.tagwatermarking.TagWatermarkingImpl.java.TagWatermarkingImpl.download() at 2620" predecessor_AbstractAction="_k2KV0ngqEea49PdDTFshrw" successor_AbstractAction="_k2KV0XgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2KV0XgqEea49PdDTFshrw" predecessor_AbstractAction="_k2KV03gqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_kkPfY3gqEea49PdDTFshrw" entityName="MediaAccessImpl">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_k0h-IHgqEea49PdDTFshrw" entityName="MediaAccessImpl_provides_IMediaAccess" providedInterface__OperationProvidedRole="_kkPfZHgqEea49PdDTFshrw"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_k0h-IXgqEea49PdDTFshrw" entityName="MediaAccessImpl_provides_IDownloadMediaAccess" providedInterface__OperationProvidedRole="_k0hXEHgqEea49PdDTFshrw"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_k0h-IngqEea49PdDTFshrw" entityName="MediaAccessImpl_provides_IMediaAccessMaintenance" providedInterface__OperationProvidedRole="_k0hXEXgqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0lBcHgqEea49PdDTFshrw" entityName="MediaAccessImpl_requires_DbManager" requiredInterface__OperationRequiredRole="_g9_xcXgqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0sWM3gqEea49PdDTFshrw" describedService__SEFF="_kkPfZXgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2ZmYHgqEea49PdDTFshrw" successor_AbstractAction="_k2ZmYngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2ZmYngqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.MediaAccessImpl.java.MediaAccessImpl.upload() at 2245" predecessor_AbstractAction="_k2ZmYHgqEea49PdDTFshrw" successor_AbstractAction="_k2bbkHgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2bbkHgqEea49PdDTFshrw" entityName="saveAudioFile @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.MediaAccessImpl.java.MediaAccessImpl.upload() from 2673 to 2728" predecessor_AbstractAction="_k2ZmYngqEea49PdDTFshrw" successor_AbstractAction="_k2ZmYXgqEea49PdDTFshrw" calledService_ExternalService="_g-A_kHgqEea49PdDTFshrw" role_ExternalService="_k0lBcHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2ZmYXgqEea49PdDTFshrw" predecessor_AbstractAction="_k2bbkHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0sWNHgqEea49PdDTFshrw" describedService__SEFF="_kkPfZngqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2bbkXgqEea49PdDTFshrw" successor_AbstractAction="_k2bbk3gqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2bbk3gqEea49PdDTFshrw" entityName="getAllAudios @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.MediaAccessImpl.java.MediaAccessImpl.getFileList() from 2922 to 2970" predecessor_AbstractAction="_k2bbkXgqEea49PdDTFshrw" successor_AbstractAction="_k2bbkngqEea49PdDTFshrw" calledService_ExternalService="_g-SsYHgqEea49PdDTFshrw" role_ExternalService="_k0lBcHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2bbkngqEea49PdDTFshrw" predecessor_AbstractAction="_k2bbk3gqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0sWNXgqEea49PdDTFshrw" describedService__SEFF="_jH-Vs3gqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2bblHgqEea49PdDTFshrw" successor_AbstractAction="_k2bblngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2bblngqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.basic.config.GlobalConstantsContainer.java.GlobalConstantsContainer.getFileDir() from 2255 to 2323" predecessor_AbstractAction="_k2bblHgqEea49PdDTFshrw" successor_AbstractAction="_k2dQwHgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_k2dQwHgqEea49PdDTFshrw" entityName="SoMoX default loop count value" predecessor_AbstractAction="_k2bblngqEea49PdDTFshrw" successor_AbstractAction="_k2bblXgqEea49PdDTFshrw">
+        <bodyBehaviour_Loop id="_k2dQwXgqEea49PdDTFshrw">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_k2dQwngqEea49PdDTFshrw" successor_AbstractAction="_k2dQw3gqEea49PdDTFshrw"/>
+          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2dQw3gqEea49PdDTFshrw" entityName="getAudioByID @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.MediaAccessImpl.java.MediaAccessImpl.downloadFile() at 3728" predecessor_AbstractAction="_k2dQwngqEea49PdDTFshrw" successor_AbstractAction="_k2dQxHgqEea49PdDTFshrw" calledService_ExternalService="_jH9uoHgqEea49PdDTFshrw" role_ExternalService="_k0lBcHgqEea49PdDTFshrw"/>
+          <steps_Behaviour xsi:type="seff:InternalAction" id="_k2dQxHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.MediaAccessImpl.java.MediaAccessImpl.getFileFromHDD() at 4050" predecessor_AbstractAction="_k2dQw3gqEea49PdDTFshrw" successor_AbstractAction="_k2dQxXgqEea49PdDTFshrw">
+            <resourceDemand_Action>
+              <specification_ParametericResourceDemand specification="0"/>
+              <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+            </resourceDemand_Action>
+          </steps_Behaviour>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_k2dQxXgqEea49PdDTFshrw" predecessor_AbstractAction="_k2dQxHgqEea49PdDTFshrw"/>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="1"/>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2bblXgqEea49PdDTFshrw" predecessor_AbstractAction="_k2dQwHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0sWNngqEea49PdDTFshrw" describedService__SEFF="_k0hXEngqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2dQxngqEea49PdDTFshrw" successor_AbstractAction="_k2dQyHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2dQyHgqEea49PdDTFshrw" entityName="clearTable @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.MediaAccessImpl.java.MediaAccessImpl.removeAllData() at 4715" predecessor_AbstractAction="_k2dQxngqEea49PdDTFshrw" successor_AbstractAction="_k2d30HgqEea49PdDTFshrw" calledService_ExternalService="_jH9uoXgqEea49PdDTFshrw" role_ExternalService="_k0lBcHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2d30HgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.basic.config.GlobalConstantsContainer.java.GlobalConstantsContainer.getFileDir() from 2255 to 2323" predecessor_AbstractAction="_k2dQyHgqEea49PdDTFshrw" successor_AbstractAction="_k2dQx3gqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2dQx3gqEea49PdDTFshrw" predecessor_AbstractAction="_k2d30HgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0sWN3gqEea49PdDTFshrw" describedService__SEFF="_k0hXE3gqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2d30XgqEea49PdDTFshrw" successor_AbstractAction="_k2d303gqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2d303gqEea49PdDTFshrw" entityName="getAllAudios @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.MediaAccessImpl.java.MediaAccessImpl.getFileList() from 2922 to 2970" predecessor_AbstractAction="_k2d30XgqEea49PdDTFshrw" successor_AbstractAction="_k2ee4HgqEea49PdDTFshrw" calledService_ExternalService="_g-SsYHgqEea49PdDTFshrw" role_ExternalService="_k0lBcHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2ee4HgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.MediaAccessImpl.java.MediaAccessImpl.trimToPayload() from 5213 to 5264" predecessor_AbstractAction="_k2d303gqEea49PdDTFshrw" successor_AbstractAction="_k2ee4XgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2ee4XgqEea49PdDTFshrw" entityName="clearExceptFromUser @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.MediaAccessImpl.java.MediaAccessImpl.trimToPayload() at 5750" predecessor_AbstractAction="_k2ee4HgqEea49PdDTFshrw" successor_AbstractAction="_k2ee4ngqEea49PdDTFshrw" calledService_ExternalService="_jH9uongqEea49PdDTFshrw" role_ExternalService="_k0lBcHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2ee4ngqEea49PdDTFshrw" entityName="getAudioCount @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.MediaAccessImpl.java.MediaAccessImpl.trimToPayload() at 5815" predecessor_AbstractAction="_k2ee4XgqEea49PdDTFshrw" successor_AbstractAction="_k2fF8HgqEea49PdDTFshrw" calledService_ExternalService="_jH9uo3gqEea49PdDTFshrw" role_ExternalService="_k0lBcHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2fF8HgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.mediaaccess.MediaAccessImpl.java.MediaAccessImpl.trimToPayload() from 5816 to 5895" predecessor_AbstractAction="_k2ee4ngqEea49PdDTFshrw" successor_AbstractAction="_k2d30ngqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2d30ngqEea49PdDTFshrw" predecessor_AbstractAction="_k2fF8HgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_k0h-I3gqEea49PdDTFshrw" entityName="UserManagementImpl">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_k0h-J3gqEea49PdDTFshrw" entityName="UserManagementImpl_provides_IUserManagement" providedInterface__OperationProvidedRole="_k0h-JHgqEea49PdDTFshrw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_k0kaYngqEea49PdDTFshrw" entityName="UserManagementImpl_requires_IUserDBAdapter" requiredInterface__OperationRequiredRole="_g9W4QHgqEea49PdDTFshrw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0sWOHgqEea49PdDTFshrw" describedService__SEFF="_k0h-JXgqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2fF8XgqEea49PdDTFshrw" successor_AbstractAction="_k2ftAHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2ftAHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.usermanagement.UserManagementImpl.java.UserManagementImpl.initUserAdapter() from 1600 to 1638" predecessor_AbstractAction="_k2fF8XgqEea49PdDTFshrw" successor_AbstractAction="_k2g7IHgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2g7IHgqEea49PdDTFshrw" entityName="addUser @position: edu.kit.ipd.sdq.mediastore.ejb.usermanagement.UserManagementImpl.java.UserManagementImpl.register() from 2026 to 2073" predecessor_AbstractAction="_k2ftAHgqEea49PdDTFshrw" successor_AbstractAction="_k2fF8ngqEea49PdDTFshrw" calledService_ExternalService="_g9XfUHgqEea49PdDTFshrw" role_ExternalService="_k0kaYngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2fF8ngqEea49PdDTFshrw" predecessor_AbstractAction="_k2g7IHgqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_k0sWOXgqEea49PdDTFshrw" describedService__SEFF="_k0h-JngqEea49PdDTFshrw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_k2g7IXgqEea49PdDTFshrw" successor_AbstractAction="_k2hiMHgqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2hiMHgqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.usermanagement.UserManagementImpl.java.UserManagementImpl.initUserAdapter() from 1600 to 1638" predecessor_AbstractAction="_k2g7IXgqEea49PdDTFshrw" successor_AbstractAction="_k2hiMXgqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_k2hiMXgqEea49PdDTFshrw" entityName="getUserData @position: edu.kit.ipd.sdq.mediastore.ejb.usermanagement.UserManagementImpl.java.UserManagementImpl.login() at 2351" predecessor_AbstractAction="_k2hiMHgqEea49PdDTFshrw" successor_AbstractAction="_k2hiMngqEea49PdDTFshrw" calledService_ExternalService="_g9roYHgqEea49PdDTFshrw" role_ExternalService="_k0kaYngqEea49PdDTFshrw"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_k2hiMngqEea49PdDTFshrw" entityName="IA  @position: edu.kit.ipd.sdq.mediastore.ejb.usermanagement.UserManagementImpl.java.UserManagementImpl.login() from 2352 to 2421" predecessor_AbstractAction="_k2hiMXgqEea49PdDTFshrw" successor_AbstractAction="_k2g7IngqEea49PdDTFshrw">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_k2g7IngqEea49PdDTFshrw" predecessor_AbstractAction="_k2hiMngqEea49PdDTFshrw"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_g9W4QHgqEea49PdDTFshrw" entityName="IUserDBAdapter">
+    <signatures__OperationInterface id="_g9XfUHgqEea49PdDTFshrw" entityName="addUser">
+      <parameters__OperationSignature dataType__Parameter="_g9e0EHgqEea49PdDTFshrw" parameterName="user"/>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_g9roYHgqEea49PdDTFshrw" entityName="getUserData" returnType__OperationSignature="_g9roYXgqEea49PdDTFshrw">
+      <parameters__OperationSignature parameterName="username">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_g95q0HgqEea49PdDTFshrw" entityName="removeAllData"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_g9_xcXgqEea49PdDTFshrw" entityName="DbManager">
+    <signatures__OperationInterface id="_g-A_kHgqEea49PdDTFshrw" entityName="saveAudioFile">
+      <parameters__OperationSignature dataType__Parameter="_g-BmoHgqEea49PdDTFshrw" parameterName="file"/>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_g-SsYHgqEea49PdDTFshrw" entityName="getAllAudios" returnType__OperationSignature="_i-oMcHgqEea49PdDTFshrw"/>
+    <signatures__OperationInterface id="_jH9uoHgqEea49PdDTFshrw" entityName="getAudioByID" returnType__OperationSignature="_g-EC4HgqEea49PdDTFshrw">
+      <parameters__OperationSignature parameterName="id">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_jH9uoXgqEea49PdDTFshrw" entityName="clearTable"/>
+    <signatures__OperationInterface id="_jH9uongqEea49PdDTFshrw" entityName="clearExceptFromUser">
+      <parameters__OperationSignature parameterName="userId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_jH9uo3gqEea49PdDTFshrw" entityName="getAudioCount">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_jH-VsXgqEea49PdDTFshrw" entityName="IDownloadAudioWatermarking"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_jH-VsngqEea49PdDTFshrw" entityName="IDownload">
+    <signatures__OperationInterface id="_jH-Vs3gqEea49PdDTFshrw" entityName="download" returnType__OperationSignature="_jRO_YHgqEea49PdDTFshrw">
+      <parameters__OperationSignature dataType__Parameter="_hn1YoHgqEea49PdDTFshrw" parameterName="requestedAudioIDs"/>
+      <parameters__OperationSignature dataType__Parameter="_hn1YoHgqEea49PdDTFshrw" parameterName="bitrates"/>
+      <parameters__OperationSignature parameterName="downloaderLogin">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_jYYJMHgqEea49PdDTFshrw" entityName="IDownloadCache" parentInterfaces__Interface="_jH-VsngqEea49PdDTFshrw"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_jYYJMXgqEea49PdDTFshrw" entityName="ICacheMaintenance">
+    <signatures__OperationInterface id="_jYYJMngqEea49PdDTFshrw" entityName="clear"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_jYYJNngqEea49PdDTFshrw" entityName="IPackaging">
+    <signatures__OperationInterface id="_jYYJN3gqEea49PdDTFshrw" entityName="zip" returnType__OperationSignature="_g-SFUHgqEea49PdDTFshrw">
+      <parameters__OperationSignature dataType__Parameter="_hn1YoHgqEea49PdDTFshrw" parameterName="fileList"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_jYYwQXgqEea49PdDTFshrw" entityName="IFacade">
+    <signatures__OperationInterface id="_jYYwQngqEea49PdDTFshrw" entityName="register">
+      <parameters__OperationSignature dataType__Parameter="_g9e0EHgqEea49PdDTFshrw" parameterName="user"/>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_jYYwQ3gqEea49PdDTFshrw" entityName="login" returnType__OperationSignature="_g9roYXgqEea49PdDTFshrw">
+      <parameters__OperationSignature parameterName="username">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_jYYwRHgqEea49PdDTFshrw" entityName="upload">
+      <parameters__OperationSignature dataType__Parameter="_g-BmoHgqEea49PdDTFshrw" parameterName="file"/>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_jYYwRXgqEea49PdDTFshrw" entityName="getFileList" returnType__OperationSignature="_i-oMcHgqEea49PdDTFshrw"/>
+    <signatures__OperationInterface id="_kOiVIHgqEea49PdDTFshrw" entityName="download" returnType__OperationSignature="_g-SFUHgqEea49PdDTFshrw">
+      <parameters__OperationSignature dataType__Parameter="_hn1YoHgqEea49PdDTFshrw" parameterName="id"/>
+      <parameters__OperationSignature dataType__Parameter="_hn1YoHgqEea49PdDTFshrw" parameterName="bitrates"/>
+      <parameters__OperationSignature parameterName="downloaderLogin">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_kOiVIXgqEea49PdDTFshrw" entityName="downloadTest">
+      <parameters__OperationSignature dataType__Parameter="_hn1YoHgqEea49PdDTFshrw" parameterName="id"/>
+      <parameters__OperationSignature dataType__Parameter="_hn1YoHgqEea49PdDTFshrw" parameterName="bitrates"/>
+      <parameters__OperationSignature parameterName="downloaderLogin">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_kOi8MHgqEea49PdDTFshrw" entityName="DbManager">
+    <signatures__OperationInterface id="_kOi8MXgqEea49PdDTFshrw" entityName="saveUser">
+      <parameters__OperationSignature dataType__Parameter="_g9e0EHgqEea49PdDTFshrw" parameterName="userData"/>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_kOi8MngqEea49PdDTFshrw" entityName="findUser" returnType__OperationSignature="_g9roYXgqEea49PdDTFshrw">
+      <parameters__OperationSignature parameterName="username">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_kOi8M3gqEea49PdDTFshrw" entityName="clearTable"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_kOi8NngqEea49PdDTFshrw" entityName="IDownloadReEncoder" parentInterfaces__Interface="_jH-VsngqEea49PdDTFshrw"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_kOjjQXgqEea49PdDTFshrw" entityName="IMediaManagement">
+    <signatures__OperationInterface id="_kOjjQngqEea49PdDTFshrw" entityName="upload">
+      <parameters__OperationSignature dataType__Parameter="_g-BmoHgqEea49PdDTFshrw" parameterName="file"/>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_kOjjQ3gqEea49PdDTFshrw" entityName="getFileList" returnType__OperationSignature="_i-oMcHgqEea49PdDTFshrw"/>
+    <signatures__OperationInterface id="_kkO4UHgqEea49PdDTFshrw" entityName="download" returnType__OperationSignature="_g-SFUHgqEea49PdDTFshrw">
+      <parameters__OperationSignature dataType__Parameter="_hn1YoHgqEea49PdDTFshrw" parameterName="requestedAudioIDs"/>
+      <parameters__OperationSignature dataType__Parameter="_hn1YoHgqEea49PdDTFshrw" parameterName="bitrates"/>
+      <parameters__OperationSignature parameterName="downloaderLogin">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_kkPfYXgqEea49PdDTFshrw" entityName="IDownloadTagWatermarking" parentInterfaces__Interface="_jH-VsngqEea49PdDTFshrw"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_kkPfZHgqEea49PdDTFshrw" entityName="IMediaAccess">
+    <signatures__OperationInterface id="_kkPfZXgqEea49PdDTFshrw" entityName="upload">
+      <parameters__OperationSignature dataType__Parameter="_g-BmoHgqEea49PdDTFshrw" parameterName="file"/>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_kkPfZngqEea49PdDTFshrw" entityName="getFileList" returnType__OperationSignature="_i-oMcHgqEea49PdDTFshrw"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_k0hXEHgqEea49PdDTFshrw" entityName="IDownloadMediaAccess" parentInterfaces__Interface="_jH-VsngqEea49PdDTFshrw"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_k0hXEXgqEea49PdDTFshrw" entityName="IMediaAccessMaintenance">
+    <signatures__OperationInterface id="_k0hXEngqEea49PdDTFshrw" entityName="removeAllData"/>
+    <signatures__OperationInterface id="_k0hXE3gqEea49PdDTFshrw" entityName="trimToPayload">
+      <parameters__OperationSignature parameterName="payloadUserId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="payloadSize">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_k0h-JHgqEea49PdDTFshrw" entityName="IUserManagement">
+    <signatures__OperationInterface id="_k0h-JXgqEea49PdDTFshrw" entityName="register">
+      <parameters__OperationSignature dataType__Parameter="_g9e0EHgqEea49PdDTFshrw" parameterName="user"/>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_k0h-JngqEea49PdDTFshrw" entityName="login" returnType__OperationSignature="_g9roYXgqEea49PdDTFshrw">
+      <parameters__OperationSignature parameterName="username">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_g9e0EHgqEea49PdDTFshrw" entityName="UserRegData">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="firstname">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="lastname">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="email">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="password">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_g9roYXgqEea49PdDTFshrw" entityName="CurrentUser">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="id">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="firstname">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="lastname">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="email">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="passwordHash">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_g-BmoHgqEea49PdDTFshrw" entityName="AudioFile">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="info" datatype_InnerDeclaration="_g-EC4HgqEea49PdDTFshrw"/>
+    <innerDeclaration_CompositeDataType entityName="bytes" datatype_InnerDeclaration="_g-SFUXgqEea49PdDTFshrw"/>
+    <innerDeclaration_CompositeDataType entityName="length">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_g-EC4HgqEea49PdDTFshrw" entityName="AudioFileInfo">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="id">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="album">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="artist">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="bitrate">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="genre">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="releaseyear">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="title">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="uploader">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_g-SFUHgqEea49PdDTFshrw" entityName="BYTEList">
+    <innerType_CollectionDataType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_g-SFUXgqEea49PdDTFshrw" entityName="BYTEList_bytes"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_hn1YoHgqEea49PdDTFshrw" entityName="List" innerType_CollectionDataType="_hn1YoXgqEea49PdDTFshrw"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_hn1YoXgqEea49PdDTFshrw" entityName="Object"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_i-oMcHgqEea49PdDTFshrw" entityName="AudioFileInfoList" innerType_CollectionDataType="_g-EC4HgqEea49PdDTFshrw"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_jRO_YHgqEea49PdDTFshrw" entityName="AudioFileList" innerType_CollectionDataType="_g-BmoHgqEea49PdDTFshrw"/>
+</repository:Repository>

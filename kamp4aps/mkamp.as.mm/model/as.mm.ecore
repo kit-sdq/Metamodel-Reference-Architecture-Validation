@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="as.mm" nsURI="as.mm" nsPrefix="as.mm">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractKAMP4aPSModificationRepository"
+      abstract="true">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//KAMP4aPSSeedModifications"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//AbstractModificationRepository">
+      <eTypeArguments eTypeParameter="#//AbstractKAMP4aPSModificationRepository/T"/>
+      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//ChangePropagationStep"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KAMP4aPSModificationRepository">
+    <eGenericSuperTypes eClassifier="#//AbstractKAMP4aPSModificationRepository">
+      <eTypeArguments eClassifier="#//KAMP4aPSSeedModifications"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KAMP4aPSSeedModifications" eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//AbstractSeedModifications">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structureModifications"
+        upperBound="-1" containment="true">
+      <eGenericType eClassifier="#//ModifyStructure">
+        <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleModifications" upperBound="-1"
+        containment="true">
+      <eGenericType eClassifier="#//ModifyModule">
+        <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentModifications"
+        upperBound="-1" containment="true">
+      <eGenericType eClassifier="#//ModifyComponent">
+        <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//ComponentRepository/Component"/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceModifications"
+        upperBound="-1" containment="true">
+      <eGenericType eClassifier="#//ModifyInterface">
+        <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//InterfaceRepository/Interface"/>
+      </eGenericType>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangePropagationDueToHardwareChange"
+      eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//ChangePropagationStep">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceModifications"
+        upperBound="-1" containment="true">
+      <eGenericType eClassifier="#//ModifyInterface">
+        <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//InterfaceRepository/Interface"/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentModifications"
+        upperBound="-1" containment="true">
+      <eGenericType eClassifier="#//ModifyComponent">
+        <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//ComponentRepository/Component"/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structureModifications"
+        upperBound="-1" containment="true">
+      <eGenericType eClassifier="#//ModifyStructure">
+        <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleModifications" upperBound="-1"
+        containment="true">
+      <eGenericType eClassifier="#//ModifyModule">
+        <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changed" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyEntity" abstract="true">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//AbstractModification">
+      <eTypeArguments eTypeParameter="#//ModifyEntity/T"/>
+      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyComponent">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//ComponentRepository/Component"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="#//ModifyEntity">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//ComponentRepository/Component"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyModule">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="#//ModifyEntity">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyStructure">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="#//ModifyEntity">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyInterface">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//InterfaceRepository/Interface"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="#//ModifyEntity">
+      <eTypeArguments eClassifier="ecore:EClass ../../mkamp.as/model/as.ecore#//InterfaceRepository/Interface"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modificationmarks" nsURI="http://sdq.ipd.kit.edu/Modificationmarks/1.0"
+    nsPrefix="modificationmarks">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractModificationRepository" abstract="true">
+    <eTypeParameters name="S">
+      <eBounds eClassifier="#//AbstractSeedModifications"/>
+    </eTypeParameters>
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//AbstractChangePropagationStep"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="seedModifications" lowerBound="1"
+        containment="true">
+      <eGenericType eTypeParameter="#//AbstractModificationRepository/S"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="changePropagationSteps"
+        upperBound="-1" containment="true">
+      <eGenericType eTypeParameter="#//AbstractModificationRepository/T"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModificationRepository">
+    <eGenericSuperTypes eClassifier="#//AbstractModificationRepository">
+      <eTypeArguments eClassifier="#//SeedModifications"/>
+      <eTypeArguments eClassifier="#//ChangePropagationStep"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractSeedModifications" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SeedModifications" eSuperTypes="#//AbstractSeedModifications">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="seedElements" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractChangePropagationStep" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangePropagationStep" eSuperTypes="#//AbstractChangePropagationStep"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractModification" abstract="true">
+    <eTypeParameters name="S"/>
+    <eTypeParameters name="T"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="affectedElement" lowerBound="1">
+      <eGenericType eTypeParameter="#//AbstractModification/S"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="causingElements" upperBound="-1">
+      <eGenericType eTypeParameter="#//AbstractModification/T"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="toolderived" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userDecision" lowerBound="1"
+        eType="#//AcceptanceAndConfirmationState" defaultValueLiteral="NODECISION"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Modification">
+    <eGenericSuperTypes eClassifier="#//AbstractModification">
+      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AcceptanceAndConfirmationState">
+    <eLiterals name="NODECISION" literal="NODECISION"/>
+    <eLiterals name="CONFIRMED" value="1" literal="CONFIRMED"/>
+    <eLiterals name="EXCLUDED" value="2" literal="EXCLUDED"/>
+  </eClassifiers>
+</ecore:EPackage>

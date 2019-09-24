@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_u0DCkJhPEeWKgoTb5jIgDA" entityName="testSendAndReceive">
+    <scenarioBehaviour_UsageScenario id="_u0DCk5hPEeWKgoTb5jIgDA" entityName="testSendAndReceive">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_u0DCkZhPEeWKgoTb5jIgDA" successor="_vkCVEJhPEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_vkCVEJhPEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.test.TestSupport.java.TestSupport.getSubject() from 4606 to 4660" successor="_zTV4YJhPEeWKgoTb5jIgDA" predecessor="_u0DCkZhPEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_zTV4YJhPEeWKgoTb5jIgDA" entityName="getClientId:  @position: org.activemq.JmsTopicRequestReplyTest.java.JmsTopicRequestReplyTest.testSendAndReceive() at 2290" successor="_0OM-IJhPEeWKgoTb5jIgDA" predecessor="_vkCVEJhPEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_NL2ZYZhOEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7vemHJhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_0OM-IJhPEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTopicRequestReplyTest.java.JmsTopicRequestReplyTest.testSendAndReceive() at 2399" successor="_u0DCkphPEeWKgoTb5jIgDA" predecessor="_zTV4YJhPEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_u0DCkphPEeWKgoTb5jIgDA" predecessor="_0OM-IJhPEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="__SnGwJhPEeWKgoTb5jIgDA" entityName="testSendAndReceiveWithDynamicallyCreatedProducer">
+    <scenarioBehaviour_UsageScenario id="__SnGw5hPEeWKgoTb5jIgDA" entityName="testSendAndReceiveWithDynamicallyCreatedProducer">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="__SnGwZhPEeWKgoTb5jIgDA" successor="_L8exUJhQEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_L8exUJhQEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.test.TestSupport.java.TestSupport.getSubject() from 4606 to 4660" successor="_L8exUZhQEeWKgoTb5jIgDA" predecessor="__SnGwZhPEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_L8exUZhQEeWKgoTb5jIgDA" entityName="getClientId:  @position: org.activemq.JmsTopicRequestReplyTest.java.JmsTopicRequestReplyTest.testSendAndReceive() at 2290" successor="_MPaUYJhQEeWKgoTb5jIgDA" predecessor="_L8exUJhQEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_NL2ZYZhOEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7vemHJhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_MPaUYJhQEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTopicRequestReplyTest.java.JmsTopicRequestReplyTest.testSendAndReceive() at 2399" successor="__SnGwphPEeWKgoTb5jIgDA" predecessor="_L8exUZhQEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="__SnGwphPEeWKgoTb5jIgDA" predecessor="_MPaUYJhQEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="generictest" nsURI="generictest.de" nsPrefix="generictest">
+  <eClassifiers xsi:type="ecore:EClass" name="Door">
+    <eTypeParameters name="A"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="genref">
+      <eGenericType eClassifier="#//GenRef">
+        <eTypeArguments eClassifier="#//TypeArgForRef"/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reffedclass" eType="#//ReffedClass"
+        containment="true"/>
+    <eGenericSuperTypes eClassifier="#//GenericSuperClass">
+      <eTypeArguments eClassifier="#//TypeArgForGenericSuperClass"/>
+    </eGenericSuperTypes>
+    <eGenericSuperTypes eClassifier="#//NextGenSuperClass">
+      <eTypeArguments eTypeParameter="#//Door/A"/>
+    </eGenericSuperTypes>
+    <eGenericSuperTypes eClassifier="#//NonGenericSuperclass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericSuperClass">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//GenericSuperClassBound"/>
+    </eTypeParameters>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericSuperClassBound"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeArgForGenericSuperClass" eSuperTypes="#//GenericSuperClassBound"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NextGenSuperClass">
+    <eTypeParameters name="Y"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeArgReferencedOnlyExternally"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GenRef">
+    <eTypeParameters name="T"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeArgForRef"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NonGenericSuperclass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReffedClass" eSuperTypes="#//SuperReffedClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperReffedClass"/>
+</ecore:EPackage>

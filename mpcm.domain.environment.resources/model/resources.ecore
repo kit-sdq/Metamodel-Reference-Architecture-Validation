@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="resources" nsURI="mpcm.domain.environment.resources" nsPrefix="mpcm.domain.environment.resources">
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceEnvironment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceContainers" upperBound="-1"
+        eType="#//ResourceContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="communicationLinkResourceSpecifications"
+        upperBound="-1" eType="#//CommunicationLinkResourceSpecification" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" lowerBound="1"
+        eType="ecore:EClass ../../mpcm.domain.environment/model/environment.ecore#//Container"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activeResourceSpecifications_ResourceContainer"
+        ordered="false" upperBound="-1" eType="#//ProcessingResourceSpecification"
+        containment="true" eOpposite="#//ProcessingResourceSpecification/resourceContainer_ProcessingResourceSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hddResourceSpecifications"
+        upperBound="-1" eType="#//HDDProcessingResourceSpecification" eOpposite="#//HDDProcessingResourceSpecification/resourceContainer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessingResourceSpecification" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Performance specification of processing resources (e.g. processing rate, scheduling policy)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredByContainer" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>&#xD;&#xA;    This attribute controls the handling of the resource&amp;nbsp;by the&amp;nbsp;reliability prediction.&#xD;&#xA;&lt;/p>&#xD;&#xA;&lt;p>&#xD;&#xA;    If set to TRUE, the unavailability of the resource automatically leads to the unavailability of the surrounding&#xD;&#xA;    resource container. Every attempt to execute a SEFF on an unavailable resource container leads to a corresponding&#xD;&#xA;    resource failure.&#xD;&#xA;&lt;/p>&#xD;&#xA;&lt;p>&#xD;&#xA;    If set to FALSE, the unavailability of the resource does not make the container unavailable. An attempt to execute a&#xD;&#xA;    SEFF on a container with an unavailable resource leads to a resource failure ONLY IF the SEFF contains an&#xD;&#xA;    InternalAction that accesses&amp;nbsp;the resource.&#xD;&#xA;&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="schedulingPolicy" ordered="false"
+        lowerBound="1" eType="#//resourcetype/SchedulingPolicy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activeResourceType_ActiveResourceSpecification"
+        ordered="false" lowerBound="1" eType="#//resourcetype/ProcessingResourceType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfReplicas" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>&#xD;&#xA;    Specifies the actual number of processors of the processing resource.&#xD;&#xA;&lt;/p>&#xD;&#xA;&lt;p>&#xD;&#xA;    In terms of the queueing theory, the number of processors corresponds to the number of servers&amp;nbsp;of a service&#xD;&#xA;    center. Thus, the attribute allows to specify a&amp;nbsp;multi-server queue, i.e., one queue with multiple servers.&lt;br />&#xD;&#xA;&lt;/p>"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceContainer_ProcessingResourceSpecification"
+        ordered="false" lowerBound="1" eType="#//ResourceContainer" eOpposite="#//ResourceContainer/activeResourceSpecifications_ResourceContainer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HDDProcessingResourceSpecification"
+      eSuperTypes="#//ProcessingResourceSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceContainer" eType="#//ResourceContainer"
+        eOpposite="#//ResourceContainer/hddResourceSpecifications"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationLinkResourceSpecification"
+      eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Throughput and performance specification of linking resources"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkingResource_CommunicationLinkResourceSpecification"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.domain.environment/model/environment.ecore#//LinkingResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="communicationLinkResourceType_CommunicationLinkResourceSpecification"
+        ordered="false" lowerBound="1" eType="#//resourcetype/CommunicationLinkResourceType"/>
+  </eClassifiers>
+  <eSubpackages name="resourcetype" nsURI="mpcm.domain.environment.resources.resourcetype"
+      nsPrefix="mpcm.domain.environment.resources.resourcetype">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Package containing all resource types supported by the PCM"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceRepository">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Extendable repository of resource types of the PCM. The resource type repository is intentionally left open to support&#xD;&#xA;arbitrary resources in the future"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="schedulingPolicies__ResourceRepository"
+          ordered="false" upperBound="-1" eType="#//resourcetype/SchedulingPolicy"
+          containment="true" eOpposite="#//resourcetype/SchedulingPolicy/resourceRepository__SchedulingPolicy"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="availableResourceTypes_ResourceRepository"
+          ordered="false" upperBound="-1" eType="#//resourcetype/ResourceType" containment="true"
+          eOpposite="#//resourcetype/ResourceType/resourceRepository_ResourceType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceType" abstract="true" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore#//UnitCarryingElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Abstract superclass of any resource"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceRepository_ResourceType"
+          ordered="false" lowerBound="1" eType="#//resourcetype/ResourceRepository"
+          eOpposite="#//resourcetype/ResourceRepository/availableResourceTypes_ResourceRepository"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ProcessingResourceType" eSuperTypes="#//resourcetype/ResourceType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&lt;p>&#xD;&#xA;    ResourceType representation of CPU.&#xD;&#xA;&lt;/p>"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SchedulingPolicy" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceRepository__SchedulingPolicy"
+          ordered="false" lowerBound="1" eType="#//resourcetype/ResourceRepository"
+          eOpposite="#//resourcetype/ResourceRepository/schedulingPolicies__ResourceRepository"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CommunicationLinkResourceType" eSuperTypes="#//resourcetype/ResourceType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="ResourceType representing communication links like, LAN, WAN, WiFi etc."/>
+      </eAnnotations>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

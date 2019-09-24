@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_dhmJsJhXEeWKgoTb5jIgDA" entityName="testSetBitGetBitInRange">
+    <scenarioBehaviour_UsageScenario id="_dhmJs5hXEeWKgoTb5jIgDA" entityName="testSetBitGetBitInRange">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_dhmJsZhXEeWKgoTb5jIgDA" successor="_diCOkJhXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_diCOkJhXEeWKgoTb5jIgDA" entityName="default loop count value" successor="_diorgJhXEeWKgoTb5jIgDA" predecessor="_dhmJsZhXEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_diCOkZhXEeWKgoTb5jIgDA" entityName=" @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBitInRange() from 868 to 906">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_diCOkphXEeWKgoTb5jIgDA" successor="_diCOk5hXEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_diCOk5hXEeWKgoTb5jIgDA" successor="_diVwkphXEeWKgoTb5jIgDA" predecessor="_diCOkphXEeWKgoTb5jIgDA">
+            <branchTransitions_Branch branchProbability="1.0">
+              <branchedBehaviour_BranchTransition id="_diCOlJhXEeWKgoTb5jIgDA" entityName="parent  @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBitInRange().Block from 909 to 936/ @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBitInRange().Block.Block from 937 to 988">
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_diCOlZhXEeWKgoTb5jIgDA" successor="_diL_kJhXEeWKgoTb5jIgDA"/>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_diL_kJhXEeWKgoTb5jIgDA" entityName="setBit:  @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBitInRange().Block.Block at 987" successor="_diVwkJhXEeWKgoTb5jIgDA" predecessor="_diCOlZhXEeWKgoTb5jIgDA">
+                  <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+                  <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_diL_kZhXEeWKgoTb5jIgDA"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_diVwkJhXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBitInRange().Block.Block at 987" successor="_diVwkZhXEeWKgoTb5jIgDA" predecessor="_diL_kJhXEeWKgoTb5jIgDA">
+                  <timeSpecification_Delay specification="0"/>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_diVwkZhXEeWKgoTb5jIgDA" predecessor="_diVwkJhXEeWKgoTb5jIgDA"/>
+              </branchedBehaviour_BranchTransition>
+            </branchTransitions_Branch>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_diVwkphXEeWKgoTb5jIgDA" predecessor="_diCOk5hXEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_diorgJhXEeWKgoTb5jIgDA" entityName="default loop count value" successor="_dhmJsphXEeWKgoTb5jIgDA" predecessor="_diCOkJhXEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_diorgZhXEeWKgoTb5jIgDA" entityName=" @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBitInRange() from 1012 to 1049">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_diorgphXEeWKgoTb5jIgDA" successor="_di7mcJhXEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_di7mcJhXEeWKgoTb5jIgDA" entityName="getBit:  @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBitInRange().Block at 1136" successor="_di7mcphXEeWKgoTb5jIgDA" predecessor="_diorgphXEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_di7mcZhXEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_di7mcphXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBitInRange().Block at 1136" successor="_di7mc5hXEeWKgoTb5jIgDA" predecessor="_di7mcJhXEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_di7mc5hXEeWKgoTb5jIgDA" predecessor="_di7mcphXEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_dhmJsphXEeWKgoTb5jIgDA" predecessor="_diorgJhXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_di7mdJhXEeWKgoTb5jIgDA" entityName="testSetBitGetBit">
+    <scenarioBehaviour_UsageScenario id="_di7md5hXEeWKgoTb5jIgDA" entityName="testSetBitGetBit">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_di7mdZhXEeWKgoTb5jIgDA" successor="_djYSYJhXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_djYSYJhXEeWKgoTb5jIgDA" entityName="default loop count value" successor="_dj-vUJhXEeWKgoTb5jIgDA" predecessor="_di7mdZhXEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_djYSYZhXEeWKgoTb5jIgDA" entityName=" @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBit() from 1305 to 1347">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_djYSYphXEeWKgoTb5jIgDA" successor="_djiDYJhXEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_djiDYJhXEeWKgoTb5jIgDA" entityName="setBit:  @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBit().Block at 1394" successor="_djiDYZhXEeWKgoTb5jIgDA" predecessor="_djYSYphXEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_diL_kZhXEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_djiDYZhXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBit().Block at 1394" successor="_djiDYphXEeWKgoTb5jIgDA" predecessor="_djiDYJhXEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_djiDYphXEeWKgoTb5jIgDA" predecessor="_djiDYZhXEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_dj-vUJhXEeWKgoTb5jIgDA" entityName="default loop count value" successor="_di7mdphXEeWKgoTb5jIgDA" predecessor="_djYSYJhXEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_dj-vUZhXEeWKgoTb5jIgDA" entityName=" @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBit() from 1405 to 1464">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_dj-vUphXEeWKgoTb5jIgDA" successor="_dkH5QJhXEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_dkH5QJhXEeWKgoTb5jIgDA" entityName="getBit:  @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBit().Block at 1504" successor="_dkH5QZhXEeWKgoTb5jIgDA" predecessor="_dj-vUphXEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_di7mcZhXEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dkH5QZhXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.util.BitArrayBinTest.java.BitArrayBinTest.testSetBitGetBit().Block at 1504" successor="_dkH5QphXEeWKgoTb5jIgDA" predecessor="_dkH5QJhXEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_dkH5QphXEeWKgoTb5jIgDA" predecessor="_dkH5QZhXEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_di7mdphXEeWKgoTb5jIgDA" predecessor="_dj-vUJhXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

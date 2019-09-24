@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="typerepo" nsURI="http://www.example.org/typerepo" nsPrefix="typerepo">
+  <eClassifiers xsi:type="ecore:EClass" name="Repository" eSuperTypes="../../msmartgrid.paradigm.base/model/base.ecore#//NamedIdentifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsSmartMeterTypes"
+        upperBound="-1" eType="#//SmartMeterType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsConnectionType"
+        upperBound="-1" eType="#//ConnectionType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsNetworkNodeTypes"
+        upperBound="-1" eType="#//NetworkNodeType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SmartMeterType" eSuperTypes="../../msmartgrid.paradigm.base/model/base.ecore#//NamedIdentifier"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionType" eSuperTypes="../../msmartgrid.paradigm.base/model/base.ecore#//NamedIdentifier"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkNodeType" eSuperTypes="../../msmartgrid.paradigm.base/model/base.ecore#//NamedIdentifier"/>
+  <eSubpackages name="typeapplication" nsURI="http://www.example.org/typeapplication"
+      nsPrefix="typeapplication">
+    <eClassifiers xsi:type="ecore:EClass" name="TypeApplications">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="networknodetypeapplication"
+          upperBound="-1" eType="#//typeapplication/SmartMeterTypeApplication" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connectiontypeapplication"
+          upperBound="-1" eType="#//typeapplication/NetworkNodeTypeApplication" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="typeapplications" upperBound="-1"
+          eType="#//typeapplication/ConnectionTypeApplication" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ConnectionTypeApplication">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connectiontype" lowerBound="1"
+          eType="#//ConnectionType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="smartmeter" lowerBound="1"
+          eType="ecore:EClass ../../msmartgrid.paradigm.graph/model/graph.ecore#//PhysicalConnection"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SmartMeterTypeApplication">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="smartmetertype" lowerBound="1"
+          eType="#//SmartMeterType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="networknode" lowerBound="1"
+          eType="ecore:EClass ../../msmartgrid.domain.topo/model/topo.ecore#//SmartMeter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NetworkNodeTypeApplication">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="networknodetype" lowerBound="1"
+          eType="#//NetworkNodeType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="physicalconnection" lowerBound="1"
+          eType="ecore:EClass ../../msmartgrid.domain.topo/model/topo.ecore#//NetworkNode"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

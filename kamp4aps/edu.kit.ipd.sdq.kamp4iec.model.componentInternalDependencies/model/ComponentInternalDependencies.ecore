@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ComponentInternalDependencies" nsURI="http://sdq.ipd.kit.edu/ComponentInternalDependencies"
+    nsPrefix="ComponentInternalDependencies">
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentInternalDependenciesRepository">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasFunctionblockDependency"
+        upperBound="-1" eType="#//FunctionblockDependency" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionblockDependency">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ProvidedFunctionBlock"
+        lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//FunctionBlock"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RequiredResource" lowerBound="1"
+        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//FunctionblockResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasMethodDependency" upperBound="-1"
+        eType="#//MethodDependency" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodDependency">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RequiredResource" lowerBound="1"
+        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//MethodResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ProvidedMethod" lowerBound="1"
+        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECMethodImplementation"/>
+  </eClassifiers>
+</ecore:EPackage>

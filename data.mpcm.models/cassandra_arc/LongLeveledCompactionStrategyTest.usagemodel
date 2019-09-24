@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_BR2vYLLjEeWaL4cfYRKdZg" entityName="testParallelLeveledCompaction">
+    <scenarioBehaviour_UsageScenario id="_BR2vY7LjEeWaL4cfYRKdZg" entityName="testParallelLeveledCompaction">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_BR2vYbLjEeWaL4cfYRKdZg" successor="_BR3WcLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BR3WcLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction() at 1650" successor="_BR3WcbLjEeWaL4cfYRKdZg" predecessor="_BR2vYbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BR3WcbLjEeWaL4cfYRKdZg" entityName="open:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction() at 1744" successor="_BR4kkLLjEeWaL4cfYRKdZg" predecessor="_BR3WcLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAnxAbLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BR4kkLLjEeWaL4cfYRKdZg" entityName="getColumnFamilyStore:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction() at 1817" successor="_BR5LoLLjEeWaL4cfYRKdZg" predecessor="_BR3WcbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AApmMLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BR5LoLLjEeWaL4cfYRKdZg" entityName="disableAutoCompaction:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction() at 1856" successor="_BR6ZwLLjEeWaL4cfYRKdZg" predecessor="_BR4kkLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nhw1cLLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BR6ZwLLjEeWaL4cfYRKdZg" entityName="getCompactionStrategy:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction() at 1955" successor="_BSJDQLLjEeWaL4cfYRKdZg" predecessor="_BR5LoLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ncnPsbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BSJDQLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction() at 2022" successor="_BSPJ4LLjEeWaL4cfYRKdZg" predecessor="_BR6ZwLLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_BSPJ4LLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_BSawELLjEeWaL4cfYRKdZg" predecessor="_BSJDQLLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_BSPJ4bLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction() from 2174 to 2279">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_BSPJ4rLjEeWaL4cfYRKdZg" successor="_BSPJ47LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BSPJ47LjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block at 2348" successor="_BSPJ5LLjEeWaL4cfYRKdZg" predecessor="_BSPJ4rLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSPJ5LLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_BSPw8LLjEeWaL4cfYRKdZg" predecessor="_BSPJ47LjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_BSPw8LLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_BSRmIbLjEeWaL4cfYRKdZg" predecessor="_BSPJ5LLjEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_BSPw8bLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block from 2412 to 2457">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_BSPw8rLjEeWaL4cfYRKdZg" successor="_BSPw87LjEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSPw87LjEeWaL4cfYRKdZg" entityName="bytes:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block at 2549" successor="_BSQYALLjEeWaL4cfYRKdZg" predecessor="_BSPw8rLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSQYALLjEeWaL4cfYRKdZg" entityName="add:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block at 2549" successor="_BSRmILLjEeWaL4cfYRKdZg" predecessor="_BSPw87LjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dYCzcrLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_BSRmILLjEeWaL4cfYRKdZg" predecessor="_BSQYALLjEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSRmIbLjEeWaL4cfYRKdZg" entityName="apply:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block at 2587" successor="_BSS0QLLjEeWaL4cfYRKdZg" predecessor="_BSPw8LLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGRGALLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_dX8FwLLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSS0QLLjEeWaL4cfYRKdZg" entityName="forceBlockingFlush:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block at 2627" successor="_BSTbULLjEeWaL4cfYRKdZg" predecessor="_BSRmIbLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABAykLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_ncpE4LLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_BSTbULLjEeWaL4cfYRKdZg" predecessor="_BSS0QLLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_BSawELLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_BSeacbLjEeWaL4cfYRKdZg" predecessor="_BSPJ4LLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_BSawEbLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction() from 2984 to 3004">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_BSawErLjEeWaL4cfYRKdZg" successor="_BSawE7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_BSawE7LjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_BSclR7LjEeWaL4cfYRKdZg" predecessor="_BSawErLjEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_BSawFLLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block from 3015 to 3039">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_BSawFbLjEeWaL4cfYRKdZg" successor="_BSawFrLjEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSawFrLjEeWaL4cfYRKdZg" entityName="getMaximalTask:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block at 3141" successor="_BSclQrLjEeWaL4cfYRKdZg" predecessor="_BSawFbLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BSclQLLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_BSbXILLjEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BSclQrLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block from 3142 to 3172" successor="_BSclQ7LjEeWaL4cfYRKdZg" predecessor="_BSawFrLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSclQ7LjEeWaL4cfYRKdZg" entityName="execute:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block at 3401" successor="_BSclRLLjEeWaL4cfYRKdZg" predecessor="_BSclQrLjEeWaL4cfYRKdZg">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_ABGSILLjEeWaL4cfYRKdZg"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_Kb7uwLLiEeWaL4cfYRKdZg"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BSclRLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block at 3401" successor="_BSclRbLjEeWaL4cfYRKdZg" predecessor="_BSclQ7LjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BSclRbLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block at 3401" successor="_BSclRrLjEeWaL4cfYRKdZg" predecessor="_BSclRLLjEeWaL4cfYRKdZg">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_BSclRrLjEeWaL4cfYRKdZg" predecessor="_BSclRbLjEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BSclR7LjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block from 3416 to 3448" successor="_BSdMULLjEeWaL4cfYRKdZg" predecessor="_BSawE7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BSdMULLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block from 3551 to 3587" successor="_BSdMUbLjEeWaL4cfYRKdZg" predecessor="_BSclR7LjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSdMUbLjEeWaL4cfYRKdZg" entityName="waitOnFutures:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block at 3684" successor="_BSeacLLjEeWaL4cfYRKdZg" predecessor="_BSdMULLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAnJ8LLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGo5cLLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_BSeacLLjEeWaL4cfYRKdZg" predecessor="_BSdMUbLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSeacbLjEeWaL4cfYRKdZg" entityName="getLevelCount:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction() at 3874" successor="_BSir4LLjEeWaL4cfYRKdZg" predecessor="_BSawELLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BSfBgLLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_m3nsQbLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_BSir4LLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_BSoLcLLjEeWaL4cfYRKdZg" predecessor="_BSeacbLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_BSir4bLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction() from 3875 to 3927">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_BSir4rLjEeWaL4cfYRKdZg" successor="_BSjS8LLjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSjS8LLjEeWaL4cfYRKdZg" entityName="getLevel:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block at 4006" successor="_BSkhELLjEeWaL4cfYRKdZg" predecessor="_BSir4rLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BSfBgLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_BSjS8bLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSkhELLjEeWaL4cfYRKdZg" entityName="getTotalBytes:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block from 4007 to 4136" successor="_BSlIIrLjEeWaL4cfYRKdZg" predecessor="_BSjS8LLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BSlIILLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_sYlacLLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSlIIrLjEeWaL4cfYRKdZg" entityName="maxBytesForLevel:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block from 4007 to 4136" successor="_BSlvMLLjEeWaL4cfYRKdZg" predecessor="_BSkhELLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BSfBgLLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_BSlII7LjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_BSlvMLLjEeWaL4cfYRKdZg" successor="_BSnkZLLjEeWaL4cfYRKdZg" predecessor="_BSlIIrLjEeWaL4cfYRKdZg">
+            <branchTransitions_Branch branchProbability="1.0">
+              <branchedBehaviour_BranchTransition id="_BSlvMbLjEeWaL4cfYRKdZg" entityName="parent  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block from 4137 to 4218/ @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block from 4219 to 4496">
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_BSlvMrLjEeWaL4cfYRKdZg" successor="_BSlvM7LjEeWaL4cfYRKdZg"/>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_BSlvM7LjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_BSnkY7LjEeWaL4cfYRKdZg" predecessor="_BSlvMrLjEeWaL4cfYRKdZg">
+                  <loopIteration_Loop specification="1"/>
+                  <bodyBehaviour_Loop id="_BSlvNLLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block from 4233 to 4286">
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_BSlvNbLjEeWaL4cfYRKdZg" successor="_BSlvNrLjEeWaL4cfYRKdZg"/>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSlvNrLjEeWaL4cfYRKdZg" entityName="overlapping:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block.Block at 4400" successor="_BSnkYLLjEeWaL4cfYRKdZg" predecessor="_BSlvNbLjEeWaL4cfYRKdZg">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_BSfBgLLjEeWaL4cfYRKdZg"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_BSmWQLLjEeWaL4cfYRKdZg"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BSnkYLLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block.Block from 4401 to 4478" successor="_BSnkYbLjEeWaL4cfYRKdZg" predecessor="_BSlvNrLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_BSnkYbLjEeWaL4cfYRKdZg" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block.Block.Block from 4401 to 4478" successor="_BSnkYrLjEeWaL4cfYRKdZg" predecessor="_BSnkYLLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_BSnkYrLjEeWaL4cfYRKdZg" predecessor="_BSnkYbLjEeWaL4cfYRKdZg"/>
+                  </bodyBehaviour_Loop>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_BSnkY7LjEeWaL4cfYRKdZg" predecessor="_BSlvM7LjEeWaL4cfYRKdZg"/>
+              </branchedBehaviour_BranchTransition>
+            </branchTransitions_Branch>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_BSnkZLLjEeWaL4cfYRKdZg" predecessor="_BSlvMLLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_BSoLcLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_BR2vYrLjEeWaL4cfYRKdZg" predecessor="_BSir4LLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_BSoLcbLjEeWaL4cfYRKdZg" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction() from 4520 to 4577">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_BSoLcrLjEeWaL4cfYRKdZg" successor="_BSoLc7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSoLc7LjEeWaL4cfYRKdZg" entityName="getSSTableLevel:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block from 4588 to 4662" successor="_BSoLdLLjEeWaL4cfYRKdZg" predecessor="_BSoLcrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AA7TALLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nDeW8rLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_BSoLdLLjEeWaL4cfYRKdZg" entityName="getSSTableLevel:  @position: compaction.org.apache.cassandra.db.compaction.LongLeveledCompactionStrategyTest.java.LongLeveledCompactionStrategyTest.testParallelLeveledCompaction().Block from 4588 to 4662" successor="_BSoygLLjEeWaL4cfYRKdZg" predecessor="_BSoLc7LjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AA7TALLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_nDeW8rLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_BSoygLLjEeWaL4cfYRKdZg" predecessor="_BSoLdLLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_BR2vYrLjEeWaL4cfYRKdZg" predecessor="_BSoLcLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

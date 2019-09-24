@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_84QnG42BEeWUKKvQPqVU9Q" entityName="testCompactionWide">
+    <scenarioBehaviour_UsageScenario id="_84QnHo2BEeWUKKvQPqVU9Q" entityName="testCompactionWide">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_84QnHI2BEeWUKKvQPqVU9Q" successor="_9AwbwI2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9AwbwI2BEeWUKKvQPqVU9Q" entityName="disableAutoCompaction:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 2261" successor="_9AwbwY2BEeWUKKvQPqVU9Q" predecessor="_84QnHI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCYADo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_cz7H4Y2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9AwbwY2BEeWUKKvQPqVU9Q" entityName="open:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 2316" successor="_9Awbwo2BEeWUKKvQPqVU9Q" predecessor="_9AwbwI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWlo2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9Awbwo2BEeWUKKvQPqVU9Q" entityName="getColumnFamilyStore:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 2394" successor="_9Awbw42BEeWUKKvQPqVU9Q" predecessor="_9AwbwY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWmI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9Awbw42BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9B8up42BEeWUKKvQPqVU9Q" predecessor="_9Awbwo2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_9AwbxI2BEeWUKKvQPqVU9Q" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() from 2472 to 2518">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9AwbxY2BEeWUKKvQPqVU9Q" successor="_9Awbxo2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9Awbxo2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9B8ukY2BEeWUKKvQPqVU9Q" predecessor="_9AwbxY2BEeWUKKvQPqVU9Q">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_9Awbx42BEeWUKKvQPqVU9Q" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction().Block from 2615 to 2667">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9AwbyI2BEeWUKKvQPqVU9Q" successor="_9AwbyY2BEeWUKKvQPqVU9Q"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9AwbyY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction().Block.Block at 2729" successor="_9Awbyo2BEeWUKKvQPqVU9Q" predecessor="_9AwbyI2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9Awbyo2BEeWUKKvQPqVU9Q" entityName="delete:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.createCF() at 1524" successor="_9Awby42BEeWUKKvQPqVU9Q" predecessor="_9AwbyY2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W6xjOY2BEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9Awby42BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9Awb0Y2BEeWUKKvQPqVU9Q" predecessor="_9Awbyo2BEeWUKKvQPqVU9Q">
+                <loopIteration_Loop specification="1"/>
+                <bodyBehaviour_Loop id="_9AwbzI2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.createCF() from 1525 to 1556">
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9AwbzY2BEeWUKKvQPqVU9Q" successor="_9Awbzo2BEeWUKKvQPqVU9Q"/>
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9Awbzo2BEeWUKKvQPqVU9Q" entityName="addColumn:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.createCF() at 1587" successor="_9Awbz42BEeWUKKvQPqVU9Q" predecessor="_9AwbzY2BEeWUKKvQPqVU9Q">
+                    <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+                    <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WlUQl42BEeWUKKvQPqVU9Q"/>
+                  </actions_ScenarioBehaviour>
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9Awbz42BEeWUKKvQPqVU9Q" predecessor="_9Awbzo2BEeWUKKvQPqVU9Q"/>
+                </bodyBehaviour_Loop>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9Awb0Y2BEeWUKKvQPqVU9Q" predecessor="_9Awby42BEeWUKKvQPqVU9Q"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9B8ukY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_9B8ulI2BEeWUKKvQPqVU9Q" predecessor="_9Awbxo2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9B8ulI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() from 1960 to 2009" successor="_9B8ulY2BEeWUKKvQPqVU9Q" predecessor="_9B8ukY2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9B8ulY2BEeWUKKvQPqVU9Q" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() at 2368" successor="_9B8ulo2BEeWUKKvQPqVU9Q" predecessor="_9B8ulI2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_9eNADo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9B8ulo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() from 2369 to 2407" successor="_9B8ul42BEeWUKKvQPqVU9Q" predecessor="_9B8ulY2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9B8ul42BEeWUKKvQPqVU9Q" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7251" successor="_9B8umI2BEeWUKKvQPqVU9Q" predecessor="_9B8ulo2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XePcpI2BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9B8umI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7347" successor="_9B8umY2BEeWUKKvQPqVU9Q" predecessor="_9B8ul42BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9B8umY2BEeWUKKvQPqVU9Q" entityName="closeAndOpenReader:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7470" successor="_9B8umo2BEeWUKKvQPqVU9Q" predecessor="_9B8umI2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WQwV1Y2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WQ5fx42BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_9B8umo2BEeWUKKvQPqVU9Q" successor="_9B8upI2BEeWUKKvQPqVU9Q" predecessor="_9B8umY2BEeWUKKvQPqVU9Q">
+            <branchTransitions_Branch branchProbability="1.0">
+              <branchedBehaviour_BranchTransition id="_9B8um42BEeWUKKvQPqVU9Q" entityName="parent  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7471 to 7542/ @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7543 to 7604">
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9B8unI2BEeWUKKvQPqVU9Q" successor="_9B8unY2BEeWUKKvQPqVU9Q"/>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9B8unY2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9B8uo42BEeWUKKvQPqVU9Q" predecessor="_9B8unI2BEeWUKKvQPqVU9Q">
+                  <loopIteration_Loop specification="1"/>
+                  <bodyBehaviour_Loop id="_9B8uno2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7543 to 7604">
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9B8un42BEeWUKKvQPqVU9Q" successor="_9B8uoI2BEeWUKKvQPqVU9Q"/>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9B8uoI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7691" successor="_9B8uoY2BEeWUKKvQPqVU9Q" predecessor="_9B8un42BEeWUKKvQPqVU9Q">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9B8uoY2BEeWUKKvQPqVU9Q" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7691" successor="_9B8uoo2BEeWUKKvQPqVU9Q" predecessor="_9B8uoI2BEeWUKKvQPqVU9Q">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XePcpI2BEeWUKKvQPqVU9Q"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9B8uoo2BEeWUKKvQPqVU9Q" predecessor="_9B8uoY2BEeWUKKvQPqVU9Q"/>
+                  </bodyBehaviour_Loop>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9B8uo42BEeWUKKvQPqVU9Q" predecessor="_9B8unY2BEeWUKKvQPqVU9Q"/>
+              </branchedBehaviour_BranchTransition>
+            </branchTransitions_Branch>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9B8upI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write().append() from 6316 to 6356" successor="_9B8upY2BEeWUKKvQPqVU9Q" predecessor="_9B8umo2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9B8upY2BEeWUKKvQPqVU9Q" entityName="addSSTable:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction().Block at 3272" successor="_9B8upo2BEeWUKKvQPqVU9Q" predecessor="_9B8upI2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_23-S9I1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9B8upo2BEeWUKKvQPqVU9Q" predecessor="_9B8upY2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9B8up42BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3372" successor="_9CF4gI2BEeWUKKvQPqVU9Q" predecessor="_9Awbw42BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9CF4gI2BEeWUKKvQPqVU9Q" entityName="getCFMetaData:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3561" successor="_9CF4gY2BEeWUKKvQPqVU9Q" predecessor="_9B8up42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WN7EQY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9CF4gY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3561" successor="_9CF4go2BEeWUKKvQPqVU9Q" predecessor="_9CF4gI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9CF4go2BEeWUKKvQPqVU9Q" entityName="execute:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3630" successor="_9CF4g42BEeWUKKvQPqVU9Q" predecessor="_9CF4gY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCYADo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#__CyYQI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9CF4g42BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 4053" successor="_84QnHY2BEeWUKKvQPqVU9Q" predecessor="_9CF4go2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_84QnHY2BEeWUKKvQPqVU9Q" predecessor="_9CF4g42BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_9CF4hY2BEeWUKKvQPqVU9Q" entityName="testCompactionSlim">
+    <scenarioBehaviour_UsageScenario id="_9CF4iI2BEeWUKKvQPqVU9Q" entityName="testCompactionSlim">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9CF4ho2BEeWUKKvQPqVU9Q" successor="_9Kb8MI2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9Kb8MI2BEeWUKKvQPqVU9Q" entityName="disableAutoCompaction:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 2261" successor="_9Kb8MY2BEeWUKKvQPqVU9Q" predecessor="_9CF4ho2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCYADo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_cz7H4Y2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9Kb8MY2BEeWUKKvQPqVU9Q" entityName="open:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 2316" successor="_9Kb8Mo2BEeWUKKvQPqVU9Q" predecessor="_9Kb8MI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWlo2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9Kb8Mo2BEeWUKKvQPqVU9Q" entityName="getColumnFamilyStore:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 2394" successor="_9Kb8M42BEeWUKKvQPqVU9Q" predecessor="_9Kb8MY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWmI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9Kb8M42BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9LoPF42BEeWUKKvQPqVU9Q" predecessor="_9Kb8Mo2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_9Kb8NI2BEeWUKKvQPqVU9Q" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() from 2472 to 2518">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9Kb8NY2BEeWUKKvQPqVU9Q" successor="_9Kb8No2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9Kb8No2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9LoPAY2BEeWUKKvQPqVU9Q" predecessor="_9Kb8NY2BEeWUKKvQPqVU9Q">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_9Kb8N42BEeWUKKvQPqVU9Q" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction().Block from 2615 to 2667">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9Kb8OI2BEeWUKKvQPqVU9Q" successor="_9Kb8OY2BEeWUKKvQPqVU9Q"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9Kb8OY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction().Block.Block at 2729" successor="_9Kb8Oo2BEeWUKKvQPqVU9Q" predecessor="_9Kb8OI2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9Kb8Oo2BEeWUKKvQPqVU9Q" entityName="delete:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.createCF() at 1524" successor="_9Kb8O42BEeWUKKvQPqVU9Q" predecessor="_9Kb8OY2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W6xjOY2BEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9Kb8O42BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9Kb8QY2BEeWUKKvQPqVU9Q" predecessor="_9Kb8Oo2BEeWUKKvQPqVU9Q">
+                <loopIteration_Loop specification="1"/>
+                <bodyBehaviour_Loop id="_9Kb8PI2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.createCF() from 1525 to 1556">
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9Kb8PY2BEeWUKKvQPqVU9Q" successor="_9Kb8Po2BEeWUKKvQPqVU9Q"/>
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9Kb8Po2BEeWUKKvQPqVU9Q" entityName="addColumn:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.createCF() at 1587" successor="_9Kb8P42BEeWUKKvQPqVU9Q" predecessor="_9Kb8PY2BEeWUKKvQPqVU9Q">
+                    <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+                    <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WlUQl42BEeWUKKvQPqVU9Q"/>
+                  </actions_ScenarioBehaviour>
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9Kb8P42BEeWUKKvQPqVU9Q" predecessor="_9Kb8Po2BEeWUKKvQPqVU9Q"/>
+                </bodyBehaviour_Loop>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9Kb8QY2BEeWUKKvQPqVU9Q" predecessor="_9Kb8O42BEeWUKKvQPqVU9Q"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9LoPAY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_9LoPBI2BEeWUKKvQPqVU9Q" predecessor="_9Kb8No2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9LoPBI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() from 1960 to 2009" successor="_9LoPBY2BEeWUKKvQPqVU9Q" predecessor="_9LoPAY2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9LoPBY2BEeWUKKvQPqVU9Q" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() at 2368" successor="_9LoPBo2BEeWUKKvQPqVU9Q" predecessor="_9LoPBI2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_9eNADo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9LoPBo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() from 2369 to 2407" successor="_9LoPB42BEeWUKKvQPqVU9Q" predecessor="_9LoPBY2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9LoPB42BEeWUKKvQPqVU9Q" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7251" successor="_9LoPCI2BEeWUKKvQPqVU9Q" predecessor="_9LoPBo2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XePcpI2BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9LoPCI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7347" successor="_9LoPCY2BEeWUKKvQPqVU9Q" predecessor="_9LoPB42BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9LoPCY2BEeWUKKvQPqVU9Q" entityName="closeAndOpenReader:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7470" successor="_9LoPCo2BEeWUKKvQPqVU9Q" predecessor="_9LoPCI2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WQwV1Y2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WQ5fx42BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_9LoPCo2BEeWUKKvQPqVU9Q" successor="_9LoPFI2BEeWUKKvQPqVU9Q" predecessor="_9LoPCY2BEeWUKKvQPqVU9Q">
+            <branchTransitions_Branch branchProbability="1.0">
+              <branchedBehaviour_BranchTransition id="_9LoPC42BEeWUKKvQPqVU9Q" entityName="parent  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7471 to 7542/ @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7543 to 7604">
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9LoPDI2BEeWUKKvQPqVU9Q" successor="_9LoPDY2BEeWUKKvQPqVU9Q"/>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9LoPDY2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9LoPE42BEeWUKKvQPqVU9Q" predecessor="_9LoPDI2BEeWUKKvQPqVU9Q">
+                  <loopIteration_Loop specification="1"/>
+                  <bodyBehaviour_Loop id="_9LoPDo2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7543 to 7604">
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9LoPD42BEeWUKKvQPqVU9Q" successor="_9LoPEI2BEeWUKKvQPqVU9Q"/>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9LoPEI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7691" successor="_9LoPEY2BEeWUKKvQPqVU9Q" predecessor="_9LoPD42BEeWUKKvQPqVU9Q">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9LoPEY2BEeWUKKvQPqVU9Q" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7691" successor="_9LoPEo2BEeWUKKvQPqVU9Q" predecessor="_9LoPEI2BEeWUKKvQPqVU9Q">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XePcpI2BEeWUKKvQPqVU9Q"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9LoPEo2BEeWUKKvQPqVU9Q" predecessor="_9LoPEY2BEeWUKKvQPqVU9Q"/>
+                  </bodyBehaviour_Loop>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9LoPE42BEeWUKKvQPqVU9Q" predecessor="_9LoPDY2BEeWUKKvQPqVU9Q"/>
+              </branchedBehaviour_BranchTransition>
+            </branchTransitions_Branch>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9LoPFI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write().append() from 6316 to 6356" successor="_9LoPFY2BEeWUKKvQPqVU9Q" predecessor="_9LoPCo2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9LoPFY2BEeWUKKvQPqVU9Q" entityName="addSSTable:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction().Block at 3272" successor="_9LoPFo2BEeWUKKvQPqVU9Q" predecessor="_9LoPFI2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_23-S9I1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9LoPFo2BEeWUKKvQPqVU9Q" predecessor="_9LoPFY2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9LoPF42BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3372" successor="_9LyAAI2BEeWUKKvQPqVU9Q" predecessor="_9Kb8M42BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9LyAAI2BEeWUKKvQPqVU9Q" entityName="getCFMetaData:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3561" successor="_9LyAAY2BEeWUKKvQPqVU9Q" predecessor="_9LoPF42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WN7EQY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9LyAAY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3561" successor="_9LyAAo2BEeWUKKvQPqVU9Q" predecessor="_9LyAAI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9LyAAo2BEeWUKKvQPqVU9Q" entityName="execute:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3630" successor="_9LyAA42BEeWUKKvQPqVU9Q" predecessor="_9LyAAY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCYADo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#__CyYQI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9LyAA42BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 4053" successor="_9CF4h42BEeWUKKvQPqVU9Q" predecessor="_9LyAAo2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9CF4h42BEeWUKKvQPqVU9Q" predecessor="_9LyAA42BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_9L7xAI2BEeWUKKvQPqVU9Q" entityName="testCompactionMany">
+    <scenarioBehaviour_UsageScenario id="_9L7xA42BEeWUKKvQPqVU9Q" entityName="testCompactionMany">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9L7xAY2BEeWUKKvQPqVU9Q" successor="_9T1IwI2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9T1IwI2BEeWUKKvQPqVU9Q" entityName="disableAutoCompaction:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 2261" successor="_9T1IwY2BEeWUKKvQPqVU9Q" predecessor="_9L7xAY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCYADo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_cz7H4Y2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9T1IwY2BEeWUKKvQPqVU9Q" entityName="open:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 2316" successor="_9T1Iwo2BEeWUKKvQPqVU9Q" predecessor="_9T1IwI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWlo2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9T1Iwo2BEeWUKKvQPqVU9Q" entityName="getColumnFamilyStore:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 2394" successor="_9T1Iw42BEeWUKKvQPqVU9Q" predecessor="_9T1IwY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWmI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9T1Iw42BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9VBbpo2BEeWUKKvQPqVU9Q" predecessor="_9T1Iwo2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_9T1IxI2BEeWUKKvQPqVU9Q" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() from 2472 to 2518">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9T1IxY2BEeWUKKvQPqVU9Q" successor="_9T1Ixo2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9T1Ixo2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9VBbkI2BEeWUKKvQPqVU9Q" predecessor="_9T1IxY2BEeWUKKvQPqVU9Q">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_9T1Ix42BEeWUKKvQPqVU9Q" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction().Block from 2615 to 2667">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9T1IyI2BEeWUKKvQPqVU9Q" successor="_9T1IyY2BEeWUKKvQPqVU9Q"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9T1IyY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction().Block.Block at 2729" successor="_9T1Iyo2BEeWUKKvQPqVU9Q" predecessor="_9T1IyI2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9T1Iyo2BEeWUKKvQPqVU9Q" entityName="delete:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.createCF() at 1524" successor="_9T1Iy42BEeWUKKvQPqVU9Q" predecessor="_9T1IyY2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W6xjOY2BEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9T1Iy42BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9T1I0Y2BEeWUKKvQPqVU9Q" predecessor="_9T1Iyo2BEeWUKKvQPqVU9Q">
+                <loopIteration_Loop specification="1"/>
+                <bodyBehaviour_Loop id="_9T1IzI2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.createCF() from 1525 to 1556">
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9T1IzY2BEeWUKKvQPqVU9Q" successor="_9T1Izo2BEeWUKKvQPqVU9Q"/>
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9T1Izo2BEeWUKKvQPqVU9Q" entityName="addColumn:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.createCF() at 1587" successor="_9T1Iz42BEeWUKKvQPqVU9Q" predecessor="_9T1IzY2BEeWUKKvQPqVU9Q">
+                    <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+                    <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WlUQl42BEeWUKKvQPqVU9Q"/>
+                  </actions_ScenarioBehaviour>
+                  <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9T1Iz42BEeWUKKvQPqVU9Q" predecessor="_9T1Izo2BEeWUKKvQPqVU9Q"/>
+                </bodyBehaviour_Loop>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9T1I0Y2BEeWUKKvQPqVU9Q" predecessor="_9T1Iy42BEeWUKKvQPqVU9Q"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9VBbkI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 6124 to 6609" successor="_9VBbk42BEeWUKKvQPqVU9Q" predecessor="_9T1Ixo2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9VBbk42BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() from 1960 to 2009" successor="_9VBblI2BEeWUKKvQPqVU9Q" predecessor="_9VBbkI2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9VBblI2BEeWUKKvQPqVU9Q" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() at 2368" successor="_9VBblY2BEeWUKKvQPqVU9Q" predecessor="_9VBbk42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_9eNADo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9VBblY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.tempSSTableFile() from 2369 to 2407" successor="_9VBblo2BEeWUKKvQPqVU9Q" predecessor="_9VBblI2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9VBblo2BEeWUKKvQPqVU9Q" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7251" successor="_9VBbl42BEeWUKKvQPqVU9Q" predecessor="_9VBblY2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XePcpI2BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9VBbl42BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7347" successor="_9VBbmI2BEeWUKKvQPqVU9Q" predecessor="_9VBblo2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9VBbmI2BEeWUKKvQPqVU9Q" entityName="closeAndOpenReader:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7470" successor="_9VBbmY2BEeWUKKvQPqVU9Q" predecessor="_9VBbl42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WQwV1Y2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WQ5fx42BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_9VBbmY2BEeWUKKvQPqVU9Q" successor="_9VBbo42BEeWUKKvQPqVU9Q" predecessor="_9VBbmI2BEeWUKKvQPqVU9Q">
+            <branchTransitions_Branch branchProbability="1.0">
+              <branchedBehaviour_BranchTransition id="_9VBbmo2BEeWUKKvQPqVU9Q" entityName="parent  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7471 to 7542/ @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7543 to 7604">
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9VBbm42BEeWUKKvQPqVU9Q" successor="_9VBbnI2BEeWUKKvQPqVU9Q"/>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9VBbnI2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9VBboo2BEeWUKKvQPqVU9Q" predecessor="_9VBbm42BEeWUKKvQPqVU9Q">
+                  <loopIteration_Loop specification="1"/>
+                  <bodyBehaviour_Loop id="_9VBbnY2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() from 7543 to 7604">
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9VBbno2BEeWUKKvQPqVU9Q" successor="_9VBbn42BEeWUKKvQPqVU9Q"/>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9VBbn42BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7691" successor="_9VBboI2BEeWUKKvQPqVU9Q" predecessor="_9VBbno2BEeWUKKvQPqVU9Q">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9VBboI2BEeWUKKvQPqVU9Q" entityName="filenameFor:  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write() at 7691" successor="_9VBboY2BEeWUKKvQPqVU9Q" predecessor="_9VBbn42BEeWUKKvQPqVU9Q">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WLsPo42BEeWUKKvQPqVU9Q"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XePcpI2BEeWUKKvQPqVU9Q"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9VBboY2BEeWUKKvQPqVU9Q" predecessor="_9VBboI2BEeWUKKvQPqVU9Q"/>
+                  </bodyBehaviour_Loop>
+                </actions_ScenarioBehaviour>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9VBboo2BEeWUKKvQPqVU9Q" predecessor="_9VBbnI2BEeWUKKvQPqVU9Q"/>
+              </branchedBehaviour_BranchTransition>
+            </branchTransitions_Branch>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9VBbo42BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.io.sstable.SSTableUtils.java.SSTableUtils.Context.write().append() from 6316 to 6356" successor="_9VBbpI2BEeWUKKvQPqVU9Q" predecessor="_9VBbmY2BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9VBbpI2BEeWUKKvQPqVU9Q" entityName="addSSTable:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction().Block at 3272" successor="_9VBbpY2BEeWUKKvQPqVU9Q" predecessor="_9VBbo42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_23-S9I1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9VBbpY2BEeWUKKvQPqVU9Q" predecessor="_9VBbpI2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9VBbpo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3372" successor="_9VKlgI2BEeWUKKvQPqVU9Q" predecessor="_9T1Iw42BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9VKlgI2BEeWUKKvQPqVU9Q" entityName="getCFMetaData:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3561" successor="_9VKlgY2BEeWUKKvQPqVU9Q" predecessor="_9VBbpo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WN7EQY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9VKlgY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3561" successor="_9VKlgo2BEeWUKKvQPqVU9Q" predecessor="_9VKlgI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9VKlgo2BEeWUKKvQPqVU9Q" entityName="execute:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 3630" successor="_9VKlg42BEeWUKKvQPqVU9Q" predecessor="_9VKlgY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCYADo2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#__CyYQI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9VKlg42BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testCompaction() at 4053" successor="_9L7xAo2BEeWUKKvQPqVU9Q" predecessor="_9VKlgo2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9L7xAo2BEeWUKKvQPqVU9Q" predecessor="_9VKlg42BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_9VKlhY2BEeWUKKvQPqVU9Q" entityName="testStandardColumnCompactions">
+    <scenarioBehaviour_UsageScenario id="_9VKliI2BEeWUKKvQPqVU9Q" entityName="testStandardColumnCompactions">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9VKlho2BEeWUKKvQPqVU9Q" successor="_9VKliY2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9VKliY2BEeWUKKvQPqVU9Q" entityName="open:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions() at 4320" successor="_9VKlio2BEeWUKKvQPqVU9Q" predecessor="_9VKlho2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWlo2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9VKlio2BEeWUKKvQPqVU9Q" entityName="getColumnFamilyStore:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions() at 4396" successor="_9VKli42BEeWUKKvQPqVU9Q" predecessor="_9VKliY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWmI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9VKli42BEeWUKKvQPqVU9Q" entityName="clearUnsafe:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions() at 4423" successor="_9WNuYI2BEeWUKKvQPqVU9Q" predecessor="_9VKlio2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_W-pWmo2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9WNuYI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions() at 4550" successor="_9WNuYY2BEeWUKKvQPqVU9Q" predecessor="_9VKli42BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9WNuYY2BEeWUKKvQPqVU9Q" entityName="disableAutoCompaction:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions() at 4633" successor="_9a-5oI2BEeWUKKvQPqVU9Q" predecessor="_9WNuYI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2s4dOI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9a-5oI2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9cBbcI2BEeWUKKvQPqVU9Q" predecessor="_9WNuYY2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_9a-5oY2BEeWUKKvQPqVU9Q" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions() from 4753 to 4795">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9a-5oo2BEeWUKKvQPqVU9Q" successor="_9a-5o42BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9a-5o42BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9b4RiY2BEeWUKKvQPqVU9Q" predecessor="_9a-5oo2BEeWUKKvQPqVU9Q">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_9a-5pI2BEeWUKKvQPqVU9Q" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions().Block from 4798 to 4852">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9a-5pY2BEeWUKKvQPqVU9Q" successor="_9a-5po2BEeWUKKvQPqVU9Q"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9a-5po2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions().Block.Block at 4921" successor="_9b4RgI2BEeWUKKvQPqVU9Q" predecessor="_9a-5pY2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9b4RgI2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_9b4RgY2BEeWUKKvQPqVU9Q" predecessor="_9a-5po2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9b4RgY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_9b4Rgo2BEeWUKKvQPqVU9Q" predecessor="_9b4RgI2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9b4Rgo2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.dk() from 2268 to 2354" successor="_9b4Rg42BEeWUKKvQPqVU9Q" predecessor="_9b4RgY2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9b4Rg42BEeWUKKvQPqVU9Q" entityName="bytes:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions().Block.Block at 5223" successor="_9b4RhI2BEeWUKKvQPqVU9Q" predecessor="_9b4Rgo2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9b4RhI2BEeWUKKvQPqVU9Q" entityName="add:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions().Block.Block at 5223" successor="_9b4RhY2BEeWUKKvQPqVU9Q" predecessor="_9b4Rg42BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F_HDY1xEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9b4RhY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions().Block.Block at 5305" successor="_9b4Rho2BEeWUKKvQPqVU9Q" predecessor="_9b4RhI2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9b4Rho2BEeWUKKvQPqVU9Q" entityName="apply:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions().Block.Block at 5333" successor="_9b4Rh42BEeWUKKvQPqVU9Q" predecessor="_9b4RhY2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCOPCo2BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_6F19F41xEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9b4Rh42BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions().Block.Block at 5368" successor="_9b4RiI2BEeWUKKvQPqVU9Q" predecessor="_9b4Rho2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9b4RiI2BEeWUKKvQPqVU9Q" predecessor="_9b4Rh42BEeWUKKvQPqVU9Q"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9b4RiY2BEeWUKKvQPqVU9Q" entityName="forceBlockingFlush:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions().Block at 5420" successor="_9b4Rio2BEeWUKKvQPqVU9Q" predecessor="_9a-5o42BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2yjAVo1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9b4Rio2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9b4Rk42BEeWUKKvQPqVU9Q" predecessor="_9b4RiY2BEeWUKKvQPqVU9Q">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_9b4Ri42BEeWUKKvQPqVU9Q" entityName=" @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() from 6781 to 6836">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9b4RjI2BEeWUKKvQPqVU9Q" successor="_9b4RjY2BEeWUKKvQPqVU9Q"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9b4RjY2BEeWUKKvQPqVU9Q" entityName="getMaxTimestamp:  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6930" successor="_9b4Rjo2BEeWUKKvQPqVU9Q" predecessor="_9b4RjI2BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WQwV1Y2BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_tC7gYY1xEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9b4Rjo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.CompactionsTest.java.CompactionsTest.assertMaxTimestamp() at 6930" successor="_9b4Rj42BEeWUKKvQPqVU9Q" predecessor="_9b4RjY2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9b4Rj42BEeWUKKvQPqVU9Q" predecessor="_9b4Rjo2BEeWUKKvQPqVU9Q"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9b4Rk42BEeWUKKvQPqVU9Q" predecessor="_9b4Rio2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9cBbcI2BEeWUKKvQPqVU9Q" entityName="setCompactionThresholds:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.forceCompactions() at 6147" successor="_9cBbco2BEeWUKKvQPqVU9Q" predecessor="_9a-5oI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_9cBbcY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9cBbco2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9cBbfY2BEeWUKKvQPqVU9Q" predecessor="_9cBbcI2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_9cBbc42BEeWUKKvQPqVU9Q" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.forceCompactions() from 6148 to 6783">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9cBbdI2BEeWUKKvQPqVU9Q" successor="_9cBbdY2BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_9cBbdY2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_9cBbe42BEeWUKKvQPqVU9Q" predecessor="_9cBbdI2BEeWUKKvQPqVU9Q">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_9cBbdo2BEeWUKKvQPqVU9Q" entityName=" @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.forceCompactions().Block from 6317 to 6357">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9cBbd42BEeWUKKvQPqVU9Q" successor="_9cBbeI2BEeWUKKvQPqVU9Q"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9cBbeI2BEeWUKKvQPqVU9Q" entityName="submitBackground:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.forceCompactions().Block at 6443" successor="_9cBbeY2BEeWUKKvQPqVU9Q" predecessor="_9cBbd42BEeWUKKvQPqVU9Q">
+                <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCYADo2BEeWUKKvQPqVU9Q"/>
+                <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_-tVFk41xEeWUKKvQPqVU9Q"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9cBbeY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.forceCompactions().Block at 6443" successor="_9cBbeo2BEeWUKKvQPqVU9Q" predecessor="_9cBbeI2BEeWUKKvQPqVU9Q">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9cBbeo2BEeWUKKvQPqVU9Q" predecessor="_9cBbeY2BEeWUKKvQPqVU9Q"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9cBbe42BEeWUKKvQPqVU9Q" entityName="waitOnFutures:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.forceCompactions().Block at 6658" successor="_9cBbfI2BEeWUKKvQPqVU9Q" predecessor="_9cBbdY2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XCYAEY2BEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9cBbfI2BEeWUKKvQPqVU9Q" predecessor="_9cBbe42BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_9cBbfY2BEeWUKKvQPqVU9Q" successor="_9cLMcI2BEeWUKKvQPqVU9Q" predecessor="_9cBbco2BEeWUKKvQPqVU9Q">
+        <branchTransitions_Branch branchProbability="1.0">
+          <branchedBehaviour_BranchTransition id="_9cBbfo2BEeWUKKvQPqVU9Q" entityName="parent  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.forceCompactions() from 6784 to 6826/ @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.forceCompactions().Block from 6827 to 6897">
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9cBbf42BEeWUKKvQPqVU9Q" successor="_9cBbgI2BEeWUKKvQPqVU9Q"/>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9cBbgI2BEeWUKKvQPqVU9Q" entityName="performMaximal:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.forceCompactions().Block at 6896" successor="_9cBbgY2BEeWUKKvQPqVU9Q" predecessor="_9cBbf42BEeWUKKvQPqVU9Q">
+              <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XCYADo2BEeWUKKvQPqVU9Q"/>
+              <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_-4Du441xEeWUKKvQPqVU9Q"/>
+            </actions_ScenarioBehaviour>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9cBbgY2BEeWUKKvQPqVU9Q" predecessor="_9cBbgI2BEeWUKKvQPqVU9Q"/>
+          </branchedBehaviour_BranchTransition>
+        </branchTransitions_Branch>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9cLMcI2BEeWUKKvQPqVU9Q" entityName="startOf:  @position: org.apache.cassandra.Util.java.Util.getRangeSlice() at 5387" successor="_9cLMcY2BEeWUKKvQPqVU9Q" predecessor="_9cBbfY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_3WASxo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9cLMcY2BEeWUKKvQPqVU9Q" entityName="endOf:  @position: org.apache.cassandra.Util.java.Util.getRangeSlice() at 5387" successor="_9dD9QI2BEeWUKKvQPqVU9Q" predecessor="_9cLMcI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_3WASx41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9dD9QI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.Util.java.Util.getRangeSlice() at 5459" successor="_9dD9QY2BEeWUKKvQPqVU9Q" predecessor="_9cLMcY2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9dD9QY2BEeWUKKvQPqVU9Q" entityName="toRowBounds:  @position: org.apache.cassandra.Util.java.Util.getRangeSlice() from 5460 to 5557" successor="_9dD9Q42BEeWUKKvQPqVU9Q" predecessor="_9dD9QI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XNjVS42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_qoQNu41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9dD9Q42BEeWUKKvQPqVU9Q" entityName="getRangeSlice:  @position: org.apache.cassandra.Util.java.Util.getRangeSlice() from 5460 to 5557" successor="_9dNuQI2BEeWUKKvQPqVU9Q" predecessor="_9dD9QY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_c13BlI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9dNuQI2BEeWUKKvQPqVU9Q" entityName="truncateBlocking:  @position: compaction.org.apache.cassandra.db.compaction.LongCompactionsTest.java.LongCompactionsTest.testStandardColumnCompactions() at 5905" successor="_9VKlh42BEeWUKKvQPqVU9Q" predecessor="_9dD9Q42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_No2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_2s4dMo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9VKlh42BEeWUKKvQPqVU9Q" predecessor="_9dNuQI2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

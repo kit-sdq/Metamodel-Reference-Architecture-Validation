@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_pozQ4LLWEeWT3tCwcp23sg" entityName="testDurableTopicMessageExpiration">
+    <scenarioBehaviour_UsageScenario id="_pozQ47LWEeWT3tCwcp23sg" entityName="testDurableTopicMessageExpiration">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_pozQ4bLWEeWT3tCwcp23sg" successor="_pozQ5LLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_pozQ5LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.testDurableTopicMessageExpiration() at 3332" successor="_p154wLLWEeWT3tCwcp23sg" predecessor="_pozQ4bLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_p154wLLWEeWT3tCwcp23sg" entityName="getDeadLetterNameFromDestination:  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() at 2230" successor="_p16f0LLWEeWT3tCwcp23sg" predecessor="_pozQ5LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_eodv8bLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_p16f0LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() at 2297" successor="_p16f0bLWEeWT3tCwcp23sg" predecessor="_p154wLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_p16f0bLWEeWT3tCwcp23sg" successor="_p16f2rLWEeWT3tCwcp23sg" predecessor="_p16f0LLWEeWT3tCwcp23sg">
+        <branchTransitions_Branch branchProbability="0.5">
+          <branchedBehaviour_BranchTransition id="_p16f0rLWEeWT3tCwcp23sg" entityName="parent  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() from 2376 to 2528/ @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block from 2417 to 2518">
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_p16f07LWEeWT3tCwcp23sg" successor="_p16f1LLWEeWT3tCwcp23sg"/>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_p16f1LLWEeWT3tCwcp23sg" entityName="toString:  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block at 2517" successor="_p16f1bLWEeWT3tCwcp23sg" predecessor="_p16f07LWEeWT3tCwcp23sg">
+              <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+              <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EvlGYLLWEeWT3tCwcp23sg"/>
+            </actions_ScenarioBehaviour>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_p16f1bLWEeWT3tCwcp23sg" predecessor="_p16f1LLWEeWT3tCwcp23sg"/>
+          </branchedBehaviour_BranchTransition>
+        </branchTransitions_Branch>
+        <branchTransitions_Branch branchProbability="0.5">
+          <branchedBehaviour_BranchTransition id="_p16f1rLWEeWT3tCwcp23sg" entityName="parent  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() from 2376 to 2528/ @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block from 2532 to 2594">
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_p16f17LWEeWT3tCwcp23sg" successor="_p16f2LLWEeWT3tCwcp23sg"/>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_p16f2LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block at 2593" successor="_p16f2bLWEeWT3tCwcp23sg" predecessor="_p16f17LWEeWT3tCwcp23sg">
+              <timeSpecification_Delay specification="0"/>
+            </actions_ScenarioBehaviour>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_p16f2bLWEeWT3tCwcp23sg" predecessor="_p16f2LLWEeWT3tCwcp23sg"/>
+          </branchedBehaviour_BranchTransition>
+        </branchTransitions_Branch>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_p16f2rLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() from 2604 to 2658" successor="_pozQ4rLWEeWT3tCwcp23sg" predecessor="_p16f0bLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_pozQ4rLWEeWT3tCwcp23sg" predecessor="_p16f2rLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_p17G4LLWEeWT3tCwcp23sg" entityName="testTransientQueueMessageExpiration">
+    <scenarioBehaviour_UsageScenario id="_p17G47LWEeWT3tCwcp23sg" entityName="testTransientQueueMessageExpiration">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_p17G4bLWEeWT3tCwcp23sg" successor="_p17G5LLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_p17G5LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.testTransientQueueMessageExpiration() at 3544" successor="_p19jILLWEeWT3tCwcp23sg" predecessor="_p17G4bLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_p19jILLWEeWT3tCwcp23sg" entityName="getDeadLetterNameFromDestination:  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() at 2230" successor="_p19jIbLWEeWT3tCwcp23sg" predecessor="_p17G5LLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_eodv8bLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_p19jIbLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() at 2297" successor="_p19jIrLWEeWT3tCwcp23sg" predecessor="_p19jILLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_p19jIrLWEeWT3tCwcp23sg" successor="_p1-KNbLWEeWT3tCwcp23sg" predecessor="_p19jIbLWEeWT3tCwcp23sg">
+        <branchTransitions_Branch branchProbability="0.5">
+          <branchedBehaviour_BranchTransition id="_p19jI7LWEeWT3tCwcp23sg" entityName="parent  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() from 2376 to 2528/ @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block from 2417 to 2518">
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_p19jJLLWEeWT3tCwcp23sg" successor="_p19jJbLWEeWT3tCwcp23sg"/>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_p19jJbLWEeWT3tCwcp23sg" entityName="toString:  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block at 2517" successor="_p1-KMLLWEeWT3tCwcp23sg" predecessor="_p19jJLLWEeWT3tCwcp23sg">
+              <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+              <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EvlGYLLWEeWT3tCwcp23sg"/>
+            </actions_ScenarioBehaviour>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_p1-KMLLWEeWT3tCwcp23sg" predecessor="_p19jJbLWEeWT3tCwcp23sg"/>
+          </branchedBehaviour_BranchTransition>
+        </branchTransitions_Branch>
+        <branchTransitions_Branch branchProbability="0.5">
+          <branchedBehaviour_BranchTransition id="_p1-KMbLWEeWT3tCwcp23sg" entityName="parent  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() from 2376 to 2528/ @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block from 2532 to 2594">
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_p1-KMrLWEeWT3tCwcp23sg" successor="_p1-KM7LWEeWT3tCwcp23sg"/>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_p1-KM7LWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block at 2593" successor="_p1-KNLLWEeWT3tCwcp23sg" predecessor="_p1-KMrLWEeWT3tCwcp23sg">
+              <timeSpecification_Delay specification="0"/>
+            </actions_ScenarioBehaviour>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_p1-KNLLWEeWT3tCwcp23sg" predecessor="_p1-KM7LWEeWT3tCwcp23sg"/>
+          </branchedBehaviour_BranchTransition>
+        </branchTransitions_Branch>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_p1-KNbLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() from 2604 to 2658" successor="_p17G4rLWEeWT3tCwcp23sg" predecessor="_p19jIrLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_p17G4rLWEeWT3tCwcp23sg" predecessor="_p1-KNbLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_p1-KNrLWEeWT3tCwcp23sg" entityName="testDurableQueueMessageExpiration">
+    <scenarioBehaviour_UsageScenario id="_p1-KObLWEeWT3tCwcp23sg" entityName="testDurableQueueMessageExpiration">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_p1-KN7LWEeWT3tCwcp23sg" successor="_p1-KOrLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_p1-KOrLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.testDurableQueueMessageExpiration() at 3759" successor="_p2CboLLWEeWT3tCwcp23sg" predecessor="_p1-KN7LWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_p2CboLLWEeWT3tCwcp23sg" entityName="getDeadLetterNameFromDestination:  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() at 2230" successor="_p2DCsLLWEeWT3tCwcp23sg" predecessor="_p1-KOrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtLhsbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_eodv8bLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_p2DCsLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() at 2297" successor="_p2DCsbLWEeWT3tCwcp23sg" predecessor="_p2CboLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_p2DCsbLWEeWT3tCwcp23sg" successor="_p2DCurLWEeWT3tCwcp23sg" predecessor="_p2DCsLLWEeWT3tCwcp23sg">
+        <branchTransitions_Branch branchProbability="0.5">
+          <branchedBehaviour_BranchTransition id="_p2DCsrLWEeWT3tCwcp23sg" entityName="parent  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() from 2376 to 2528/ @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block from 2417 to 2518">
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_p2DCs7LWEeWT3tCwcp23sg" successor="_p2DCtLLWEeWT3tCwcp23sg"/>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_p2DCtLLWEeWT3tCwcp23sg" entityName="toString:  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block at 2517" successor="_p2DCtbLWEeWT3tCwcp23sg" predecessor="_p2DCs7LWEeWT3tCwcp23sg">
+              <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+              <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_EvlGYLLWEeWT3tCwcp23sg"/>
+            </actions_ScenarioBehaviour>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_p2DCtbLWEeWT3tCwcp23sg" predecessor="_p2DCtLLWEeWT3tCwcp23sg"/>
+          </branchedBehaviour_BranchTransition>
+        </branchTransitions_Branch>
+        <branchTransitions_Branch branchProbability="0.5">
+          <branchedBehaviour_BranchTransition id="_p2DCtrLWEeWT3tCwcp23sg" entityName="parent  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() from 2376 to 2528/ @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block from 2532 to 2594">
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_p2DCt7LWEeWT3tCwcp23sg" successor="_p2DCuLLWEeWT3tCwcp23sg"/>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_p2DCuLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest().Block at 2593" successor="_p2DCubLWEeWT3tCwcp23sg" predecessor="_p2DCt7LWEeWT3tCwcp23sg">
+              <timeSpecification_Delay specification="0"/>
+            </actions_ScenarioBehaviour>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_p2DCubLWEeWT3tCwcp23sg" predecessor="_p2DCuLLWEeWT3tCwcp23sg"/>
+          </branchedBehaviour_BranchTransition>
+        </branchTransitions_Branch>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_p2DCurLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.usecases.DeadLetterTest.java.DeadLetterTest.doTest() from 2604 to 2658" successor="_p1-KOLLWEeWT3tCwcp23sg" predecessor="_p2DCsbLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_p1-KOLLWEeWT3tCwcp23sg" predecessor="_p2DCurLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

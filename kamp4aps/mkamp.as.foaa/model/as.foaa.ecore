@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="as.foaa" nsURI="as.foaa" nsPrefix="as.foaa">
+  <eClassifiers xsi:type="ecore:EClass" name="FieldOfActivityAnnotationRepository">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calibrationSpecification"
+        eType="#//CalibrationSpecification" containment="true" eOpposite="#//CalibrationSpecification/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testSpecification" eType="#//TestSpecification"
+        containment="true" eOpposite="#//TestSpecification/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stockSpecification" eType="#//StockSpecification"
+        containment="true" eOpposite="#//StockSpecification/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hmiSpecification" eType="#//HMISpecification"
+        containment="true" eOpposite="#//HMISpecification/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ecadSpecification" eType="#//ECADSpecification"
+        containment="true" eOpposite="#//ECADSpecification/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentationSpecification"
+        eType="#//DocumentationSpecification" containment="true" eOpposite="#//DocumentationSpecification/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="staffSpecification" eType="#//StaffSpecification"
+        containment="true" eOpposite="#//StaffSpecification/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TestSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/testSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemTests" upperBound="-1"
+        eType="#//SystemTest" containment="true" eOpposite="#//SystemTest/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//Role"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StockSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/stockSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentStockList" upperBound="-1"
+        eType="#//ComponentStockList" containment="true" eOpposite="#//ComponentStockList/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceStockList" upperBound="-1"
+        eType="#//InterfaceStockList" containment="true" eOpposite="#//InterfaceStockList/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleStockList" upperBound="-1"
+        eType="#//ModuleStockList" containment="true" eOpposite="#//ModuleStockList/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structureStockList" upperBound="-1"
+        eType="#//StructureStockList" containment="true" eOpposite="#//StructureStockList/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//Role"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HMISpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/hmiSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hmiConfig" upperBound="-1"
+        eType="#//HMIConfiguration" containment="true" eOpposite="#//HMIConfiguration/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ECADSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/ecadSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawings" upperBound="-1"
+        eType="#//Drawing" containment="true" eOpposite="#//Drawing/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//Role"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentationSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/documentationSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentDocumentation"
+        upperBound="-1" eType="#//ComponentDocumentationFiles" containment="true"
+        eOpposite="#//ComponentDocumentationFiles/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleDocumentation" upperBound="-1"
+        eType="#//ModuleDocumentationFiles" containment="true" eOpposite="#//ModuleDocumentationFiles/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceDocumentation"
+        upperBound="-1" eType="#//InterfaceDocumentationFiles" containment="true"
+        eOpposite="#//InterfaceDocumentationFiles/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structureDocumentation"
+        upperBound="-1" eType="#//StructureDocumentationFiles" containment="true"
+        eOpposite="#//StructureDocumentationFiles/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//Role"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StaffSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/staffSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="personList" lowerBound="1"
+        eType="#//PersonList" containment="true" eOpposite="#//PersonList/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleList" lowerBound="1"
+        eType="#//RoleList" containment="true" eOpposite="#//RoleList/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalibrationSpecification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/calibrationSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calibrationConfig" upperBound="-1"
+        eType="#//CalibrationConfiguration" containment="true" eOpposite="#//CalibrationConfiguration/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalibrationConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//CalibrationSpecification" eOpposite="#//CalibrationSpecification/calibrationConfig"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//ComponentRepository/Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//InterfaceRepository/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HMIConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//ComponentRepository/Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//InterfaceRepository/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//HMISpecification" eOpposite="#//HMISpecification/hmiConfig"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//StaffSpecification" eOpposite="#//StaffSpecification/personList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persons" upperBound="-1"
+        eType="#//Person" containment="true" eOpposite="#//Person/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Person">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//PersonList" eOpposite="#//PersonList/persons"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
+        eType="#//Role" eOpposite="#//Role/person"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Role" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//RoleList" eOpposite="#//RoleList/roles"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="person" upperBound="-1"
+        eType="#//Person" eOpposite="#//Person/roles"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//StaffSpecification" eOpposite="#//StaffSpecification/roleList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
+        eType="#//Role" containment="true" eOpposite="#//Role/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="File" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TestCase" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="testName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemTest" eSuperTypes="#//TestCase">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//TestSpecification" eOpposite="#//TestSpecification/systemTests"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnderTest" eType="ecore:EClass ../../mkamp.as/model/as.ecore#//Plant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Engineer" eSuperTypes="#//Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Purchaser" eSuperTypes="#//Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mechanic" eSuperTypes="#//Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Documentation" eSuperTypes="#//File"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Drawing" eSuperTypes="#//File">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//ECADSpecification" eOpposite="#//ECADSpecification/drawings"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentDrawing" eSuperTypes="#//Drawing">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_component" eType="ecore:EClass ../../mkamp.as/model/as.ecore#//ComponentRepository/Component"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleDrawing" eSuperTypes="#//Drawing">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_module" eType="ecore:EClass ../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceDrawing" eSuperTypes="#//Drawing">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_interface" eType="ecore:EClass ../../mkamp.as/model/as.ecore#//InterfaceRepository/Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StructureDrawing" eSuperTypes="#//Drawing">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_structure" eType="ecore:EClass ../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MainteneanceDocumentation" eSuperTypes="#//Documentation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationFiles" eOpposite="#//DocumentationFiles/mainteneance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperatorInstructions" eSuperTypes="#//Documentation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationFiles" eOpposite="#//DocumentationFiles/instructions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrainingDocIntern" eSuperTypes="#//Documentation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationFiles" eOpposite="#//DocumentationFiles/trainingIntern"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrainingDocExternal" eSuperTypes="#//Documentation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationFiles" eOpposite="#//DocumentationFiles/trainingExternal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentationFiles" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mainteneance" upperBound="-1"
+        eType="#//MainteneanceDocumentation" containment="true" eOpposite="#//MainteneanceDocumentation/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
+        eType="#//OperatorInstructions" containment="true" eOpposite="#//OperatorInstructions/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trainingIntern" upperBound="-1"
+        eType="#//TrainingDocIntern" containment="true" eOpposite="#//TrainingDocIntern/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trainingExternal" upperBound="-1"
+        eType="#//TrainingDocExternal" containment="true" eOpposite="#//TrainingDocExternal/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentDocumentationFiles" eSuperTypes="#//DocumentationFiles">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/componentDocumentation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentedComponent" lowerBound="1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//ComponentRepository/Component"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleDocumentationFiles" eSuperTypes="#//DocumentationFiles">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/moduleDocumentation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentedModule" lowerBound="1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceDocumentationFiles" eSuperTypes="#//DocumentationFiles">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/interfaceDocumentation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentedInterface" lowerBound="1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//InterfaceRepository/Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StructureDocumentationFiles" eSuperTypes="#//DocumentationFiles">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/structureDocumentation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentedStructure" lowerBound="1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StockList" eSuperTypes="#//File"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentStockList" eSuperTypes="#//StockList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//StockSpecification" eOpposite="#//StockSpecification/componentStockList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//ComponentRepository/Component"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceStockList" eSuperTypes="#//StockList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//StockSpecification" eOpposite="#//StockSpecification/interfaceStockList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//InterfaceRepository/Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleStockList" eSuperTypes="#//StockList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//StockSpecification" eOpposite="#//StockSpecification/moduleStockList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//ModuleRepository/Module"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StructureStockList" eSuperTypes="#//StockList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//StockSpecification" eOpposite="#//StockSpecification/structureStockList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
+        eType="ecore:EClass ../../mkamp.as/model/as.ecore#//StructureRepository/Structure"/>
+  </eClassifiers>
+</ecore:EPackage>

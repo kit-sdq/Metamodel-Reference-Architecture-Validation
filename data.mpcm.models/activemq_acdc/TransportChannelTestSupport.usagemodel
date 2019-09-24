@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_klAm4LLWEeWT3tCwcp23sg" entityName="testSendPacket">
+    <scenarioBehaviour_UsageScenario id="_klAm47LWEeWT3tCwcp23sg" entityName="testSendPacket">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_klAm4bLWEeWT3tCwcp23sg" successor="_klBN8LLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_klBN8LLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testSendPacket() at 2248" successor="_klDqMLLWEeWT3tCwcp23sg" predecessor="_klAm4bLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_klDqMLLWEeWT3tCwcp23sg" entityName="default loop count value" successor="_klGGcLLWEeWT3tCwcp23sg" predecessor="_klBN8LLWEeWT3tCwcp23sg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_klDqMbLWEeWT3tCwcp23sg" entityName=" @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testSendPacket() from 2297 to 2340">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_klDqMrLWEeWT3tCwcp23sg" successor="_klDqM7LWEeWT3tCwcp23sg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_klDqM7LWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testSendPacket().Block at 2395" successor="_klDqNLLWEeWT3tCwcp23sg" predecessor="_klDqMrLWEeWT3tCwcp23sg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_klDqNLLWEeWT3tCwcp23sg" entityName="asyncSend:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testSendPacket().Block at 2433" successor="_klDqNbLWEeWT3tCwcp23sg" predecessor="_klDqM7LWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_FaqDs7LWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_klDqNbLWEeWT3tCwcp23sg" predecessor="_klDqNLLWEeWT3tCwcp23sg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_klGGcLLWEeWT3tCwcp23sg" entityName="default loop count value" successor="_klAm4rLWEeWT3tCwcp23sg" predecessor="_klDqMLLWEeWT3tCwcp23sg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_klGGcbLWEeWT3tCwcp23sg" entityName=" @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testSendPacket() from 2507 to 2544">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_klGGcrLWEeWT3tCwcp23sg" successor="_klGGc7LWEeWT3tCwcp23sg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_klGGc7LWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testSendPacket().Block from 2547 to 2679" successor="_klGGdLLWEeWT3tCwcp23sg" predecessor="_klGGcrLWEeWT3tCwcp23sg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_klGGdLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testSendPacket().Block from 2547 to 2679" successor="_klGGdrLWEeWT3tCwcp23sg" predecessor="_klGGc7LWEeWT3tCwcp23sg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_klGGdrLWEeWT3tCwcp23sg" predecessor="_klGGdLLWEeWT3tCwcp23sg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_klAm4rLWEeWT3tCwcp23sg" predecessor="_klGGcLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_klNbMbLWEeWT3tCwcp23sg" entityName="testAsyncSendWithReceipt">
+    <scenarioBehaviour_UsageScenario id="_klNbNLLWEeWT3tCwcp23sg" entityName="testAsyncSendWithReceipt">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_klNbMrLWEeWT3tCwcp23sg" successor="_klOCQLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_klOCQLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testAsyncSendWithReceipt() at 3005" successor="_klOCQbLWEeWT3tCwcp23sg" predecessor="_klNbMrLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_klOCQbLWEeWT3tCwcp23sg" entityName="setId:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testAsyncSendWithReceipt() at 3079" successor="_klOCQrLWEeWT3tCwcp23sg" predecessor="_klOCQLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E9gNprLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_klOCQrLWEeWT3tCwcp23sg" entityName="asyncSendWithReceipt:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testAsyncSendWithReceipt() at 3143" successor="_klOpULLWEeWT3tCwcp23sg" predecessor="_klOCQbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_FgOgMrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_klOpULLWEeWT3tCwcp23sg" entityName="getReceipt:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testAsyncSendWithReceipt() at 3189" successor="_klRFkLLWEeWT3tCwcp23sg" predecessor="_klOCQrLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_gqD0QLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HtTbwrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_klRFkLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testAsyncSendWithReceipt() from 3190 to 3217" successor="_klNbM7LWEeWT3tCwcp23sg" predecessor="_klOpULLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_klNbM7LWEeWT3tCwcp23sg" predecessor="_klRFkLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_klRsoLLWEeWT3tCwcp23sg" entityName="testRpc">
+    <scenarioBehaviour_UsageScenario id="_klRso7LWEeWT3tCwcp23sg" entityName="testRpc">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_klRsobLWEeWT3tCwcp23sg" successor="_klRspLLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_klRspLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testRpc() at 3358" successor="_klXMMLLWEeWT3tCwcp23sg" predecessor="_klRsobLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_klXMMLLWEeWT3tCwcp23sg" entityName="default loop count value" successor="_klRsorLWEeWT3tCwcp23sg" predecessor="_klRspLLWEeWT3tCwcp23sg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_klXMMbLWEeWT3tCwcp23sg" entityName=" @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testRpc() from 3407 to 3450">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_klXMMrLWEeWT3tCwcp23sg" successor="_klXMM7LWEeWT3tCwcp23sg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_klXMM7LWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testRpc().Block at 3505" successor="_klXMNLLWEeWT3tCwcp23sg" predecessor="_klXMMrLWEeWT3tCwcp23sg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_klXMNLLWEeWT3tCwcp23sg" entityName="send:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testRpc().Block at 3562" successor="_klXzQLLWEeWT3tCwcp23sg" predecessor="_klXMM7LWEeWT3tCwcp23sg">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_FaqDtLLWEeWT3tCwcp23sg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_klXzQLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testRpc().Block at 3634" successor="_klXzQbLWEeWT3tCwcp23sg" predecessor="_klXMNLLWEeWT3tCwcp23sg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_klXzQbLWEeWT3tCwcp23sg" predecessor="_klXzQLLWEeWT3tCwcp23sg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_klRsorLWEeWT3tCwcp23sg" predecessor="_klXMMLLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_klXzQrLWEeWT3tCwcp23sg" entityName="testForceDisconnect">
+    <scenarioBehaviour_UsageScenario id="_klXzRbLWEeWT3tCwcp23sg" entityName="testForceDisconnect">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_klXzQ7LWEeWT3tCwcp23sg" successor="_klfIALLWEeWT3tCwcp23sg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_klfIALLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testForceDisconnect() at 4164" successor="_klmcwLLWEeWT3tCwcp23sg" predecessor="_klXzQ7LWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_klmcwLLWEeWT3tCwcp23sg" entityName="setId:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testAsyncSendWithReceipt() at 3079" successor="_klmcwbLWEeWT3tCwcp23sg" predecessor="_klfIALLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZspWMLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_E9gNprLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_klmcwbLWEeWT3tCwcp23sg" entityName="asyncSendWithReceipt:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testAsyncSendWithReceipt() at 3143" successor="_klnD0LLWEeWT3tCwcp23sg" predecessor="_klmcwLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_FgOgMrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_klnD0LLWEeWT3tCwcp23sg" entityName="getReceipt:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testAsyncSendWithReceipt() at 3189" successor="_klnD0bLWEeWT3tCwcp23sg" predecessor="_klmcwbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_gqD0QLLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HtTbwrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_klnD0bLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testAsyncSendWithReceipt() from 3190 to 3217" successor="_klsjYLLWEeWT3tCwcp23sg" predecessor="_klnD0LLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_klsjYLLWEeWT3tCwcp23sg" entityName="getChannelStatus:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testForceDisconnect() at 5150" successor="_klsjYbLWEeWT3tCwcp23sg" predecessor="_klnD0bLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_aEcLILLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_HNUUILLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_klsjYbLWEeWT3tCwcp23sg" entityName="addTransportStatusEventListener:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testForceDisconnect() at 5150" successor="_kltKcLLWEeWT3tCwcp23sg" predecessor="_klsjYLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_Fb-SUrLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_kltKcLLWEeWT3tCwcp23sg" entityName="forceDisconnect:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testForceDisconnect() at 5184" successor="_kl3igLLWEeWT3tCwcp23sg" predecessor="_klsjYbLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_FgN5I7LWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_kl3igLLWEeWT3tCwcp23sg" entityName="Delay  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testForceDisconnect() at 5291" successor="_kl6l0LLWEeWT3tCwcp23sg" predecessor="_kltKcLLWEeWT3tCwcp23sg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_kl6l0LLWEeWT3tCwcp23sg" entityName="isTransportConnected:  @position: org.activemq.transport.TransportChannelTestSupport.java.TransportChannelTestSupport.testForceDisconnect() at 5369" successor="_klXzRLLWEeWT3tCwcp23sg" predecessor="_kl3igLLWEeWT3tCwcp23sg">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.system#_ZtRBQbLWEeWT3tCwcp23sg"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_acdc_clustered.repository#_FhZk5LLWEeWT3tCwcp23sg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_klXzRLLWEeWT3tCwcp23sg" predecessor="_kl6l0LLWEeWT3tCwcp23sg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

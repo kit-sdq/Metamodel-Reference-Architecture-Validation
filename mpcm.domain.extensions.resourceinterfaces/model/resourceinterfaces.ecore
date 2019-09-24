@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="resourceinterfaces" nsURI="mpcm.domain.extensions.resourceinterfaces"
+    nsPrefix="mpcm.domain.extensions.resourceinterfaces">
+  <eSubpackages name="repository" nsURI="mpcm.domain.extensions.resourceinterfaces.repository"
+      nsPrefix="mpcm.domain.extensions.resourceinterfaces.repository">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceInterfacesRepositoryRoot">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceinterfacerequiringentity"
+          upperBound="-1" eType="#//repository/ResourceInterfaceRequiringEntity" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceRequiredRole" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//Role">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Required role for resource interface access of a component"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredResourceInterface__ResourceRequiredRole"
+          ordered="false" lowerBound="1" eType="#//resourcetype/ResourceInterface"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceInterfaceRequiringEntity__ResourceRequiredRole"
+          ordered="false" lowerBound="1" eType="#//repository/ResourceInterfaceRequiringEntity"
+          eOpposite="#//repository/ResourceInterfaceRequiringEntity/resourceRequiredRoles__ResourceInterfaceRequiringEntity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceInterfaceRequiringEntity"
+        eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This is an annotation (simulating a stereotype) of ResourceInterfaceRequiringEntity onto InterfaceRequiringEntity"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceRequiredRoles__ResourceInterfaceRequiringEntity"
+          ordered="false" upperBound="-1" eType="#//repository/ResourceRequiredRole"
+          containment="true" eOpposite="#//repository/ResourceRequiredRole/resourceInterfaceRequiringEntity__ResourceRequiredRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceRequiringEntity"
+          lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//InterfaceRequiringEntity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceInterfaceProvidingRequiringEntity"
+        eSuperTypes="#//repository/ResourceInterfaceRequiringEntity #//resourcetype/ResourceInterfaceProvidingEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Misha Strittmatter: This is a dead (and nonsensical) class. Thus, it does no harm to code the base class of Requiring- and ProvidingEntity directly as their attributes"/>
+      </eAnnotations>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="seff" nsURI="mpcm.domain.extensions.resourceinterfaces.seff"
+      nsPrefix="mpcm.domain.extensions.resourceinterfaces.seff">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceInterfacesSEFFRoot">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceCalls" upperBound="-1"
+          eType="#//seff/ResourceCall" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceCall" eSuperTypes="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//CallAction">
+      <eOperations name="ResourceSignatureBelongsToResourceRequiredRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="self.resourceRequiredRole__ResourceCall.requiredResourceInterface__ResourceRequiredRole.resourceSignatures__ResourceInterface->includes(self.signature__ResourceCall)"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="ResourceRequiredRoleMustBeReferencedByComponent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="self.oclAsType(ecore::EObject)->closure(eContainer())->select( entity | entity.oclIsKindOf(mpcm::core::entity::ResourceInterfaceRequiringEntity)).oclAsType(mpcm::core::entity::ResourceInterfaceRequiringEntity).resourceRequiredRoles__ResourceInterfaceRequiringEntity->includes(self.resourceRequiredRole__ResourceCall)"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="SignatureRoleCombinationMustBeUniqueWithinAbstractInternalControlFlowAction"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+          <details key="body" value="self.action__ResourceCall.resourceCall__Action->select(call | call.resourceRequiredRole__ResourceCall=self.resourceRequiredRole__ResourceCall and call.signature__ResourceCall=self.signature__ResourceCall)->size() = 1"/>
+        </eAnnotations>
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="action__ResourceCall"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractInternalControlFlowAction"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceRequiredRole__ResourceCall"
+          ordered="false" lowerBound="1" eType="#//repository/ResourceRequiredRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="signature__ResourceCall"
+          ordered="false" lowerBound="1" eType="#//resourcetype/ResourceSignature"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="numberOfCalls__ResourceCall"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable"
+          containment="true"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="composition" nsURI="mpcm.domain.extensions.resourceinterfaces.composition"
+      nsPrefix="mpcm.domain.extensions.resourceinterfaces.composition">
+    <eClassifiers xsi:type="ecore:EClass" name="RequiredResourceDelegationConnector"
+        eSuperTypes="../../mpcm.paradigm.composition/model/composition.ecore#//DelegationConnector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext__RequiredResourceDelegationConnector"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerRequiredRole__RequiredResourceDelegationConnector"
+          ordered="false" lowerBound="1" eType="#//repository/ResourceRequiredRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outerRequiredRole__RequiredResourceDelegationConnector"
+          ordered="false" lowerBound="1" eType="#//repository/ResourceRequiredRole"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceRequiredDelegationConnector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO Michael Hauck"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerResourceRequiredRole_ResourceRequiredDelegationConnector"
+          ordered="false" lowerBound="1" eType="#//repository/ResourceRequiredRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outerResourceRequiredRole_ResourceRequiredDelegationConnector"
+          ordered="false" lowerBound="1" eType="#//repository/ResourceRequiredRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentStructure_ResourceRequiredDelegationConnector"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//ComposedStructure"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="resourcetype" nsURI="mpcm.domain.extensions.resourceinterfaces.resourcetype"
+      nsPrefix="mpcm.domain.extensions.resourceinterfaces.resourcetype">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceInterfaceResourcetypeRoot">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceinterfaceprovidingentity"
+          upperBound="-1" eType="#//resourcetype/ResourceInterfaceProvidingEntity"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceinterface" upperBound="-1"
+          eType="#//resourcetype/ResourceInterface" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceInterface" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO: This structure still has to be finalized by Henning. There is no influence on other model elements yet. so this can be done later on."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceSignatures__ResourceInterface"
+          ordered="false" upperBound="-1" eType="#//resourcetype/ResourceSignature"
+          containment="true" eOpposite="#//resourcetype/ResourceSignature/resourceInterface__ResourceSignature"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceSignature" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="TODO: This structure still has to be finalized by Henning. There is no influence on other model elements yet. so this can be done later on."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter__ResourceSignature"
+          ordered="false" upperBound="-1" eType="ecore:EClass ../../mpcm.paradigm.repository/model/repository.ecore#//Parameter"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceServiceId" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceInterface__ResourceSignature"
+          ordered="false" lowerBound="1" eType="#//resourcetype/ResourceInterface"
+          eOpposite="#//resourcetype/ResourceInterface/resourceSignatures__ResourceInterface"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceProvidedRole" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//Role">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceInterfaceProvidingEntity__ResourceProvidedRole"
+          ordered="false" lowerBound="1" eType="#//resourcetype/ResourceInterfaceProvidingEntity"
+          eOpposite="#//resourcetype/ResourceInterfaceProvidingEntity/resourceProvidedRoles__ResourceInterfaceProvidingEntity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="providedResourceInterface__ResourceProvidedRole"
+          ordered="false" lowerBound="1" eType="#//resourcetype/ResourceInterface"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceInterfaceProvidingEntity"
+        eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceProvidedRoles__ResourceInterfaceProvidingEntity"
+          ordered="false" upperBound="-1" eType="#//resourcetype/ResourceProvidedRole"
+          containment="true" eOpposite="#//resourcetype/ResourceProvidedRole/resourceInterfaceProvidingEntity__ResourceProvidedRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceType" lowerBound="1"
+          eType="ecore:EClass ../../mpcm.domain.environment.resources/model/resources.ecore#//resourcetype/ResourceType"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

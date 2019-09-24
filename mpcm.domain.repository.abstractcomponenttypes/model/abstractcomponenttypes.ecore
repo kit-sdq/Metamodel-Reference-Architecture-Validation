@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="abstractcomponenttypes" nsURI="mpcm.domain.repository.abstractcomponenttypes"
+    nsPrefix="mpcm.domain.repository.abstractcomponenttypes">
+  <eClassifiers xsi:type="ecore:EClass" name="ProvidesComponentType" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//RepositoryComponent">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Provided (Component) Types abstract a component to its provided interfaces, leaving its requirements and implementation details open. So, provided types subsume components which offer the same functionality, but with different implementations. As different implementations might require different services from the environment, provided types omit required interfaces. Provided types allow software architects to focus on a component’s functionality and introduce weak substitutability to the PCM. Using provided types, software architects can draft ideas on how functionality can be partitioned among different components without worrying about their implementation. In the initial phases of architectural design, it often does not make sense to arrange all details of a component, since most of them depend on the actual implementation and thus need to be specified by component developers. As during this phase the actual implementation is unknown, also the required interfaces of a component cannot be stated. However, software architects can still pre-evaluate a software architecture containing provided-types. This gives rough estimates about the quality of the build software system and defines QoS requirements for the component implementation."/>
+    </eAnnotations>
+    <eOperations name="AtLeastOneInterfaceHasToBeProvidedByAUsefullProvidesComponentType"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.oclIsTypeOf(ProvidesComponentType)&#xD;&#xA;implies&#xD;&#xA;self.providedRoles_InterfaceProvidingEntity->size() >= 1"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompleteComponentType" eSuperTypes="../../mpcm.paradigm.repository/model/repository.ecore#//RepositoryComponent">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Complete (Component) types abstract from the realisation of components. They only contain provided and required roles omitting the components’ internal structure, i.e., the service effect specifications or assemblies. Thus, complete types represent a black box view on components. Leaving the implementation open allows for a higher flexibility of software architects and defines substitutability in the PCM."/>
+    </eAnnotations>
+    <eOperations name="AtLeastOneInterfaceHasToBeProvidedOrRequiredByAUsefullCompleteComponentType"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="(&#xD;&#xA;&#x9;self.oclIsTypeOf(CompleteComponentType)&#xD;&#xA;&#x9;or&#xD;&#xA;&#x9;self.oclIsTypeOf(ImplementationComponentType)&#xD;&#xA;&#x9;or&#xD;&#xA;&#x9;self.oclIsTypeOf(CompositeComponent)&#xD;&#xA;&#x9;or&#xD;&#xA;&#x9;self.oclIsTypeOf(BasicComponent)&#xD;&#xA;)&#xD;&#xA;implies&#xD;&#xA;(&#xD;&#xA;&#x9;self.providedRoles_InterfaceProvidingEntity->size() >= 1&#xD;&#xA;&#x9;or&#xD;&#xA;&#x9;self.requiredRoles_InterfaceRequiringEntity->size() >= 1&#xD;&#xA;)"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="providedInterfacesHaveToConformToProvidedType2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="-- CompleteTypes provided Interfaces have to be a superset&#xD;&#xA;-- of ProvidesComponentType provided Interfaces #&#xD;&#xA;--&#xD;&#xA;-- ACCx are used to accumulate Sets/Bags; usually only the very inner ACCx is used at all.&#xD;&#xA;--&#xD;&#xA;-- Recursive Query for parent Interface IDs&#xD;&#xA;-- see &quot;lpar2005.pdf&quot; (Second-order principles in specification languages for Object-Oriented Programs; Beckert, Tretelman) pp. 11 #&#xD;&#xA;--let parentInterfaces : Bag(Interface) =&#xD;&#xA;--&#x9;self.providedRoles->iterate(r : ProvidedRole; acc2 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;acc2->union(r.providedInterface.parentInterface->asBag()) -- asBag required to allow Set operations #&#xD;&#xA;--&#x9;) in&#xD;&#xA;--let anchestorInterfaces : Bag(Interface) =&#xD;&#xA;--&#x9;self.providedRoles->iterate(r : ProvidedRole; acc4 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;acc4->union(r.providedInterface.parentInterface->asBag()) -- asBag required to allow Set operations #&#xD;&#xA;--&#x9;)->union( -- union with anchestors found in former recursion #&#xD;&#xA;--&#x9;&#x9;self.providedRoles->iterate(r : ProvidedRole; acc6 : Bag(Interface) = Bag{} |&#xD;&#xA;--&#x9;&#x9;&#x9;acc6->union(r.providedInterface.parentInterface.anchestorInterfaces) --already Set/Bag&#xD;&#xA;--&#x9;&#x9;)&#xD;&#xA;--&#x9;) in&#xD;&#xA;--&#x9;-- Directly provided anchestorInterfaces need to be a superset of provided interfaces of Supertype #&#xD;&#xA;--&#x9;anchestorInterfaces.identifier.id->includesAll(&#xD;&#xA;--&#x9;&#x9;self.parentProvidesComponentTypes->iterate(pt : ProvidesComponentType; acc1 : Bag(String) = Bag{} |&#xD;&#xA;--&#x9;&#x9;&#x9;pt.providedRoles->iterate(r : ProvidedRole; acc2 : Bag(String) = Bag{} |&#xD;&#xA;--&#x9;&#x9;&#x9;&#x9;acc2->union(r.providedInterface.identifier.id->asBag()) -- asBag required to allow Set operations #&#xD;&#xA;--&#x9;&#x9;&#x9;)&#xD;&#xA;--&#x9;&#x9;)&#xD;&#xA;--&#x9;)&#xD;&#xA;true"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentProvidesComponentTypes"
+        ordered="false" upperBound="-1" eType="#//ProvidesComponentType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="confirmingImplComponentTypes"
+        upperBound="-1" eType="ecore:EClass ../../mpcm.domain.repository/model/repository.ecore#//ImplementationComponentType"/>
+  </eClassifiers>
+</ecore:EPackage>

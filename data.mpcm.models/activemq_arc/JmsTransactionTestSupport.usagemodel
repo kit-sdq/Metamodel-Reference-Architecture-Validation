@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_JnmAzJhUEeWKgoTb5jIgDA" entityName="testSendReceiveTransactedBatches">
+    <scenarioBehaviour_UsageScenario id="_JnmAz5hUEeWKgoTb5jIgDA" entityName="testSendReceiveTransactedBatches">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_JnmAzZhUEeWKgoTb5jIgDA" successor="_KFQNIJhUEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_KFQNIJhUEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testSendReceiveTransactedBatches() at 1771" successor="_NRjKAJhUEeWKgoTb5jIgDA" predecessor="_JnmAzZhUEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_NRjKAJhUEeWKgoTb5jIgDA" entityName="default loop count value" successor="_JnmAzphUEeWKgoTb5jIgDA" predecessor="_KFQNIJhUEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_NRjKAZhUEeWKgoTb5jIgDA" entityName=" @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testSendReceiveTransactedBatches() from 1772 to 1815">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_NRjKAphUEeWKgoTb5jIgDA" successor="_NRjKBJhUEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_NRjKBJhUEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testSendReceiveTransactedBatches().Block from 1901 to 1946" successor="_NRjKBphUEeWKgoTb5jIgDA" predecessor="_NRjKAphUEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_NRjKBphUEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testSendReceiveTransactedBatches().Block from 2125 to 2170" successor="_NRjKB5hUEeWKgoTb5jIgDA" predecessor="_NRjKBJhUEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_NRjKB5hUEeWKgoTb5jIgDA" predecessor="_NRjKBphUEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_JnmAzphUEeWKgoTb5jIgDA" predecessor="_NRjKAJhUEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_NRjKCJhUEeWKgoTb5jIgDA" entityName="testSendRollback">
+    <scenarioBehaviour_UsageScenario id="_NRjKC5hUEeWKgoTb5jIgDA" entityName="testSendRollback">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_NRjKCZhUEeWKgoTb5jIgDA" successor="_OMjZsJhUEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_OMjZsJhUEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testSendRollback() at 2671" successor="_NRjKCphUEeWKgoTb5jIgDA" predecessor="_NRjKCZhUEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_NRjKCphUEeWKgoTb5jIgDA" predecessor="_OMjZsJhUEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_iI_S8JhUEeWKgoTb5jIgDA" entityName="testReceiveRollback">
+    <scenarioBehaviour_UsageScenario id="_iI_S85hUEeWKgoTb5jIgDA" entityName="testReceiveRollback">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_iI_S8ZhUEeWKgoTb5jIgDA" successor="_jD2YsJhUEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_jD2YsJhUEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testReceiveRollback() at 3761" successor="_iI_S8phUEeWKgoTb5jIgDA" predecessor="_iI_S8ZhUEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_iI_S8phUEeWKgoTb5jIgDA" predecessor="_jD2YsJhUEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_-zd6YJhUEeWKgoTb5jIgDA" entityName="testReceiveTwoThenRollback">
+    <scenarioBehaviour_UsageScenario id="_-zd6Y5hUEeWKgoTb5jIgDA" entityName="testReceiveTwoThenRollback">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_-zd6YZhUEeWKgoTb5jIgDA" successor="__uL2MJhUEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="__uL2MJhUEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testReceiveTwoThenRollback() at 5204" successor="_-zd6YphUEeWKgoTb5jIgDA" predecessor="_-zd6YZhUEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_-zd6YphUEeWKgoTb5jIgDA" predecessor="__uL2MJhUEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_i7YjwJhVEeWKgoTb5jIgDA" entityName="testReceiveTwoThenRollbackManyTimes">
+    <scenarioBehaviour_UsageScenario id="_i7Yjw5hVEeWKgoTb5jIgDA" entityName="testReceiveTwoThenRollbackManyTimes">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_i7YjwZhVEeWKgoTb5jIgDA" successor="_6yAaoJhVEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_6yAaoJhVEeWKgoTb5jIgDA" entityName="default loop count value" successor="_i7YjwphVEeWKgoTb5jIgDA" predecessor="_i7YjwZhVEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_6yAaoZhVEeWKgoTb5jIgDA" entityName=" @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testReceiveTwoThenRollbackManyTimes() from 6630 to 6664">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_6yAaophVEeWKgoTb5jIgDA" successor="_7FFHoJhVEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_7FFHoJhVEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testReceiveTwoThenRollback() at 5204" successor="_7PEKEJhVEeWKgoTb5jIgDA" predecessor="_6yAaophVEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_7PEKEJhVEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testReceiveTwoThenRollback() at 5668" successor="_9EyVkJhVEeWKgoTb5jIgDA" predecessor="_7FFHoJhVEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_9EyVkJhVEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testReceiveTwoThenRollback() at 6467" successor="_9EyVkZhVEeWKgoTb5jIgDA" predecessor="_7PEKEJhVEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9EyVkZhVEeWKgoTb5jIgDA" predecessor="_9EyVkJhVEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_i7YjwphVEeWKgoTb5jIgDA" predecessor="_6yAaoJhVEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_9E8GkJhVEeWKgoTb5jIgDA" entityName="testSendRollbackWithPrefetchOfOne">
+    <scenarioBehaviour_UsageScenario id="_9E8Gk5hVEeWKgoTb5jIgDA" entityName="testSendRollbackWithPrefetchOfOne">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_9E8GkZhVEeWKgoTb5jIgDA" successor="_9E9UsJhVEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9E9UsJhVEeWKgoTb5jIgDA" entityName="getPrefetchPolicy:  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.setPrefetchToOne() at 9992" successor="_9E9UsphVEeWKgoTb5jIgDA" predecessor="_9E8GkZhVEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_9E9UsZhVEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9E9UsphVEeWKgoTb5jIgDA" entityName="setQueuePrefetch:  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.setPrefetchToOne() at 10036" successor="_9E9UtJhVEeWKgoTb5jIgDA" predecessor="_9E9UsJhVEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_9E9Us5hVEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9E9UtJhVEeWKgoTb5jIgDA" entityName="setTopicPrefetch:  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.setPrefetchToOne() at 10080" successor="_9E9UtphVEeWKgoTb5jIgDA" predecessor="_9E9UsphVEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_9E9UtZhVEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_9E9UtphVEeWKgoTb5jIgDA" entityName="setDurableTopicPrefetch:  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.setPrefetchToOne() at 10131" successor="_LGumUJhWEeWKgoTb5jIgDA" predecessor="_9E9UtJhVEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_9E9Ut5hVEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_LGumUJhWEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testSendRollback() at 2671" successor="_LQQ80JhWEeWKgoTb5jIgDA" predecessor="_9E9UtphVEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_LQQ80JhWEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testSendRollback() at 3062" successor="_LaGOQJhWEeWKgoTb5jIgDA" predecessor="_LGumUJhWEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_LaGOQJhWEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testSendRollback() at 3246" successor="_LjokwJhWEeWKgoTb5jIgDA" predecessor="_LQQ80JhWEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_LjokwJhWEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testSendRollback() at 3356" successor="_NWYUwJhWEeWKgoTb5jIgDA" predecessor="_LaGOQJhWEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_NWYUwJhWEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testSendRollback() at 3450" successor="_9E8GkphVEeWKgoTb5jIgDA" predecessor="_LjokwJhWEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_9E8GkphVEeWKgoTb5jIgDA" predecessor="_NWYUwJhWEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_NWYUwZhWEeWKgoTb5jIgDA" entityName="testReceiveRollbackWithPrefetchOfOne">
+    <scenarioBehaviour_UsageScenario id="_NWYUxJhWEeWKgoTb5jIgDA" entityName="testReceiveRollbackWithPrefetchOfOne">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_NWYUwphWEeWKgoTb5jIgDA" successor="_NWdNQJhWEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_NWdNQJhWEeWKgoTb5jIgDA" entityName="getPrefetchPolicy:  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.setPrefetchToOne() at 9992" successor="_NWdNQZhWEeWKgoTb5jIgDA" predecessor="_NWYUwphWEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_9E9UsZhVEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_NWdNQZhWEeWKgoTb5jIgDA" entityName="setQueuePrefetch:  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.setPrefetchToOne() at 10036" successor="_NWdNQphWEeWKgoTb5jIgDA" predecessor="_NWdNQJhWEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_9E9Us5hVEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_NWdNQphWEeWKgoTb5jIgDA" entityName="setTopicPrefetch:  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.setPrefetchToOne() at 10080" successor="_NWdNQ5hWEeWKgoTb5jIgDA" predecessor="_NWdNQZhWEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_9E9UtZhVEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_NWdNQ5hWEeWKgoTb5jIgDA" entityName="setDurableTopicPrefetch:  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.setPrefetchToOne() at 10131" successor="_grd6IJhWEeWKgoTb5jIgDA" predecessor="_NWdNQphWEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_9E9Ut5hVEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_grd6IJhWEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testReceiveRollback() at 3761" successor="_g0aawJhWEeWKgoTb5jIgDA" predecessor="_NWdNQ5hWEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_g0aawJhWEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testReceiveRollback() at 4225" successor="_ims3wJhWEeWKgoTb5jIgDA" predecessor="_grd6IJhWEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ims3wJhWEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testReceiveRollback() at 4887" successor="_NWYUw5hWEeWKgoTb5jIgDA" predecessor="_g0aawJhWEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_NWYUw5hWEeWKgoTb5jIgDA" predecessor="_ims3wJhWEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_ims3wZhWEeWKgoTb5jIgDA" entityName="testCloseConsumerBeforeCommit">
+    <scenarioBehaviour_UsageScenario id="_ims3xJhWEeWKgoTb5jIgDA" entityName="testCloseConsumerBeforeCommit">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_ims3wphWEeWKgoTb5jIgDA" successor="_jhtugJhWEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_jhtugJhWEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTransactionTestSupport.java.JmsTransactionTestSupport.testCloseConsumerBeforeCommit() at 7323" successor="_ims3w5hWEeWKgoTb5jIgDA" predecessor="_ims3wphWEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_ims3w5hWEeWKgoTb5jIgDA" predecessor="_jhtugJhWEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

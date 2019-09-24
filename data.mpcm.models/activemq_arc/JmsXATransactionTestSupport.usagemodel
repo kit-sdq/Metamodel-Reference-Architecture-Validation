@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_oly38phMEeWKgoTb5jIgDA" entityName="testSendOutsideXATransaction">
+    <scenarioBehaviour_UsageScenario id="_oly39ZhMEeWKgoTb5jIgDA" entityName="testSendOutsideXATransaction">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_oly385hMEeWKgoTb5jIgDA" successor="_oucdoJhMEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_oucdoJhMEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.test.JmsXATransactionTestSupport.java.JmsXATransactionTestSupport.testSendOutsideXATransaction() from 1600 to 1778" successor="_oly39JhMEeWKgoTb5jIgDA" predecessor="_oly385hMEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_oly39JhMEeWKgoTb5jIgDA" predecessor="_oucdoJhMEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_oucdoZhMEeWKgoTb5jIgDA" entityName="testSendRollback">
+    <scenarioBehaviour_UsageScenario id="_oucdpJhMEeWKgoTb5jIgDA" entityName="testSendRollback">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_oucdophMEeWKgoTb5jIgDA" successor="_o9fmQJhMEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_o9fmQJhMEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.test.JmsXATransactionTestSupport.java.JmsXATransactionTestSupport.testSendRollback() at 1984" successor="_pbABoZhMEeWKgoTb5jIgDA" predecessor="_oucdophMEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_pbABoZhMEeWKgoTb5jIgDA" successor="_oucdo5hMEeWKgoTb5jIgDA" predecessor="_o9fmQJhMEeWKgoTb5jIgDA">
+        <branchTransitions_Branch branchProbability="1.0">
+          <branchedBehaviour_BranchTransition id="_pbABophMEeWKgoTb5jIgDA" entityName="parent  @position: org.activemq.test.JmsXATransactionTestSupport.java.JmsXATransactionTestSupport.testSendRollback() from 2876 to 2931/ @position: org.activemq.test.JmsXATransactionTestSupport.java.JmsXATransactionTestSupport.testSendRollback().Block from 2932 to 2976">
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_pbABo5hMEeWKgoTb5jIgDA" successor="_pbABpZhMEeWKgoTb5jIgDA"/>
+            <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_pbABpZhMEeWKgoTb5jIgDA" predecessor="_pbABo5hMEeWKgoTb5jIgDA"/>
+          </branchedBehaviour_BranchTransition>
+        </branchTransitions_Branch>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_oucdo5hMEeWKgoTb5jIgDA" predecessor="_pbABoZhMEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_sk5x0JhMEeWKgoTb5jIgDA" entityName="testSendPrepareRecoverRollback">
+    <scenarioBehaviour_UsageScenario id="_sk5x05hMEeWKgoTb5jIgDA" entityName="testSendPrepareRecoverRollback">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sk5x0ZhMEeWKgoTb5jIgDA" successor="_szg1kJhMEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_szg1kJhMEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.test.JmsXATransactionTestSupport.java.JmsXATransactionTestSupport.testSendPrepareRecoverRollback() at 3644" successor="_sk5x0phMEeWKgoTb5jIgDA" predecessor="_sk5x0ZhMEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sk5x0phMEeWKgoTb5jIgDA" predecessor="_szg1kJhMEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

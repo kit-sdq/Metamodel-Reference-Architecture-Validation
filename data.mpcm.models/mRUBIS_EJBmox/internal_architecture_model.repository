@@ -1,0 +1,1547 @@
+<?xml version="1.0" encoding="ASCII"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" id="_B1rIoFfrEeaSKrqgVHdKiA">
+  <components__Repository xsi:type="repository:BasicComponent" id="_FHLVoFfrEeaSKrqgVHdKiA" entityName="ItemRegistrationServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FJuTUFfrEeaSKrqgVHdKiA" entityName="ItemRegistrationServiceBean_provides_ItemRegistrationService" providedInterface__OperationProvidedRole="_FHYJ8FfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLU10FfrEeaSKrqgVHdKiA" entityName="ItemRegistrationServiceBean_requires_BusinessObjectsPersistenceService" requiredInterface__OperationRequiredRole="_FKM0cVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLVc4FfrEeaSKrqgVHdKiA" entityName="ItemRegistrationServiceBean_requires_AuthenticationService" requiredInterface__OperationRequiredRole="_FKjZwlfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLVc4VfrEeaSKrqgVHdKiA" entityName="ItemRegistrationServiceBean_requires_BasicQueryService" requiredInterface__OperationRequiredRole="_FKr8oFfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLhDEFfrEeaSKrqgVHdKiA" describedService__SEFF="_FHamMFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FNkRgFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FOHEEFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FOHEEFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.itemmgmt.impl.ItemRegistrationServiceBean.java.ItemRegistrationServiceBean.registerItem() at 1713" predecessor_AbstractAction="_FNkRgFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FONxwFfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FONxwFfrEeaSKrqgVHdKiA" entityName="findUserById @position: de.hpi.sam.rubis.itemmgmt.impl.ItemRegistrationServiceBean.java.ItemRegistrationServiceBean.registerItem() at 2955" predecessor_AbstractAction="_FOHEEFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FOQ1EFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKr8olfrEeaSKrqgVHdKiA" role_ExternalService="_FLVc4VfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FOQ1EFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.itemmgmt.impl.ItemRegistrationServiceBean.java.ItemRegistrationServiceBean.registerItem() at 3062" predecessor_AbstractAction="_FONxwFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FOQ1EVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FOQ1EVfrEeaSKrqgVHdKiA" entityName="authenticate @position: de.hpi.sam.rubis.itemmgmt.impl.ItemRegistrationServiceBean.java.ItemRegistrationServiceBean.registerItem() at 3062" predecessor_AbstractAction="_FOQ1EFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FORcIFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKjZw1frEeaSKrqgVHdKiA" role_ExternalService="_FLVc4FfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FORcIFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.itemmgmt.impl.ItemRegistrationServiceBean.java.ItemRegistrationServiceBean.registerItem() from 3063 to 3142" predecessor_AbstractAction="_FOQ1EVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FOSDMFfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FOSDMFfrEeaSKrqgVHdKiA" entityName="findCategoryById @position: de.hpi.sam.rubis.itemmgmt.impl.ItemRegistrationServiceBean.java.ItemRegistrationServiceBean.registerItem() at 4006" predecessor_AbstractAction="_FORcIFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FOTRUFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKtx0FfrEeaSKrqgVHdKiA" role_ExternalService="_FLVc4VfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FOTRUFfrEeaSKrqgVHdKiA" entityName="persistItem @position: de.hpi.sam.rubis.itemmgmt.impl.ItemRegistrationServiceBean.java.ItemRegistrationServiceBean.registerItem() at 4415" predecessor_AbstractAction="_FOSDMFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FOT4YFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKOpoFfrEeaSKrqgVHdKiA" role_ExternalService="_FLU10FfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FOT4YFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.itemmgmt.impl.ItemRegistrationServiceBean.java.ItemRegistrationServiceBean.registerItem() from 4416 to 4431" predecessor_AbstractAction="_FOTRUFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FNk4kFfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FNk4kFfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FOT4YFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FJu6YFfrEeaSKrqgVHdKiA" entityName="ViewUserInfoServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FKMNYFfrEeaSKrqgVHdKiA" entityName="ViewUserInfoServiceBean_provides_ViewUserInfoService" providedInterface__OperationProvidedRole="_FJu6YVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLZuUlfrEeaSKrqgVHdKiA" entityName="ViewUserInfoServiceBean_requires_BasicQueryService" requiredInterface__OperationRequiredRole="_FKr8oFfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLktcFfrEeaSKrqgVHdKiA" describedService__SEFF="_FJu6YlfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FOUfcFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FOZ_AFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FOZ_AFfrEeaSKrqgVHdKiA" entityName="findUserById @position: de.hpi.sam.rubis.usermgmt.impl.ViewUserInfoServiceBean.java.ViewUserInfoServiceBean.getUserInfo() at 1104" predecessor_AbstractAction="_FOUfcFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FOamEFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKr8olfrEeaSKrqgVHdKiA" role_ExternalService="_FLZuUlfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FOamEFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.usermgmt.impl.ViewUserInfoServiceBean.java.ViewUserInfoServiceBean.getUserInfo() from 1105 to 1245" predecessor_AbstractAction="_FOZ_AFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FOUfcVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FOUfcVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FOamEFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FKM0cFfrEeaSKrqgVHdKiA" entityName="BusinessObjectsPersistenceServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FKdTIFfrEeaSKrqgVHdKiA" entityName="BusinessObjectsPersistenceServiceBean_provides_BusinessObjectsPersistenceService" providedInterface__OperationProvidedRole="_FKM0cVfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLktcVfrEeaSKrqgVHdKiA" describedService__SEFF="_FKM0clfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FOamEVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FOamE1frEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FOamE1frEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.persistenceservice.impl.BusinessObjectsPersistenceServiceBean.java.BusinessObjectsPersistenceServiceBean.persistUser() at 4006" predecessor_AbstractAction="_FOamEVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FOamElfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FOamElfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FOamE1frEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLlUgFfrEeaSKrqgVHdKiA" describedService__SEFF="_FKOpoFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FYZogFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FYaPkFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FYaPkFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.persistenceservice.impl.BusinessObjectsPersistenceServiceBean.java.BusinessObjectsPersistenceServiceBean.persistItem() at 2001" predecessor_AbstractAction="_FYZogFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FYZogVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FYZogVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FYaPkFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLlUgVfrEeaSKrqgVHdKiA" describedService__SEFF="_FKRF4FfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FZTAYFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FZTncFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FZTncFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.persistenceservice.impl.BusinessObjectsPersistenceServiceBean.java.BusinessObjectsPersistenceServiceBean.persistBid() at 5374" predecessor_AbstractAction="_FZTAYFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FZTAYVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FZTAYVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FZTncFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLl7kFfrEeaSKrqgVHdKiA" describedService__SEFF="_FKSUAFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FaR30FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FaSe4FfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FaSe4FfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.persistenceservice.impl.BusinessObjectsPersistenceServiceBean.java.BusinessObjectsPersistenceServiceBean.persistBuyNow() at 6969" predecessor_AbstractAction="_FaR30FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FaR30VfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FaR30VfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FaSe4FfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLl7kVfrEeaSKrqgVHdKiA" describedService__SEFF="_FKS7EFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FbVAsFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FbVnwFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FbVnwFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.persistenceservice.impl.BusinessObjectsPersistenceServiceBean.java.BusinessObjectsPersistenceServiceBean.persistComment() at 8618" predecessor_AbstractAction="_FbVAsFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FbVAsVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FbVAsVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FbVnwFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLmioFfrEeaSKrqgVHdKiA" describedService__SEFF="_FKUJMFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FcQNwFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FcfeUFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FcfeUFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.persistenceservice.impl.BusinessObjectsPersistenceServiceBean.java.BusinessObjectsPersistenceServiceBean.reduceInventoryItem() from 10684 to 11073" predecessor_AbstractAction="_FcQNwFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FcQNwVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FcQNwVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FcfeUFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLmioVfrEeaSKrqgVHdKiA" describedService__SEFF="_FKUwQFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FcfeUVfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fd3XUFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_Fd3XUFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.persistenceservice.impl.BusinessObjectsPersistenceServiceBean.java.BusinessObjectsPersistenceServiceBean.increaseInventoryItem() from 11469 to 11752" predecessor_AbstractAction="_FcfeUVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FcfeUlfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FcfeUlfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_Fd3XUFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FKdTIVfrEeaSKrqgVHdKiA" entityName="ReputationServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FKfvYFfrEeaSKrqgVHdKiA" entityName="ReputationServiceBean_provides_ReputationService" providedInterface__OperationProvidedRole="_FKd6MFfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLX5IFfrEeaSKrqgVHdKiA" entityName="ReputationServiceBean_requires_AuthenticationService" requiredInterface__OperationRequiredRole="_FKjZwlfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLX5IVfrEeaSKrqgVHdKiA" entityName="ReputationServiceBean_requires_BasicQueryService" requiredInterface__OperationRequiredRole="_FKr8oFfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLX5IlfrEeaSKrqgVHdKiA" entityName="ReputationServiceBean_requires_QueryService" requiredInterface__OperationRequiredRole="_FLDJAVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLYgMFfrEeaSKrqgVHdKiA" entityName="ReputationServiceBean_requires_BusinessObjectsPersistenceService" requiredInterface__OperationRequiredRole="_FKM0cVfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLnJsFfrEeaSKrqgVHdKiA" describedService__SEFF="_FKd6MVfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Fd3-YFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fd3-YlfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_Fd3-YlfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment() at 1764" predecessor_AbstractAction="_Fd3-YFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fd4lcFfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Fd4lcFfrEeaSKrqgVHdKiA" entityName="authenticate @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment() at 1837" predecessor_AbstractAction="_Fd3-YlfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fd5MgFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKjZw1frEeaSKrqgVHdKiA" role_ExternalService="_FLX5IFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Fd5MgFfrEeaSKrqgVHdKiA" entityName="findItemById @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment() at 2148" predecessor_AbstractAction="_Fd4lcFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fd5zkFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKxcMFfrEeaSKrqgVHdKiA" role_ExternalService="_FLX5IVfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Fd5zkFfrEeaSKrqgVHdKiA" entityName="findUserById @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment() at 2586" predecessor_AbstractAction="_Fd5MgFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fd8P0FfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKr8olfrEeaSKrqgVHdKiA" role_ExternalService="_FLX5IVfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_Fd8P0FfrEeaSKrqgVHdKiA" entityName=" @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment() from 3565 to 3608" predecessor_AbstractAction="_Fd5zkFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeELoFfrEeaSKrqgVHdKiA">
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_Fd9d8FfrEeaSKrqgVHdKiA" entityName="SoMoX default branch probability" branchProbability="1.0">
+          <branchBehaviour_BranchTransition id="_FeAhQFfrEeaSKrqgVHdKiA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_FeAhQVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeAhQlfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeAhQlfrEeaSKrqgVHdKiA" entityName="findSuccessfulBidsForItem @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment().Block at 3742" predecessor_AbstractAction="_FeAhQVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeBIUFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FLIokFfrEeaSKrqgVHdKiA" role_ExternalService="_FLX5IlfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_FeBIUFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment().Block from 3743 to 3787" predecessor_AbstractAction="_FeAhQlfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeBIUVfrEeaSKrqgVHdKiA">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_FeBIUVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeBIUFfrEeaSKrqgVHdKiA"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FeELoFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment() at 5436" predecessor_AbstractAction="_Fd8P0FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeELoVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeELoVfrEeaSKrqgVHdKiA" entityName="findComment @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment() at 5436" predecessor_AbstractAction="_FeELoFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeFZwFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FLMS8FfrEeaSKrqgVHdKiA" role_ExternalService="_FLX5IlfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_FeFZwFfrEeaSKrqgVHdKiA" entityName=" @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment() from 5758 to 6168" predecessor_AbstractAction="_FeELoVfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fd3-YVfrEeaSKrqgVHdKiA">
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_FeFZwVfrEeaSKrqgVHdKiA" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_FeFZwlfrEeaSKrqgVHdKiA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_FeFZw1frEeaSKrqgVHdKiA" successor_AbstractAction="_FeFZxFfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_FeFZxFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment().Block from 5790 to 6163" predecessor_AbstractAction="_FeFZw1frEeaSKrqgVHdKiA" successor_AbstractAction="_FeFZxVfrEeaSKrqgVHdKiA">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_FeFZxVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeFZxFfrEeaSKrqgVHdKiA"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_FeFZxlfrEeaSKrqgVHdKiA" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_FeFZx1frEeaSKrqgVHdKiA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_FeFZyFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeFZyVfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeFZyVfrEeaSKrqgVHdKiA" entityName="persistComment @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment().Block at 6347" predecessor_AbstractAction="_FeFZyFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeGA0FfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKS7EFfrEeaSKrqgVHdKiA" role_ExternalService="_FLYgMFfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_FeGA0FfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.reputationservice.impl.ReputationServiceBean.java.ReputationServiceBean.giveComment().Block from 6348 to 6373" predecessor_AbstractAction="_FeFZyVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeGA0VfrEeaSKrqgVHdKiA">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_FeGA0VfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeGA0FfrEeaSKrqgVHdKiA"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Fd3-YVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeFZwFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FKgWcFfrEeaSKrqgVHdKiA" entityName="UserRegistrationServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FKjZwFfrEeaSKrqgVHdKiA" entityName="UserRegistrationServiceBean_provides_UserRegistrationService" providedInterface__OperationProvidedRole="_FKgWcVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLVc4lfrEeaSKrqgVHdKiA" entityName="UserRegistrationServiceBean_requires_BusinessObjectsPersistenceService" requiredInterface__OperationRequiredRole="_FKM0cVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLVc41frEeaSKrqgVHdKiA" entityName="UserRegistrationServiceBean_requires_BasicQueryService" requiredInterface__OperationRequiredRole="_FKr8oFfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLnJsVfrEeaSKrqgVHdKiA" describedService__SEFF="_FKgWclfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FeGA0lfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeGA1FfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FeGA1FfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.usermgmt.impl.UserRegistrationServiceBean.java.UserRegistrationServiceBean.registerUser() at 1343" predecessor_AbstractAction="_FeGA0lfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeGn4FfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeGn4FfrEeaSKrqgVHdKiA" entityName="findRegionByName @position: de.hpi.sam.rubis.usermgmt.impl.UserRegistrationServiceBean.java.UserRegistrationServiceBean.registerUser() at 1597" predecessor_AbstractAction="_FeGA1FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeHO8FfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKwOEFfrEeaSKrqgVHdKiA" role_ExternalService="_FLVc41frEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeHO8FfrEeaSKrqgVHdKiA" entityName="isUserNicknameUsed @position: de.hpi.sam.rubis.usermgmt.impl.UserRegistrationServiceBean.java.UserRegistrationServiceBean.registerUser() at 1858" predecessor_AbstractAction="_FeGn4FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeH2AFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKxcMVfrEeaSKrqgVHdKiA" role_ExternalService="_FLVc41frEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_FeH2AFfrEeaSKrqgVHdKiA" entityName=" @position: de.hpi.sam.rubis.usermgmt.impl.UserRegistrationServiceBean.java.UserRegistrationServiceBean.registerUser() from 2008 to 2171" predecessor_AbstractAction="_FeHO8FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeGA01frEeaSKrqgVHdKiA">
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_FeIdEFfrEeaSKrqgVHdKiA" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_FeIdEVfrEeaSKrqgVHdKiA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_FeIdElfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeIdE1frEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_FeIdE1frEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.usermgmt.impl.UserRegistrationServiceBean.java.UserRegistrationServiceBean.registerUser().Block from 2031 to 2166" predecessor_AbstractAction="_FeIdElfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeIdFFfrEeaSKrqgVHdKiA">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_FeIdFFfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeIdE1frEeaSKrqgVHdKiA"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_FeIdFVfrEeaSKrqgVHdKiA" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_FeIdFlfrEeaSKrqgVHdKiA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_FeIdF1frEeaSKrqgVHdKiA" successor_AbstractAction="_FeIdGFfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeIdGFfrEeaSKrqgVHdKiA" entityName="persistUser @position: de.hpi.sam.rubis.usermgmt.impl.UserRegistrationServiceBean.java.UserRegistrationServiceBean.registerUser().Block at 2311" predecessor_AbstractAction="_FeIdF1frEeaSKrqgVHdKiA" successor_AbstractAction="_FeJEIFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKM0clfrEeaSKrqgVHdKiA" role_ExternalService="_FLVc4lfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_FeJEIFfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeIdGFfrEeaSKrqgVHdKiA"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FeGA01frEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeH2AFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FKjZwVfrEeaSKrqgVHdKiA" entityName="AuthenticationServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FKkn4FfrEeaSKrqgVHdKiA" entityName="AuthenticationServiceBean_provides_AuthenticationService" providedInterface__OperationProvidedRole="_FKjZwlfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLWD8FfrEeaSKrqgVHdKiA" entityName="AuthenticationServiceBean_requires_BasicQueryService" requiredInterface__OperationRequiredRole="_FKr8oFfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLnwwFfrEeaSKrqgVHdKiA" describedService__SEFF="_FKjZw1frEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FeJEIVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeJEI1frEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FeJEI1frEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.authservice.impl.AuthenticationServiceBean.java.AuthenticationServiceBean.authenticate() from 838 to 862" predecessor_AbstractAction="_FeJEIVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeJrMFfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeJrMFfrEeaSKrqgVHdKiA" entityName="findUserByNickname @position: de.hpi.sam.rubis.authservice.impl.AuthenticationServiceBean.java.AuthenticationServiceBean.authenticate() at 1198" predecessor_AbstractAction="_FeJEI1frEeaSKrqgVHdKiA" successor_AbstractAction="_FeJEIlfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKsjsFfrEeaSKrqgVHdKiA" role_ExternalService="_FLWD8FfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FeJEIlfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeJrMFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FKlO8FfrEeaSKrqgVHdKiA" entityName="BidServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FKnrMVfrEeaSKrqgVHdKiA" entityName="BidServiceBean_provides_BidService" providedInterface__OperationProvidedRole="_FKlO8VfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLWrAFfrEeaSKrqgVHdKiA" entityName="BidServiceBean_requires_AuthenticationService" requiredInterface__OperationRequiredRole="_FKjZwlfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLXSEFfrEeaSKrqgVHdKiA" entityName="BidServiceBean_requires_BasicQueryService" requiredInterface__OperationRequiredRole="_FKr8oFfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLXSEVfrEeaSKrqgVHdKiA" entityName="BidServiceBean_requires_BusinessObjectsPersistenceService" requiredInterface__OperationRequiredRole="_FKM0cVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLXSElfrEeaSKrqgVHdKiA" entityName="BidServiceBean_requires_QueryService" requiredInterface__OperationRequiredRole="_FLDJAVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLXSE1frEeaSKrqgVHdKiA" entityName="BidServiceBean_requires_InventoryService" requiredInterface__OperationRequiredRole="_FKo5UFfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLoX0FfrEeaSKrqgVHdKiA" describedService__SEFF="_FKlO8lfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FeK5UFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeK5UlfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FeK5UlfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.bidandbuy.impl.BidServiceBean.java.BidServiceBean.bidOnItem() at 1824" predecessor_AbstractAction="_FeK5UFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeLgYFfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeLgYFfrEeaSKrqgVHdKiA" entityName="authenticate @position: de.hpi.sam.rubis.bidandbuy.impl.BidServiceBean.java.BidServiceBean.bidOnItem() at 1893" predecessor_AbstractAction="_FeK5UlfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeLgYVfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKjZw1frEeaSKrqgVHdKiA" role_ExternalService="_FLWrAFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeLgYVfrEeaSKrqgVHdKiA" entityName="findItemById @position: de.hpi.sam.rubis.bidandbuy.impl.BidServiceBean.java.BidServiceBean.bidOnItem() at 2195" predecessor_AbstractAction="_FeLgYFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeNVkFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKxcMFfrEeaSKrqgVHdKiA" role_ExternalService="_FLXSEFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeNVkFfrEeaSKrqgVHdKiA" entityName="checkAvailabilityOfItem @position: de.hpi.sam.rubis.bidandbuy.impl.BidServiceBean.java.BidServiceBean.bidOnItem() at 3474" predecessor_AbstractAction="_FeLgYVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeN8oFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKo5UVfrEeaSKrqgVHdKiA" role_ExternalService="_FLXSE1frEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeN8oFfrEeaSKrqgVHdKiA" entityName="persistBid @position: de.hpi.sam.rubis.bidandbuy.impl.BidServiceBean.java.BidServiceBean.bidOnItem() at 4922" predecessor_AbstractAction="_FeNVkFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeN8oVfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKRF4FfrEeaSKrqgVHdKiA" role_ExternalService="_FLXSEVfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FeN8oVfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.bidandbuy.impl.BidServiceBean.java.BidServiceBean.bidOnItem() from 4923 to 4937" predecessor_AbstractAction="_FeN8oFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeK5UVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FeK5UVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeN8oVfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLoX0VfrEeaSKrqgVHdKiA" describedService__SEFF="_FKnEIFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FeOjsFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeOjslfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeOjslfrEeaSKrqgVHdKiA" entityName="findItemBidHistory @position: de.hpi.sam.rubis.bidandbuy.impl.BidServiceBean.java.BidServiceBean.getItemBidHistory() at 5299" predecessor_AbstractAction="_FeOjsFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FePKwFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FLIBgFfrEeaSKrqgVHdKiA" role_ExternalService="_FLXSElfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FePKwFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.bidandbuy.impl.BidServiceBean.java.BidServiceBean.getItemBidHistory() from 5300 to 5321" predecessor_AbstractAction="_FeOjslfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeOjsVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FeOjsVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FePKwFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLoX0lfrEeaSKrqgVHdKiA" describedService__SEFF="_FKnrMFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FePKwVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FePKw1frEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FePKw1frEeaSKrqgVHdKiA" entityName="findItemMaxBids @position: de.hpi.sam.rubis.bidandbuy.impl.BidServiceBean.java.BidServiceBean.getItemBidHistorySortyByBidPrice() at 5715" predecessor_AbstractAction="_FePKwVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FePx0FfrEeaSKrqgVHdKiA" calledService_ExternalService="_FLHacVfrEeaSKrqgVHdKiA" role_ExternalService="_FLXSElfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FePx0FfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.bidandbuy.impl.BidServiceBean.java.BidServiceBean.getItemBidHistorySortyByBidPrice() from 5716 to 5737" predecessor_AbstractAction="_FePKw1frEeaSKrqgVHdKiA" successor_AbstractAction="_FePKwlfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FePKwlfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FePx0FfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FKoSQFfrEeaSKrqgVHdKiA" entityName="InventoryServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FKrVkFfrEeaSKrqgVHdKiA" entityName="InventoryServiceBean_provides_InventoryService" providedInterface__OperationProvidedRole="_FKo5UFfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLWD8VfrEeaSKrqgVHdKiA" entityName="InventoryServiceBean_requires_QueryService" requiredInterface__OperationRequiredRole="_FLDJAVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLWD8lfrEeaSKrqgVHdKiA" entityName="InventoryServiceBean_requires_BusinessObjectsPersistenceService" requiredInterface__OperationRequiredRole="_FKM0cVfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLo-4FfrEeaSKrqgVHdKiA" describedService__SEFF="_FKo5UVfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FePx0VfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeQY4FfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FeQY4FfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.inventorymgmt.impl.InventoryServiceBean.java.InventoryServiceBean.checkAvailabilityOfItem() at 1212" predecessor_AbstractAction="_FePx0VfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeQY4VfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeQY4VfrEeaSKrqgVHdKiA" entityName="retrieveAvailabilityOfItem @position: de.hpi.sam.rubis.inventorymgmt.impl.InventoryServiceBean.java.InventoryServiceBean.checkAvailabilityOfItem() at 1212" predecessor_AbstractAction="_FeQY4FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeQY4lfrEeaSKrqgVHdKiA" calledService_ExternalService="_FLM6AFfrEeaSKrqgVHdKiA" role_ExternalService="_FLWD8VfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FeQY4lfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.inventorymgmt.impl.InventoryServiceBean.java.InventoryServiceBean.checkAvailabilityOfItem() from 1213 to 1381" predecessor_AbstractAction="_FeQY4VfrEeaSKrqgVHdKiA" successor_AbstractAction="_FePx0lfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FePx0lfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeQY4lfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLo-4VfrEeaSKrqgVHdKiA" describedService__SEFF="_FKpgYFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FeQ_8FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeRnAFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FeRnAFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.inventorymgmt.impl.InventoryServiceBean.java.InventoryServiceBean.checkAvailabilityOfItem() at 1212" predecessor_AbstractAction="_FeQ_8FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeSOEFfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeSOEFfrEeaSKrqgVHdKiA" entityName="retrieveAvailabilityOfItem @position: de.hpi.sam.rubis.inventorymgmt.impl.InventoryServiceBean.java.InventoryServiceBean.checkAvailabilityOfItem() at 1212" predecessor_AbstractAction="_FeRnAFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeSOEVfrEeaSKrqgVHdKiA" calledService_ExternalService="_FLM6AFfrEeaSKrqgVHdKiA" role_ExternalService="_FLWD8VfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FeSOEVfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.inventorymgmt.impl.InventoryServiceBean.java.InventoryServiceBean.checkAvailabilityOfItem() from 1213 to 1381" predecessor_AbstractAction="_FeSOEFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeS1IFfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_FeS1IFfrEeaSKrqgVHdKiA" entityName=" @position: de.hpi.sam.rubis.inventorymgmt.impl.InventoryServiceBean.java.InventoryServiceBean.reserveItem() from 1727 to 1792" predecessor_AbstractAction="_FeSOEVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeQ_8VfrEeaSKrqgVHdKiA">
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_FeS1IVfrEeaSKrqgVHdKiA" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_FeS1IlfrEeaSKrqgVHdKiA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_FeS1I1frEeaSKrqgVHdKiA" successor_AbstractAction="_FeS1JFfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_FeS1JFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.inventorymgmt.impl.InventoryServiceBean.java.InventoryServiceBean.reserveItem().Block from 1771 to 1787" predecessor_AbstractAction="_FeS1I1frEeaSKrqgVHdKiA" successor_AbstractAction="_FeS1JVfrEeaSKrqgVHdKiA">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_FeS1JVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeS1JFfrEeaSKrqgVHdKiA"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_FeS1JlfrEeaSKrqgVHdKiA" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_FeS1J1frEeaSKrqgVHdKiA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_FeS1KFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeS1KVfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeS1KVfrEeaSKrqgVHdKiA" entityName="reduceInventoryItem @position: de.hpi.sam.rubis.inventorymgmt.impl.InventoryServiceBean.java.InventoryServiceBean.reserveItem().Block at 1905" predecessor_AbstractAction="_FeS1KFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeTcMFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKUJMFfrEeaSKrqgVHdKiA" role_ExternalService="_FLWD8lfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_FeTcMFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.inventorymgmt.impl.InventoryServiceBean.java.InventoryServiceBean.reserveItem().Block from 1906 to 1928" predecessor_AbstractAction="_FeS1KVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeTcMVfrEeaSKrqgVHdKiA">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_FeTcMVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeTcMFfrEeaSKrqgVHdKiA"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FeQ_8VfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeS1IFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLo-4lfrEeaSKrqgVHdKiA" describedService__SEFF="_FKqHcFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FeTcMlfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeUDQFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FeUDQFfrEeaSKrqgVHdKiA" entityName="increaseInventoryItem @position: de.hpi.sam.rubis.inventorymgmt.impl.InventoryServiceBean.java.InventoryServiceBean.cancelReservedItem() at 2410" predecessor_AbstractAction="_FeTcMlfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeTcM1frEeaSKrqgVHdKiA" calledService_ExternalService="_FKUwQFfrEeaSKrqgVHdKiA" role_ExternalService="_FLWD8lfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FeTcM1frEeaSKrqgVHdKiA" predecessor_AbstractAction="_FeUDQFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FKrVkVfrEeaSKrqgVHdKiA" entityName="BasicQueryServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FKyDQFfrEeaSKrqgVHdKiA" entityName="BasicQueryServiceBean_provides_BasicQueryService" providedInterface__OperationProvidedRole="_FKr8oFfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLpl8FfrEeaSKrqgVHdKiA" describedService__SEFF="_FKr8oVfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FeUDQVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FfOpQFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FfOpQFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findAllUsers() from 2446 to 2748" predecessor_AbstractAction="_FeUDQVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FeUDQlfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FeUDQlfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FfOpQFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLpl8VfrEeaSKrqgVHdKiA" describedService__SEFF="_FKr8olfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FfPQUFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FfPQUlfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FfPQUlfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findUserById() at 7527" predecessor_AbstractAction="_FfPQUFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FfPQUVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FfPQUVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FfPQUlfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLqNAFfrEeaSKrqgVHdKiA" describedService__SEFF="_FKsjsFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Ff_eQFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FgvFIFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FgvFIFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findUserByNickname() from 7950 to 8200" predecessor_AbstractAction="_Ff_eQFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Ff_eQVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Ff_eQVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FgvFIFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLqNAVfrEeaSKrqgVHdKiA" describedService__SEFF="_FKtKwFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FgvFIVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FgzWkFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FgzWkFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findAllCategories() from 1251 to 1607" predecessor_AbstractAction="_FgvFIVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FgvFIlfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FgvFIlfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FgzWkFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLqNAlfrEeaSKrqgVHdKiA" describedService__SEFF="_FKtx0FfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FgzWkVfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fgz9oFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_Fgz9oFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findCategoryById() at 3851" predecessor_AbstractAction="_FgzWkVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FgzWklfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FgzWklfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_Fgz9oFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLqNA1frEeaSKrqgVHdKiA" describedService__SEFF="_FKuY4FfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Fg3A8FfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fg8ggFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_Fg8ggFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findCategoryByName() from 4333 to 4599" predecessor_AbstractAction="_Fg3A8FfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fg3A8VfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Fg3A8VfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_Fg8ggFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLq0EFfrEeaSKrqgVHdKiA" describedService__SEFF="_FKuY4VfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Fg9HkFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fg9HklfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_Fg9HklfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findCategoriesByName() at 3076" predecessor_AbstractAction="_Fg9HkFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fg9HkVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Fg9HkVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_Fg9HklfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLq0EVfrEeaSKrqgVHdKiA" describedService__SEFF="_FKu_8FfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FhCnIFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FhG4kFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FhG4kFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findAllRegions() from 1867 to 2193" predecessor_AbstractAction="_FhCnIFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FhCnIVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FhCnIVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FhG4kFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLq0ElfrEeaSKrqgVHdKiA" describedService__SEFF="_FKvnAFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FhG4kVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FhHfoFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FhHfoFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findRegionById() at 5696" predecessor_AbstractAction="_FhG4kVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FhG4klfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FhG4klfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FhHfoFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLrbIFfrEeaSKrqgVHdKiA" describedService__SEFF="_FKwOEFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FhKi8FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FhQpkFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FhQpkFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findRegionByName() from 6150 to 6404" predecessor_AbstractAction="_FhKi8FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FhKi8VfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FhKi8VfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FhQpkFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLrbIVfrEeaSKrqgVHdKiA" describedService__SEFF="_FKwOEVfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FhQpkVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FhRQoFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FhRQoFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findRegionsByName() at 6813" predecessor_AbstractAction="_FhQpkVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FhQpklfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FhQpklfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FhRQoFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLrbIlfrEeaSKrqgVHdKiA" describedService__SEFF="_FKw1IFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FhXXQFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FhXXQlfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FhXXQlfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findItemsByName() at 5004" predecessor_AbstractAction="_FhXXQFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FhXXQVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FhXXQVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FhXXQlfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLsCMFfrEeaSKrqgVHdKiA" describedService__SEFF="_FKxcMFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FiIzUFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FiIzUlfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FiIzUlfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.findItemById() at 9093" predecessor_AbstractAction="_FiIzUFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FiIzUVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FiIzUVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FiIzUlfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLsCMVfrEeaSKrqgVHdKiA" describedService__SEFF="_FKxcMVfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Fjp2QFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjrrcFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FjrrcFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.BasicQueryServiceBean.java.BasicQueryServiceBean.isUserNicknameUsed() from 8529 to 8746" predecessor_AbstractAction="_Fjp2QFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fjp2QVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Fjp2QVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FjrrcFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FKyDQVfrEeaSKrqgVHdKiA" entityName="AboutMeServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FLAswFfrEeaSKrqgVHdKiA" entityName="AboutMeServiceBean_provides_AboutMeService" providedInterface__OperationProvidedRole="_FKyqUFfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLZuUFfrEeaSKrqgVHdKiA" entityName="AboutMeServiceBean_requires_AuthenticationService" requiredInterface__OperationRequiredRole="_FKjZwlfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLZuUVfrEeaSKrqgVHdKiA" entityName="AboutMeServiceBean_requires_QueryService" requiredInterface__OperationRequiredRole="_FLDJAVfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLspQFfrEeaSKrqgVHdKiA" describedService__SEFF="_FKyqUVfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FjsSgFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjsSglfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FjsSglfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.usermgmt.impl.AboutMeServiceBean.java.AboutMeServiceBean.getAboutMe() from 1156 to 1250" predecessor_AbstractAction="_FjsSgFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fjs5kFfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Fjs5kFfrEeaSKrqgVHdKiA" entityName="authenticate @position: de.hpi.sam.rubis.usermgmt.impl.AboutMeServiceBean.java.AboutMeServiceBean.getAboutMe() at 1444" predecessor_AbstractAction="_FjsSglfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjtgoFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKjZw1frEeaSKrqgVHdKiA" role_ExternalService="_FLZuUFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FjtgoFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.usermgmt.impl.AboutMeServiceBean.java.AboutMeServiceBean.getAboutMe() at 1699" predecessor_AbstractAction="_Fjs5kFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjuHsFfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FjuHsFfrEeaSKrqgVHdKiA" entityName="findUserPastWinningBids @position: de.hpi.sam.rubis.usermgmt.impl.AboutMeServiceBean.java.AboutMeServiceBean.getAboutMe() at 1699" predecessor_AbstractAction="_FjtgoFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjuHsVfrEeaSKrqgVHdKiA" calledService_ExternalService="_FLLE0FfrEeaSKrqgVHdKiA" role_ExternalService="_FLZuUVfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FjuHsVfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.usermgmt.impl.AboutMeServiceBean.java.AboutMeServiceBean.getAboutMe() at 1791" predecessor_AbstractAction="_FjuHsFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjuHslfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FjuHslfrEeaSKrqgVHdKiA" entityName="findUserCurrentMaxBids @position: de.hpi.sam.rubis.usermgmt.impl.AboutMeServiceBean.java.AboutMeServiceBean.getAboutMe() at 1791" predecessor_AbstractAction="_FjuHsVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjuHs1frEeaSKrqgVHdKiA" calledService_ExternalService="_FLLE0VfrEeaSKrqgVHdKiA" role_ExternalService="_FLZuUVfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FjuHs1frEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.usermgmt.impl.AboutMeServiceBean.java.AboutMeServiceBean.getAboutMe() at 1877" predecessor_AbstractAction="_FjuHslfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjsSgVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FjsSgVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FjuHs1frEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FLBT0FfrEeaSKrqgVHdKiA" entityName="BuyNowServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FLCh8FfrEeaSKrqgVHdKiA" entityName="BuyNowServiceBean_provides_BuyNowService" providedInterface__OperationProvidedRole="_FLBT0VfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLZHQFfrEeaSKrqgVHdKiA" entityName="BuyNowServiceBean_requires_AuthenticationService" requiredInterface__OperationRequiredRole="_FKjZwlfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLZHQVfrEeaSKrqgVHdKiA" entityName="BuyNowServiceBean_requires_BasicQueryService" requiredInterface__OperationRequiredRole="_FKr8oFfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLZHQlfrEeaSKrqgVHdKiA" entityName="BuyNowServiceBean_requires_BusinessObjectsPersistenceService" requiredInterface__OperationRequiredRole="_FKM0cVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLZHQ1frEeaSKrqgVHdKiA" entityName="BuyNowServiceBean_requires_InventoryService" requiredInterface__OperationRequiredRole="_FKo5UFfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLspQVfrEeaSKrqgVHdKiA" describedService__SEFF="_FLBT0lfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FjuuwFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjuuwlfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FjuuwlfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.bidandbuy.impl.BuyNowServiceBean.java.BuyNowServiceBean.buyItemNow() at 1762" predecessor_AbstractAction="_FjuuwFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fjuuw1frEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Fjuuw1frEeaSKrqgVHdKiA" entityName="authenticate @position: de.hpi.sam.rubis.bidandbuy.impl.BuyNowServiceBean.java.BuyNowServiceBean.buyItemNow() at 1841" predecessor_AbstractAction="_FjuuwlfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjvV0FfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKjZw1frEeaSKrqgVHdKiA" role_ExternalService="_FLZHQFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FjvV0FfrEeaSKrqgVHdKiA" entityName="findItemById @position: de.hpi.sam.rubis.bidandbuy.impl.BuyNowServiceBean.java.BuyNowServiceBean.buyItemNow() at 2134" predecessor_AbstractAction="_Fjuuw1frEeaSKrqgVHdKiA" successor_AbstractAction="_Fjv84FfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKxcMFfrEeaSKrqgVHdKiA" role_ExternalService="_FLZHQVfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Fjv84FfrEeaSKrqgVHdKiA" entityName="checkAvailabilityOfItem @position: de.hpi.sam.rubis.bidandbuy.impl.BuyNowServiceBean.java.BuyNowServiceBean.buyItemNow() at 3350" predecessor_AbstractAction="_FjvV0FfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fjwj8FfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKo5UVfrEeaSKrqgVHdKiA" role_ExternalService="_FLZHQ1frEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Fjwj8FfrEeaSKrqgVHdKiA" entityName="reserveItem @position: de.hpi.sam.rubis.bidandbuy.impl.BuyNowServiceBean.java.BuyNowServiceBean.buyItemNow() at 4138" predecessor_AbstractAction="_Fjv84FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjxLAFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKpgYFfrEeaSKrqgVHdKiA" role_ExternalService="_FLZHQ1frEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_FjxLAFfrEeaSKrqgVHdKiA" entityName=" @position: de.hpi.sam.rubis.bidandbuy.impl.BuyNowServiceBean.java.BuyNowServiceBean.buyItemNow() from 4339 to 4613" predecessor_AbstractAction="_Fjwj8FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjuuwVfrEeaSKrqgVHdKiA">
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_FjxLAVfrEeaSKrqgVHdKiA" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_FjxLAlfrEeaSKrqgVHdKiA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_FjxLA1frEeaSKrqgVHdKiA" successor_AbstractAction="_FjxLBFfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_FjxLBFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.bidandbuy.impl.BuyNowServiceBean.java.BuyNowServiceBean.buyItemNow().Block from 4364 to 4608" predecessor_AbstractAction="_FjxLA1frEeaSKrqgVHdKiA" successor_AbstractAction="_FjxLBVfrEeaSKrqgVHdKiA">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_FjxLBVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FjxLBFfrEeaSKrqgVHdKiA"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_FjxLBlfrEeaSKrqgVHdKiA" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_FjxLB1frEeaSKrqgVHdKiA">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_FjxLCFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjxLCVfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_FjxLCVfrEeaSKrqgVHdKiA" entityName="persistBuyNow @position: de.hpi.sam.rubis.bidandbuy.impl.BuyNowServiceBean.java.BuyNowServiceBean.buyItemNow().Block at 4778" predecessor_AbstractAction="_FjxLCFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjxLClfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKSUAFfrEeaSKrqgVHdKiA" role_ExternalService="_FLZHQlfrEeaSKrqgVHdKiA"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_FjxLClfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.bidandbuy.impl.BuyNowServiceBean.java.BuyNowServiceBean.buyItemNow().Block from 4779 to 4797" predecessor_AbstractAction="_FjxLCVfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjxLC1frEeaSKrqgVHdKiA">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_FjxLC1frEeaSKrqgVHdKiA" predecessor_AbstractAction="_FjxLClfrEeaSKrqgVHdKiA"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FjuuwVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FjxLAFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FLDJAFfrEeaSKrqgVHdKiA" entityName="QueryServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FLNhEFfrEeaSKrqgVHdKiA" entityName="QueryServiceBean_provides_QueryService" providedInterface__OperationProvidedRole="_FLDJAVfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLtQUFfrEeaSKrqgVHdKiA" describedService__SEFF="_FLDJAlfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FjxyEFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjxyElfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FjxyElfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findCurrentItemsInCategory() at 2787" predecessor_AbstractAction="_FjxyEFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FjxyEVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FjxyEVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FjxyElfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLtQUVfrEeaSKrqgVHdKiA" describedService__SEFF="_FLDwEFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FnmiIFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FnnJMFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FnnJMFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findPastItemsInCategory() at 7295" predecessor_AbstractAction="_FnmiIFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FnmiIVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FnmiIVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FnnJMFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLt3YFfrEeaSKrqgVHdKiA" describedService__SEFF="_FLEXIFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FovxoFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FowYsFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FowYsFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findCurrentItemsInCategoryAndRegion() at 3802" predecessor_AbstractAction="_FovxoFfrEeaSKrqgVHdKiA" successor_AbstractAction="_FovxoVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FovxoVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FowYsFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLt3YVfrEeaSKrqgVHdKiA" describedService__SEFF="_FLFlQFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FpsM0FfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fpsz4FfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_Fpsz4FfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findPastItemsInCategoryAndRegion() at 8356" predecessor_AbstractAction="_FpsM0FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FpsM0VfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FpsM0VfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_Fpsz4FfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLuecFfrEeaSKrqgVHdKiA" describedService__SEFF="_FLHacFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Fq2qcFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fq3RgFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_Fq3RgFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findItemMaxBid() at 5627" predecessor_AbstractAction="_Fq2qcFfrEeaSKrqgVHdKiA" successor_AbstractAction="_Fq2qcVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Fq2qcVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_Fq3RgFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLuecVfrEeaSKrqgVHdKiA" describedService__SEFF="_FLHacVfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FzTb0FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FzUC4FfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_FzUC4FfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findItemMaxBids() at 6364" predecessor_AbstractAction="_FzTb0FfrEeaSKrqgVHdKiA" successor_AbstractAction="_FzTb0VfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FzTb0VfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_FzUC4FfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLvFgFfrEeaSKrqgVHdKiA" describedService__SEFF="_FLIBgFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F0gVsFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F0gVslfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F0gVslfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findItemBidHistory() at 4744" predecessor_AbstractAction="_F0gVsFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F0gVsVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F0gVsVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F0gVslfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLvFgVfrEeaSKrqgVHdKiA" describedService__SEFF="_FLIokFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F1a7sFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F1a7slfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F1a7slfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findSuccessfulBidsForItem() at 15975" predecessor_AbstractAction="_F1a7sFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F1a7sVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F1a7sVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F1a7slfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLvFglfrEeaSKrqgVHdKiA" describedService__SEFF="_FLJPoFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F26JcFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F26JclfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F26JclfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findUserBuyNows() at 9364" predecessor_AbstractAction="_F26JcFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F26JcVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F26JcVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F26JclfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLvskFfrEeaSKrqgVHdKiA" describedService__SEFF="_FLJ2sFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F3-gcFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F3_HgFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F3_HgFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findUserCurrentSellings() at 11963" predecessor_AbstractAction="_F3-gcFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F3-gcVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F3-gcVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F3_HgFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLvskVfrEeaSKrqgVHdKiA" describedService__SEFF="_FLKdwFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F5EsoFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F5EsolfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F5EsolfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findUserPastSellings() at 12808" predecessor_AbstractAction="_F5EsoFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F5EsoVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F5EsoVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F5EsolfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLvsklfrEeaSKrqgVHdKiA" describedService__SEFF="_FLLE0FfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F6C9AFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F6C9AlfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F6C9AlfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findUserPastWinningBids() at 14455" predecessor_AbstractAction="_F6C9AFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F6C9AVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F6C9AVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F6C9AlfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLwToFfrEeaSKrqgVHdKiA" describedService__SEFF="_FLLE0VfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F7YZwFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F7ZA0FfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F7ZA0FfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findUserCurrentMaxBids() at 11023" predecessor_AbstractAction="_F7YZwFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F7YZwVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F7YZwVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F7ZA0FfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLwToVfrEeaSKrqgVHdKiA" describedService__SEFF="_FLLr4FfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F8iQUFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F8nv4FfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F8nv4FfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findCategoriesInRegion() from 1694 to 2297" predecessor_AbstractAction="_F8iQUFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F8iQUVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F8iQUVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F8nv4FfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLwTolfrEeaSKrqgVHdKiA" describedService__SEFF="_FLLr4VfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F8nv4VfrEeaSKrqgVHdKiA" successor_AbstractAction="_F8o-AFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F8o-AFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.getNumberOfBidsForItem() from 15174 to 15661" predecessor_AbstractAction="_F8nv4VfrEeaSKrqgVHdKiA" successor_AbstractAction="_F8nv4lfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F8nv4lfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F8o-AFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLwTo1frEeaSKrqgVHdKiA" describedService__SEFF="_FLMS8FfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F8plEFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F8plElfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F8plElfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.findComment() at 18470" predecessor_AbstractAction="_F8plEFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F8plEVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F8plEVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F8plElfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLw6sFfrEeaSKrqgVHdKiA" describedService__SEFF="_FLM6AFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F9vKMFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F9vxQFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F9vxQFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.queryservice.impl.QueryServiceBean.java.QueryServiceBean.retrieveAvailabilityOfItem() at 19867" predecessor_AbstractAction="_F9vKMFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F9vKMVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F9vKMVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F9vxQFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FLOIIFfrEeaSKrqgVHdKiA" entityName="BrowseRegionsServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FLOvMFfrEeaSKrqgVHdKiA" entityName="BrowseRegionsServiceBean_provides_BrowseRegionsService" providedInterface__OperationProvidedRole="_FLOIIVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLZHRFfrEeaSKrqgVHdKiA" entityName="BrowseRegionsServiceBean_requires_BasicQueryService" requiredInterface__OperationRequiredRole="_FKr8oFfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLw6sVfrEeaSKrqgVHdKiA" describedService__SEFF="_FLOIIlfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F-vPwFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-v20FfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_F-v20FfrEeaSKrqgVHdKiA" entityName="findAllRegions @position: de.hpi.sam.rubis.usermgmt.impl.BrowseRegionsServiceBean.java.BrowseRegionsServiceBean.getAllRegions() at 897" predecessor_AbstractAction="_F-vPwFfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-v20VfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKu_8FfrEeaSKrqgVHdKiA" role_ExternalService="_FLZHRFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F-v20VfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.usermgmt.impl.BrowseRegionsServiceBean.java.BrowseRegionsServiceBean.getAllRegions() from 898 to 916" predecessor_AbstractAction="_F-v20FfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-vPwVfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F-vPwVfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F-v20VfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_FLPWQFfrEeaSKrqgVHdKiA" entityName="BrowseCategoriesServiceBean">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FLQkYVfrEeaSKrqgVHdKiA" entityName="BrowseCategoriesServiceBean_provides_BrowseCategoriesService" providedInterface__OperationProvidedRole="_FLPWQVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLXSFFfrEeaSKrqgVHdKiA" entityName="BrowseCategoriesServiceBean_requires_QueryService" requiredInterface__OperationRequiredRole="_FLDJAVfrEeaSKrqgVHdKiA"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_FLXSFVfrEeaSKrqgVHdKiA" entityName="BrowseCategoriesServiceBean_requires_BasicQueryService" requiredInterface__OperationRequiredRole="_FKr8oFfrEeaSKrqgVHdKiA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLw6slfrEeaSKrqgVHdKiA" describedService__SEFF="_FLPWQlfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F-wd4FfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-wd4lfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_F-wd4lfrEeaSKrqgVHdKiA" entityName="findCategoriesInRegion @position: de.hpi.sam.rubis.itemmgmt.impl.BrowseCategoriesServiceBean.java.BrowseCategoriesServiceBean.getCategoriesInRegion() at 1529" predecessor_AbstractAction="_F-wd4FfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-xE8FfrEeaSKrqgVHdKiA" calledService_ExternalService="_FLLr4FfrEeaSKrqgVHdKiA" role_ExternalService="_FLXSFFfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F-xE8FfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.itemmgmt.impl.BrowseCategoriesServiceBean.java.BrowseCategoriesServiceBean.getCategoriesInRegion() from 1530 to 1551" predecessor_AbstractAction="_F-wd4lfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-wd4VfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F-wd4VfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F-xE8FfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLxhwFfrEeaSKrqgVHdKiA" describedService__SEFF="_FLP9UFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F-xE8VfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-xE81frEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_F-xE81frEeaSKrqgVHdKiA" entityName="findAllCategories @position: de.hpi.sam.rubis.itemmgmt.impl.BrowseCategoriesServiceBean.java.BrowseCategoriesServiceBean.getAllCategories() at 1115" predecessor_AbstractAction="_F-xE8VfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-xsAFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKtKwFfrEeaSKrqgVHdKiA" role_ExternalService="_FLXSFVfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F-xsAFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.itemmgmt.impl.BrowseCategoriesServiceBean.java.BrowseCategoriesServiceBean.getAllCategories() from 1116 to 1140" predecessor_AbstractAction="_F-xE81frEeaSKrqgVHdKiA" successor_AbstractAction="_F-xE8lfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F-xE8lfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F-xsAFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLxhwVfrEeaSKrqgVHdKiA" describedService__SEFF="_FLP9UVfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F-xsAVfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-xsA1frEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_F-xsA1frEeaSKrqgVHdKiA" entityName="findCategoriesByName @position: de.hpi.sam.rubis.itemmgmt.impl.BrowseCategoriesServiceBean.java.BrowseCategoriesServiceBean.getCategoriesByName() at 1980" predecessor_AbstractAction="_F-xsAVfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-yTEFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKuY4VfrEeaSKrqgVHdKiA" role_ExternalService="_FLXSFVfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F-yTEFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.itemmgmt.impl.BrowseCategoriesServiceBean.java.BrowseCategoriesServiceBean.getCategoriesByName() from 1981 to 2002" predecessor_AbstractAction="_F-xsA1frEeaSKrqgVHdKiA" successor_AbstractAction="_F-xsAlfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F-xsAlfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F-yTEFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FLxhwlfrEeaSKrqgVHdKiA" describedService__SEFF="_FLQkYFfrEeaSKrqgVHdKiA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_F-yTEVfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-yTE1frEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_F-yTE1frEeaSKrqgVHdKiA" entityName="findItemsByName @position: de.hpi.sam.rubis.itemmgmt.impl.BrowseCategoriesServiceBean.java.BrowseCategoriesServiceBean.getItemsByName() at 2392" predecessor_AbstractAction="_F-yTEVfrEeaSKrqgVHdKiA" successor_AbstractAction="_F-yTFFfrEeaSKrqgVHdKiA" calledService_ExternalService="_FKw1IFfrEeaSKrqgVHdKiA" role_ExternalService="_FLXSFVfrEeaSKrqgVHdKiA"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_F-yTFFfrEeaSKrqgVHdKiA" entityName="IA  @position: de.hpi.sam.rubis.itemmgmt.impl.BrowseCategoriesServiceBean.java.BrowseCategoriesServiceBean.getItemsByName() from 2393 to 2409" predecessor_AbstractAction="_F-yTE1frEeaSKrqgVHdKiA" successor_AbstractAction="_F-yTElfrEeaSKrqgVHdKiA">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_F-yTElfrEeaSKrqgVHdKiA" predecessor_AbstractAction="_F-yTFFfrEeaSKrqgVHdKiA"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FHYJ8FfrEeaSKrqgVHdKiA" entityName="ItemRegistrationService">
+    <signatures__OperationInterface id="_FHamMFfrEeaSKrqgVHdKiA" entityName="registerItem" returnType__OperationSignature="_FHdCcFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="name">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="description">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="initialQuantity">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="initialPrice">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="buyNowPrice">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="reservcePrice">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_FH2rEFfrEeaSKrqgVHdKiA" parameterName="startDate"/>
+      <parameters__OperationSignature dataType__Parameter="_FH2rEFfrEeaSKrqgVHdKiA" parameterName="endDate"/>
+      <parameters__OperationSignature parameterName="sellerId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="categoryId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FJu6YVfrEeaSKrqgVHdKiA" entityName="ViewUserInfoService">
+    <signatures__OperationInterface id="_FJu6YlfrEeaSKrqgVHdKiA" entityName="getUserInfo" returnType__OperationSignature="_FJu6Y1frEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="userId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FKM0cVfrEeaSKrqgVHdKiA" entityName="BusinessObjectsPersistenceService">
+    <signatures__OperationInterface id="_FKM0clfrEeaSKrqgVHdKiA" entityName="persistUser" returnType__OperationSignature="_FImR8FfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="firstname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="lastname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="nickname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="email">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_FI07cFfrEeaSKrqgVHdKiA" parameterName="region"/>
+      <parameters__OperationSignature dataType__Parameter="_FJTckVfrEeaSKrqgVHdKiA" parameterName="userClass"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKOpoFfrEeaSKrqgVHdKiA" entityName="persistItem" returnType__OperationSignature="_FHdCcFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="name">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="description">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="initialQuantity">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="initialPrice">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="buyNowPrice">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="reservcePrice">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_FH2rEFfrEeaSKrqgVHdKiA" parameterName="startDate"/>
+      <parameters__OperationSignature dataType__Parameter="_FH2rEFfrEeaSKrqgVHdKiA" parameterName="endDate"/>
+      <parameters__OperationSignature dataType__Parameter="_FImR8FfrEeaSKrqgVHdKiA" parameterName="seller"/>
+      <parameters__OperationSignature dataType__Parameter="_FII-8FfrEeaSKrqgVHdKiA" parameterName="category"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKRF4FfrEeaSKrqgVHdKiA" entityName="persistBid" returnType__OperationSignature="_FIcg8VfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature dataType__Parameter="_FImR8FfrEeaSKrqgVHdKiA" parameterName="biddingUser"/>
+      <parameters__OperationSignature dataType__Parameter="_FHdCcFfrEeaSKrqgVHdKiA" parameterName="item"/>
+      <parameters__OperationSignature parameterName="bidPrice">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="maxBidPrice">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="quantity">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_FH2rEFfrEeaSKrqgVHdKiA" parameterName="date"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKSUAFfrEeaSKrqgVHdKiA" entityName="persistBuyNow" returnType__OperationSignature="_FJBvwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature dataType__Parameter="_FImR8FfrEeaSKrqgVHdKiA" parameterName="buyer"/>
+      <parameters__OperationSignature dataType__Parameter="_FHdCcFfrEeaSKrqgVHdKiA" parameterName="item"/>
+      <parameters__OperationSignature parameterName="quantity">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_FH2rEFfrEeaSKrqgVHdKiA" parameterName="buyingDate"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKS7EFfrEeaSKrqgVHdKiA" entityName="persistComment" returnType__OperationSignature="_FJJrkVfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature dataType__Parameter="_FImR8FfrEeaSKrqgVHdKiA" parameterName="fromUser"/>
+      <parameters__OperationSignature dataType__Parameter="_FImR8FfrEeaSKrqgVHdKiA" parameterName="toUser"/>
+      <parameters__OperationSignature dataType__Parameter="_FHdCcFfrEeaSKrqgVHdKiA" parameterName="item"/>
+      <parameters__OperationSignature parameterName="comment">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="rating">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_FH2rEFfrEeaSKrqgVHdKiA" parameterName="commentDate"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKUJMFfrEeaSKrqgVHdKiA" entityName="reduceInventoryItem">
+      <parameters__OperationSignature dataType__Parameter="_FHdCcFfrEeaSKrqgVHdKiA" parameterName="item"/>
+      <parameters__OperationSignature parameterName="numberOfRequestedInstances">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKUwQFfrEeaSKrqgVHdKiA" entityName="increaseInventoryItem" returnType__OperationSignature="_FKUwQVfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature dataType__Parameter="_FHdCcFfrEeaSKrqgVHdKiA" parameterName="item"/>
+      <parameters__OperationSignature parameterName="numberOfReturnedInstances">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FKd6MFfrEeaSKrqgVHdKiA" entityName="ReputationService">
+    <signatures__OperationInterface id="_FKd6MVfrEeaSKrqgVHdKiA" entityName="giveComment" returnType__OperationSignature="_FJJrkVfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="nickname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="toUserId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="comment">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="rating">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FKgWcVfrEeaSKrqgVHdKiA" entityName="UserRegistrationService">
+    <signatures__OperationInterface id="_FKgWclfrEeaSKrqgVHdKiA" entityName="registerUser" returnType__OperationSignature="_FImR8FfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="firstname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="lastname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="nickname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="email">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="regionName">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_FJTckVfrEeaSKrqgVHdKiA" parameterName="customerClass"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FKjZwlfrEeaSKrqgVHdKiA" entityName="AuthenticationService">
+    <signatures__OperationInterface id="_FKjZw1frEeaSKrqgVHdKiA" entityName="authenticate" returnType__OperationSignature="_FImR8FfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="nickname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FKlO8VfrEeaSKrqgVHdKiA" entityName="BidService">
+    <signatures__OperationInterface id="_FKlO8lfrEeaSKrqgVHdKiA" entityName="bidOnItem" returnType__OperationSignature="_FIcg8VfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="bidPrice">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="maxBidPrice">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="quantity">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="nickname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKnEIFfrEeaSKrqgVHdKiA" entityName="getItemBidHistory" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKnrMFfrEeaSKrqgVHdKiA" entityName="getItemBidHistorySortyByBidPrice" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FKo5UFfrEeaSKrqgVHdKiA" entityName="InventoryService">
+    <signatures__OperationInterface id="_FKo5UVfrEeaSKrqgVHdKiA" entityName="checkAvailabilityOfItem">
+      <parameters__OperationSignature dataType__Parameter="_FHdCcFfrEeaSKrqgVHdKiA" parameterName="item"/>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKpgYFfrEeaSKrqgVHdKiA" entityName="reserveItem">
+      <parameters__OperationSignature dataType__Parameter="_FHdCcFfrEeaSKrqgVHdKiA" parameterName="item"/>
+      <parameters__OperationSignature parameterName="numberOfItems">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKqHcFfrEeaSKrqgVHdKiA" entityName="cancelReservedItem">
+      <parameters__OperationSignature dataType__Parameter="_FHdCcFfrEeaSKrqgVHdKiA" parameterName="item"/>
+      <parameters__OperationSignature parameterName="numberOfItems">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FKr8oFfrEeaSKrqgVHdKiA" entityName="BasicQueryService">
+    <signatures__OperationInterface id="_FKr8oVfrEeaSKrqgVHdKiA" entityName="findAllUsers" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA"/>
+    <signatures__OperationInterface id="_FKr8olfrEeaSKrqgVHdKiA" entityName="findUserById" returnType__OperationSignature="_FImR8FfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="userId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKsjsFfrEeaSKrqgVHdKiA" entityName="findUserByNickname" returnType__OperationSignature="_FImR8FfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="nickname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKtKwFfrEeaSKrqgVHdKiA" entityName="findAllCategories" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA"/>
+    <signatures__OperationInterface id="_FKtx0FfrEeaSKrqgVHdKiA" entityName="findCategoryById" returnType__OperationSignature="_FII-8FfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="categoryId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKuY4FfrEeaSKrqgVHdKiA" entityName="findCategoryByName" returnType__OperationSignature="_FII-8FfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="categoryName">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKuY4VfrEeaSKrqgVHdKiA" entityName="findCategoriesByName" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="categoryName">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKu_8FfrEeaSKrqgVHdKiA" entityName="findAllRegions" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA"/>
+    <signatures__OperationInterface id="_FKvnAFfrEeaSKrqgVHdKiA" entityName="findRegionById" returnType__OperationSignature="_FI07cFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="regionId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKwOEFfrEeaSKrqgVHdKiA" entityName="findRegionByName" returnType__OperationSignature="_FI07cFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="regionName">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKwOEVfrEeaSKrqgVHdKiA" entityName="findRegionsByName" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="regionName">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKw1IFfrEeaSKrqgVHdKiA" entityName="findItemsByName" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemName">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKxcMFfrEeaSKrqgVHdKiA" entityName="findItemById" returnType__OperationSignature="_FHdCcFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FKxcMVfrEeaSKrqgVHdKiA" entityName="isUserNicknameUsed">
+      <parameters__OperationSignature parameterName="nickname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FKyqUFfrEeaSKrqgVHdKiA" entityName="AboutMeService">
+    <signatures__OperationInterface id="_FKyqUVfrEeaSKrqgVHdKiA" entityName="getAboutMe" returnType__OperationSignature="_FKyqUlfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="username">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FLBT0VfrEeaSKrqgVHdKiA" entityName="BuyNowService">
+    <signatures__OperationInterface id="_FLBT0lfrEeaSKrqgVHdKiA" entityName="buyItemNow" returnType__OperationSignature="_FJBvwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="quantity">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="nickname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="password">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FLDJAVfrEeaSKrqgVHdKiA" entityName="QueryService">
+    <signatures__OperationInterface id="_FLDJAlfrEeaSKrqgVHdKiA" entityName="findCurrentItemsInCategory" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="categoryId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="maxResult">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLDwEFfrEeaSKrqgVHdKiA" entityName="findPastItemsInCategory" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="categoryId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="maxResult">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLEXIFfrEeaSKrqgVHdKiA" entityName="findCurrentItemsInCategoryAndRegion" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="categoryId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="regionId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="maxResult">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLFlQFfrEeaSKrqgVHdKiA" entityName="findPastItemsInCategoryAndRegion" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="categoryId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="regionId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="maxResult">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLHacFfrEeaSKrqgVHdKiA" entityName="findItemMaxBid" returnType__OperationSignature="_FIcg8VfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLHacVfrEeaSKrqgVHdKiA" entityName="findItemMaxBids" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="maxToCollect">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLIBgFfrEeaSKrqgVHdKiA" entityName="findItemBidHistory" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLIokFfrEeaSKrqgVHdKiA" entityName="findSuccessfulBidsForItem" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLJPoFfrEeaSKrqgVHdKiA" entityName="findUserBuyNows" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="userId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="days">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLJ2sFfrEeaSKrqgVHdKiA" entityName="findUserCurrentSellings" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="userId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLKdwFfrEeaSKrqgVHdKiA" entityName="findUserPastSellings" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="userId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="days">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLLE0FfrEeaSKrqgVHdKiA" entityName="findUserPastWinningBids" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="userId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLLE0VfrEeaSKrqgVHdKiA" entityName="findUserCurrentMaxBids" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="userId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLLr4FfrEeaSKrqgVHdKiA" entityName="findCategoriesInRegion" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="regionName">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLLr4VfrEeaSKrqgVHdKiA" entityName="getNumberOfBidsForItem">
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLMS8FfrEeaSKrqgVHdKiA" entityName="findComment" returnType__OperationSignature="_FJJrkVfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="fromUserId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="toUserId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLM6AFfrEeaSKrqgVHdKiA" entityName="retrieveAvailabilityOfItem" returnType__OperationSignature="_FKUwQVfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemId">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FLOIIVfrEeaSKrqgVHdKiA" entityName="BrowseRegionsService">
+    <signatures__OperationInterface id="_FLOIIlfrEeaSKrqgVHdKiA" entityName="getAllRegions" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FLPWQVfrEeaSKrqgVHdKiA" entityName="BrowseCategoriesService">
+    <signatures__OperationInterface id="_FLPWQlfrEeaSKrqgVHdKiA" entityName="getCategoriesInRegion" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="regionName">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLP9UFfrEeaSKrqgVHdKiA" entityName="getAllCategories" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA"/>
+    <signatures__OperationInterface id="_FLP9UVfrEeaSKrqgVHdKiA" entityName="getCategoriesByName" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="categoryName">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_FLQkYFfrEeaSKrqgVHdKiA" entityName="getItemsByName" returnType__OperationSignature="_FIarwFfrEeaSKrqgVHdKiA">
+      <parameters__OperationSignature parameterName="itemName">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FHdCcFfrEeaSKrqgVHdKiA" entityName="Item">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="id">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="name">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="description">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="initialPrice">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="initialQuantity">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="reservePrice">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="buyNowPrice">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="startDate" datatype_InnerDeclaration="_FH2rEFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="endDate" datatype_InnerDeclaration="_FH2rEFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="sellerId">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="category" datatype_InnerDeclaration="_FII-8FfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="bids" datatype_InnerDeclaration="_FIcg8FfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="buyNows" datatype_InnerDeclaration="_FJfp0FfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="comments" datatype_InnerDeclaration="_FJfp0VfrEeaSKrqgVHdKiA"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FH2rEFfrEeaSKrqgVHdKiA" entityName="Date"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FII-8FfrEeaSKrqgVHdKiA" entityName="Category">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="id">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="name">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="items" datatype_InnerDeclaration="_FIbS0FfrEeaSKrqgVHdKiA"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FIarwFfrEeaSKrqgVHdKiA" entityName="List" innerType_CollectionDataType="_FIarwVfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FIarwVfrEeaSKrqgVHdKiA" entityName="Object"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FIbS0FfrEeaSKrqgVHdKiA" entityName="List_items" innerType_CollectionDataType="_FHdCcFfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FIcg8FfrEeaSKrqgVHdKiA" entityName="List_bids" innerType_CollectionDataType="_FIcg8VfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FIcg8VfrEeaSKrqgVHdKiA" entityName="Bid">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="id">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="user" datatype_InnerDeclaration="_FImR8FfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="item" datatype_InnerDeclaration="_FHdCcFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="quantity">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="bidPrice">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="maxBidPrice">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="date" datatype_InnerDeclaration="_FH2rEFfrEeaSKrqgVHdKiA"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FImR8FfrEeaSKrqgVHdKiA" entityName="User">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="id">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="firstname">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="lastname">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="nickname">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="password">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="email">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="rating">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="balance">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="creationDate" datatype_InnerDeclaration="_FH2rEFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="region" datatype_InnerDeclaration="_FI07cFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="offeredItems" datatype_InnerDeclaration="_FI_6kFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="bids" datatype_InnerDeclaration="_FJAhoFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="buyNows" datatype_InnerDeclaration="_FJBIsFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="givenComments" datatype_InnerDeclaration="_FJJrkFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="receivedComments" datatype_InnerDeclaration="_FJTckFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="customerClass" datatype_InnerDeclaration="_FJTckVfrEeaSKrqgVHdKiA"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FI07cFfrEeaSKrqgVHdKiA" entityName="Region">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="id">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="name">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="users" datatype_InnerDeclaration="_FI_TgFfrEeaSKrqgVHdKiA"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FI_TgFfrEeaSKrqgVHdKiA" entityName="List_users" innerType_CollectionDataType="_FImR8FfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FI_6kFfrEeaSKrqgVHdKiA" entityName="List_offeredItems" innerType_CollectionDataType="_FHdCcFfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FJAhoFfrEeaSKrqgVHdKiA" entityName="List_bids" innerType_CollectionDataType="_FIcg8VfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FJBIsFfrEeaSKrqgVHdKiA" entityName="List_buyNows" innerType_CollectionDataType="_FJBvwFfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FJBvwFfrEeaSKrqgVHdKiA" entityName="BuyNow">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="id">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="buyer" datatype_InnerDeclaration="_FImR8FfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="item" datatype_InnerDeclaration="_FHdCcFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="quantity">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="date" datatype_InnerDeclaration="_FH2rEFfrEeaSKrqgVHdKiA"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FJJrkFfrEeaSKrqgVHdKiA" entityName="List_givenComments" innerType_CollectionDataType="_FJJrkVfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FJJrkVfrEeaSKrqgVHdKiA" entityName="Comment">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="id">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="fromUser" datatype_InnerDeclaration="_FImR8FfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="toUser" datatype_InnerDeclaration="_FImR8FfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="item" datatype_InnerDeclaration="_FHdCcFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="rating">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="date" datatype_InnerDeclaration="_FH2rEFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="comment">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FJTckFfrEeaSKrqgVHdKiA" entityName="List_receivedComments" innerType_CollectionDataType="_FJJrkVfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FJTckVfrEeaSKrqgVHdKiA" entityName="CustomerClass">
+    <innerDeclaration_CompositeDataType entityName="customerClass">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FJfp0FfrEeaSKrqgVHdKiA" entityName="List_buyNows" innerType_CollectionDataType="_FJBvwFfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FJfp0VfrEeaSKrqgVHdKiA" entityName="List_comments" innerType_CollectionDataType="_FJJrkVfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FJu6Y1frEeaSKrqgVHdKiA" entityName="UserInfo">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="userId">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="nickname">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="email">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="rating">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="creationDate" datatype_InnerDeclaration="_FH2rEFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="regionName">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="regionId">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="receivedComments" datatype_InnerDeclaration="_FJ_ZEFfrEeaSKrqgVHdKiA"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FJ_ZEFfrEeaSKrqgVHdKiA" entityName="List_receivedComments" innerType_CollectionDataType="_FKAAIFfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FKAAIFfrEeaSKrqgVHdKiA" entityName="UserInfoComment">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="commentId">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="commentTxt">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="rating">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="givingUserId">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="givingUserName">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="commentDate" datatype_InnerDeclaration="_FH2rEFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="itemId">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="itemName">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="itemDescription">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FKUwQVfrEeaSKrqgVHdKiA" entityName="InventoryItem">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="id">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="item" datatype_InnerDeclaration="_FHdCcFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="availableQuantity">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_FKyqUlfrEeaSKrqgVHdKiA" entityName="UserProfile">
+    <innerDeclaration_CompositeDataType entityName="serialVersionUID">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="user" datatype_InnerDeclaration="_FImR8FfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="pastMaxBids" datatype_InnerDeclaration="_FK_eoFfrEeaSKrqgVHdKiA"/>
+    <innerDeclaration_CompositeDataType entityName="currentMaxBids" datatype_InnerDeclaration="_FLAFsFfrEeaSKrqgVHdKiA"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FK_eoFfrEeaSKrqgVHdKiA" entityName="List_pastMaxBids" innerType_CollectionDataType="_FIcg8VfrEeaSKrqgVHdKiA"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_FLAFsFfrEeaSKrqgVHdKiA" entityName="List_currentMaxBids" innerType_CollectionDataType="_FIcg8VfrEeaSKrqgVHdKiA"/>
+</repository:Repository>

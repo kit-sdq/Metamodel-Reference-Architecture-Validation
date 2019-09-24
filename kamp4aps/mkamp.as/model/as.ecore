@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="as" nsURI="as" nsPrefix="as">
+  <eClassifiers xsi:type="ecore:EClass" name="Plant" eSuperTypes="../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PlantName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
+        eType="#//StructureRepository/Structure" containment="true" eOpposite="#//StructureRepository/Structure/parentPlant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceRepository" lowerBound="1"
+        eType="#//InterfaceRepository/InterfaceRepository" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentRepository" lowerBound="1"
+        eType="#//ComponentRepository/ComponentRepository" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleRepository" lowerBound="1"
+        eType="#//ModuleRepository/ModuleRepository" containment="true"/>
+  </eClassifiers>
+  <eSubpackages name="ComponentRepository" nsURI="edu.kit.ipd.sdq.kaps.xppu.componentrepository"
+      nsPrefix="ComponentRepository">
+    <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connectedInterfaces"
+          upperBound="-1" eType="#//InterfaceRepository/Interface"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//StructureRepository/Structure"
+          eOpposite="#//StructureRepository/Structure/components"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentModule" eType="#//ModuleRepository/Module"
+          eOpposite="#//ModuleRepository/Module/components"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ComponentRepository" eSuperTypes="../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allComponentsInPlant"
+          upperBound="-1" eType="#//ComponentRepository/Component"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="StructureRepository" nsURI="edu.kit.ipd.sdq.kaps.xppu.structurerepository"
+      nsPrefix="StructureRepository">
+    <eClassifiers xsi:type="ecore:EClass" name="Structure" eSuperTypes="../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentPlant" lowerBound="1"
+          eType="#//Plant" eOpposite="#//Plant/structures"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+          eType="#//ModuleRepository/Module" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+          eType="#//ComponentRepository/Component" containment="true" eOpposite="#//ComponentRepository/Component/parent"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="ModuleRepository" nsURI="edu.kit.ipd.sdq.kaps.xppu.modulerepository"
+      nsPrefix="ModuleRepository">
+    <eClassifiers xsi:type="ecore:EClass" name="ModuleRepository" eSuperTypes="../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allModulesInPlant" upperBound="-1"
+          eType="#//ModuleRepository/Module"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentEntity" lowerBound="1"
+          eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+          eType="#//ModuleRepository/Module" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+          eType="#//ComponentRepository/Component" containment="true" eOpposite="#//ComponentRepository/Component/parentModule"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
+          eType="#//InterfaceRepository/Interface"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="InterfaceRepository" nsURI="edu.kit.ipd.sdq.kaps.xppu.interfacerepository"
+      nsPrefix="InterfaceRepository">
+    <eClassifiers xsi:type="ecore:EClass" name="InterfaceRepository" eSuperTypes="../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allInterfacesInPlant"
+          upperBound="-1" eType="#//InterfaceRepository/Interface" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentElement" lowerBound="1"
+          upperBound="-1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

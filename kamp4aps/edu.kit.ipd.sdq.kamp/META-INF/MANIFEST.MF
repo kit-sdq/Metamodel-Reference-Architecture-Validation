@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: KAMP Core
+Bundle-SymbolicName: edu.kit.ipd.sdq.kamp;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: edu.kit.ipd.sdq.kamp.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.core.resources,
+ org.eclipse.emf.compare,
+ edu.kit.ipd.sdq.kamp.model.modificationmarks,
+ org.palladiosimulator.pcm
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: edu.kit.ipd.sdq.kamp.architecture,
+ edu.kit.ipd.sdq.kamp.derivation,
+ edu.kit.ipd.sdq.kamp.propagation,
+ edu.kit.ipd.sdq.kamp.ui,
+ edu.kit.ipd.sdq.kamp.util,
+ edu.kit.ipd.sdq.kamp.workplan
+Bundle-ClassPath: ., libs/jxl.jar
+Bundle-Vendor: SDQ

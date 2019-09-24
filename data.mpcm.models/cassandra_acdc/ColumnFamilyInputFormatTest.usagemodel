@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_icFqSI2BEeWUKKvQPqVU9Q" entityName="testSlicePredicate">
+    <scenarioBehaviour_UsageScenario id="_icFqS42BEeWUKKvQPqVU9Q" entityName="testSlicePredicate">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_icFqSY2BEeWUKKvQPqVU9Q" successor="_icFqTI2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_icFqTI2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.hadoop.ColumnFamilyInputFormatTest.java.ColumnFamilyInputFormatTest.testSlicePredicate() at 1308" successor="_icFqTo2BEeWUKKvQPqVU9Q" predecessor="_icFqSY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_XNZkR42BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_icFqTo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.hadoop.ColumnFamilyInputFormatTest.java.ColumnFamilyInputFormatTest.testSlicePredicate() at 1415" successor="_icFqT42BEeWUKKvQPqVU9Q" predecessor="_icFqTI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_icFqT42BEeWUKKvQPqVU9Q" entityName="setColumn_names:  @position: org.apache.cassandra.hadoop.ColumnFamilyInputFormatTest.java.ColumnFamilyInputFormatTest.testSlicePredicate() at 1509" successor="_icFqUo2BEeWUKKvQPqVU9Q" predecessor="_icFqTo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_icFqUI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_x0GwcI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_icFqUo2BEeWUKKvQPqVU9Q" entityName="setInputSlicePredicate:  @position: org.apache.cassandra.hadoop.ColumnFamilyInputFormatTest.java.ColumnFamilyInputFormatTest.testSlicePredicate() at 1630" successor="_icFqVY2BEeWUKKvQPqVU9Q" predecessor="_icFqT42BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_icFqU42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_0a2JII1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_icFqVY2BEeWUKKvQPqVU9Q" entityName="getInputSlicePredicate:  @position: org.apache.cassandra.hadoop.ColumnFamilyInputFormatTest.java.ColumnFamilyInputFormatTest.testSlicePredicate() at 1711" successor="_icO0MI2BEeWUKKvQPqVU9Q" predecessor="_icFqUo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_icFqU42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_0Q7_MY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_icO0MI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.hadoop.ColumnFamilyInputFormatTest.java.ColumnFamilyInputFormatTest.testSlicePredicate() from 1765 to 1858" successor="_icFqSo2BEeWUKKvQPqVU9Q" predecessor="_icFqVY2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_icFqSo2BEeWUKKvQPqVU9Q" predecessor="_icO0MI2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

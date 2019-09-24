@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mpcm.paradigm.repository/src" modelPluginID="mpcm.paradigm.repository"
+    modelName="Repository" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../mpcm.paradigm.base/model/base.genmodel#//base ../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units ../../mpcm.paradigm.variables/model/variables.genmodel#//variables"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>repository.ecore</foreignModel>
+  <genPackages prefix="Repository" disposableProviderFactory="true" ecorePackage="repository.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="repository.ecore#//ParameterModifier">
+      <genEnumLiterals ecoreEnumLiteral="repository.ecore#//ParameterModifier/none"/>
+      <genEnumLiterals ecoreEnumLiteral="repository.ecore#//ParameterModifier/in"/>
+      <genEnumLiterals ecoreEnumLiteral="repository.ecore#//ParameterModifier/out"/>
+      <genEnumLiterals ecoreEnumLiteral="repository.ecore#//ParameterModifier/inout"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="repository.ecore#//Interface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference repository.ecore#//Interface/parentInterfaces__Interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//Interface/protocols__Interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//Interface/requiredCharacterisations"/>
+      <genOperations ecoreOperation="repository.ecore#//Interface/NoProtocolTypeIDUsedTwice">
+        <genParameters ecoreParameter="repository.ecore#//Interface/NoProtocolTypeIDUsedTwice/diagnostics"/>
+        <genParameters ecoreParameter="repository.ecore#//Interface/NoProtocolTypeIDUsedTwice/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="repository.ecore#//Protocol">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute repository.ecore#//Protocol/protocolTypeID"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="repository.ecore#//Signature"/>
+    <genClasses ecoreClass="repository.ecore#//RequiredCharacterisation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute repository.ecore#//RequiredCharacterisation/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference repository.ecore#//RequiredCharacterisation/parameter"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference repository.ecore#//RequiredCharacterisation/interface_RequiredCharacterisation"/>
+    </genClasses>
+    <genClasses ecoreClass="repository.ecore#//Parameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference repository.ecore#//Parameter/dataType__Parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute repository.ecore#//Parameter/parameterName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute repository.ecore#//Parameter/modifier__Parameter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="repository.ecore#//Role"/>
+    <genClasses image="false" ecoreClass="repository.ecore#//ProvidedRole">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference repository.ecore#//ProvidedRole/providingEntity_ProvidedRole"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="repository.ecore#//RequiredRole">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference repository.ecore#//RequiredRole/requiringEntity_RequiredRole"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="repository.ecore#//InterfaceProvidingEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//InterfaceProvidingEntity/providedRoles_InterfaceProvidingEntity"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="repository.ecore#//InterfaceRequiringEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//InterfaceRequiringEntity/requiredRoles_InterfaceRequiringEntity"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="repository.ecore#//InterfaceProvidingRequiringEntity"/>
+    <genClasses image="false" ecoreClass="repository.ecore#//RepositoryComponent"/>
+    <nestedGenPackages prefix="Datatypes" basePackage="repository" disposableProviderFactory="true"
+        ecorePackage="repository.ecore#//datatypes">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="repository.ecore#//datatypes/PrimitiveTypeEnum">
+        <genEnumLiterals ecoreEnumLiteral="repository.ecore#//datatypes/PrimitiveTypeEnum/INT"/>
+        <genEnumLiterals ecoreEnumLiteral="repository.ecore#//datatypes/PrimitiveTypeEnum/STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="repository.ecore#//datatypes/PrimitiveTypeEnum/BOOL"/>
+        <genEnumLiterals ecoreEnumLiteral="repository.ecore#//datatypes/PrimitiveTypeEnum/DOUBLE"/>
+        <genEnumLiterals ecoreEnumLiteral="repository.ecore#//datatypes/PrimitiveTypeEnum/CHAR"/>
+        <genEnumLiterals ecoreEnumLiteral="repository.ecore#//datatypes/PrimitiveTypeEnum/BYTE"/>
+        <genEnumLiterals ecoreEnumLiteral="repository.ecore#//datatypes/PrimitiveTypeEnum/LONG"/>
+      </genEnums>
+      <genClasses image="false" ecoreClass="repository.ecore#//datatypes/DataType"/>
+      <genClasses ecoreClass="repository.ecore#//datatypes/PrimitiveDataType">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute repository.ecore#//datatypes/PrimitiveDataType/type"/>
+      </genClasses>
+      <genClasses ecoreClass="repository.ecore#//datatypes/CollectionDataType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference repository.ecore#//datatypes/CollectionDataType/innerType_CollectionDataType"/>
+      </genClasses>
+      <genClasses ecoreClass="repository.ecore#//datatypes/CompositeDataType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference repository.ecore#//datatypes/CompositeDataType/parentType_CompositeDataType"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference repository.ecore#//datatypes/CompositeDataType/innerDeclaration_CompositeDataType"/>
+      </genClasses>
+      <genClasses ecoreClass="repository.ecore#//datatypes/InnerDeclaration">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference repository.ecore#//datatypes/InnerDeclaration/datatype_InnerDeclaration"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference repository.ecore#//datatypes/InnerDeclaration/compositeDataType_InnerDeclaration"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

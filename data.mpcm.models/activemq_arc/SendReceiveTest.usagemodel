@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_MBuoQphREeWKgoTb5jIgDA" entityName="testSendReceive">
+    <scenarioBehaviour_UsageScenario id="_MBuoRZhREeWKgoTb5jIgDA" entityName="testSendReceive">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_MBuoQ5hREeWKgoTb5jIgDA" successor="_M72HIJhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_M72HIJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.test.SendReceiveTest.java.SendReceiveTest.sendSomeMessagesAndCheckTheyAreAllReceived() from 1990 to 2066" successor="_MBuoRJhREeWKgoTb5jIgDA" predecessor="_MBuoQ5hREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_MBuoRJhREeWKgoTb5jIgDA" predecessor="_M72HIJhREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_M75xgJhREeWKgoTb5jIgDA" entityName="testSendReceiveReusingTheMessageInstance">
+    <scenarioBehaviour_UsageScenario id="_M75xg5hREeWKgoTb5jIgDA" entityName="testSendReceiveReusingTheMessageInstance">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_M75xgZhREeWKgoTb5jIgDA" successor="_N9aR0JhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_N9aR0JhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.test.SendReceiveTest.java.SendReceiveTest.sendSomeMessagesReusingTheSameMessageAndCheckTheyAreAllReceived() at 2680" successor="_M75xgphREeWKgoTb5jIgDA" predecessor="_M75xgZhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_M75xgphREeWKgoTb5jIgDA" predecessor="_N9aR0JhREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

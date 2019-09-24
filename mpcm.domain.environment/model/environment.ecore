@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="environment" nsURI="mpcm.domain.environment" nsPrefix="mpcm.domain.environment">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Package of entities representing the execution environment of a component based software system"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Environment" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>&#xD;&#xA;    Repository element of&amp;nbsp;the resource environment&#xD;&#xA;&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkingResources__ResourceEnvironment"
+        ordered="false" upperBound="-1" eType="#//LinkingResource" containment="true"
+        eOpposite="#//LinkingResource/resourceEnvironment_LinkingResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceContainer_ResourceEnvironment"
+        ordered="false" upperBound="-1" eType="#//Container" containment="true" eOpposite="#//Container/resourceEnvironment_ResourceContainer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Container" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="UML-like&amp;nbsp;container&amp;nbsp;of&amp;nbsp;a&amp;nbsp;number&amp;nbsp;of&amp;nbsp;processing&amp;nbsp;resources (e.g. hardware server)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceEnvironment_ResourceContainer"
+        ordered="false" eType="#//Environment" eOpposite="#//Environment/resourceContainer_ResourceEnvironment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nestedResourceContainers__ResourceContainer"
+        ordered="false" upperBound="-1" eType="#//Container" containment="true" eOpposite="#//Container/parentResourceContainer__ResourceContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentResourceContainer__ResourceContainer"
+        ordered="false" eType="#//Container" eOpposite="#//Container/nestedResourceContainers__ResourceContainer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkingResource" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Model&amp;nbsp;element&amp;nbsp;representing&amp;nbsp;communication&amp;nbsp;links&amp;nbsp;like&amp;nbsp;LAN,&amp;nbsp;WAN,&amp;nbsp;WiFi&amp;nbsp;etc."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectedResourceContainers_LinkingResource"
+        ordered="false" upperBound="-1" eType="#//Container"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceEnvironment_LinkingResource"
+        ordered="false" lowerBound="1" eType="#//Environment" eOpposite="#//Environment/linkingResources__ResourceEnvironment"/>
+  </eClassifiers>
+</ecore:EPackage>

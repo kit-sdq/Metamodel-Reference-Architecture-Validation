@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="annotations" nsURI="mpcm.quality.performance.annotations" nsPrefix="mpcm.quality.performance.annotations">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Performance aspects of QoS annotations."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceExecutionTime" abstract="true"
+      eSuperTypes="../../mpcm.paradigm.annotations/model/annotations.ecore#//ServicePropertyAnnotation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>&#xD;&#xA;    Specifies an execution time&#xD;&#xA;    in&amp;nbsp;terms&amp;nbsp;of&amp;nbsp;a&amp;nbsp;PCMRandomVariable&amp;nbsp;which&amp;nbsp;may&amp;nbsp;depend&amp;nbsp;on&amp;nbsp;component&amp;nbsp;or&amp;nbsp;input&amp;nbsp;parameters&amp;nbsp;of&amp;nbsp;the&#xD;&#xA;    referenced&amp;nbsp;service.&#xD;&#xA;&lt;/p>&#xD;&#xA;&lt;p>&#xD;&#xA;    Notes:&#xD;&#xA;&lt;/p>&#xD;&#xA;&lt;p>&#xD;&#xA;    -&amp;nbsp;Is&amp;nbsp;it&amp;nbsp;correct&amp;nbsp;that&amp;nbsp;the&amp;nbsp;PCMRandomvariable&amp;nbsp;can&amp;nbsp;depend&amp;nbsp;on&amp;nbsp;parameters?&lt;br />&#xD;&#xA;    -&amp;nbsp;How&amp;nbsp;is&amp;nbsp;the&amp;nbsp;relation&amp;nbsp;of&amp;nbsp;the&amp;nbsp;specified&amp;nbsp;QoS&amp;nbsp;to&amp;nbsp;the&amp;nbsp;input&amp;nbsp;parameters&amp;nbsp;established?&lt;br />&#xD;&#xA;&lt;/p>"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specification_SpecifiedExecutionTime"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemServiceExecutionTime" eSuperTypes="#//ServiceExecutionTime">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The SystemSpecifiedExecutionTime allows software architect and performance analysts to specify the response time (distribution) of services called at the system boundaries. This allows abstracting from the system externals and restricts the focus to the software architecture under consideration.&#xD;&#xA;&#xD;&#xA;Note:&#xD;&#xA;- That's the starting point for Performance-Kennlinien I guess..."/>
+    </eAnnotations>
+    <eOperations name="SystemSpecifiedExecutionTimeMustReferenceRequiredRoleOfASystem"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="(self.role_SpecifiedQoSAnnotation.oclIsTypeOf(mpcm::repository::OperationRequiredRole)) and (self.role_SpecifiedQoSAnnotation.oclAsType(mpcm::repository::OperationRequiredRole).requiringEntity_RequiredRole.oclIsTypeOf(mpcm::system::System))&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentServiceExecutionTime" eSuperTypes="#//ServiceExecutionTime">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The ComponentSpecifiedExecutionTime allows software architects (and performance analysts) to specify the response time of a service (signature + role) of a component. However, the response time is not given for the considered component in general, but the component in a specific context (i.e., in a specific hardware environment with specific external components connected) determined by the AssemblyContext. This allows software architects to include Provided- and CompleteComponentTypes into their software architecuture that still miss a description of their internals. Even though the internals are missing, performance predictions are still possible.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Note:&#xD;&#xA;- Is it actually the response time or total service demand specified here? -> I guess it should be response time. Otherwise, we would require also an assignment to resources.&#xD;&#xA;- I guess it's necessary to replace the association  to the AssemblyContext by an association to an AllocationContext, since the Response time is heavily determined by the underlying hardware...&#xD;&#xA;&#xD;&#xA;"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext_ComponentSpecifiedExecutionTime"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.composition/model/composition.ecore#//AssemblyContext"/>
+  </eClassifiers>
+</ecore:EPackage>

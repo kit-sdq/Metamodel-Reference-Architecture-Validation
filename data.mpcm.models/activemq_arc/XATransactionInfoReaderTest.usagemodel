@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_KgeCIJhXEeWKgoTb5jIgDA" entityName="testGetPacketType">
+    <scenarioBehaviour_UsageScenario id="_KgeCI5hXEeWKgoTb5jIgDA" entityName="testGetPacketType">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_KgeCIZhXEeWKgoTb5jIgDA" successor="_Kl1DQJhXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Kl1DQJhXEeWKgoTb5jIgDA" entityName="getPacketType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testGetPacketType() at 1131" successor="_Kl1DQphXEeWKgoTb5jIgDA" predecessor="_KgeCIZhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-EfVoZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Kl1DQphXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testGetPacketType() at 1131" successor="_KgeCIphXEeWKgoTb5jIgDA" predecessor="_Kl1DQJhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_KgeCIphXEeWKgoTb5jIgDA" predecessor="_Kl1DQphXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_Kl1DQ5hXEeWKgoTb5jIgDA" entityName="testReadXidPacket">
+    <scenarioBehaviour_UsageScenario id="_Kl1DRphXEeWKgoTb5jIgDA" entityName="testReadXidPacket">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Kl1DRJhXEeWKgoTb5jIgDA" successor="_Kl1DR5hXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Kl1DR5hXEeWKgoTb5jIgDA" entityName="setType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() at 3837" successor="_Kl1DSphXEeWKgoTb5jIgDA" predecessor="_Kl1DRJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8G3yRZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Kl1DSphXEeWKgoTb5jIgDA" entityName="setXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() at 3863" successor="_Kl1DS5hXEeWKgoTb5jIgDA" predecessor="_Kl1DR5hXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8G3yRphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Kl1DS5hXEeWKgoTb5jIgDA" entityName="writePacketToByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testReadXidPacket() at 1469" successor="_Kl1DTJhXEeWKgoTb5jIgDA" predecessor="_Kl1DSphXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_XkX-X5hMEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Kl1DTJhXEeWKgoTb5jIgDA" entityName="readPacketFromByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testReadXidPacket() at 1564" successor="_Kuny4JhXEeWKgoTb5jIgDA" predecessor="_Kl1DS5hXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_XkX-YphMEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Kuny4JhXEeWKgoTb5jIgDA" entityName="getType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3342" successor="_Kuny4ZhXEeWKgoTb5jIgDA" predecessor="_Kl1DTJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8HA8OZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Kuny4ZhXEeWKgoTb5jIgDA" entityName="getType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3342" successor="_Kuny4phXEeWKgoTb5jIgDA" predecessor="_Kuny4JhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8HA8OZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Kuny4phXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3342" successor="_KwZ7kJhXEeWKgoTb5jIgDA" predecessor="_Kuny4ZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_KwZ7kJhXEeWKgoTb5jIgDA" entityName="getXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3404" successor="_KwZ7kZhXEeWKgoTb5jIgDA" predecessor="_Kuny4phXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8HA8P5hJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_KwZ7kZhXEeWKgoTb5jIgDA" entityName="getXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3404" successor="_KwZ7kphXEeWKgoTb5jIgDA" predecessor="_KwZ7kJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8HA8P5hJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_KwZ7kphXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3404" successor="_Kl1DRZhXEeWKgoTb5jIgDA" predecessor="_KwZ7kZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Kl1DRZhXEeWKgoTb5jIgDA" predecessor="_KwZ7kphXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_KwZ7k5hXEeWKgoTb5jIgDA" entityName="testReadNoXidPacket">
+    <scenarioBehaviour_UsageScenario id="_KwZ7lphXEeWKgoTb5jIgDA" entityName="testReadNoXidPacket">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_KwZ7lJhXEeWKgoTb5jIgDA" successor="_KwZ7l5hXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_KwZ7l5hXEeWKgoTb5jIgDA" entityName="setType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createNoXidPacket() at 4041" successor="_KwZ7mJhXEeWKgoTb5jIgDA" predecessor="_KwZ7lJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8G3yRZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_KwZ7mJhXEeWKgoTb5jIgDA" entityName="writePacketToByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testReadNoXidPacket() at 1945" successor="_KwZ7mZhXEeWKgoTb5jIgDA" predecessor="_KwZ7l5hXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_XkX-X5hMEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_KwZ7mZhXEeWKgoTb5jIgDA" entityName="readPacketFromByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testReadNoXidPacket() at 2040" successor="_K5DhQJhXEeWKgoTb5jIgDA" predecessor="_KwZ7mJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_XkX-YphMEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_K5DhQJhXEeWKgoTb5jIgDA" entityName="getType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3342" successor="_K5DhQZhXEeWKgoTb5jIgDA" predecessor="_KwZ7mZhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8HA8OZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_K5DhQZhXEeWKgoTb5jIgDA" entityName="getType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3342" successor="_K5DhQphXEeWKgoTb5jIgDA" predecessor="_K5DhQJhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8HA8OZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_K5DhQphXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3342" successor="_K61p8JhXEeWKgoTb5jIgDA" predecessor="_K5DhQZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_K61p8JhXEeWKgoTb5jIgDA" entityName="getXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3404" successor="_K61p8ZhXEeWKgoTb5jIgDA" predecessor="_K5DhQphXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8HA8P5hJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_K61p8ZhXEeWKgoTb5jIgDA" entityName="getXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3404" successor="_K61p8phXEeWKgoTb5jIgDA" predecessor="_K61p8JhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8HA8P5hJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_K61p8phXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.assertPacket() at 3404" successor="_KwZ7lZhXEeWKgoTb5jIgDA" predecessor="_K61p8ZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_KwZ7lZhXEeWKgoTb5jIgDA" predecessor="_K61p8phXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_K61p85hXEeWKgoTb5jIgDA" entityName="testTime">
+    <scenarioBehaviour_UsageScenario id="_K61p9phXEeWKgoTb5jIgDA" entityName="testTime">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_K61p9JhXEeWKgoTb5jIgDA" successor="_K61p95hXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_K61p95hXEeWKgoTb5jIgDA" entityName="setType:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() at 3837" successor="_K61p-JhXEeWKgoTb5jIgDA" predecessor="_K61p9JhXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8G3yRZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_K61p-JhXEeWKgoTb5jIgDA" entityName="setXid:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.createXidPacket() at 3863" successor="_K-kTYJhXEeWKgoTb5jIgDA" predecessor="_K61p95hXEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_Kl1DSJhXEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_8G3yRphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_K-kTYJhXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testTime() at 2478" successor="_K-kTYZhXEeWKgoTb5jIgDA" predecessor="_K61p-JhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_K-kTYZhXEeWKgoTb5jIgDA" entityName="default loop count value" successor="_K61p9ZhXEeWKgoTb5jIgDA" predecessor="_K-kTYJhXEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_K-kTYphXEeWKgoTb5jIgDA" entityName=" @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testTime() from 2479 to 2522">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_K-kTY5hXEeWKgoTb5jIgDA" successor="_K-kTZJhXEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_K-kTZJhXEeWKgoTb5jIgDA" entityName="writePacketToByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testTime().Block at 2591" successor="_K-kTZZhXEeWKgoTb5jIgDA" predecessor="_K-kTY5hXEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_XkX-X5hMEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_K-kTZZhXEeWKgoTb5jIgDA" entityName="readPacketFromByteArray:  @position: org.activemq.io.impl.XATransactionInfoReaderTest.java.XATransactionInfoReaderTest.testTime().Block at 2676" successor="_K-kTZphXEeWKgoTb5jIgDA" predecessor="_K-kTZJhXEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIlEAJhMEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_XkX-YphMEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_K-kTZphXEeWKgoTb5jIgDA" predecessor="_K-kTZZhXEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_K61p9ZhXEeWKgoTb5jIgDA" predecessor="_K-kTYZhXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="input" nsURI="http://www.example.org/input" nsPrefix="input">
+  <eClassifiers xsi:type="ecore:EClass" name="ScenarioState">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EntityStates" upperBound="-1"
+        eType="#//EntityState" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="PowerStates" upperBound="-1"
+        eType="#//PowerState" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Scenario" eType="ecore:EClass ../../msmartgrid.domain.topo/model/topo.ecore#//SmartGridTopology"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityState">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IsDestroyed" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="IsHacked" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Owner" lowerBound="1" eType="ecore:EClass ../../msmartgrid.paradigm.graph/model/graph.ecore#//NetworkEntity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PowerState">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Owner" lowerBound="1" eType="ecore:EClass ../../msmartgrid.paradigm.graph/model/graph.ecore#//PowerGridNode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PowerOutage" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+</ecore:EPackage>

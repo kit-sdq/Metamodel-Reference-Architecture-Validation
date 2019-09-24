@@ -1,0 +1,141 @@
+20/06/2018 10:02:09
+Metamodel: SmartGrid
+Assessing: extent from txt file
+################################################################################
+EntryClassNames (1):
+ScenarioResult
+################################################################################
+Loaded 3 metamodel modules.
+Searching class names in loaded modules.
+Different EClasses with the same name (EntityState) were found! You will need to write a 'disti' class matching exception, or else these classes cannot be correctly matched in the other metamodel. This is relevant for the modes: Model (exception file in base dir of project), Modification (only for entry classes, specified in the mode files) and Extension (only for extended classes, not implemented as not yet needed).
+EntityState: Package=smartgridoutput Resoruce=org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl$1@5080901 uri='platform:/resource/smartgrid.model.output/model/smartgridoutput.ecore'
+EntityState: Package=smartgridinput Resoruce=org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl$1@243f761d uri='platform:/resource/smartgrid.model.input/model/smartgridinput.ecore'
+################################################################################
+Metamodels (3):
+smartgridinput
+smartgridoutput
+smartgridtopo
+################################################################################
+Relevant modules (1): smartgridoutput
+################################################################################
+EntryClasses (1):
+ScenarioResult
+################################################################################
+################################################################################
+RemainingClasses (29):
+NoPower
+Repository
+LogicalCommunication
+NetworkNode
+Identifier
+PowerGridNode
+NetworkNodeType
+Cluster
+SmartGridTopology
+NamedIdentifier
+EntityState
+SmartMeter
+InterCom
+Defect
+On
+Online
+ConnectionType
+NetworkEntity
+NoUplink
+ScenarioState
+NamedEntity
+Offline
+EntityState
+CommunicatingEntity
+ControlCenter
+SmartMeterType
+PowerState
+PhysicalConnection
+GenericController
+################################################################################
+Using ContainmentWalker(grab package, don't grab subclasses, don't grab incoming containments)
+ScenarioResult(outgoing containment)->EntityState (package: smartgridoutput)
+ScenarioResult(outgoing containment)->Cluster (package: smartgridoutput)
+ScenarioResult(package)->Online (package: smartgridoutput)
+ScenarioResult(package)->Defect (package: smartgridoutput)
+ScenarioResult(package)->NoPower (package: smartgridoutput)
+ScenarioResult(package)->NoUplink (package: smartgridoutput)
+ScenarioResult(package)->Offline (package: smartgridoutput)
+ScenarioResult(package)->On (package: smartgridoutput)
+EntityState(obligatory ref)->NetworkEntity (package: smartgridtopo)
+NetworkEntity(obligatory ref)->PowerGridNode (package: smartgridtopo)
+NetworkEntity(super class)->NamedIdentifier (package: smartgridtopo)
+NetworkEntity(package)->SmartGridTopology (package: smartgridtopo)
+NetworkEntity(package)->NamedEntity (package: smartgridtopo)
+NetworkEntity(package)->Identifier (package: smartgridtopo)
+NetworkEntity(package)->NamedIdentifier (package: smartgridtopo)
+NetworkEntity(package)->SmartMeter (package: smartgridtopo)
+NetworkEntity(package)->SmartMeterType (package: smartgridtopo)
+NetworkEntity(package)->PhysicalConnection (package: smartgridtopo)
+NetworkEntity(package)->Repository (package: smartgridtopo)
+NetworkEntity(package)->ConnectionType (package: smartgridtopo)
+NetworkEntity(package)->NetworkNode (package: smartgridtopo)
+NetworkEntity(package)->NetworkNodeType (package: smartgridtopo)
+NetworkEntity(package)->ControlCenter (package: smartgridtopo)
+NetworkEntity(package)->GenericController (package: smartgridtopo)
+NetworkEntity(package)->CommunicatingEntity (package: smartgridtopo)
+NetworkEntity(package)->InterCom (package: smartgridtopo)
+NetworkEntity(package)->LogicalCommunication (package: smartgridtopo)
+################################################################################
+EntryClasses after walk (27):
+NoPower
+Repository
+LogicalCommunication
+ScenarioResult
+NetworkNode
+Identifier
+PowerGridNode
+NetworkNodeType
+Cluster
+SmartGridTopology
+NamedIdentifier
+SmartMeter
+InterCom
+Defect
+On
+Online
+ConnectionType
+NetworkEntity
+NoUplink
+NamedEntity
+Offline
+EntityState
+CommunicatingEntity
+ControlCenter
+SmartMeterType
+PhysicalConnection
+GenericController
+################################################################################
+################################################################################
+RemainingClasses after walk (3):
+EntityState
+ScenarioState
+PowerState
+################################################################################
+################################################################################
+Used Modules (2):
+smartgridtopo
+smartgridoutput
+################################################################################
+################################################################################
+Unused Modules (1):
+smartgridinput
+################################################################################
+Using CompleteCollector
+################################################################################
+Results raw:
+Classes 27
+Attributes 6
+Inheritances 25
+References 12
+Containments 9
+Packages 2
+################################################################################
+Waiting for hypergraph analysis job.
+Persisting current hypergraph to D:\eclipse_oxygen\ws-runtime-dissvali\metamodelassessor.results/results1/ScenarioResult/SmartGrid.xmi
+Persisting current csv data to text file D:\eclipse_oxygen\ws-runtime-dissvali\metamodelassessor.results/results1/ScenarioResult/SmartGrid.csv

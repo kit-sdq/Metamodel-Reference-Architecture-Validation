@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_r543MJhSEeWKgoTb5jIgDA" entityName="testLoad">
+    <scenarioBehaviour_UsageScenario id="_r543M5hSEeWKgoTb5jIgDA" entityName="testLoad">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_r543MZhSEeWKgoTb5jIgDA" successor="_r55eQJhSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r55eQJhSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testLoad() at 2692" successor="_r56FUJhSEeWKgoTb5jIgDA" predecessor="_r543MZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r56FUJhSEeWKgoTb5jIgDA" entityName="setValueLimit:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testLoad() at 2768" successor="_r56FUphSEeWKgoTb5jIgDA" predecessor="_r55eQJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIMXk5hOEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r56FUZhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_r56FUphSEeWKgoTb5jIgDA" entityName="default loop count value" successor="_r56FWZhSEeWKgoTb5jIgDA" predecessor="_r56FUJhSEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_r56FU5hSEeWKgoTb5jIgDA" entityName=" @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testLoad() from 2890 to 2938">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_r56FVJhSEeWKgoTb5jIgDA" successor="_r56FVZhSEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_r56FVZhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testLoad().Block at 3032" successor="_r56FWJhSEeWKgoTb5jIgDA" predecessor="_r56FVJhSEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_r56FWJhSEeWKgoTb5jIgDA" predecessor="_r56FVZhSEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_r56FWZhSEeWKgoTb5jIgDA" entityName="default loop count value" successor="_r8thsJhSEeWKgoTb5jIgDA" predecessor="_r56FUphSEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_r56FWphSEeWKgoTb5jIgDA" entityName=" @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testLoad() from 3158 to 3200">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_r56FW5hSEeWKgoTb5jIgDA" successor="_r56FXJhSEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r56FXJhSEeWKgoTb5jIgDA" entityName="setMemoryUsage:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testLoad().Block at 3311" successor="_r56FXphSEeWKgoTb5jIgDA" predecessor="_r56FW5hSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SLaVl5hMEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r56FXZhSEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r56FXphSEeWKgoTb5jIgDA" entityName="enqueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testLoad().Block at 3343" successor="_r56FYZhSEeWKgoTb5jIgDA" predecessor="_r56FXJhSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RphJEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_r56FYZhSEeWKgoTb5jIgDA" predecessor="_r56FXphSEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_r8thsJhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testLoad() from 3354 to 3481" successor="_r-MvcJhSEeWKgoTb5jIgDA" predecessor="_r56FWZhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r-MvcJhSEeWKgoTb5jIgDA" entityName="getTotalMemoryUsedSize:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testLoad() at 3679" successor="_r-MvcphSEeWKgoTb5jIgDA" predecessor="_r8thsJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r-MvcZhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_r-MvcphSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testLoad() at 3679" successor="_r-Mvc5hSEeWKgoTb5jIgDA" predecessor="_r-MvcJhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r-Mvc5hSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testLoad() at 3702" successor="_r543MphSEeWKgoTb5jIgDA" predecessor="_r-MvcphSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_r543MphSEeWKgoTb5jIgDA" predecessor="_r-Mvc5hSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_r-MvdJhSEeWKgoTb5jIgDA" entityName="testClear">
+    <scenarioBehaviour_UsageScenario id="_r-Mvd5hSEeWKgoTb5jIgDA" entityName="testClear">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_r-MvdZhSEeWKgoTb5jIgDA" successor="_r-MveJhSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r-MveJhSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClear() at 3828" successor="_r-MvephSEeWKgoTb5jIgDA" predecessor="_r-MvdZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r-MvephSEeWKgoTb5jIgDA" entityName="setValueLimit:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClear() at 3885" successor="_r-Mve5hSEeWKgoTb5jIgDA" predecessor="_r-MveJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIMXk5hOEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r56FUZhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r-Mve5hSEeWKgoTb5jIgDA" entityName="enqueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClear() at 3966" successor="_r-MvfJhSEeWKgoTb5jIgDA" predecessor="_r-MvephSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r-MvfJhSEeWKgoTb5jIgDA" entityName="clear:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClear() at 3989" successor="_r_skQJhSEeWKgoTb5jIgDA" predecessor="_r-Mve5hSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAJhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r_skQJhSEeWKgoTb5jIgDA" entityName="size:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClear() at 4028" successor="_r_skQZhSEeWKgoTb5jIgDA" predecessor="_r-MvfJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RJhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_r_skQZhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClear() at 4028" successor="_r_skQphSEeWKgoTb5jIgDA" predecessor="_r_skQJhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r_skQphSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClear() at 4051" successor="_r-MvdphSEeWKgoTb5jIgDA" predecessor="_r_skQZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_r-MvdphSEeWKgoTb5jIgDA" predecessor="_r_skQphSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_r_skQ5hSEeWKgoTb5jIgDA" entityName="testDequeue">
+    <scenarioBehaviour_UsageScenario id="_r_skRphSEeWKgoTb5jIgDA" entityName="testDequeue">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_r_skRJhSEeWKgoTb5jIgDA" successor="_r_skR5hSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r_skR5hSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testDequeue() at 4196" successor="_r_skSZhSEeWKgoTb5jIgDA" predecessor="_r_skRJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r_skSZhSEeWKgoTb5jIgDA" entityName="setValueLimit:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testDequeue() at 4259" successor="_r_skSphSEeWKgoTb5jIgDA" predecessor="_r_skR5hSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIMXk5hOEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r56FUZhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r_skSphSEeWKgoTb5jIgDA" entityName="enqueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testDequeue() at 4340" successor="_r_skS5hSEeWKgoTb5jIgDA" predecessor="_r_skSZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_r_skS5hSEeWKgoTb5jIgDA" entityName="dequeue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testDequeue() at 4381" successor="_sBLyAJhSEeWKgoTb5jIgDA" predecessor="_r_skSphSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r_skTJhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sBLyAJhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testDequeue() at 4416" successor="_sBLyAZhSEeWKgoTb5jIgDA" predecessor="_r_skS5hSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sBLyAZhSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testDequeue() at 4439" successor="_r_skRZhSEeWKgoTb5jIgDA" predecessor="_sBLyAJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_r_skRZhSEeWKgoTb5jIgDA" predecessor="_sBLyAZhSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_sBLyAphSEeWKgoTb5jIgDA" entityName="testClose">
+    <scenarioBehaviour_UsageScenario id="_sBLyBZhSEeWKgoTb5jIgDA" entityName="testClose">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sBLyA5hSEeWKgoTb5jIgDA" successor="_sBLyBphSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sBLyBphSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClose() at 4643" successor="_sBLyCJhSEeWKgoTb5jIgDA" predecessor="_sBLyA5hSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sBLyCJhSEeWKgoTb5jIgDA" entityName="setValueLimit:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClose() at 4699" successor="_sBLyCZhSEeWKgoTb5jIgDA" predecessor="_sBLyBphSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIMXk5hOEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r56FUZhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sBLyCZhSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClose() at 4861" successor="_sCq_wJhSEeWKgoTb5jIgDA" predecessor="_sBLyCJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sCq_wJhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClose() at 4894" successor="_sHvF8JhSEeWKgoTb5jIgDA" predecessor="_sBLyCZhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sHvF8JhSEeWKgoTb5jIgDA" entityName="dequeue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClose() at 5348" successor="_sH428JhSEeWKgoTb5jIgDA" predecessor="_sCq_wJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r_skTJhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sH428JhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClose() at 5348" successor="_sH4285hSEeWKgoTb5jIgDA" predecessor="_sHvF8JhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sH4285hSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClose() at 5390" successor="_sLT-YJhSEeWKgoTb5jIgDA" predecessor="_sH428JhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sLT-YJhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClose() from 5391 to 5552" successor="_sPMY0JhSEeWKgoTb5jIgDA" predecessor="_sH4285hSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sPMY0JhSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClose() at 5757" successor="_sQrmkJhSEeWKgoTb5jIgDA" predecessor="_sLT-YJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sQrmkJhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testClose() at 5790" successor="_sBLyBJhSEeWKgoTb5jIgDA" predecessor="_sPMY0JhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sBLyBJhSEeWKgoTb5jIgDA" predecessor="_sQrmkJhSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_sQrmkZhSEeWKgoTb5jIgDA" entityName="testDequeueNoWait">
+    <scenarioBehaviour_UsageScenario id="_sQrmlJhSEeWKgoTb5jIgDA" entityName="testDequeueNoWait">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sQrmkphSEeWKgoTb5jIgDA" successor="_sQrmlZhSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sQrmlZhSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testDequeueNoWait() at 5941" successor="_sQrml5hSEeWKgoTb5jIgDA" predecessor="_sQrmkphSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sQrml5hSEeWKgoTb5jIgDA" entityName="dequeueNoWait:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testDequeueNoWait() at 5985" successor="_sSK0UJhSEeWKgoTb5jIgDA" predecessor="_sQrmlZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-asPC5hJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sSK0UJhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testDequeueNoWait() at 6018" successor="_sSK0UZhSEeWKgoTb5jIgDA" predecessor="_sQrml5hSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sSK0UZhSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testDequeueNoWait() at 6041" successor="_sQrmk5hSEeWKgoTb5jIgDA" predecessor="_sSK0UJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sQrmk5hSEeWKgoTb5jIgDA" predecessor="_sSK0UZhSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_sSUlUJhSEeWKgoTb5jIgDA" entityName="testEnqueueFirst">
+    <scenarioBehaviour_UsageScenario id="_sSUlU5hSEeWKgoTb5jIgDA" entityName="testEnqueueFirst">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sSUlUZhSEeWKgoTb5jIgDA" successor="_sSUlVJhSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sSUlVJhSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueFirst() at 6191" successor="_sTzzEJhSEeWKgoTb5jIgDA" predecessor="_sSUlUZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sTzzEJhSEeWKgoTb5jIgDA" entityName="getTotalMemoryUsedSize:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueFirst() at 6256" successor="_sTzzEZhSEeWKgoTb5jIgDA" predecessor="_sSUlVJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r-MvcZhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sTzzEZhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueFirst() at 6256" successor="_sTzzEphSEeWKgoTb5jIgDA" predecessor="_sTzzEJhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sTzzEphSEeWKgoTb5jIgDA" entityName="setValueLimit:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueFirst() at 6356" successor="_sTzzE5hSEeWKgoTb5jIgDA" predecessor="_sTzzEZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIMXk5hOEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r56FUZhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_sTzzE5hSEeWKgoTb5jIgDA" entityName="default loop count value" successor="_sTzzGJhSEeWKgoTb5jIgDA" predecessor="_sTzzEphSEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_sTzzFJhSEeWKgoTb5jIgDA" entityName=" @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueFirst() from 6357 to 6391">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sTzzFZhSEeWKgoTb5jIgDA" successor="_sTzzFphSEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sTzzFphSEeWKgoTb5jIgDA" entityName="enqueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueFirst().Block at 6443" successor="_sTzzF5hSEeWKgoTb5jIgDA" predecessor="_sTzzFZhSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RphJEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sTzzF5hSEeWKgoTb5jIgDA" predecessor="_sTzzFphSEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sTzzGJhSEeWKgoTb5jIgDA" entityName="setJMSMessageID:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueFirst() at 6546" successor="_sTzzGZhSEeWKgoTb5jIgDA" predecessor="_sTzzE5hSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_XiSTophMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-XHWxphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sTzzGZhSEeWKgoTb5jIgDA" entityName="enqueueFirst:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueFirst() at 6580" successor="_sTzzGphSEeWKgoTb5jIgDA" predecessor="_sTzzGJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieF5hJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sTzzGphSEeWKgoTb5jIgDA" entityName="dequeue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueFirst() at 6618" successor="_sVTA0JhSEeWKgoTb5jIgDA" predecessor="_sTzzGZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r_skTJhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sVTA0JhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueFirst() at 6651" successor="_sVTA0ZhSEeWKgoTb5jIgDA" predecessor="_sTzzGphSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sVTA0ZhSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueFirst() at 6674" successor="_sSUlUphSEeWKgoTb5jIgDA" predecessor="_sVTA0JhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sSUlUphSEeWKgoTb5jIgDA" predecessor="_sVTA0ZhSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_sVTA0phSEeWKgoTb5jIgDA" entityName="testEnqueueNoBlock">
+    <scenarioBehaviour_UsageScenario id="_sVTA1ZhSEeWKgoTb5jIgDA" entityName="testEnqueueNoBlock">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sVTA05hSEeWKgoTb5jIgDA" successor="_sVTA1phSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sVTA1phSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueNoBlock() at 6803" successor="_sVTA2JhSEeWKgoTb5jIgDA" predecessor="_sVTA05hSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sVTA2JhSEeWKgoTb5jIgDA" entityName="setValueLimit:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueNoBlock() at 6859" successor="_sVTA2ZhSEeWKgoTb5jIgDA" predecessor="_sVTA1phSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_SIMXk5hOEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_r56FUZhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sVTA2ZhSEeWKgoTb5jIgDA" entityName="enqueueNoBlock:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueNoBlock() at 6947" successor="_sWyOkJhSEeWKgoTb5jIgDA" predecessor="_sVTA2JhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieDZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sWyOkJhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueNoBlock() at 6973" successor="_sWyOkZhSEeWKgoTb5jIgDA" predecessor="_sVTA2ZhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sWyOkZhSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testEnqueueNoBlock() at 6996" successor="_sVTA1JhSEeWKgoTb5jIgDA" predecessor="_sWyOkJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sVTA1JhSEeWKgoTb5jIgDA" predecessor="_sWyOkZhSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_sWyOkphSEeWKgoTb5jIgDA" entityName="testIsEmpty">
+    <scenarioBehaviour_UsageScenario id="_sWyOlZhSEeWKgoTb5jIgDA" entityName="testIsEmpty">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sWyOk5hSEeWKgoTb5jIgDA" successor="_sWyOlphSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sWyOlphSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testIsEmpty() at 7141" successor="_sWyOmJhSEeWKgoTb5jIgDA" predecessor="_sWyOk5hSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_sWyOmJhSEeWKgoTb5jIgDA" entityName="default loop count value" successor="_sWyOnZhSEeWKgoTb5jIgDA" predecessor="_sWyOlphSEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_sWyOmZhSEeWKgoTb5jIgDA" entityName=" @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testIsEmpty() from 7142 to 7178">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sWyOmphSEeWKgoTb5jIgDA" successor="_sWyOm5hSEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sWyOm5hSEeWKgoTb5jIgDA" entityName="enqueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testIsEmpty().Block at 7230" successor="_sWyOnJhSEeWKgoTb5jIgDA" predecessor="_sWyOmphSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RphJEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sWyOnJhSEeWKgoTb5jIgDA" predecessor="_sWyOm5hSEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sWyOnZhSEeWKgoTb5jIgDA" entityName="clear:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testIsEmpty() at 7263" successor="_sYSDYJhSEeWKgoTb5jIgDA" predecessor="_sWyOmJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAJhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sYSDYJhSEeWKgoTb5jIgDA" entityName="isEmpty:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testIsEmpty() at 7300" successor="_sYSDYZhSEeWKgoTb5jIgDA" predecessor="_sWyOnZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieBJhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sYSDYZhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testIsEmpty() at 7300" successor="_sYSDYphSEeWKgoTb5jIgDA" predecessor="_sYSDYJhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sYSDYphSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testIsEmpty() at 7323" successor="_sWyOlJhSEeWKgoTb5jIgDA" predecessor="_sYSDYZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sWyOlJhSEeWKgoTb5jIgDA" predecessor="_sYSDYphSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_sYSDY5hSEeWKgoTb5jIgDA" entityName="testRemove">
+    <scenarioBehaviour_UsageScenario id="_sYSDZphSEeWKgoTb5jIgDA" entityName="testRemove">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sYSDZJhSEeWKgoTb5jIgDA" successor="_sYSDZ5hSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sYSDZ5hSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemove() at 7444" successor="_sYSDaZhSEeWKgoTb5jIgDA" predecessor="_sYSDZJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sYSDaZhSEeWKgoTb5jIgDA" entityName="enqueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemove() at 7525" successor="_sZxRIJhSEeWKgoTb5jIgDA" predecessor="_sYSDZ5hSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sZxRIJhSEeWKgoTb5jIgDA" entityName="remove:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemove() at 7564" successor="_sZxRIphSEeWKgoTb5jIgDA" predecessor="_sYSDaZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_sZxRIZhSEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sZxRIphSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemove() at 7564" successor="_sZxRI5hSEeWKgoTb5jIgDA" predecessor="_sZxRIJhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sZxRI5hSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemove() at 7587" successor="_sYSDZZhSEeWKgoTb5jIgDA" predecessor="_sZxRIphSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sYSDZZhSEeWKgoTb5jIgDA" predecessor="_sZxRI5hSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_sZxRJJhSEeWKgoTb5jIgDA" entityName="testSize">
+    <scenarioBehaviour_UsageScenario id="_sZxRJ5hSEeWKgoTb5jIgDA" entityName="testSize">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sZxRJZhSEeWKgoTb5jIgDA" successor="_sZxRKJhSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sZxRKJhSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testSize() at 7729" successor="_sZxRKphSEeWKgoTb5jIgDA" predecessor="_sZxRJZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_sZxRKphSEeWKgoTb5jIgDA" entityName="default loop count value" successor="_sbQe4JhSEeWKgoTb5jIgDA" predecessor="_sZxRKJhSEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_sZxRK5hSEeWKgoTb5jIgDA" entityName=" @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testSize() from 7730 to 7766">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sZxRLJhSEeWKgoTb5jIgDA" successor="_sZxRLZhSEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sZxRLZhSEeWKgoTb5jIgDA" entityName="enqueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testSize().Block at 7818" successor="_sZxRLphSEeWKgoTb5jIgDA" predecessor="_sZxRLJhSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RphJEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sZxRLphSEeWKgoTb5jIgDA" predecessor="_sZxRLZhSEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sbQe4JhSEeWKgoTb5jIgDA" entityName="size:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testSize() at 7870" successor="_sbQe4ZhSEeWKgoTb5jIgDA" predecessor="_sZxRKphSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RJhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sbQe4ZhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testSize() at 7870" successor="_sbQe4phSEeWKgoTb5jIgDA" predecessor="_sbQe4JhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sbQe4phSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testSize() at 7893" successor="_sZxRJphSEeWKgoTb5jIgDA" predecessor="_sbQe4ZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sZxRJphSEeWKgoTb5jIgDA" predecessor="_sbQe4phSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_sbQe45hSEeWKgoTb5jIgDA" entityName="testRemovePacket">
+    <scenarioBehaviour_UsageScenario id="_sbQe5phSEeWKgoTb5jIgDA" entityName="testRemovePacket">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sbQe5JhSEeWKgoTb5jIgDA" successor="_sbQe55hSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sbQe55hSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacket() at 8047" successor="_sbaP4JhSEeWKgoTb5jIgDA" predecessor="_sbQe5JhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_sbaP4JhSEeWKgoTb5jIgDA" entityName="default loop count value" successor="_sbaP55hSEeWKgoTb5jIgDA" predecessor="_sbQe55hSEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_sbaP4ZhSEeWKgoTb5jIgDA" entityName=" @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacket() from 8089 to 8125">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sbaP4phSEeWKgoTb5jIgDA" successor="_sbaP45hSEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sbaP45hSEeWKgoTb5jIgDA" entityName="setJMSMessageID:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacket().Block at 8223" successor="_sbaP5JhSEeWKgoTb5jIgDA" predecessor="_sbaP4phSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_XiSTophMEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-XHWxphJEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sbaP5JhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacket().Block at 8250" successor="_sbaP5ZhSEeWKgoTb5jIgDA" predecessor="_sbaP45hSEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sbaP5ZhSEeWKgoTb5jIgDA" entityName="enqueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacket().Block at 8282" successor="_sbaP5phSEeWKgoTb5jIgDA" predecessor="_sbaP5JhSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RphJEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sbaP5phSEeWKgoTb5jIgDA" predecessor="_sbaP5ZhSEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_sbaP55hSEeWKgoTb5jIgDA" entityName="default loop count value" successor="_sc5doJhSEeWKgoTb5jIgDA" predecessor="_sbaP4JhSEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_sbaP6JhSEeWKgoTb5jIgDA" entityName=" @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacket() from 8293 to 8330">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sbaP6ZhSEeWKgoTb5jIgDA" successor="_sbaP6phSEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sbaP6phSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacket().Block at 8387" successor="_sbaP65hSEeWKgoTb5jIgDA" predecessor="_sbaP6ZhSEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sbaP65hSEeWKgoTb5jIgDA" entityName="remove:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacket().Block at 8387" successor="_sbaP7JhSEeWKgoTb5jIgDA" predecessor="_sbaP6phSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_sZxRIZhSEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sbaP7JhSEeWKgoTb5jIgDA" predecessor="_sbaP65hSEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sc5doJhSEeWKgoTb5jIgDA" entityName="size:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacket() at 8436" successor="_sc5doZhSEeWKgoTb5jIgDA" predecessor="_sbaP55hSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RJhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sc5doZhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacket() at 8436" successor="_sc5dophSEeWKgoTb5jIgDA" predecessor="_sc5doJhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sc5dophSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacket() at 8459" successor="_sbQe5ZhSEeWKgoTb5jIgDA" predecessor="_sc5doZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sbQe5ZhSEeWKgoTb5jIgDA" predecessor="_sc5dophSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_sc5do5hSEeWKgoTb5jIgDA" entityName="testRemovePacketById">
+    <scenarioBehaviour_UsageScenario id="_sc5dpphSEeWKgoTb5jIgDA" entityName="testRemovePacketById">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sc5dpJhSEeWKgoTb5jIgDA" successor="_sc5dp5hSEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sc5dp5hSEeWKgoTb5jIgDA" entityName="getMemoryBoundedQueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById() at 8617" successor="_sc5dqZhSEeWKgoTb5jIgDA" predecessor="_sc5dpJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_uPTeIZhMEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_7II5JphJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_sc5dqZhSEeWKgoTb5jIgDA" entityName="default loop count value" successor="_se_IUJhSEeWKgoTb5jIgDA" predecessor="_sc5dp5hSEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_sc5dqphSEeWKgoTb5jIgDA" entityName=" @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById() from 8659 to 8695">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_sc5dq5hSEeWKgoTb5jIgDA" successor="_sc5drJhSEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sc5drJhSEeWKgoTb5jIgDA" entityName="setJMSMessageID:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById().Block at 8793" successor="_sc5drZhSEeWKgoTb5jIgDA" predecessor="_sc5dq5hSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_XiSTophMEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-XHWxphJEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sc5drZhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById().Block at 8820" successor="_sc5drphSEeWKgoTb5jIgDA" predecessor="_sc5drJhSEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sc5drphSEeWKgoTb5jIgDA" entityName="enqueue:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById().Block at 8852" successor="_sc5dr5hSEeWKgoTb5jIgDA" predecessor="_sc5drZhSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RphJEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sc5dr5hSEeWKgoTb5jIgDA" predecessor="_sc5drphSEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_se_IUJhSEeWKgoTb5jIgDA" entityName="default loop count value" successor="_sg7CAJhSEeWKgoTb5jIgDA" predecessor="_sc5dqZhSEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_se_IUZhSEeWKgoTb5jIgDA" entityName=" @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById() from 8863 to 8900">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_se_IUphSEeWKgoTb5jIgDA" successor="_se_IU5hSEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_se_IU5hSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById().Block at 8963" successor="_se_IVJhSEeWKgoTb5jIgDA" predecessor="_se_IUphSEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_se_IVJhSEeWKgoTb5jIgDA" entityName="getJMSMessageID:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById().Block at 9037" successor="_se_IVZhSEeWKgoTb5jIgDA" predecessor="_se_IU5hSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_XiSTophMEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-V7D55hJEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_se_IVZhSEeWKgoTb5jIgDA" entityName="remove:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById().Block at 9037" successor="_sfb0QJhSEeWKgoTb5jIgDA" predecessor="_se_IVJhSEeWKgoTb5jIgDA">
+            <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+            <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieEZhJEeWKgoTb5jIgDA"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sfb0QJhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById().Block at 9078" successor="_sfb0QZhSEeWKgoTb5jIgDA" predecessor="_se_IVZhSEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sfb0QZhSEeWKgoTb5jIgDA" predecessor="_sfb0QJhSEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sg7CAJhSEeWKgoTb5jIgDA" entityName="size:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById() at 9165" successor="_sg7CAZhSEeWKgoTb5jIgDA" predecessor="_se_IUJhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-Zf8RJhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_sg7CAZhSEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById() at 9165" successor="_sg7CAphSEeWKgoTb5jIgDA" predecessor="_sg7CAJhSEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_sg7CAphSEeWKgoTb5jIgDA" entityName="close:  @position: org.activemq.message.util.MemoryBoundedQueueTest.java.MemoryBoundedQueueTest.testRemovePacketById() at 9188" successor="_sc5dpZhSEeWKgoTb5jIgDA" predecessor="_sg7CAZhSEeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_r56FX5hSEeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_-aieAZhJEeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_sc5dpZhSEeWKgoTb5jIgDA" predecessor="_sg7CAphSEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

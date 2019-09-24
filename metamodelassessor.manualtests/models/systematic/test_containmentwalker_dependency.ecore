@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="test_containmentwalker_dependency" nsURI="test_containmentwalker_dependency.de"
+    nsPrefix="test_containmentwalker_dependency">
+  <eClassifiers xsi:type="ecore:EClass" name="Foo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classinotherpackage" upperBound="-1"
+        eType="#//subpackage/ClassInOtherPackage" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IsolatedClassInReachablePackage"/>
+  <eSubpackages name="subpackage" nsURI="subpackage.de" nsPrefix="subpackage">
+    <eClassifiers xsi:type="ecore:EClass" name="ClassInOtherPackage"/>
+  </eSubpackages>
+</ecore:EPackage>

@@ -1,0 +1,17 @@
+/**
+ */
+package edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents;
+
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Ether CAT Master</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusComponentsPackage#getEtherCATMaster()
+ * @model
+ * @generated
+ */
+public interface EtherCATMaster extends BusMaster {
+} // EtherCATMaster

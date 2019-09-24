@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_Ep1X0LLjEeWaL4cfYRKdZg" entityName="testRingIterator">
+    <scenarioBehaviour_UsageScenario id="_Ep1X07LjEeWaL4cfYRKdZg" entityName="testRingIterator">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Ep1X0bLjEeWaL4cfYRKdZg" successor="_EqCzMLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_EqCzMLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() at 2010" successor="_EqCzMbLjEeWaL4cfYRKdZg" predecessor="_Ep1X0bLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_EqCzMbLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.token() from 3387 to 3470" successor="_EqF2gLLjEeWaL4cfYRKdZg" predecessor="_EqCzMLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_EqF2gLLjEeWaL4cfYRKdZg" entityName="ringIterator:  @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() at 2104" successor="_EqHrsLLjEeWaL4cfYRKdZg" predecessor="_EqCzMbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__zBZ4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKubwrLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_EqHrsLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_Ep1X0rLjEeWaL4cfYRKdZg" predecessor="_EqF2gLLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_EqHrsbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() from 2178 to 2227">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_EqHrsrLjEeWaL4cfYRKdZg" successor="_EqHrs7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_EqHrs7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() at 2330" successor="_EqHrtLLjEeWaL4cfYRKdZg" predecessor="_EqHrsrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_EqHrtLLjEeWaL4cfYRKdZg" predecessor="_EqHrs7LjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Ep1X0rLjEeWaL4cfYRKdZg" predecessor="_EqHrsLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_EqVuILLjEeWaL4cfYRKdZg" entityName="testRingIteratorIncludeMin">
+    <scenarioBehaviour_UsageScenario id="_EqVuI7LjEeWaL4cfYRKdZg" entityName="testRingIteratorIncludeMin">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_EqVuIbLjEeWaL4cfYRKdZg" successor="_EqeRALLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_EqeRALLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() at 2010" successor="_EqeRAbLjEeWaL4cfYRKdZg" predecessor="_EqVuIbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_EqeRAbLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.token() from 3387 to 3470" successor="_Eqe4ELLjEeWaL4cfYRKdZg" predecessor="_EqeRALLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_Eqe4ELLjEeWaL4cfYRKdZg" entityName="ringIterator:  @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() at 2104" successor="_EqgtQLLjEeWaL4cfYRKdZg" predecessor="_EqeRAbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__zBZ4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKubwrLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_EqgtQLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_EqVuIrLjEeWaL4cfYRKdZg" predecessor="_Eqe4ELLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_EqgtQbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() from 2178 to 2227">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_EqgtQrLjEeWaL4cfYRKdZg" successor="_EqgtQ7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_EqgtQ7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() at 2330" successor="_EqgtRLLjEeWaL4cfYRKdZg" predecessor="_EqgtQrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_EqgtRLLjEeWaL4cfYRKdZg" predecessor="_EqgtQ7LjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_EqVuIrLjEeWaL4cfYRKdZg" predecessor="_EqgtQLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_Eq9ZMLLjEeWaL4cfYRKdZg" entityName="testRingIteratorEmptyRing">
+    <scenarioBehaviour_UsageScenario id="_Eq9ZM7LjEeWaL4cfYRKdZg" entityName="testRingIteratorEmptyRing">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_Eq9ZMbLjEeWaL4cfYRKdZg" successor="_ErHKMLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ErHKMLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() at 2010" successor="_ErHKMbLjEeWaL4cfYRKdZg" predecessor="_Eq9ZMbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ErHKMbLjEeWaL4cfYRKdZg" entityName="bytes:  @position: org.apache.cassandra.Util.java.Util.token() from 3387 to 3470" successor="_ErHxQLLjEeWaL4cfYRKdZg" predecessor="_ErHKMLLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AGPQ0LLjEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AGOCsLLjEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ErHxQLLjEeWaL4cfYRKdZg" entityName="ringIterator:  @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() at 2104" successor="_ErJmcLLjEeWaL4cfYRKdZg" predecessor="_ErHKMbLjEeWaL4cfYRKdZg">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__zBZ4LLiEeWaL4cfYRKdZg"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKubwrLiEeWaL4cfYRKdZg"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_ErJmcLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_Eq9ZMrLjEeWaL4cfYRKdZg" predecessor="_ErHxQLLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_ErJmcbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() from 2178 to 2227">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_ErJmcrLjEeWaL4cfYRKdZg" successor="_ErJmc7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ErJmc7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.locator.TokenMetadataTest.java.TokenMetadataTest.testRingIterator() at 2330" successor="_ErJmdLLjEeWaL4cfYRKdZg" predecessor="_ErJmcrLjEeWaL4cfYRKdZg">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_ErJmdLLjEeWaL4cfYRKdZg" predecessor="_ErJmc7LjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Eq9ZMrLjEeWaL4cfYRKdZg" predecessor="_ErJmcLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

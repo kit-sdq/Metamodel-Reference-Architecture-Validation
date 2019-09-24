@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_cXMa0JhREeWKgoTb5jIgDA" entityName="testAcidTransactions">
+    <scenarioBehaviour_UsageScenario id="_cXMa05hREeWKgoTb5jIgDA" entityName="testAcidTransactions">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_cXMa0ZhREeWKgoTb5jIgDA" successor="_cXMa1ZhREeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_cXMa1ZhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions() from 8768 to 8813" successor="_cXMa2ZhREeWKgoTb5jIgDA" predecessor="_cXMa0ZhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_cXMa2ZhREeWKgoTb5jIgDA" entityName="reconnect:  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions() at 9093" successor="_cef8sJhREeWKgoTb5jIgDA" predecessor="_cXMa1ZhREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_cXMa25hREeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_cXMa2phREeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_cef8sJhREeWKgoTb5jIgDA" entityName="default loop count value" successor="_co7rEJhREeWKgoTb5jIgDA" predecessor="_cXMa2ZhREeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_cef8sZhREeWKgoTb5jIgDA" entityName=" @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions() from 9219 to 9261">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_cef8sphREeWKgoTb5jIgDA" successor="_cgI7cJhREeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_cgI7cJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions().Block at 9447" successor="_ch7EIJhREeWKgoTb5jIgDA" predecessor="_cef8sphREeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ch7EIJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions().Block at 9637" successor="_ch7EIphREeWKgoTb5jIgDA" predecessor="_cgI7cJhREeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_ch7EIphREeWKgoTb5jIgDA" predecessor="_ch7EIJhREeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_co7rEJhREeWKgoTb5jIgDA" entityName="default loop count value" successor="_cxuasJhREeWKgoTb5jIgDA" predecessor="_cef8sJhREeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_co7rEZhREeWKgoTb5jIgDA" entityName=" @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions() from 9830 to 10000">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_co7rEphREeWKgoTb5jIgDA" successor="_csWygJhREeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_csWygJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions().Block at 10141" successor="_csWygphREeWKgoTb5jIgDA" predecessor="_co7rEphREeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_csWygphREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions().Block at 10173" successor="_csWyg5hREeWKgoTb5jIgDA" predecessor="_csWygJhREeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_csWyg5hREeWKgoTb5jIgDA" predecessor="_csWygphREeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_cxuasJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions() at 10455" successor="_c44LkJhREeWKgoTb5jIgDA" predecessor="_co7rEJhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_c44LkJhREeWKgoTb5jIgDA" entityName="default loop count value" successor="_c8TTCJhREeWKgoTb5jIgDA" predecessor="_cxuasJhREeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_c44LkZhREeWKgoTb5jIgDA" entityName=" @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions() from 10591 to 10656">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_c44LkphREeWKgoTb5jIgDA" successor="_c44Lk5hREeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_c44Lk5hREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions().Block at 10708" successor="_c44LlJhREeWKgoTb5jIgDA" predecessor="_c44LkphREeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_c44LlJhREeWKgoTb5jIgDA" entityName="default loop count value" successor="_c8TTA5hREeWKgoTb5jIgDA" predecessor="_c44Lk5hREeWKgoTb5jIgDA">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_c44LlZhREeWKgoTb5jIgDA" entityName=" @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions().Block from 10709 to 10754">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_c44LlphREeWKgoTb5jIgDA" successor="_c8TTAJhREeWKgoTb5jIgDA"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_c8TTAJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions().Block.Block at 11168" successor="_c8TTAphREeWKgoTb5jIgDA" predecessor="_c44LlphREeWKgoTb5jIgDA">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_c8TTAphREeWKgoTb5jIgDA" predecessor="_c8TTAJhREeWKgoTb5jIgDA"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_c8TTA5hREeWKgoTb5jIgDA" predecessor="_c44LlJhREeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_c8TTCJhREeWKgoTb5jIgDA" entityName="reconnect:  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions() at 11606" successor="_c_4LcJhREeWKgoTb5jIgDA" predecessor="_c44LkJhREeWKgoTb5jIgDA">
+        <providedRole_EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.system#_cXMa25hREeWKgoTb5jIgDA"/>
+        <operationSignature__EntryLevelSystemCall href="../activemq-3.0_340_topics_116_arc_clusters.repository#_cXMa2phREeWKgoTb5jIgDA"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_c_4LcJhREeWKgoTb5jIgDA" entityName="default loop count value" successor="_dI92AJhREeWKgoTb5jIgDA" predecessor="_c8TTCJhREeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_c_4LcZhREeWKgoTb5jIgDA" entityName=" @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions() from 11650 to 11796">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_c_4LcphREeWKgoTb5jIgDA" successor="_dBqUIJhREeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dBqUIJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions().Block at 11961" successor="_dBqUIphREeWKgoTb5jIgDA" predecessor="_c_4LcphREeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_dBqUIphREeWKgoTb5jIgDA" predecessor="_dBqUIJhREeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_dI92AJhREeWKgoTb5jIgDA" entityName="default loop count value" successor="_dXuDsJhREeWKgoTb5jIgDA" predecessor="_c_4LcJhREeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_dI92AZhREeWKgoTb5jIgDA" entityName=" @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions() from 12156 to 12221">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_dI92AphREeWKgoTb5jIgDA" successor="_dI92A5hREeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dI92A5hREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions().Block at 12273" successor="_dI92BJhREeWKgoTb5jIgDA" predecessor="_dI92AphREeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_dI92BJhREeWKgoTb5jIgDA" entityName="default loop count value" successor="_dMsfc5hREeWKgoTb5jIgDA" predecessor="_dI92A5hREeWKgoTb5jIgDA">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_dI92BZhREeWKgoTb5jIgDA" entityName=" @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions().Block from 12274 to 12321">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_dI92BphREeWKgoTb5jIgDA" successor="_dMsfcJhREeWKgoTb5jIgDA"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dMsfcJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions().Block.Block at 12573" successor="_dMsfcphREeWKgoTb5jIgDA" predecessor="_dI92BphREeWKgoTb5jIgDA">
+                <timeSpecification_Delay specification="0"/>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_dMsfcphREeWKgoTb5jIgDA" predecessor="_dMsfcJhREeWKgoTb5jIgDA"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_dMsfc5hREeWKgoTb5jIgDA" predecessor="_dI92BJhREeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_dXuDsJhREeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.tool.AcidTestTool.java.AcidTestTool.testAcidTransactions() at 12820" successor="_cXMa0phREeWKgoTb5jIgDA" predecessor="_dI92AJhREeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_cXMa0phREeWKgoTb5jIgDA" predecessor="_dXuDsJhREeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

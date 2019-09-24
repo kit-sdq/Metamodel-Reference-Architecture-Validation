@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="usage" nsURI="mpcm.paradigm.behaviour.usage" nsPrefix="mpcm.paradigm.behaviour.usage">
+  <eClassifiers xsi:type="ecore:EClass" name="ScenarioBehaviour" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A ScenarioBehaviour specifies possible sequences of executing services provided by the system.&#xD;&#xA;It contains a set of AbstractUserActions, each referencing a predecessor and successor (except the&#xD;&#xA;first and last action), thereby forming a sequence of actions. &#xD;&#xA;&#xD;&#xA;See the AbstractAction documentation for why it is advantageous&#xD;&#xA;to model control flow in this way, as the same principle is used in the RDSEFF language. &#xD;&#xA;&#xD;&#xA;Concrete user actions of the usage model are:&#xD;&#xA;- Branch&#xD;&#xA;- Loop&#xD;&#xA;- EntryLevelSystemCall&#xD;&#xA;- Delay&#xD;&#xA;- Start &#xD;&#xA;- Stop&#xD;&#xA;&#xD;&#xA;So far, ScenarioBehaviours do not include forks in the user flow (i.e., splitting the flow with an&#xD;&#xA;AND semantic), as it is assumed that users always act sequentially.&#xD;&#xA;&#xD;&#xA;As there are no random variables depending on other variables in the&#xD;&#xA;usage model, there are no equivalent actions to GuardedBranchTransitions or CollectionIteratorActions.&#xD;&#xA;"/>
+    </eAnnotations>
+    <eOperations name="Exactlyonestart" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.actions_ScenarioBehaviour->select(s|s.oclIsTypeOf(Start))->size() = 1"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="Exactlyonestop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.actions_ScenarioBehaviour->select(s|s.oclIsTypeOf(Stop))->size() = 1"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="EachuseractionexceptStartandStopmusthaveapredecessorandsuccessor"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="not self.actions_ScenarioBehaviour->select(s|not s.oclIsTypeOf(Start) and not s.oclIsTypeOf(Stop))->exists(a|a.oclAsType(AbstractUserAction).predecessor.oclIsUndefined()) and not self.actions_ScenarioBehaviour->select(s|not s.oclIsTypeOf(Start) and not s.oclIsTypeOf(Stop))->exists(a|a.oclAsType(AbstractUserAction).successor.oclIsUndefined())"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="branchTransition_ScenarioBehaviour"
+        ordered="false" eType="#//BranchTransition" eOpposite="#//BranchTransition/branchedBehaviour_BranchTransition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loop_ScenarioBehaviour"
+        ordered="false" eType="#//Loop" eOpposite="#//Loop/bodyBehaviour_Loop"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions_ScenarioBehaviour"
+        ordered="false" upperBound="-1" eType="#//AbstractUserAction" containment="true"
+        eOpposite="#//AbstractUserAction/scenarioBehaviour_AbstractUserAction"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractUserAction" abstract="true"
+      eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="See the AbstractAction documentation for why it is advantageous&#xD;&#xA;to model control flow in this way, as the same principle is used in the RDSEFF language. &#xD;&#xA;&#xD;&#xA;Concrete user actions of the usage model are:&#xD;&#xA;- Branch&#xD;&#xA;- Loop&#xD;&#xA;- EntryLevelSystemCall&#xD;&#xA;- Delay"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="successor" ordered="false"
+        eType="#//AbstractUserAction" eOpposite="#//AbstractUserAction/predecessor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predecessor" ordered="false"
+        eType="#//AbstractUserAction" eOpposite="#//AbstractUserAction/successor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenarioBehaviour_AbstractUserAction"
+        ordered="false" lowerBound="1" eType="#//ScenarioBehaviour" eOpposite="#//ScenarioBehaviour/actions_ScenarioBehaviour"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Start" eSuperTypes="#//AbstractUserAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Each ScenarioBehaviour has exactly one Start action which marks the action where the control flows begins. Start actions have no predecessor."/>
+    </eAnnotations>
+    <eOperations name="StartHasNoPredecessor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.predecessor.oclIsUndefined()"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stop" eSuperTypes="#//AbstractUserAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Each ScenarioBehaviour has exactly one Stop action which marks the action where the control flows ends. Stop actions have no successor."/>
+    </eAnnotations>
+    <eOperations name="StopHasNoSuccessor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.successor.oclIsUndefined()"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Branch" eSuperTypes="#//AbstractUserAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Branch splits the user flow with a XOR-semantic: one of the included BranchTransitions&#xD;&#xA;is taken depending on the specified branch probabilities. Each BranchTransition contains a&#xD;&#xA;nested ScenarioBehaviour, which a user executes once this branch transition is chosen. After&#xD;&#xA;execution of the complete nested ScenarioBehaviour, the next action in the user flow after the&#xD;&#xA;Branch is its successor action.&#xD;&#xA;&#xD;&#xA;A constraint ensures that all branchProbabilities of the included BranchTransitions sum up to 1. "/>
+    </eAnnotations>
+    <eOperations name="AllBranchProbabilitiesMustSumUpTo1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self->collect(branchTransitions_Branch.branchProbability)->sum() > 0.999 and self->collect(branchTransitions_Branch.branchProbability)->sum() &lt;1.001"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="branchTransitions_Branch"
+        ordered="false" upperBound="-1" eType="#//BranchTransition" containment="true"
+        eOpposite="#//BranchTransition/branch_BranchTransition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BranchTransition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The BranchTransition is an association class that realises the containment of ScenarioBehaviours in in the branches of a Branch action. It is a separate meta class because it has the additional attribute branchProbability that specifies how probably it is that the references ScenarioBehaviour is executed in the Branch action. &#xD;&#xA;&#xD;&#xA;See also Branch."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="branchProbability" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="branch_BranchTransition"
+        ordered="false" lowerBound="1" eType="#//Branch" eOpposite="#//Branch/branchTransitions_Branch"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="branchedBehaviour_BranchTransition"
+        ordered="false" lowerBound="1" eType="#//ScenarioBehaviour" containment="true"
+        eOpposite="#//ScenarioBehaviour/branchTransition_ScenarioBehaviour"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//AbstractUserAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Loop models a repeated sequence of actions in the user flow. It contains a nested ScenarioBehaviour specifying the loop body, and a RandomVariable specifying the number of iterations."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loopIteration_Loop" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyBehaviour_Loop" ordered="false"
+        lowerBound="1" eType="#//ScenarioBehaviour" containment="true" eOpposite="#//ScenarioBehaviour/loop_ScenarioBehaviour"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Delay" eSuperTypes="#//AbstractUserAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Delay represents a timing delay as a RandomVariable between two user actions. The Delay&#xD;&#xA;is included into the usage model to express that users do not call system services in direct successions,&#xD;&#xA;but usually need some time to determine their next action. User delays are for example useful,&#xD;&#xA;if a performance analyst wants to determine the execution time for a complete scenario behaviour&#xD;&#xA;(instead of a single service), which needs to include user delays."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeSpecification_Delay"
+        ordered="false" lowerBound="1" eType="ecore:EClass ../../mpcm.paradigm.variables/model/variables.ecore#//PCMRandomVariable"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

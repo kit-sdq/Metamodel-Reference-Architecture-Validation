@@ -1,0 +1,471 @@
+18/06/2018 14:11:36
+Metamodel: mbpmn
+Assessing: extent from txt file
+################################################################################
+EntryClassNames (1):
+ParticipantAssociation
+################################################################################
+WARNING: multiple metamodels found in module 'mbpmn'. This is unexpected.
+Loaded 27 metamodel modules.
+Searching class names in loaded modules.
+################################################################################
+Metamodels (29):
+bpmndi
+dc
+di
+activities
+artifacts
+auditingandmonitoring
+choreography
+collaboration
+conversations
+core
+correlations
+data
+events
+events.advanced
+expressions
+domain.expressions
+externals
+flows
+gateways
+group
+humaninteraction
+looping
+messaging
+processes
+resources
+domain.resources
+resources.human
+services
+subprocesses
+################################################################################
+Relevant modules (1): collaboration
+################################################################################
+EntryClasses (1):
+ParticipantAssociation
+################################################################################
+################################################################################
+RemainingClasses (161):
+CompensateEventDefinition
+BPMNLabel
+ServiceTask
+Lane
+Point
+LinkEventDefinition
+FlowElement
+CorrelationPropertyRetrievalExpression
+Extension
+ResourceParameterBinding
+Font
+BoundaryEvent
+LoopCharacteristicsContainer
+ParticipantMultiplicity
+Process
+Artifact
+Transaction
+InputOutputSpecification
+FlowNode
+ComplexBehaviorDefinition
+EndPoint
+IntermediateCatchEvent
+Participant
+Escalation
+ExtensionAttributeDefinition
+SubChoreography
+ItemAwareElement
+ChoreographyActivity
+CategoryValue
+SubProcess
+AdHocSubProcess
+Diagram
+SequenceFlow
+ParallelGateway
+ScriptTask
+Import
+SubConversation
+BaseElement
+ComplexGateway
+Edge
+ErrorEventDefinition
+Resource
+Activity
+StartEvent
+Monitoring
+MessageFlow
+Node
+ConversationLink
+ImplicitThrowEvent
+Rendering
+Category
+Bounds
+ThrowEvent
+ConditionalEventDefinition
+ConversationContainer
+EndEvent
+EventBasedGateway
+OutputSet
+ExclusiveGateway
+BPMNLabelStyle
+BPMNEdge
+ManualTask
+ExtensionAttributeValue
+PotentialOwner
+Style
+DataStore
+Signal
+MultiInstanceLoopCharacteristics
+CallChoreography
+FlowElementsContainer
+GlobalUserTask
+Property
+MessageEventDefinition
+CorrelationProperty
+CorrelationKey
+Relationship
+DataState
+Group
+DiagramElement
+Interface
+Event
+TextAnnotation
+LabeledEdge
+StandardLoopCharacteristics
+GlobalChoreographyTask
+Expression
+Choreography
+InclusiveGateway
+GlobalBusinessRuleTask
+PartnerRole
+CallActivity
+LaneSet
+ChoreographyTask
+EventDefinition
+ReceiveTask
+DataOutput
+Documentation
+Task
+ItemDefinition
+Assignment
+ResourceParameter
+CallableElement
+MessageFlowAssociation
+ConversationNode
+ResourceRole
+RootElement
+Association
+CallConversation
+TimerEventDefinition
+ResourceAssignmentExpression
+Message
+Auditing
+AdvancedEventExpressionApplication
+EscalationEventDefinition
+Label
+FormalExpression
+DataOutputAssociation
+DataObject
+FlowAnnotation
+Conversation
+HumanPerformer
+UserTask
+DataInput
+TerminateEventDefinition
+BusinessRuleTask
+ExternalsContainer
+GlobalManualTask
+GlobalTask
+ConversationAssociation
+CorrelationPropertyBinding
+InputOutputBinding
+DataObjectReference
+SignalEventDefinition
+ExtensionDefinition
+CatchEvent
+InputSet
+CancelEventDefinition
+BPMNDiagram
+CorrelationSubscription
+BPMNShape
+Error
+DataAssociation
+LoopCharacteristics
+Performer
+InteractionNode
+LabeledShape
+SendTask
+PartnerEntity
+DataStoreReference
+Operation
+GlobalScriptTask
+IntermediateThrowEvent
+Plane
+Definitions
+Shape
+Gateway
+GlobalConversation
+DataInputAssociation
+BPMNPlane
+ResourceRoleApplication
+Collaboration
+################################################################################
+Using ContainmentWalker(grab package, don't grab subclasses, don't grab incoming containments)
+ParticipantAssociation(obligatory ref)->Participant (package: collaboration)
+ParticipantAssociation(super class)->BaseElement (package: core)
+ParticipantAssociation(package)->ParticipantMultiplicity (package: collaboration)
+ParticipantAssociation(package)->Collaboration (package: collaboration)
+ParticipantAssociation(package)->PartnerRole (package: collaboration)
+ParticipantAssociation(package)->PartnerEntity (package: collaboration)
+BaseElement(outgoing containment)->Documentation (package: core)
+BaseElement(package)->Definitions (package: core)
+BaseElement(package)->BaseElement (package: core)
+BaseElement(package)->RootElement (package: core)
+Participant(super class)->InteractionNode (package: messaging)
+InteractionNode(package)->MessageFlowAssociation (package: messaging)
+InteractionNode(package)->InteractionNode (package: messaging)
+InteractionNode(package)->MessageFlow (package: messaging)
+InteractionNode(package)->Message (package: messaging)
+Definitions(outgoing containment)->BPMNDiagram (package: bpmndi)
+BPMNDiagram(outgoing containment)->BPMNPlane (package: bpmndi)
+BPMNDiagram(outgoing containment)->BPMNLabelStyle (package: bpmndi)
+BPMNDiagram(super class)->Diagram (package: di)
+BPMNDiagram(package)->BPMNEdge (package: bpmndi)
+BPMNDiagram(package)->BPMNLabel (package: bpmndi)
+BPMNDiagram(package)->BPMNShape (package: bpmndi)
+Diagram(obligatory ref)->DiagramElement (package: di)
+Diagram(package)->Diagram (package: di)
+Diagram(package)->Edge (package: di)
+Diagram(package)->Label (package: di)
+Diagram(package)->LabeledEdge (package: di)
+Diagram(package)->LabeledShape (package: di)
+Diagram(package)->Node (package: di)
+Diagram(package)->Plane (package: di)
+Diagram(package)->Shape (package: di)
+Diagram(package)->Style (package: di)
+Label(outgoing containment)->Bounds (package: dc)
+Bounds(package)->Font (package: dc)
+Bounds(package)->Point (package: dc)
+Collaboration(outgoing containment)->Artifact (package: artifacts)
+Collaboration(outgoing containment)->CorrelationKey (package: correlations)
+CorrelationKey(package)->CorrelationSubscription (package: correlations)
+CorrelationKey(package)->CorrelationPropertyRetrievalExpression (package: correlations)
+CorrelationKey(package)->CorrelationPropertyBinding (package: correlations)
+CorrelationKey(package)->CorrelationProperty (package: correlations)
+Artifact(package)->Association (package: artifacts)
+Artifact(package)->TextAnnotation (package: artifacts)
+################################################################################
+EntryClasses after walk (41):
+BPMNLabel
+DiagramElement
+TextAnnotation
+MessageFlow
+LabeledEdge
+Node
+Point
+CorrelationPropertyBinding
+PartnerRole
+CorrelationPropertyRetrievalExpression
+Font
+Bounds
+ParticipantMultiplicity
+BPMNDiagram
+Artifact
+Documentation
+CorrelationSubscription
+BPMNShape
+BPMNLabelStyle
+BPMNEdge
+ParticipantAssociation
+MessageFlowAssociation
+Participant
+InteractionNode
+RootElement
+LabeledShape
+Style
+Association
+PartnerEntity
+Message
+Diagram
+Definitions
+BaseElement
+Plane
+Label
+Shape
+CorrelationKey
+CorrelationProperty
+Edge
+BPMNPlane
+Collaboration
+################################################################################
+################################################################################
+RemainingClasses after walk (121):
+CompensateEventDefinition
+ServiceTask
+Lane
+LinkEventDefinition
+FlowElement
+Extension
+ResourceParameterBinding
+BoundaryEvent
+LoopCharacteristicsContainer
+Process
+Transaction
+InputOutputSpecification
+FlowNode
+ComplexBehaviorDefinition
+EndPoint
+IntermediateCatchEvent
+Escalation
+ExtensionAttributeDefinition
+SubChoreography
+ItemAwareElement
+ChoreographyActivity
+CategoryValue
+SubProcess
+AdHocSubProcess
+SequenceFlow
+ParallelGateway
+ScriptTask
+Import
+SubConversation
+ComplexGateway
+ErrorEventDefinition
+Resource
+Activity
+StartEvent
+Monitoring
+ConversationLink
+ImplicitThrowEvent
+Rendering
+Category
+ThrowEvent
+ConditionalEventDefinition
+ConversationContainer
+EndEvent
+EventBasedGateway
+OutputSet
+ExclusiveGateway
+ManualTask
+ExtensionAttributeValue
+PotentialOwner
+DataStore
+Signal
+MultiInstanceLoopCharacteristics
+CallChoreography
+FlowElementsContainer
+GlobalUserTask
+Property
+MessageEventDefinition
+Relationship
+DataState
+Group
+Interface
+Event
+StandardLoopCharacteristics
+GlobalChoreographyTask
+Expression
+Choreography
+InclusiveGateway
+GlobalBusinessRuleTask
+CallActivity
+LaneSet
+ChoreographyTask
+EventDefinition
+ReceiveTask
+DataOutput
+Task
+ItemDefinition
+Assignment
+ResourceParameter
+CallableElement
+ConversationNode
+ResourceRole
+CallConversation
+TimerEventDefinition
+ResourceAssignmentExpression
+Auditing
+AdvancedEventExpressionApplication
+EscalationEventDefinition
+FormalExpression
+DataOutputAssociation
+DataObject
+FlowAnnotation
+Conversation
+HumanPerformer
+UserTask
+DataInput
+TerminateEventDefinition
+BusinessRuleTask
+ExternalsContainer
+GlobalManualTask
+GlobalTask
+ConversationAssociation
+InputOutputBinding
+DataObjectReference
+SignalEventDefinition
+ExtensionDefinition
+CatchEvent
+InputSet
+CancelEventDefinition
+Error
+DataAssociation
+LoopCharacteristics
+Performer
+SendTask
+DataStoreReference
+Operation
+GlobalScriptTask
+IntermediateThrowEvent
+Gateway
+GlobalConversation
+DataInputAssociation
+ResourceRoleApplication
+################################################################################
+################################################################################
+Used Modules (8):
+correlations
+collaboration
+messaging
+dc
+bpmndi
+core
+artifacts
+di
+################################################################################
+################################################################################
+Unused Modules (21):
+looping
+group
+resources.human
+expressions
+services
+externals
+auditingandmonitoring
+resources
+events
+processes
+activities
+events.advanced
+data
+gateways
+humaninteraction
+domain.resources
+flows
+subprocesses
+conversations
+choreography
+domain.expressions
+################################################################################
+Using CompleteCollector
+################################################################################
+Results raw:
+Classes 46
+Attributes 50
+Inheritances 34
+References 39
+Containments 21
+Packages 8
+################################################################################
+Waiting for hypergraph analysis job.
+Persisting current hypergraph to D:\eclipse_oxygen\ws-runtime-dissvali\metamodelassessor.results/results2/ParticipantAssociation/mbpmn.xmi
+Persisting current csv data to text file D:\eclipse_oxygen\ws-runtime-dissvali\metamodelassessor.results/results2/ParticipantAssociation/mbpmn.csv

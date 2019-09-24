@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="internalbehaviour" nsURI="mpcm.domain.behaviourseff.internalbehaviour"
+    nsPrefix="mpcm.domain.behaviourseff.internalbehaviour">
+  <eClassifiers xsi:type="ecore:EClass" name="InternalBehaviourSEFF" eSuperTypes="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//BehaviourSEFF">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Class representing component-internal behaviour not accessible from the component's interface. Comparable to internal method in object-oriented programming. This behaviour can be called from within a resource demanding behaviour using an InternalCallAction."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signature" lowerBound="1"
+        eType="ecore:EClass ../../mpcm.domain.repository/model/repository.ecore#//OperationSignature"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalCallAction" eSuperTypes="../../mpcm.domain.behaviourseff/model/behaviourseff.ecore#//CallAction ../../mpcm.paradigm.behaviour.seff/model/seff.ecore#//AbstractInternalControlFlowAction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A &quot;SubSEFF&quot;-Action: Realises an internal method call within a SEFF."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calledResourceDemandingInternalBehaviour"
+        ordered="false" lowerBound="1" eType="#//InternalBehaviourSEFF"/>
+  </eClassifiers>
+</ecore:EPackage>

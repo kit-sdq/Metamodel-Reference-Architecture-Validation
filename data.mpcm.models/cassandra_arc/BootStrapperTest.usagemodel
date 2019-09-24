@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_DwqUILLjEeWaL4cfYRKdZg" entityName="testSourceTargetComputation">
+    <scenarioBehaviour_UsageScenario id="_DwqUI7LjEeWaL4cfYRKdZg" entityName="testSourceTargetComputation">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_DwqUIbLjEeWaL4cfYRKdZg" successor="_Dwq7MLLjEeWaL4cfYRKdZg"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Dwq7MLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() at 1732" successor="_DyPogLLjEeWaL4cfYRKdZg" predecessor="_DwqUIbLjEeWaL4cfYRKdZg">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_DyPogLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_DwqUIrLjEeWaL4cfYRKdZg" predecessor="_Dwq7MLLjEeWaL4cfYRKdZg">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_DyPogbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 1733 to 1808">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_DyPogrLjEeWaL4cfYRKdZg" successor="_DyPog7LjEeWaL4cfYRKdZg"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_DyPog7LjEeWaL4cfYRKdZg" entityName="open:  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation().Block at 1931" successor="_DyQPkLLjEeWaL4cfYRKdZg" predecessor="_DyPogrLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAnxAbLjEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_DyQPkLLjEeWaL4cfYRKdZg" entityName="getReplicationFactor:  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation().Block at 1931" successor="_DyQ2oLLjEeWaL4cfYRKdZg" predecessor="_DyPog7LjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_gQUoILLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_DyQ2oLLjEeWaL4cfYRKdZg" entityName="getReplicationStrategy:  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation().Block at 1931" successor="_DyRdsLLjEeWaL4cfYRKdZg" predecessor="_DyQPkLLjEeWaL4cfYRKdZg">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_tKcVMLLiEeWaL4cfYRKdZg"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_DyRdsLLjEeWaL4cfYRKdZg" entityName="default loop count value" successor="_Dycc1rLjEeWaL4cfYRKdZg" predecessor="_DyQ2oLLjEeWaL4cfYRKdZg">
+            <loopIteration_Loop specification="1"/>
+            <bodyBehaviour_Loop id="_DyRdsbLjEeWaL4cfYRKdZg" entityName=" @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation().Block from 1932 to 1980">
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_DyRdsrLjEeWaL4cfYRKdZg" successor="_DyRds7LjEeWaL4cfYRKdZg"/>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_DyRds7LjEeWaL4cfYRKdZg" successor="_Dycc1bLjEeWaL4cfYRKdZg" predecessor="_DyRdsrLjEeWaL4cfYRKdZg">
+                <branchTransitions_Branch branchProbability="1.0">
+                  <branchedBehaviour_BranchTransition id="_DyRdtLLjEeWaL4cfYRKdZg" entityName="parent  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation().Block from 1981 to 2034/ @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation().Block at 2129">
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_DyRdtbLjEeWaL4cfYRKdZg" successor="_DyRdtrLjEeWaL4cfYRKdZg"/>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_DyRdtrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() at 2348" successor="_DyRdt7LjEeWaL4cfYRKdZg" predecessor="_DyRdtbLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_DyRdt7LjEeWaL4cfYRKdZg" entityName="sortedTokens:  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() at 2650" successor="_DySEwbLjEeWaL4cfYRKdZg" predecessor="_DyRdtrLjEeWaL4cfYRKdZg">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__zBZ4LLiEeWaL4cfYRKdZg"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_qKubwbLiEeWaL4cfYRKdZg"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_DySEwbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() at 2725" successor="_DySEwrLjEeWaL4cfYRKdZg" predecessor="_DyRdt7LjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_DySEwrLjEeWaL4cfYRKdZg" entityName="addSourceFilter:  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() at 3803" successor="_DySr0rLjEeWaL4cfYRKdZg" predecessor="_DySEwbLjEeWaL4cfYRKdZg">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_DySr0LLjEeWaL4cfYRKdZg"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_Ov9IsLLiEeWaL4cfYRKdZg"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_DySr0rLjEeWaL4cfYRKdZg" entityName="open:  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() at 3942" successor="_DyTS4LLjEeWaL4cfYRKdZg" predecessor="_DySEwrLjEeWaL4cfYRKdZg">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_AAnxAbLjEeWaL4cfYRKdZg"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_DyTS4LLjEeWaL4cfYRKdZg" entityName="getPendingAddressRanges:  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() at 3942" successor="_DyT58LLjEeWaL4cfYRKdZg" predecessor="_DySr0rLjEeWaL4cfYRKdZg">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#__y3o4LLiEeWaL4cfYRKdZg"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#__3YVcLLiEeWaL4cfYRKdZg"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_DyT58LLjEeWaL4cfYRKdZg" entityName="getReplicationStrategy:  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() at 3942" successor="_DyUhALLjEeWaL4cfYRKdZg" predecessor="_DyTS4LLjEeWaL4cfYRKdZg">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_AAo_ILLjEeWaL4cfYRKdZg"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_tKcVMLLiEeWaL4cfYRKdZg"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_DyUhALLjEeWaL4cfYRKdZg" entityName="addRanges:  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() at 3942" successor="_DyUhAbLjEeWaL4cfYRKdZg" predecessor="_DyT58LLjEeWaL4cfYRKdZg">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_DySr0LLjEeWaL4cfYRKdZg"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_O12VULLiEeWaL4cfYRKdZg"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_DyUhAbLjEeWaL4cfYRKdZg" entityName="toFetch:  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() at 4053" successor="_DyZZgLLjEeWaL4cfYRKdZg" predecessor="_DyUhALLjEeWaL4cfYRKdZg">
+                      <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.system#_DySr0LLjEeWaL4cfYRKdZg"/>
+                      <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_523_topics_285_arc_clusters.repository#_DyVIELLjEeWaL4cfYRKdZg"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_DyZZgLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() at 4169" successor="_DyanoLLjEeWaL4cfYRKdZg" predecessor="_DyUhAbLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_DyanoLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4343 to 4567" successor="_DyanobLjEeWaL4cfYRKdZg" predecessor="_DyZZgLLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_DyanobLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4343 to 4567" successor="_DyanorLjEeWaL4cfYRKdZg" predecessor="_DyanoLLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_DyanorLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4343 to 4567" successor="_Dyano7LjEeWaL4cfYRKdZg" predecessor="_DyanobLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Dyano7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4343 to 4567" successor="_DybOsLLjEeWaL4cfYRKdZg" predecessor="_DyanorLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_DybOsLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4343 to 4567" successor="_DybOsbLjEeWaL4cfYRKdZg" predecessor="_Dyano7LjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_DybOsbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4343 to 4567" successor="_DybOsrLjEeWaL4cfYRKdZg" predecessor="_DybOsLLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_DybOsrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4343 to 4567" successor="_DybOs7LjEeWaL4cfYRKdZg" predecessor="_DybOsbLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_DybOs7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4343 to 4567" successor="_Dyb1wLLjEeWaL4cfYRKdZg" predecessor="_DybOsrLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Dyb1wLLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4568 to 4638" successor="_Dyb1wbLjEeWaL4cfYRKdZg" predecessor="_DybOs7LjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Dyb1wbLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4568 to 4638" successor="_Dyb1wrLjEeWaL4cfYRKdZg" predecessor="_Dyb1wLLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Dyb1wrLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4568 to 4638" successor="_Dyb1w7LjEeWaL4cfYRKdZg" predecessor="_Dyb1wbLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Dyb1w7LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4568 to 4638" successor="_Dycc0LLjEeWaL4cfYRKdZg" predecessor="_Dyb1wrLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Dycc0LLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4568 to 4638" successor="_Dycc0bLjEeWaL4cfYRKdZg" predecessor="_Dyb1w7LjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Dycc0bLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4568 to 4638" successor="_Dycc0rLjEeWaL4cfYRKdZg" predecessor="_Dycc0LLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Dycc0rLjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4568 to 4638" successor="_Dycc07LjEeWaL4cfYRKdZg" predecessor="_Dycc0bLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_Dycc07LjEeWaL4cfYRKdZg" entityName="Delay  @position: org.apache.cassandra.dht.BootStrapperTest.java.BootStrapperTest.testSourceTargetComputation() from 4568 to 4638" successor="_Dycc1LLjEeWaL4cfYRKdZg" predecessor="_Dycc0rLjEeWaL4cfYRKdZg">
+                      <timeSpecification_Delay specification="0"/>
+                    </actions_ScenarioBehaviour>
+                    <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Dycc1LLjEeWaL4cfYRKdZg" predecessor="_Dycc07LjEeWaL4cfYRKdZg"/>
+                  </branchedBehaviour_BranchTransition>
+                </branchTransitions_Branch>
+              </actions_ScenarioBehaviour>
+              <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Dycc1bLjEeWaL4cfYRKdZg" predecessor="_DyRds7LjEeWaL4cfYRKdZg"/>
+            </bodyBehaviour_Loop>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Dycc1rLjEeWaL4cfYRKdZg" predecessor="_DyRdsLLjEeWaL4cfYRKdZg"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_DwqUIrLjEeWaL4cfYRKdZg" predecessor="_DyPogLLjEeWaL4cfYRKdZg"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

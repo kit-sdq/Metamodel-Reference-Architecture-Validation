@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_ohdGAI2BEeWUKKvQPqVU9Q" entityName="testMidpoint">
+    <scenarioBehaviour_UsageScenario id="_ohdGA42BEeWUKKvQPqVU9Q" entityName="testMidpoint">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_ohdGAY2BEeWUKKvQPqVU9Q" successor="_ohmP8I2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_ohmP8I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.tok() from 1381 to 1416" successor="_ohmP8Y2BEeWUKKvQPqVU9Q" predecessor="_ohdGAY2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_ohmP8Y2BEeWUKKvQPqVU9Q" entityName="getToken:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.tok() from 1280 to 1338" successor="_ohdGAo2BEeWUKKvQPqVU9Q" predecessor="_ohmP8I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y7LtMI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_ohdGAo2BEeWUKKvQPqVU9Q" predecessor="_ohmP8Y2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_ohmP8o2BEeWUKKvQPqVU9Q" entityName="testMidpointMinimum">
+    <scenarioBehaviour_UsageScenario id="_ohmP9Y2BEeWUKKvQPqVU9Q" entityName="testMidpointMinimum">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_ohmP842BEeWUKKvQPqVU9Q" successor="_oh5x8I2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oh5x8I2BEeWUKKvQPqVU9Q" entityName="getMinimumToken:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.midpointMinimumTestCase() at 2560" successor="_oiC74I2BEeWUKKvQPqVU9Q" predecessor="_ohmP842BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y7OJdI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oiC74I2BEeWUKKvQPqVU9Q" entityName="midpoint:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.midpointMinimumTestCase() from 2561 to 2642" successor="_oiC74Y2BEeWUKKvQPqVU9Q" predecessor="_oh5x8I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y7OJfo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oiC74Y2BEeWUKKvQPqVU9Q" entityName="compareTo:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.midpointMinimumTestCase() from 2561 to 2642" successor="_oiC74o2BEeWUKKvQPqVU9Q" predecessor="_oiC74I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XNjVS42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_o2aco41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_oiC74o2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.tok() from 1381 to 1416" successor="_oiC7442BEeWUKKvQPqVU9Q" predecessor="_oiC74Y2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oiC7442BEeWUKKvQPqVU9Q" entityName="getToken:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.tok() from 1280 to 1338" successor="_ohmP9I2BEeWUKKvQPqVU9Q" predecessor="_oiC74o2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y7LtMI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_ohmP9I2BEeWUKKvQPqVU9Q" predecessor="_oiC7442BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_oiC75I2BEeWUKKvQPqVU9Q" entityName="testMidpointWrapping">
+    <scenarioBehaviour_UsageScenario id="_oiC7542BEeWUKKvQPqVU9Q" entityName="testMidpointWrapping">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_oiC75Y2BEeWUKKvQPqVU9Q" successor="_oiMs4I2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_oiMs4I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.tok() from 1381 to 1416" successor="_oiMs4Y2BEeWUKKvQPqVU9Q" predecessor="_oiC75Y2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oiMs4Y2BEeWUKKvQPqVU9Q" entityName="getToken:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.tok() from 1280 to 1338" successor="_oiC75o2BEeWUKKvQPqVU9Q" predecessor="_oiMs4I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y7LtMI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_oiC75o2BEeWUKKvQPqVU9Q" predecessor="_oiMs4Y2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_oiMs4o2BEeWUKKvQPqVU9Q" entityName="testTokenFactoryBytes">
+    <scenarioBehaviour_UsageScenario id="_oiMs5Y2BEeWUKKvQPqVU9Q" entityName="testTokenFactoryBytes">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_oiMs442BEeWUKKvQPqVU9Q" successor="_oiMs5o2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oiMs5o2BEeWUKKvQPqVU9Q" entityName="getTokenFactory:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.testTokenFactoryBytes() at 3128" successor="_oifn0I2BEeWUKKvQPqVU9Q" predecessor="_oiMs442BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y192AI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_oifn0I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.tok() from 1381 to 1416" successor="_oifn0Y2BEeWUKKvQPqVU9Q" predecessor="_oiMs5o2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oifn0Y2BEeWUKKvQPqVU9Q" entityName="getToken:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.tok() from 1280 to 1338" successor="_oifn0o2BEeWUKKvQPqVU9Q" predecessor="_oifn0I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y7LtMI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oifn0o2BEeWUKKvQPqVU9Q" entityName="compareTo:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.testTokenFactoryBytes() from 3129 to 3222" successor="_oiMs5I2BEeWUKKvQPqVU9Q" predecessor="_oifn0Y2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XNjVS42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_o2aco41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_oiMs5I2BEeWUKKvQPqVU9Q" predecessor="_oifn0o2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_oifn042BEeWUKKvQPqVU9Q" entityName="testTokenFactoryStrings">
+    <scenarioBehaviour_UsageScenario id="_oifn1o2BEeWUKKvQPqVU9Q" entityName="testTokenFactoryStrings">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_oifn1I2BEeWUKKvQPqVU9Q" successor="_oifn142BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oifn142BEeWUKKvQPqVU9Q" entityName="getTokenFactory:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.testTokenFactoryStrings() at 3355" successor="_oipY0I2BEeWUKKvQPqVU9Q" predecessor="_oifn1I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y192AI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_oipY0I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.tok() from 1381 to 1416" successor="_oipY0Y2BEeWUKKvQPqVU9Q" predecessor="_oifn142BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oipY0Y2BEeWUKKvQPqVU9Q" entityName="getToken:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.tok() from 1280 to 1338" successor="_oipY0o2BEeWUKKvQPqVU9Q" predecessor="_oipY0I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y7LtMI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oipY0o2BEeWUKKvQPqVU9Q" entityName="compareTo:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.testTokenFactoryStrings() from 3356 to 3443" successor="_oifn1Y2BEeWUKKvQPqVU9Q" predecessor="_oipY0Y2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XNjVS42BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_o2aco41xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_oifn1Y2BEeWUKKvQPqVU9Q" predecessor="_oipY0o2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_oipY042BEeWUKKvQPqVU9Q" entityName="testDescribeOwnership">
+    <scenarioBehaviour_UsageScenario id="_oipY1o2BEeWUKKvQPqVU9Q" entityName="testDescribeOwnership">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_oipY1I2BEeWUKKvQPqVU9Q" successor="_oiyiwI2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_oiyiwI2BEeWUKKvQPqVU9Q" entityName="default loop count value" successor="_oiyixo2BEeWUKKvQPqVU9Q" predecessor="_oipY1I2BEeWUKKvQPqVU9Q">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_oiyiwY2BEeWUKKvQPqVU9Q" entityName=" @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.testDescribeOwnershipWith() from 3919 to 3960">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_oiyiwo2BEeWUKKvQPqVU9Q" successor="_oiyiw42BEeWUKKvQPqVU9Q"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oiyiw42BEeWUKKvQPqVU9Q" entityName="getRandomToken:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.testDescribeOwnershipWith().Block at 4032" successor="_oiyixI2BEeWUKKvQPqVU9Q" predecessor="_oiyiwo2BEeWUKKvQPqVU9Q">
+            <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+            <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y7VeTY1xEeWUKKvQPqVU9Q"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_oiyixI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.testDescribeOwnershipWith().Block from 4033 to 4079" successor="_oiyixY2BEeWUKKvQPqVU9Q" predecessor="_oiyiw42BEeWUKKvQPqVU9Q">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_oiyixY2BEeWUKKvQPqVU9Q" predecessor="_oiyixI2BEeWUKKvQPqVU9Q"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_oiyixo2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.testDescribeOwnershipWith() at 4164" successor="_oiyix42BEeWUKKvQPqVU9Q" predecessor="_oiyiwI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_oiyix42BEeWUKKvQPqVU9Q" entityName="describeOwnership:  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.testDescribeOwnershipWith() at 4236" successor="_oiyiyI2BEeWUKKvQPqVU9Q" predecessor="_oiyixo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WiowAI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_y7VeOo1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_oiyiyI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.dht.PartitionerTestCase.java.PartitionerTestCase.testDescribeOwnershipWith() at 4408" successor="_oipY1Y2BEeWUKKvQPqVU9Q" predecessor="_oiyix42BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_oipY1Y2BEeWUKKvQPqVU9Q" predecessor="_oiyiyI2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

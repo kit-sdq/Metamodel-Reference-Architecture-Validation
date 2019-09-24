@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/smartgrid.model.topo/src" modelPluginID="smartgrid.model.topo"
+    modelName="Smartgridtopo" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>smartgridtopo.ecore</foreignModel>
+  <genPackages prefix="Smartgridtopo" disposableProviderFactory="true" extensibleProviderFactory="true"
+      ecorePackage="smartgridtopo.ecore#/">
+    <genClasses ecoreClass="smartgridtopo.ecore#//SmartGridTopology">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//SmartGridTopology/ContainsNE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//SmartGridTopology/ContainsPGN"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//SmartGridTopology/ContainsPC"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//SmartGridTopology/ContainsLC"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="smartgridtopo.ecore#//NamedEntity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smartgridtopo.ecore#//NamedEntity/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="smartgridtopo.ecore#//Identifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smartgridtopo.ecore#//Identifier/id"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="smartgridtopo.ecore#//NamedIdentifier"/>
+    <genClasses image="false" ecoreClass="smartgridtopo.ecore#//NetworkEntity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//NetworkEntity/ConnectedTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//NetworkEntity/LinkedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="smartgridtopo.ecore#//PowerGridNode"/>
+    <genClasses ecoreClass="smartgridtopo.ecore#//SmartMeter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//SmartMeter/IsA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smartgridtopo.ecore#//SmartMeter/Aggregation"/>
+    </genClasses>
+    <genClasses ecoreClass="smartgridtopo.ecore#//SmartMeterType"/>
+    <genClasses ecoreClass="smartgridtopo.ecore#//PhysicalConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//PhysicalConnection/Links"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//PhysicalConnection/IsA"/>
+    </genClasses>
+    <genClasses ecoreClass="smartgridtopo.ecore#//Repository">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//Repository/ContainsSmartMeterTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//Repository/ContainsConnectionType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//Repository/ContainsNetworkNodeTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="smartgridtopo.ecore#//ConnectionType"/>
+    <genClasses ecoreClass="smartgridtopo.ecore#//NetworkNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//NetworkNode/IsA"/>
+    </genClasses>
+    <genClasses ecoreClass="smartgridtopo.ecore#//NetworkNodeType"/>
+    <genClasses ecoreClass="smartgridtopo.ecore#//ControlCenter"/>
+    <genClasses ecoreClass="smartgridtopo.ecore#//GenericController"/>
+    <genClasses image="false" ecoreClass="smartgridtopo.ecore#//CommunicatingEntity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//CommunicatingEntity/CommunicatesBy"/>
+    </genClasses>
+    <genClasses ecoreClass="smartgridtopo.ecore#//InterCom"/>
+    <genClasses ecoreClass="smartgridtopo.ecore#//LogicalCommunication">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference smartgridtopo.ecore#//LogicalCommunication/Links"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

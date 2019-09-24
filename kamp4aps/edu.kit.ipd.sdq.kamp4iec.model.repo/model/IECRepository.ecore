@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="IECRepository" nsURI="http://sdq.ipd.kit.edu/IECRepository"
+    nsPrefix="IECReporitory">
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionBlock" eSuperTypes="#//Identifier #//FunctionblockResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasIecMethod" upperBound="-1"
+        eType="#//IECMethodImplementation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasIecProperty" upperBound="-1"
+        eType="#//IECPropertyImplementation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasInterface" upperBound="-1"
+        eType="#//ImplementsInterface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesVariable" upperBound="-1"
+        eType="#//GlobalVariable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UsesFunctionBlock" upperBound="-1"
+        eType="#//FunctionBlock"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunction" upperBound="-1"
+        eType="#//Function"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
+        eType="#//Enum"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UsesInterface" upperBound="-1"
+        eType="#//IECInterface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GlobalVariable" eSuperTypes="#//Identifier">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//VariableType"
+        defaultValueLiteral="NONE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
+        eType="#//Enum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IECInterface" eSuperTypes="#//Identifier #//FunctionblockResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DefinesIecMethod" upperBound="-1"
+        eType="#//IECMethod" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DefinesIecProperty" upperBound="-1"
+        eType="#//IECProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
+        eType="#//Enum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IECMethodImplementation" eSuperTypes="#//Identifier #//MethodResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implements" eType="#//IECMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesProperty" upperBound="-1"
+        eType="#//IECPropertyImplementation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesVariable" upperBound="-1"
+        eType="#//GlobalVariable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
+        eType="#//Enum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//Identifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunction" upperBound="-1"
+        eType="#//Function"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
+        eType="#//Enum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Program" eSuperTypes="#//Identifier"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="VariableType">
+    <eLiterals name="NONE"/>
+    <eLiterals name="INPUT" value="1"/>
+    <eLiterals name="OUTPUT" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Repository">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsProgram" upperBound="-1"
+        eType="#//Program" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsInterface" upperBound="-1"
+        eType="#//IECInterface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsFunctionBlock"
+        upperBound="-1" eType="#//FunctionBlock" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsFunction" upperBound="-1"
+        eType="#//Function" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsVariable" upperBound="-1"
+        eType="#//GlobalVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsEnum" upperBound="-1"
+        eType="#//Enum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IECPropertyImplementation" eSuperTypes="#//Identifier #//MethodResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implements" eType="#//IECProperty"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesVariable" upperBound="-1"
+        eType="#//GlobalVariable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
+        eType="#//Enum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IECProperty" eSuperTypes="#//Identifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
+        eType="#//Enum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IECMethod" eSuperTypes="#//Identifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
+        eType="#//Enum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionblockResource" abstract="true"
+      interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodResource" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Enum">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Identifier" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImplementsInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Interface" lowerBound="1"
+        eType="#//IECInterface"/>
+  </eClassifiers>
+</ecore:EPackage>

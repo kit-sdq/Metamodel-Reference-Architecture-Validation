@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_-fOk6Y2BEeWUKKvQPqVU9Q" entityName="testValidateCommutativeWithStandard">
+    <scenarioBehaviour_UsageScenario id="_-fOk7I2BEeWUKKvQPqVU9Q" entityName="testValidateCommutativeWithStandard">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_-fOk6o2BEeWUKKvQPqVU9Q" successor="_-fOk7Y2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-fOk7Y2BEeWUKKvQPqVU9Q" entityName="validateColumnFamily:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateCommutativeWithStandard() at 1620" successor="_-fOk642BEeWUKKvQPqVU9Q" predecessor="_-fOk6o2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_icFqUI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_-fOk7o2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_-fOk642BEeWUKKvQPqVU9Q" predecessor="_-fOk7Y2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_-fOk8I2BEeWUKKvQPqVU9Q" entityName="testValidateCommutativeWithCounter">
+    <scenarioBehaviour_UsageScenario id="_-fOk842BEeWUKKvQPqVU9Q" entityName="testValidateCommutativeWithCounter">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_-fOk8Y2BEeWUKKvQPqVU9Q" successor="_-fOk9I2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-fOk9I2BEeWUKKvQPqVU9Q" entityName="validateColumnFamily:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateCommutativeWithCounter() at 1837" successor="_-fOk8o2BEeWUKKvQPqVU9Q" predecessor="_-fOk8Y2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_icFqUI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_-fOk7o2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_-fOk8o2BEeWUKKvQPqVU9Q" predecessor="_-fOk9I2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_-fOk9Y2BEeWUKKvQPqVU9Q" entityName="testColumnNameEqualToKeyAlias">
+    <scenarioBehaviour_UsageScenario id="_-fOk-I2BEeWUKKvQPqVU9Q" entityName="testColumnNameEqualToKeyAlias">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_-fOk9o2BEeWUKKvQPqVU9Q" successor="_-fOk-Y2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-fOk-Y2BEeWUKKvQPqVU9Q" entityName="getCFMetaData:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testColumnNameEqualToKeyAlias() at 1995" successor="_-frQ0I2BEeWUKKvQPqVU9Q" predecessor="_-fOk9o2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WN7EQY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_-frQ0I2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testColumnNameEqualToKeyAlias() at 2046" successor="_-hnKgI2BEeWUKKvQPqVU9Q" predecessor="_-fOk-Y2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-hnKgI2BEeWUKKvQPqVU9Q" entityName="decompose:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testColumnNameEqualToKeyAlias() at 2319" successor="_-hnKgY2BEeWUKKvQPqVU9Q" predecessor="_-frQ0I2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_XNZkSY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_vbEcfY1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_-hnKgY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testColumnNameEqualToKeyAlias() at 2319" successor="_-jjEMI2BEeWUKKvQPqVU9Q" predecessor="_-hnKgI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-jjEMI2BEeWUKKvQPqVU9Q" entityName="bytes:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testColumnNameEqualToKeyAlias() at 2755" successor="_-jjEMY2BEeWUKKvQPqVU9Q" predecessor="_-hnKgY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WON_MY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_WON_MI2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_-jjEMY2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testColumnNameEqualToKeyAlias() at 2755" successor="_-fOk942BEeWUKKvQPqVU9Q" predecessor="_-jjEMI2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_-fOk942BEeWUKKvQPqVU9Q" predecessor="_-jjEMY2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+  <usageScenario_UsageModel id="_-js1MI2BEeWUKKvQPqVU9Q" entityName="testValidateKsDef">
+    <scenarioBehaviour_UsageScenario id="_-js1M42BEeWUKKvQPqVU9Q" entityName="testValidateKsDef">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_-js1MY2BEeWUKKvQPqVU9Q" successor="_-j1_II2BEeWUKKvQPqVU9Q"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-j1_II2BEeWUKKvQPqVU9Q" entityName="setName:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 3212" successor="_-j1_Io2BEeWUKKvQPqVU9Q" predecessor="_-js1MY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_icFqUI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_-j1_IY2BEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_-j1_Io2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 3212" successor="_-j1_I42BEeWUKKvQPqVU9Q" predecessor="_-j1_II2BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-j1_I42BEeWUKKvQPqVU9Q" entityName="setStrategy_class:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 3212" successor="_-j1_JI2BEeWUKKvQPqVU9Q" predecessor="_-j1_Io2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_icFqUI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_xlMxso1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_-j1_JI2BEeWUKKvQPqVU9Q" entityName="Delay  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 3212" successor="_-j1_JY2BEeWUKKvQPqVU9Q" predecessor="_-j1_I42BEeWUKKvQPqVU9Q">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-j1_JY2BEeWUKKvQPqVU9Q" entityName="fromThrift:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 3329" successor="_-j1_Jo2BEeWUKKvQPqVU9Q" predecessor="_-j1_JI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_8ENHMI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-j1_Jo2BEeWUKKvQPqVU9Q" entityName="validate:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 3329" successor="_-j1_KI2BEeWUKKvQPqVU9Q" predecessor="_-j1_JY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_8EWRNI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-j1_KI2BEeWUKKvQPqVU9Q" entityName="setStrategy_class:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 3583" successor="_-j1_KY2BEeWUKKvQPqVU9Q" predecessor="_-j1_Jo2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_icFqUI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_xlMxso1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-j1_KY2BEeWUKKvQPqVU9Q" entityName="fromThrift:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 3691" successor="_-j1_Ko2BEeWUKKvQPqVU9Q" predecessor="_-j1_KI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_8ENHMI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-j1_Ko2BEeWUKKvQPqVU9Q" entityName="validate:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 3691" successor="_-j1_LI2BEeWUKKvQPqVU9Q" predecessor="_-j1_KY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_8EWRNI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-j1_LI2BEeWUKKvQPqVU9Q" entityName="setStrategy_class:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 3955" successor="_-j1_LY2BEeWUKKvQPqVU9Q" predecessor="_-j1_Ko2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_icFqUI2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_xlMxso1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-j1_LY2BEeWUKKvQPqVU9Q" entityName="fromThrift:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 4063" successor="_-j1_Lo2BEeWUKKvQPqVU9Q" predecessor="_-j1_LI2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_8ENHMI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:EntryLevelSystemCall" id="_-j1_Lo2BEeWUKKvQPqVU9Q" entityName="validate:  @position: org.apache.cassandra.thrift.ThriftValidationTest.java.ThriftValidationTest.testValidateKsDef() at 4063" successor="_-js1Mo2BEeWUKKvQPqVU9Q" predecessor="_-j1_LY2BEeWUKKvQPqVU9Q">
+        <providedRole_EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.system#_WOE1QY2BEeWUKKvQPqVU9Q"/>
+        <operationSignature__EntryLevelSystemCall href="cassandra-2.0.0_acdc_clustered.repository#_8EWRNI1xEeWUKKvQPqVU9Q"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_-js1Mo2BEeWUKKvQPqVU9Q" predecessor="_-j1_Lo2BEeWUKKvQPqVU9Q"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

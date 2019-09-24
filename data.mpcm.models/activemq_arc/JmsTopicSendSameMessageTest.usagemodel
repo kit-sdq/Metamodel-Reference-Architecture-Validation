@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ASCII"?>
+<usagemodel:UsageModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2">
+  <usageScenario_UsageModel id="_HTH8YJhXEeWKgoTb5jIgDA" entityName="testSendReceive">
+    <scenarioBehaviour_UsageScenario id="_HTH8Y5hXEeWKgoTb5jIgDA" entityName="testSendReceive">
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_HTH8YZhXEeWKgoTb5jIgDA" successor="_HZ1BUJhXEeWKgoTb5jIgDA"/>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_HZ1BUJhXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTopicSendSameMessageTest.java.JmsTopicSendSameMessageTest.testSendReceive() at 1008" successor="_I99tkJhXEeWKgoTb5jIgDA" predecessor="_HTH8YZhXEeWKgoTb5jIgDA">
+        <timeSpecification_Delay specification="0"/>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Loop" id="_I99tkJhXEeWKgoTb5jIgDA" entityName="default loop count value" successor="_HTH8YphXEeWKgoTb5jIgDA" predecessor="_HZ1BUJhXEeWKgoTb5jIgDA">
+        <loopIteration_Loop specification="1"/>
+        <bodyBehaviour_Loop id="_I99tkZhXEeWKgoTb5jIgDA" entityName=" @position: org.activemq.JmsTopicSendSameMessageTest.java.JmsTopicSendSameMessageTest.testSendReceive() from 1009 to 1055">
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_I99tkphXEeWKgoTb5jIgDA" successor="_JrtkYJhXEeWKgoTb5jIgDA"/>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_JrtkYJhXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTopicSendSameMessageTest.java.JmsTopicSendSameMessageTest.testSendReceive().Block at 1095" successor="_JrtkYZhXEeWKgoTb5jIgDA" predecessor="_I99tkphXEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Branch" id="_JrtkYZhXEeWKgoTb5jIgDA" successor="_JtzPEJhXEeWKgoTb5jIgDA" predecessor="_JrtkYJhXEeWKgoTb5jIgDA">
+            <branchTransitions_Branch branchProbability="1.0">
+              <branchedBehaviour_BranchTransition id="_JrtkYphXEeWKgoTb5jIgDA" entityName="parent  @position: org.activemq.JmsTopicSendSameMessageTest.java.JmsTopicSendSameMessageTest.testSendReceive().Block from 1096 to 1121/ @position: org.activemq.JmsTopicSendSameMessageTest.java.JmsTopicSendSameMessageTest.testSendReceive().Block.Block from 1122 to 1226">
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Start" id="_JrtkY5hXEeWKgoTb5jIgDA" successor="_Jr3VYJhXEeWKgoTb5jIgDA"/>
+                <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_Jr3VYJhXEeWKgoTb5jIgDA" predecessor="_JrtkY5hXEeWKgoTb5jIgDA"/>
+              </branchedBehaviour_BranchTransition>
+            </branchTransitions_Branch>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Delay" id="_JtzPEJhXEeWKgoTb5jIgDA" entityName="Delay  @position: org.activemq.JmsTopicSendSameMessageTest.java.JmsTopicSendSameMessageTest.testSendReceive().Block at 1297" successor="_JtzPEZhXEeWKgoTb5jIgDA" predecessor="_JrtkYZhXEeWKgoTb5jIgDA">
+            <timeSpecification_Delay specification="0"/>
+          </actions_ScenarioBehaviour>
+          <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_JtzPEZhXEeWKgoTb5jIgDA" predecessor="_JtzPEJhXEeWKgoTb5jIgDA"/>
+        </bodyBehaviour_Loop>
+      </actions_ScenarioBehaviour>
+      <actions_ScenarioBehaviour xsi:type="usagemodel:Stop" id="_HTH8YphXEeWKgoTb5jIgDA" predecessor="_I99tkJhXEeWKgoTb5jIgDA"/>
+    </scenarioBehaviour_UsageScenario>
+    <workload_UsageScenario xsi:type="usagemodel:ClosedWorkload" population="1">
+      <thinkTime_ClosedWorkload specification="1"/>
+    </workload_UsageScenario>
+  </usageScenario_UsageModel>
+</usagemodel:UsageModel>

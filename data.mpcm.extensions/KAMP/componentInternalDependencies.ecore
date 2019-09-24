@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="componentInternalDependencies" nsURI="http://sdq.ipd.uka.de/ComponentInternalDependencies/1.0"
+    nsPrefix="componentInternalDependencies">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="identifier" value="../../../plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#/"/>
+    <details key="repository" value="../../../plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentInternalDependencyRepository"
+      eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependencies" ordered="false"
+        upperBound="-1" eType="#//RoleToRoleDependency" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleToRoleDependency" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ProvidedRoleAndRequiredRoleBelongToSameComponent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="ProvidedRoleAndRequiredRoleBelongToSameComponent" value="&#xA;&#x9;&#x9;&#x9;self.providedRole.providingEntity_ProvidedRole = self.requiredRole.requiringEntity_RequiredRole"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedRole" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredRole" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/RequiredRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationToOperationDependency"
+        ordered="false" upperBound="-1" eType="#//OperationToOperationDependency"
+        containment="true" eOpposite="#//OperationToOperationDependency/parentRoleToRoleDependency"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationToOperationDependency" eSuperTypes="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ProvidedSignaturesBelongToProvidedRole RequiredSignaturesBelongToRequiredRole"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="ProvidedSignaturesBelongToProvidedRole" value="&#xA;&#x9;&#x9;self.providedSignatures->forAll(signature|&#xA;&#x9;&#x9;&#x9;if (self.parentRoleToRoleDependency.providedRole.oclIsKindOf(pcm::repository::OperationProvidedRole))&#xA;&#x9;&#x9;&#x9;  then (self.parentRoleToRoleDependency.providedRole.oclAsType((pcm::repository::OperationProvidedRole)).&#xA;&#x9;&#x9;&#x9;&#x9;providedInterface__OperationProvidedRole.signatures__OperationInterface->includes(signature))&#xA;&#x9;&#x9;&#x9;  else (true) endif&#xA;&#x9;&#x9;)"/>
+      <details key="RequiredSignaturesBelongToRequiredRole" value="&#xA;&#x9;&#x9;self.requiredSignatures->forAll(signature|&#xA;&#x9;&#x9;&#x9;if (self.parentRoleToRoleDependency.requiredRole.oclIsKindOf(pcm::repository::OperationRequiredRole))&#xA;&#x9;&#x9;&#x9;  then (self.parentRoleToRoleDependency.requiredRole.oclAsType((pcm::repository::OperationRequiredRole)).&#xA;&#x9;&#x9;&#x9;&#x9;requiredInterface__OperationRequiredRole.signatures__OperationInterface->includes(signature))&#xA;&#x9;&#x9;&#x9;  else (true) endif&#xA;&#x9;&#x9;)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedSignatures" ordered="false"
+        upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Signature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredSignatures" ordered="false"
+        upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Signature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentRoleToRoleDependency"
+        lowerBound="1" eType="#//RoleToRoleDependency" eOpposite="#//RoleToRoleDependency/operationToOperationDependency"/>
+  </eClassifiers>
+</ecore:EPackage>

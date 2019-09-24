@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated IECRepository -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.presentation.IECRepositoryModelWizardID"
+            name="%_UI_IECRepositoryModelWizard_label"
+            class="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.presentation.IECRepositoryModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/IECRepositoryModelFile.gif">
+         <description>%_UI_IECRepositoryModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated IECRepository -->
+      <editor
+            id="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.presentation.IECRepositoryEditorID"
+            name="%_UI_IECRepositoryEditor_label"
+            icon="icons/full/obj16/IECRepositoryModelFile.gif"
+            extensions="iecrepository"
+            class="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.presentation.IECRepositoryEditor"
+            contributorClass="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.presentation.IECRepositoryActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

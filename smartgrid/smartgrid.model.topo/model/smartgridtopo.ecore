@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="smartgridtopo" nsURI="http://sdq.ipd.uka.de/smartgridtopo/1.1"
+    nsPrefix="smartgridtopo">
+  <eClassifiers xsi:type="ecore:EClass" name="SmartGridTopology" eSuperTypes="#//NamedIdentifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsNE" upperBound="-1"
+        eType="#//NetworkEntity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsPGN" upperBound="-1"
+        eType="#//PowerGridNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsPC" upperBound="-1"
+        eType="#//PhysicalConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsLC" upperBound="-1"
+        eType="#//LogicalCommunication" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedEntity" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Identifier" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0" iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedIdentifier" abstract="true" interface="true"
+      eSuperTypes="#//Identifier #//NamedEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkEntity" abstract="true" eSuperTypes="#//NamedIdentifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ConnectedTo" lowerBound="1"
+        upperBound="-1" eType="#//PowerGridNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="LinkedBy" upperBound="-1"
+        eType="#//PhysicalConnection" eOpposite="#//PhysicalConnection/Links"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PowerGridNode" eSuperTypes="#//NamedIdentifier"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SmartMeter" eSuperTypes="#//CommunicatingEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="IsA" eType="#//SmartMeterType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Aggregation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SmartMeterType" eSuperTypes="#//NamedIdentifier"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalConnection" eSuperTypes="#//NamedEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Links" lowerBound="2" upperBound="2"
+        eType="#//NetworkEntity" eOpposite="#//NetworkEntity/LinkedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="IsA" eType="#//ConnectionType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Repository" eSuperTypes="#//NamedIdentifier">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsSmartMeterTypes"
+        upperBound="-1" eType="#//SmartMeterType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsConnectionType"
+        upperBound="-1" eType="#//ConnectionType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsNetworkNodeTypes"
+        upperBound="-1" eType="#//NetworkNodeType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionType" eSuperTypes="#//NamedIdentifier"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkNode" eSuperTypes="#//NetworkEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="IsA" eType="#//NetworkNodeType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkNodeType" eSuperTypes="#//NamedIdentifier"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlCenter" eSuperTypes="#//CommunicatingEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericController" eSuperTypes="#//CommunicatingEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicatingEntity" abstract="true"
+      eSuperTypes="#//NetworkEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CommunicatesBy" upperBound="-1"
+        eType="#//LogicalCommunication" eOpposite="#//LogicalCommunication/Links"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterCom" eSuperTypes="#//CommunicatingEntity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalCommunication" eSuperTypes="#//NamedEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Links" lowerBound="2" upperBound="2"
+        eType="#//CommunicatingEntity" eOpposite="#//CommunicatingEntity/CommunicatesBy"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="repository" nsURI="mpcm.paradigm.repository" nsPrefix="mpcm.paradigm.repository">
+  <eClassifiers xsi:type="ecore:EClass" name="Interface" abstract="true" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This entity models the interface as a set of signatures representing services provided or required by a component. An interface is an abstraction of piece of software (a software entity) which should contain a sufficient amount of information for a caller to understand and finally request the realised functionality from any entity claiming to offer the specified functionality. Note that this implies, that the specification of the interface also has to contain a sufficient amount of information for the implementer to actually implement the interface. Due to the inherent need of an interface to abstract the behaviour of the software entity not in all cases there is sufficient information provided to use or implement an interface in an unambiquious way.&#xD;&#xA;&#xD;&#xA;Interfaces can exist on their own, i.e., without any entity requesting or implementing the specified functionality. Two roles can be identified a software entity can take relative to an interface. Any entity can either claim to implement the functionality specified in an interface or to request that functionality. This is reflected in the Palladio Component Model by a set of abstract meta-classes giving a conceptual view on interfaces, entities, and their relationships."/>
+    </eAnnotations>
+    <eOperations name="NoProtocolTypeIDUsedTwice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/uml2/1.1.0/GenModel">
+        <details key="body" value="self.protocols__Interface->forAll(p1, p2 |&#xD;&#xA;p1.protocolTypeID &lt;> p2.protocolTypeID)&#xD;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentInterfaces__Interface"
+        ordered="false" upperBound="-1" eType="#//Interface">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the interfaces from which this interface directly inherits."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="protocols__Interface" ordered="false"
+        upperBound="-1" eType="#//Protocol" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the protocol bound to this interfaces, i.e., the way, in the sense of the order, the services of this interfaces are allowed to be called."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredCharacterisations"
+        ordered="false" upperBound="-1" eType="#//RequiredCharacterisation" containment="true"
+        eOpposite="#//RequiredCharacterisation/interface_RequiredCharacterisation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Protocol" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The PCM is prepared to support interface protocols. This package contains a protocol stub. Multiple protocols following&#xD;&#xA;different formalisms are supported by the PCM and distinguished by a protocol ID.&#xD;&#xA;&#xD;&#xA;A protocol is a set of calling sequences and can be optionally added to an interface. Protocols of provided&#xD;&#xA;interfaces specify the order in which services have to be called by clients. Protocols of required interfaces&#xD;&#xA;specify the actual order in which the component calls required services.&#xD;&#xA;&#xD;&#xA;Besides finite state machines, different formalisms can be used to model protocols. The PCM does&#xD;&#xA;not restrict the protocol modelling formalisms. For example, Petri nets or regular expressions could&#xD;&#xA;model interface protocols. However, the choice of a formalism does influence possible analyses. For&#xD;&#xA;example, to check the interoperability of two components A and B, the language inclusion of the required&#xD;&#xA;protocol of A within the provided protocol of B has to be tested. The language inclusion is undecidable for&#xD;&#xA;Petri nets in the general case, so protocols modelled with Petri nets cannot be checked for interoperability.&#xD;&#xA;Notice, that although protocols are able to express the state of a component, interfaces themselves&#xD;&#xA;are stateless. The protocol state only depends on the component that implements the interface and is only&#xD;&#xA;present during component runtime. Components can provide/require multiple interfaces, but the PCM&#xD;&#xA;does not support protocols ranging over multiple interfaces (neither for provided nor required protocols).&#xD;&#xA;The complete state of a components consists of all its interface states. Restrictions on the complete state&#xD;&#xA;cannot be expressed in the PCM, as protocols can only be specified for single interfaces.&#xD;&#xA;"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocolTypeID" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Multiple protocols following different formalisms are supported by the PCM and distinguished by a protocol ID."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Signature" abstract="true" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="&lt;p>&#xD;&#xA;    This&amp;nbsp;entity&amp;nbsp;represents&amp;nbsp;the&amp;nbsp;signature&amp;nbsp;of&amp;nbsp;a&amp;nbsp;method,&amp;nbsp;i.e.,&amp;nbsp;its&amp;nbsp;parameters,&amp;nbsp;exception&amp;nbsp;declarations,&amp;nbsp;return&amp;nbsp;type,&amp;nbsp;etc.&lt;br />&#xD;&#xA;    &lt;br />&#xD;&#xA;    Every&amp;nbsp;service&amp;nbsp;of&amp;nbsp;an&amp;nbsp;interface&amp;nbsp;has&amp;nbsp;a&amp;nbsp;unique&amp;nbsp;signature,&amp;nbsp;like&amp;nbsp;void&amp;nbsp;doSomething(int&amp;nbsp;a).&amp;nbsp;A&amp;nbsp;PCM&amp;nbsp;signature&amp;nbsp;is&amp;nbsp;comparable&amp;nbsp;to&amp;nbsp;a&amp;nbsp;method&amp;nbsp;signature&amp;nbsp;in&amp;nbsp;programming&amp;nbsp;languages&amp;nbsp;like&amp;nbsp;C#,&amp;nbsp;Java&amp;nbsp;or&amp;nbsp;the&amp;nbsp;OMG&amp;nbsp;IDL.&lt;br />&#xD;&#xA;    &lt;br />&#xD;&#xA;    It&amp;nbsp;contains:&lt;br />&#xD;&#xA;    &lt;br />&#xD;&#xA;    *&amp;nbsp;A&amp;nbsp;type&amp;nbsp;of&amp;nbsp;the&amp;nbsp;return&amp;nbsp;value&amp;nbsp;or&amp;nbsp;void&amp;nbsp;(no&amp;nbsp;return&amp;nbsp;value),&lt;br />&#xD;&#xA;    &lt;br />&#xD;&#xA;    *&amp;nbsp;an&amp;nbsp;identifier&amp;nbsp;naming&amp;nbsp;the&amp;nbsp;service,&lt;br />&#xD;&#xA;    &lt;br />&#xD;&#xA;    *&amp;nbsp;an&amp;nbsp;ordered&amp;nbsp;set&amp;nbsp;of&amp;nbsp;parameters&amp;nbsp;(0..*).Each&amp;nbsp;parameter&amp;nbsp;is&amp;nbsp;a&amp;nbsp;tuple&amp;nbsp;of&amp;nbsp;a&amp;nbsp;datatype&amp;nbsp;and&amp;nbsp;an&amp;nbsp;identifier&amp;nbsp;(which&amp;nbsp;is&amp;nbsp;unique&amp;nbsp;across&amp;nbsp;the&amp;nbsp;parameters).&amp;nbsp;Additionally,&amp;nbsp;the&amp;nbsp;modifiers&amp;nbsp;in,&amp;nbsp;out,&amp;nbsp;and&amp;nbsp;inout&amp;nbsp;(with&amp;nbsp;its&amp;nbsp;OMG&lt;br />&#xD;&#xA;    IDL&amp;nbsp;semantics)&amp;nbsp;can&amp;nbsp;be&amp;nbsp;used&amp;nbsp;for&amp;nbsp;parameters,&amp;nbsp;and&lt;br />&#xD;&#xA;    &lt;br />&#xD;&#xA;    *&amp;nbsp;an&amp;nbsp;unordered&amp;nbsp;set&amp;nbsp;of&amp;nbsp;exceptions.&lt;br />&#xD;&#xA;    &lt;br />&#xD;&#xA;    A&amp;nbsp;signature&amp;nbsp;has&amp;nbsp;to&amp;nbsp;be&amp;nbsp;unique&amp;nbsp;for&amp;nbsp;an&amp;nbsp;interface&amp;nbsp;through&amp;nbsp;the&amp;nbsp;tupel&amp;nbsp;(identifier,&amp;nbsp;order&amp;nbsp;of&amp;nbsp;parameters).&amp;nbsp;An&amp;nbsp;interface&amp;nbsp;has&amp;nbsp;a&amp;nbsp;list&amp;nbsp;of&amp;nbsp;1..*&amp;nbsp;signatures&amp;nbsp;(interfaces&amp;nbsp;associate&amp;nbsp;1..*&amp;nbsp;signatures,&amp;nbsp;not&amp;nbsp;the&amp;nbsp;other&amp;nbsp;way&amp;nbsp;around).&amp;nbsp;A&lt;br />&#xD;&#xA;    signature&amp;nbsp;is&amp;nbsp;assigned&amp;nbsp;to&amp;nbsp;exactly&amp;nbsp;one&amp;nbsp;interface.&amp;nbsp;However,&amp;nbsp;different&amp;nbsp;interfaces&amp;nbsp;can&amp;nbsp;define&amp;nbsp;equally&amp;nbsp;named&amp;nbsp;signatures.&amp;nbsp;If,&amp;nbsp;for&amp;nbsp;example,&amp;nbsp;void&amp;nbsp;doIt()&amp;nbsp;is&amp;nbsp;defined&amp;nbsp;for&amp;nbsp;interface&amp;nbsp;A&amp;nbsp;and&amp;nbsp;B,&amp;nbsp;void&amp;nbsp;doIt()&amp;nbsp;is&amp;nbsp;not&amp;nbsp;identical&amp;nbsp;in&amp;nbsp;both&amp;nbsp;interfaces.&#xD;&#xA;&lt;/p>&#xD;&#xA;&lt;p>&#xD;&#xA;    Failure that may occur inside external services must be specified at the service signatures. This way components that&#xD;&#xA;    use this services may implement failure handling without knowing the internal behaviour of the connected component.&#xD;&#xA;&lt;/p>"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequiredCharacterisation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Specification of required variable characeterisations per parameter. Increases power of interfaces and lifts variable characterisations to the interface to enable extended interoperability checks."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" lowerBound="1"
+        eType="ecore:EEnum ../../mpcm.paradigm.variables/model/variables.ecore#//VariableCharacterisationType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" ordered="false"
+        lowerBound="1" eType="#//Parameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface_RequiredCharacterisation"
+        ordered="false" lowerBound="1" eType="#//Interface" eOpposite="#//Interface/requiredCharacterisations"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ParameterModifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Parameter modifiers like known from C#."/>
+    </eAnnotations>
+    <eLiterals name="none">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Use this value if no parameter modifier shall be applied."/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="in" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&quot;in&quot; according to C# semantics"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="out" value="2">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&quot;out&quot; according to C# semantics"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="inout" value="3">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="ref&quot; according to C# semantics"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This entity represents a parameter within a signature. The parameter has a name and it is of a data type."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataType__Parameter" ordered="false"
+        lowerBound="1" eType="#//datatypes/DataType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the data type of the parameter."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterName" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property holds the name of the parameter."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modifier__Parameter" ordered="false"
+        lowerBound="1" eType="#//ParameterModifier">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the modifier of the parameter like known from C#."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Role" abstract="true" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This entity represents an abstraction of an interface role. "/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProvidedRole" abstract="true" eSuperTypes="#//Role">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Provided roles list the interfaces offered by a component."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providingEntity_ProvidedRole"
+        ordered="false" lowerBound="1" eType="#//InterfaceProvidingEntity" eOpposite="#//InterfaceProvidingEntity/providedRoles_InterfaceProvidingEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the providing entity that is providing the interface associated with this role."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequiredRole" abstract="true" eSuperTypes="#//Role">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Required roles list the interfaces required by a component."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiringEntity_RequiredRole"
+        ordered="false" lowerBound="1" eType="#//InterfaceRequiringEntity" eOpposite="#//InterfaceRequiringEntity/requiredRoles_InterfaceRequiringEntity">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This property represents the interface requiring entity that requires this interface."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceProvidingEntity" abstract="true"
+      eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="All Entities that provide an Interface are represented by this class. Prominent inheriting classes are all component types, for example.&#xD;&#xA;&#xD;&#xA;Two roles can be identified a software entity can take relative to an interface. Any entity can claim to implement the functionality specified in an interface as well as to request that functionality. This is reflected in the Palladio Component Model by a set of abstract meta-classes giving a conceptual view on interfaces, entities and their relationships. The abstract meta-class InterfaceProvidingEntity is inherited by all entities which can potentially offer interface implementations. Similarly, the meta-class InterfaceRequiringEntity is inherited by all entities which are allowed to request functionality offered by entities providing this functionality.&#xD;&#xA;&#xD;&#xA;See also:&#xD;&#xA;Interface, ProvidedRole"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedRoles_InterfaceProvidingEntity"
+        ordered="false" upperBound="-1" eType="#//ProvidedRole" containment="true"
+        eOpposite="#//ProvidedRole/providingEntity_ProvidedRole"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceRequiringEntity" abstract="true"
+      eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="All Entities that require an Interface are represented by this class. Prominent inheriting classes are all component types, for example.&#xD;&#xA;&#xD;&#xA;Two roles can be identified a software entity can take relative to an interface. Any entity can claim to implement the functionality specified in an interface as well as to request that functionality. This is reflected in the Palladio Component Model by a set of abstract meta-classes giving a conceptual view on interfaces, entities and their relationships. The abstract meta-class InterfaceRequiringEntity is inherited by all entities which are allowed to request functionality offered by entities providing this functionality. Similarly, the meta-classInterfaceProvidingEntity  is inherited by all entities which can potentially offer interface implementations.&#xD;&#xA;&#xD;&#xA;See also:&#xD;&#xA;Interface, RequiredRole"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredRoles_InterfaceRequiringEntity"
+        ordered="false" upperBound="-1" eType="#//RequiredRole" containment="true"
+        eOpposite="#//RequiredRole/requiringEntity_RequiredRole"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceProvidingRequiringEntity" abstract="true"
+      eSuperTypes="#//InterfaceProvidingEntity #//InterfaceRequiringEntity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="This meta-class is inherited by classes that both require and provide an Interface. It thus combines the properties of InterfaceProvidingEntity and InterfaceRequiringEntity. Prominent inheriting classes are all component types, for example.&#xD;&#xA;&#xD;&#xA;See also:&#xD;&#xA;Interface, ProvidedRole, RequiredRole, InterfaceProvidingEntity, InterfaceRequiringEntity"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RepositoryComponent" abstract="true"
+      eSuperTypes="#//InterfaceProvidingRequiringEntity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Abstract superclass of all component types which can be part of a component repository"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eSubpackages name="datatypes" nsURI="mpcm.paradigm.repository.datatypes" nsPrefix="mpcm.paradigm.repository.datatypes">
+    <eClassifiers xsi:type="ecore:EClass" name="DataType" abstract="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This entity represents a data type that can be stored in a repository and used for specification and modeling of interface signatures."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PrimitiveDataType" eSuperTypes="#//datatypes/DataType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This entity represents a primitive data type such as integer, string, and double."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
+          lowerBound="1" eType="#//datatypes/PrimitiveTypeEnum">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represent the base type of this type, e.g., if this type represents the integer interval (1..5), the base type will be INT."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="PrimitiveTypeEnum">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Primitive types for usage in datatype and interface definitions"/>
+      </eAnnotations>
+      <eLiterals name="INT"/>
+      <eLiterals name="STRING" value="1"/>
+      <eLiterals name="BOOL" value="2"/>
+      <eLiterals name="DOUBLE" value="3"/>
+      <eLiterals name="CHAR" value="4"/>
+      <eLiterals name="BYTE" value="5"/>
+      <eLiterals name="LONG" value="6"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CollectionDataType" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity #//datatypes/DataType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This entity represents a collection data type, e.g.,. a list, array, set, of items of the a particular type."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerType_CollectionDataType"
+          ordered="false" lowerBound="1" eType="#//datatypes/DataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the type of items contained in the collection data type."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CompositeDataType" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//Entity #//datatypes/DataType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This entity represents a complex data type containing other data types. This construct is common in higher programming languages as record, struct, or class."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentType_CompositeDataType"
+          ordered="false" upperBound="-1" eType="#//datatypes/CompositeDataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the parent type in the inheritance hierarchy. Null if there is no parent."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="innerDeclaration_CompositeDataType"
+          ordered="false" upperBound="-1" eType="#//datatypes/InnerDeclaration" containment="true"
+          eOpposite="#//datatypes/InnerDeclaration/compositeDataType_InnerDeclaration">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the internals, i.e., named items, each of a data type, forming this composite data type."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InnerDeclaration" eSuperTypes="../../mpcm.paradigm.base/model/base.ecore#//NamedElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This entity represent a declaration of a data type inside of a composite data type. It enriches the data type it declares with a name to allow multiple declarations of the same type within a composite data type."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="datatype_InnerDeclaration"
+          ordered="false" lowerBound="1" eType="#//datatypes/DataType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This property represents the data type that the inner declaration declares."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="compositeDataType_InnerDeclaration"
+          ordered="false" lowerBound="1" eType="#//datatypes/CompositeDataType" eOpposite="#//datatypes/CompositeDataType/innerDeclaration_CompositeDataType"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

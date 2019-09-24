@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modificationmarks" nsURI="http://sdq.ipd.kit.edu/KAMPModificationmarks/1.0"
+    nsPrefix="modificationmarks">
+  <eClassifiers xsi:type="ecore:EClass" name="Modification" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="toolderived" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userDecision" lowerBound="1"
+        eType="#//AcceptanceAndConfirmationState" defaultValueLiteral="NODECISION"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractModificationRepository" abstract="true">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//SeedModifications"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="seedModifications" lowerBound="1"
+        containment="true">
+      <eGenericType eTypeParameter="#//AbstractModificationRepository/T"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="changePropagationSteps"
+        upperBound="-1" eType="#//ChangePropagationStep" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModificationRepository">
+    <eGenericSuperTypes eClassifier="#//AbstractModificationRepository">
+      <eTypeArguments eClassifier="#//SeedModifications"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SeedModifications">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataTypeModifications"
+        upperBound="-1" eType="#//ModifyDataType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentModifications"
+        upperBound="-1" eType="#//ModifyComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceModifications"
+        upperBound="-1" eType="#//ModifyInterface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signatureModifications"
+        upperBound="-1" eType="#//ModifySignature" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangePropagationStep" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangePropagationDueToDataDependencies"
+      eSuperTypes="#//ChangePropagationStep">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceModifications"
+        upperBound="-1" eType="#//ModifyInterface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datatypeModifications"
+        upperBound="-1" eType="#//ModifyDataType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangePropagationDueToInterfaceDependencies"
+      eSuperTypes="#//ChangePropagationStep">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentModifications"
+        upperBound="-1" eType="#//ModifyComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signatureModifications"
+        upperBound="-1" eType="#//ModifySignature" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntercomponentPropagation" eSuperTypes="#//ChangePropagationStep">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectorModifications"
+        lowerBound="1" upperBound="-1" eType="#//ModifyConnector" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntracomponentPropagation" eSuperTypes="#//ChangePropagationStep">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentModifications"
+        lowerBound="1" upperBound="-1" eType="#//ModifyComponent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyArchitectureElement" abstract="true"
+      eSuperTypes="#//Modification">
+    <eTypeParameters name="T"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="affectedElement" lowerBound="1">
+      <eGenericType eTypeParameter="#//ModifyArchitectureElement/T"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="causingEntities" upperBound="-1"
+        eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="causingDataTypes" upperBound="-1"
+        eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyDataType">
+    <eGenericSuperTypes eClassifier="#//ModifyArchitectureElement">
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/DataType"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyEntity" abstract="true">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="#//ModifyArchitectureElement">
+      <eTypeArguments eTypeParameter="#//ModifyEntity/T"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedRoleModifications"
+        upperBound="-1" eType="#//ModifyProvidedRole" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredRoleModifications"
+        upperBound="-1" eType="#//ModifyRequiredRole" containment="true"/>
+    <eGenericSuperTypes eClassifier="#//ModifyEntity">
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/RepositoryComponent"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyConnector">
+    <eGenericSuperTypes eClassifier="#//ModifyEntity">
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/Connector"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyRole">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Role"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signatureModifications"
+        upperBound="-1" eType="#//ModifySignature" containment="true"/>
+    <eGenericSuperTypes eClassifier="#//ModifyEntity">
+      <eTypeArguments eTypeParameter="#//ModifyRole/T"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyProvidedRole">
+    <eGenericSuperTypes eClassifier="#//ModifyRole">
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyRequiredRole">
+    <eGenericSuperTypes eClassifier="#//ModifyRole">
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/RequiredRole"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signatureModifications"
+        upperBound="-1" eType="#//ModifySignature" containment="true"/>
+    <eGenericSuperTypes eClassifier="#//ModifyEntity">
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Interface"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifySignature">
+    <eGenericSuperTypes eClassifier="#//ModifyEntity">
+      <eTypeArguments eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Signature"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AcceptanceAndConfirmationState">
+    <eLiterals name="NODECISION" literal="NODECISION"/>
+    <eLiterals name="CONFIRMED" value="1" literal="CONFIRMED"/>
+    <eLiterals name="EXCLUDED" value="2" literal="EXCLUDED"/>
+  </eClassifiers>
+</ecore:EPackage>
