@@ -3,8 +3,8 @@ This repository contains data and code for the evaluation of the reference struc
 The structure of the repository is as follows:  
 └ casestudies: the data for all four case studies  
   └ mrs.diagrams: the Modular EMF Designer diagrams for all case studies  
-  └ <case study name>  
-    └ data.<case study name>.evolution:  
+  └ \<case study name\>  
+    └ data.\<case study name\>.evolution:  
         evolution scenarios (input for the evolvability evaluation).  
 		The evolution scenarios are stored in their separate folders, which contain a mod.txt and optionally a desc.txt file.  
 		The mod.txt contains the names of classes that are affected by the scenario.  
@@ -17,8 +17,8 @@ The structure of the repository is as follows:
 			second line: explanation what happens in the scenario  
 			third line: link to a version history entry (optional)  
 		In the PCM case study the evolution folder is replace by "...extension" and "...modification" folders, as it analyses extensions and explicitly distinguishes between the two evolution types.  
-    └ data.<case study name>.models: instances of the original metamodel of the case study (input for the utilization evaluation)  
-    └ data.<case study name>.results:  
+    └ data.\<case study name\>.models: instances of the original metamodel of the case study (input for the utilization evaluation)  
+    └ data.\<case study name\>.results:  
 		Contains the results for both evaluations.  
 		The results are summarized in csv files.  
 		The first row in these files contains the header.  
