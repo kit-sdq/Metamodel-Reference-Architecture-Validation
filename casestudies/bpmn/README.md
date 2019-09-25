@@ -1,4 +1,4 @@
-The BPMN2 models from the Camunda repository are not included in the SVN repository because of legal reasons.
+The BPMN2 models from the Camunda repository are not included in the SVN repository because of legal reasons.  
 They can be retrieved from [https://github.com/kit-sdq/bpmn-for-research this repository] and brought into the necessary folder structure using [https://svnserver.informatik.kit.edu/i43/svn/palladio/misha.strittmatter/ResearchProjects/MetamodelReferenceStructure/casestudies/bpmn/data.bpmn.models/____ignore/flatten_and_number.ps1 this PowerShell script].
 
 The mmUtil results were too big for source control, so they can be downloaded [https://sdqweb.ipd.kit.edu/typo3/sdq-v7-final/fileadmin/user_upload/sdq/people/misha_strittmatter/mBPMN2_modelutil_results.zip here].
